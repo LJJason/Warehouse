@@ -1,0 +1,708 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27226121D8FBD3C00C998CA /* TRNavigationController.m */; };
+		C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */; };
+		C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */; };
+		C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D711D8F8BDE006972CD /* TRFoundTableViewController.m */; };
+		C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */; };
+		C2915A7F1D8D378D00842952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2915A7E1D8D378D00842952 /* Assets.xcassets */; };
+		C2915A8D1D8D378D00842952 /* TRHouseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915A8C1D8D378D00842952 /* TRHouseTests.m */; };
+		C2915A981D8D378D00842952 /* TRHouseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915A971D8D378D00842952 /* TRHouseUITests.m */; };
+		C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915AB81D8D3E7D00842952 /* AppDelegate.m */; };
+		C2915ABD1D8D3E7D00842952 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915AB91D8D3E7D00842952 /* main.m */; };
+		C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2915ABA1D8D3E7D00842952 /* TRHouse.xcdatamodeld */; };
+		C2915AC21D8D407000842952 /* TRTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915AC11D8D407000842952 /* TRTabBarController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C2915A891D8D378D00842952 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2915A641D8D378C00842952 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2915A6B1D8D378C00842952;
+			remoteInfo = TRHouse;
+		};
+		C2915A941D8D378D00842952 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2915A641D8D378C00842952 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C2915A6B1D8D378C00842952;
+			remoteInfo = TRHouse;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C27226111D8FBD3C00C998CA /* TRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNavigationController.h; sourceTree = "<group>"; };
+		C27226121D8FBD3C00C998CA /* TRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNavigationController.m; sourceTree = "<group>"; };
+		C2771D6A1D8F8B89006972CD /* TRHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRHomeTableViewController.h; sourceTree = "<group>"; };
+		C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRHomeTableViewController.m; sourceTree = "<group>"; };
+		C2771D6D1D8F8BCF006972CD /* TRInteractiveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRInteractiveTableViewController.h; sourceTree = "<group>"; };
+		C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRInteractiveTableViewController.m; sourceTree = "<group>"; };
+		C2771D701D8F8BDE006972CD /* TRFoundTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRFoundTableViewController.h; sourceTree = "<group>"; };
+		C2771D711D8F8BDE006972CD /* TRFoundTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRFoundTableViewController.m; sourceTree = "<group>"; };
+		C2771D731D8F8BEA006972CD /* TRMeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeTableViewController.h; sourceTree = "<group>"; };
+		C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeTableViewController.m; sourceTree = "<group>"; };
+		C2915A6C1D8D378D00842952 /* TRHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2915A7E1D8D378D00842952 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C2915A831D8D378D00842952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2915A881D8D378D00842952 /* TRHouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRHouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2915A8C1D8D378D00842952 /* TRHouseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRHouseTests.m; sourceTree = "<group>"; };
+		C2915A8E1D8D378D00842952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2915A931D8D378D00842952 /* TRHouseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRHouseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2915A971D8D378D00842952 /* TRHouseUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRHouseUITests.m; sourceTree = "<group>"; };
+		C2915A991D8D378D00842952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2915AB71D8D3E7D00842952 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C2915AB81D8D3E7D00842952 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C2915AB91D8D3E7D00842952 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C2915ABB1D8D3E7D00842952 /* TRHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TRHouse.xcdatamodel; sourceTree = "<group>"; };
+		C2915AC01D8D407000842952 /* TRTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTabBarController.h; sourceTree = "<group>"; };
+		C2915AC11D8D407000842952 /* TRTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTabBarController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2915A691D8D378C00842952 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2915A851D8D378D00842952 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2915A901D8D378D00842952 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C2915A631D8D378C00842952 = {
+			isa = PBXGroup;
+			children = (
+				C2915A6E1D8D378D00842952 /* TRHouse */,
+				C2915A8B1D8D378D00842952 /* TRHouseTests */,
+				C2915A961D8D378D00842952 /* TRHouseUITests */,
+				C2915A6D1D8D378D00842952 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C2915A6D1D8D378D00842952 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2915A6C1D8D378D00842952 /* TRHouse.app */,
+				C2915A881D8D378D00842952 /* TRHouseTests.xctest */,
+				C2915A931D8D378D00842952 /* TRHouseUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2915A6E1D8D378D00842952 /* TRHouse */ = {
+			isa = PBXGroup;
+			children = (
+				C2915AA51D8D3E7D00842952 /* Classes */,
+				C2915A7E1D8D378D00842952 /* Assets.xcassets */,
+				C2915A6F1D8D378D00842952 /* Supporting Files */,
+			);
+			path = TRHouse;
+			sourceTree = "<group>";
+		};
+		C2915A6F1D8D378D00842952 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C2915A831D8D378D00842952 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C2915A8B1D8D378D00842952 /* TRHouseTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2915A8C1D8D378D00842952 /* TRHouseTests.m */,
+				C2915A8E1D8D378D00842952 /* Info.plist */,
+			);
+			path = TRHouseTests;
+			sourceTree = "<group>";
+		};
+		C2915A961D8D378D00842952 /* TRHouseUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C2915A971D8D378D00842952 /* TRHouseUITests.m */,
+				C2915A991D8D378D00842952 /* Info.plist */,
+			);
+			path = TRHouseUITests;
+			sourceTree = "<group>";
+		};
+		C2915AA51D8D3E7D00842952 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C2915AAA1D8D3E7D00842952 /* Home */,
+				C2915AAE1D8D3E7D00842952 /* Interactive */,
+				C2915AA61D8D3E7D00842952 /* Found */,
+				C2915AB21D8D3E7D00842952 /* Me */,
+				C2915AB61D8D3E7D00842952 /* Others */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C2915AA61D8D3E7D00842952 /* Found */ = {
+			isa = PBXGroup;
+			children = (
+				C2915AA71D8D3E7D00842952 /* Controller */,
+				C2915AA81D8D3E7D00842952 /* Model */,
+				C2915AA91D8D3E7D00842952 /* View */,
+			);
+			path = Found;
+			sourceTree = "<group>";
+		};
+		C2915AA71D8D3E7D00842952 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2771D701D8F8BDE006972CD /* TRFoundTableViewController.h */,
+				C2771D711D8F8BDE006972CD /* TRFoundTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C2915AA81D8D3E7D00842952 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2915AA91D8D3E7D00842952 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2915AAA1D8D3E7D00842952 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				C2915AAB1D8D3E7D00842952 /* Controller */,
+				C2915AAC1D8D3E7D00842952 /* Model */,
+				C2915AAD1D8D3E7D00842952 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		C2915AAB1D8D3E7D00842952 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2771D6A1D8F8B89006972CD /* TRHomeTableViewController.h */,
+				C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C2915AAC1D8D3E7D00842952 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2915AAD1D8D3E7D00842952 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2915AAE1D8D3E7D00842952 /* Interactive */ = {
+			isa = PBXGroup;
+			children = (
+				C2915AAF1D8D3E7D00842952 /* Controller */,
+				C2915AB01D8D3E7D00842952 /* Model */,
+				C2915AB11D8D3E7D00842952 /* View */,
+			);
+			path = Interactive;
+			sourceTree = "<group>";
+		};
+		C2915AAF1D8D3E7D00842952 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2771D6D1D8F8BCF006972CD /* TRInteractiveTableViewController.h */,
+				C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C2915AB01D8D3E7D00842952 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2915AB11D8D3E7D00842952 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2915AB21D8D3E7D00842952 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				C2915AB31D8D3E7D00842952 /* Controller */,
+				C2915AB41D8D3E7D00842952 /* Model */,
+				C2915AB51D8D3E7D00842952 /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		C2915AB31D8D3E7D00842952 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2771D731D8F8BEA006972CD /* TRMeTableViewController.h */,
+				C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C2915AB41D8D3E7D00842952 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2915AB51D8D3E7D00842952 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2915AB61D8D3E7D00842952 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				C2915ABF1D8D404E00842952 /* Controller */,
+				C2915AB71D8D3E7D00842952 /* AppDelegate.h */,
+				C2915AB81D8D3E7D00842952 /* AppDelegate.m */,
+				C2915AB91D8D3E7D00842952 /* main.m */,
+				C2915ABA1D8D3E7D00842952 /* TRHouse.xcdatamodeld */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		C2915ABF1D8D404E00842952 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2915AC01D8D407000842952 /* TRTabBarController.h */,
+				C2915AC11D8D407000842952 /* TRTabBarController.m */,
+				C27226111D8FBD3C00C998CA /* TRNavigationController.h */,
+				C27226121D8FBD3C00C998CA /* TRNavigationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2915A6B1D8D378C00842952 /* TRHouse */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2915A9C1D8D378D00842952 /* Build configuration list for PBXNativeTarget "TRHouse" */;
+			buildPhases = (
+				C2915A681D8D378C00842952 /* Sources */,
+				C2915A691D8D378C00842952 /* Frameworks */,
+				C2915A6A1D8D378C00842952 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TRHouse;
+			productName = TRHouse;
+			productReference = C2915A6C1D8D378D00842952 /* TRHouse.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C2915A871D8D378D00842952 /* TRHouseTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2915A9F1D8D378D00842952 /* Build configuration list for PBXNativeTarget "TRHouseTests" */;
+			buildPhases = (
+				C2915A841D8D378D00842952 /* Sources */,
+				C2915A851D8D378D00842952 /* Frameworks */,
+				C2915A861D8D378D00842952 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2915A8A1D8D378D00842952 /* PBXTargetDependency */,
+			);
+			name = TRHouseTests;
+			productName = TRHouseTests;
+			productReference = C2915A881D8D378D00842952 /* TRHouseTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C2915A921D8D378D00842952 /* TRHouseUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2915AA21D8D378D00842952 /* Build configuration list for PBXNativeTarget "TRHouseUITests" */;
+			buildPhases = (
+				C2915A8F1D8D378D00842952 /* Sources */,
+				C2915A901D8D378D00842952 /* Frameworks */,
+				C2915A911D8D378D00842952 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2915A951D8D378D00842952 /* PBXTargetDependency */,
+			);
+			name = TRHouseUITests;
+			productName = TRHouseUITests;
+			productReference = C2915A931D8D378D00842952 /* TRHouseUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2915A641D8D378C00842952 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = TR;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = wgf;
+				TargetAttributes = {
+					C2915A6B1D8D378C00842952 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					C2915A871D8D378D00842952 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C2915A6B1D8D378C00842952;
+					};
+					C2915A921D8D378D00842952 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C2915A6B1D8D378C00842952;
+					};
+				};
+			};
+			buildConfigurationList = C2915A671D8D378C00842952 /* Build configuration list for PBXProject "TRHouse" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2915A631D8D378C00842952;
+			productRefGroup = C2915A6D1D8D378D00842952 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2915A6B1D8D378C00842952 /* TRHouse */,
+				C2915A871D8D378D00842952 /* TRHouseTests */,
+				C2915A921D8D378D00842952 /* TRHouseUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C2915A6A1D8D378C00842952 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2915A7F1D8D378D00842952 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2915A861D8D378D00842952 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2915A911D8D378D00842952 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C2915A681D8D378C00842952 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */,
+				C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */,
+				C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */,
+				C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */,
+				C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */,
+				C2915AC21D8D407000842952 /* TRTabBarController.m in Sources */,
+				C2915ABD1D8D3E7D00842952 /* main.m in Sources */,
+				C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */,
+				C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2915A841D8D378D00842952 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2915A8D1D8D378D00842952 /* TRHouseTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2915A8F1D8D378D00842952 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2915A981D8D378D00842952 /* TRHouseUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2915A8A1D8D378D00842952 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2915A6B1D8D378C00842952 /* TRHouse */;
+			targetProxy = C2915A891D8D378D00842952 /* PBXContainerItemProxy */;
+		};
+		C2915A951D8D378D00842952 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C2915A6B1D8D378C00842952 /* TRHouse */;
+			targetProxy = C2915A941D8D378D00842952 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C2915A9A1D8D378D00842952 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C2915A9B1D8D378D00842952 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2915A9D1D8D378D00842952 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = TRHouse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wgfttios.TRHouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C2915A9E1D8D378D00842952 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = TRHouse/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wgfttios.TRHouse;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C2915AA01D8D378D00842952 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TRHouseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wgfttios.TRHouseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TRHouse.app/TRHouse";
+			};
+			name = Debug;
+		};
+		C2915AA11D8D378D00842952 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = TRHouseTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wgfttios.TRHouseTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TRHouse.app/TRHouse";
+			};
+			name = Release;
+		};
+		C2915AA31D8D378D00842952 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TRHouseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wgfttios.TRHouseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TRHouse;
+			};
+			name = Debug;
+		};
+		C2915AA41D8D378D00842952 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = TRHouseUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wgfttios.TRHouseUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = TRHouse;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2915A671D8D378C00842952 /* Build configuration list for PBXProject "TRHouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2915A9A1D8D378D00842952 /* Debug */,
+				C2915A9B1D8D378D00842952 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2915A9C1D8D378D00842952 /* Build configuration list for PBXNativeTarget "TRHouse" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2915A9D1D8D378D00842952 /* Debug */,
+				C2915A9E1D8D378D00842952 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2915A9F1D8D378D00842952 /* Build configuration list for PBXNativeTarget "TRHouseTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2915AA01D8D378D00842952 /* Debug */,
+				C2915AA11D8D378D00842952 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2915AA21D8D378D00842952 /* Build configuration list for PBXNativeTarget "TRHouseUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2915AA31D8D378D00842952 /* Debug */,
+				C2915AA41D8D378D00842952 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C2915ABA1D8D3E7D00842952 /* TRHouse.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C2915ABB1D8D3E7D00842952 /* TRHouse.xcdatamodel */,
+			);
+			currentVersion = C2915ABB1D8D3E7D00842952 /* TRHouse.xcdatamodel */;
+			path = TRHouse.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C2915A641D8D378C00842952 /* Project object */;
+}
