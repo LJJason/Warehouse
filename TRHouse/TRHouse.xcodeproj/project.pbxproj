@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27226121D8FBD3C00C998CA /* TRNavigationController.m */; };
+		C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */; };
+		C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */; };
+		C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D711D8F8BDE006972CD /* TRFoundTableViewController.m */; };
+		C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */; };
 		C2915A7F1D8D378D00842952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2915A7E1D8D378D00842952 /* Assets.xcassets */; };
-		C2915A821D8D378D00842952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2915A801D8D378D00842952 /* LaunchScreen.storyboard */; };
 		C2915A8D1D8D378D00842952 /* TRHouseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915A8C1D8D378D00842952 /* TRHouseTests.m */; };
 		C2915A981D8D378D00842952 /* TRHouseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915A971D8D378D00842952 /* TRHouseUITests.m */; };
 		C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915AB81D8D3E7D00842952 /* AppDelegate.m */; };
@@ -35,9 +39,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C27226111D8FBD3C00C998CA /* TRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNavigationController.h; sourceTree = "<group>"; };
+		C27226121D8FBD3C00C998CA /* TRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNavigationController.m; sourceTree = "<group>"; };
+		C2771D6A1D8F8B89006972CD /* TRHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRHomeTableViewController.h; sourceTree = "<group>"; };
+		C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRHomeTableViewController.m; sourceTree = "<group>"; };
+		C2771D6D1D8F8BCF006972CD /* TRInteractiveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRInteractiveTableViewController.h; sourceTree = "<group>"; };
+		C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRInteractiveTableViewController.m; sourceTree = "<group>"; };
+		C2771D701D8F8BDE006972CD /* TRFoundTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRFoundTableViewController.h; sourceTree = "<group>"; };
+		C2771D711D8F8BDE006972CD /* TRFoundTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRFoundTableViewController.m; sourceTree = "<group>"; };
+		C2771D731D8F8BEA006972CD /* TRMeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeTableViewController.h; sourceTree = "<group>"; };
+		C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeTableViewController.m; sourceTree = "<group>"; };
 		C2915A6C1D8D378D00842952 /* TRHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2915A7E1D8D378D00842952 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		C2915A811D8D378D00842952 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C2915A831D8D378D00842952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2915A881D8D378D00842952 /* TRHouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRHouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2915A8C1D8D378D00842952 /* TRHouseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRHouseTests.m; sourceTree = "<group>"; };
@@ -103,7 +116,6 @@
 			children = (
 				C2915AA51D8D3E7D00842952 /* Classes */,
 				C2915A7E1D8D378D00842952 /* Assets.xcassets */,
-				C2915A801D8D378D00842952 /* LaunchScreen.storyboard */,
 				C2915A6F1D8D378D00842952 /* Supporting Files */,
 			);
 			path = TRHouse;
@@ -138,9 +150,9 @@
 		C2915AA51D8D3E7D00842952 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				C2915AA61D8D3E7D00842952 /* Found */,
 				C2915AAA1D8D3E7D00842952 /* Home */,
 				C2915AAE1D8D3E7D00842952 /* Interactive */,
+				C2915AA61D8D3E7D00842952 /* Found */,
 				C2915AB21D8D3E7D00842952 /* Me */,
 				C2915AB61D8D3E7D00842952 /* Others */,
 			);
@@ -160,6 +172,8 @@
 		C2915AA71D8D3E7D00842952 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C2771D701D8F8BDE006972CD /* TRFoundTableViewController.h */,
+				C2771D711D8F8BDE006972CD /* TRFoundTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -191,6 +205,8 @@
 		C2915AAB1D8D3E7D00842952 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C2771D6A1D8F8B89006972CD /* TRHomeTableViewController.h */,
+				C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -222,6 +238,8 @@
 		C2915AAF1D8D3E7D00842952 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C2771D6D1D8F8BCF006972CD /* TRInteractiveTableViewController.h */,
+				C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -253,6 +271,8 @@
 		C2915AB31D8D3E7D00842952 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C2771D731D8F8BEA006972CD /* TRMeTableViewController.h */,
+				C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -288,6 +308,8 @@
 			children = (
 				C2915AC01D8D407000842952 /* TRTabBarController.h */,
 				C2915AC11D8D407000842952 /* TRTabBarController.m */,
+				C27226111D8FBD3C00C998CA /* TRNavigationController.h */,
+				C27226121D8FBD3C00C998CA /* TRNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -399,7 +421,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2915A821D8D378D00842952 /* LaunchScreen.storyboard in Resources */,
 				C2915A7F1D8D378D00842952 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,10 +446,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */,
+				C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */,
+				C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */,
 				C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */,
+				C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */,
 				C2915AC21D8D407000842952 /* TRTabBarController.m in Sources */,
 				C2915ABD1D8D3E7D00842952 /* main.m in Sources */,
 				C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */,
+				C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,17 +488,6 @@
 			targetProxy = C2915A941D8D378D00842952 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		C2915A801D8D378D00842952 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C2915A811D8D378D00842952 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C2915A9A1D8D378D00842952 /* Debug */ = {
@@ -567,6 +582,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TRHouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -579,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = TRHouse/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
