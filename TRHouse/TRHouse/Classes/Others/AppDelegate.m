@@ -26,7 +26,7 @@
     
     self.window.rootViewController = trVc;
     
-    
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
     //设置为主窗口并且显示
     [self.window makeKeyAndVisible];

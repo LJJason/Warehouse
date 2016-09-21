@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  TRHouse
+//
+//  Created by wgf on 16/9/20.
+//  Copyright © 2016年 wgf. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef DEBUG
+#define TRGLog(...) NSLog(__VA_ARGS__)
+#else
+#define TRGLog(...)
+#endif
+
+
+// 颜色
+#define TRColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/1.0]
+// 全局色
+#define TRGlobalColor TRColor(229, 229, 229)
+
+
+#endif /* PrefixHeader_pch */

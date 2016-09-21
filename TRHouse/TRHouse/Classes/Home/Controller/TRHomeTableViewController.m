@@ -26,13 +26,18 @@
     
     
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nav_home"]];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_map"] style:UIBarButtonItemStyleDone target:self action:@selector(mapButtonClick)];
+//    self.view.backgroundColor = TRColor(100, 200, 255, 0.7);
+}
+
+#pragma mark - mapButton
+
+- (void)mapButtonClick
+{
+    NSLog(@"%s", __func__);
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Table view data source
 
@@ -99,5 +104,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+//- (UIStatusBarStyle)preferredStatusBarStyle {
+//    return UIStatusBarStyleLightContent;
+//}
 
 @end
