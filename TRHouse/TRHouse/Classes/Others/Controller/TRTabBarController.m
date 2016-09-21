@@ -27,8 +27,9 @@
     [self setUpChildViewController];
     
     UITabBar * tabBar = [UITabBar appearance];
-    tabBar.tintColor = [UIColor orangeColor];
-//    self.tabBar.backgroundImage = [];
+    tabBar.tintColor = TRColor(0, 220, 255, 1.0);
+    tabBar.barTintColor = [UIColor whiteColor];
+//    self.tabBar.backgroundImage = [UIImage imageNamed:@"tabbar_Home"];
     
 }
 
@@ -41,7 +42,7 @@
     //发现
     [self addChildViewController:[[TRFoundTableViewController alloc] init] withTitle:@"发现" withImageName:@"tabbar_found"];
     //我
-    [self addChildViewController:[[TRMeTableViewController alloc] init] withTitle:@"我" withImageName:@"tabbar_Home"];
+    [self addChildViewController:[[TRMeTableViewController alloc] init] withTitle:@"我" withImageName:@"tabbar_me"];
     
 }
 
@@ -56,7 +57,6 @@
     [self addChildViewController:nav];
     
 }
-
 
 
 @end
