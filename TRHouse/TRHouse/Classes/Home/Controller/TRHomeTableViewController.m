@@ -34,8 +34,8 @@
 
 - (void)mapButtonClick
 {
-    NSLog(@"%s", __func__);
     
+    TRLog(@"%s", __func__);
 }
 
 
