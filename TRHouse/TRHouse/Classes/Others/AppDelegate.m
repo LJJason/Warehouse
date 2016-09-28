@@ -20,12 +20,12 @@
     // Override point for customization after application launch.
     //初始化窗口
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    
+    //初始化TabBarController
     TRTabBarController *trVc = [[TRTabBarController alloc] init];
     trVc.view.backgroundColor = [UIColor redColor];
-    
+    //将窗口的根视图设置为我们自定义的“TRTabBarController”
     self.window.rootViewController = trVc;
-    
+    //更改状态栏的风格
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
     
     //设置为主窗口并且显示
