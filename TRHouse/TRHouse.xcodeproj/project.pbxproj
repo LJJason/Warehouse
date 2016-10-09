@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B81AEA3CD0C5E3B37D3E1AC /* libPods-TRHouse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B68D0083076E8AF8B14CEDA /* libPods-TRHouse.a */; };
 		930BDCA51DAACD6300BAE473 /* TRTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930BDCA41DAACD6300BAE473 /* TRTourViewController.m */; };
 		B23969D81DA9DC3000F2904A /* TRFound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23969D71DA9DC3000F2904A /* TRFound.storyboard */; };
 		B23969DC1DAA378900F2904A /* TRCircleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B23969DB1DAA378900F2904A /* TRCircleTableViewController.m */; };
@@ -44,11 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B68D0083076E8AF8B14CEDA /* libPods-TRHouse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TRHouse.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		930BDCA31DAACD6300BAE473 /* TRTourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTourViewController.h; sourceTree = "<group>"; };
 		930BDCA41DAACD6300BAE473 /* TRTourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTourViewController.m; sourceTree = "<group>"; };
+		B1185A83EE4D695B6EA4C065 /* Pods-TRHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRHouse/Pods-TRHouse.release.xcconfig"; sourceTree = "<group>"; };
 		B23969D71DA9DC3000F2904A /* TRFound.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TRFound.storyboard; sourceTree = "<group>"; };
 		B23969DA1DAA378900F2904A /* TRCircleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRCircleTableViewController.h; sourceTree = "<group>"; };
 		B23969DB1DAA378900F2904A /* TRCircleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRCircleTableViewController.m; sourceTree = "<group>"; };
+		B6F0BE0F3B86B414511B1FFC /* Pods-TRHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRHouse/Pods-TRHouse.debug.xcconfig"; sourceTree = "<group>"; };
 		C22BD58D1D91106A00C53223 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C27226111D8FBD3C00C998CA /* TRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNavigationController.h; sourceTree = "<group>"; };
 		C27226121D8FBD3C00C998CA /* TRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNavigationController.m; sourceTree = "<group>"; };
@@ -86,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B81AEA3CD0C5E3B37D3E1AC /* libPods-TRHouse.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +111,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		06D3D0DA69333E8E0A3909C1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B6F0BE0F3B86B414511B1FFC /* Pods-TRHouse.debug.xcconfig */,
+				B1185A83EE4D695B6EA4C065 /* Pods-TRHouse.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B23969D51DA9DC0000F2904A /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +146,21 @@
 			name = Dev;
 			sourceTree = "<group>";
 		};
+		C221D9381DAA763100438B27 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				C221D9391DAA763200438B27 /* WebViewProgress */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		C221D9391DAA763200438B27 /* WebViewProgress */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WebViewProgress;
+			sourceTree = "<group>";
+		};
 		C2915A631D8D378C00842952 = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +168,8 @@
 				C2915A8B1D8D378D00842952 /* TRHouseTests */,
 				C2915A961D8D378D00842952 /* TRHouseUITests */,
 				C2915A6D1D8D378D00842952 /* Products */,
+				06D3D0DA69333E8E0A3909C1 /* Pods */,
+				E509FA414993010A967070B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,6 +222,7 @@
 		C2915AA51D8D3E7D00842952 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C221D9381DAA763100438B27 /* Lib */,
 				C2915AAA1D8D3E7D00842952 /* Home */,
 				C2915AAE1D8D3E7D00842952 /* Interactive */,
 				C2915AA61D8D3E7D00842952 /* Found */,
@@ -355,6 +387,14 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		E509FA414993010A967070B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B68D0083076E8AF8B14CEDA /* libPods-TRHouse.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -362,9 +402,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2915A9C1D8D378D00842952 /* Build configuration list for PBXNativeTarget "TRHouse" */;
 			buildPhases = (
+				AD0AC86A11D7463AE0C5FBC1 /* [CP] Check Pods Manifest.lock */,
 				C2915A681D8D378C00842952 /* Sources */,
 				C2915A691D8D378C00842952 /* Frameworks */,
 				C2915A6A1D8D378C00842952 /* Resources */,
+				E83CB132782CCBFBDCCD4FBB /* [CP] Embed Pods Frameworks */,
+				92AF5917ACBE917B72957F60 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -482,6 +525,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		92AF5917ACBE917B72957F60 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TRHouse/Pods-TRHouse-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD0AC86A11D7463AE0C5FBC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E83CB132782CCBFBDCCD4FBB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TRHouse/Pods-TRHouse-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C2915A681D8D378C00842952 /* Sources */ = {
@@ -626,6 +717,7 @@
 		};
 		C2915A9D1D8D378D00842952 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B6F0BE0F3B86B414511B1FFC /* Pods-TRHouse.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -641,6 +733,7 @@
 		};
 		C2915A9E1D8D378D00842952 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1185A83EE4D695B6EA4C065 /* Pods-TRHouse.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
