@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B23969D81DA9DC3000F2904A /* TRFound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23969D71DA9DC3000F2904A /* TRFound.storyboard */; };
 		C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27226121D8FBD3C00C998CA /* TRNavigationController.m */; };
 		C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */; };
 		C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B23969D71DA9DC3000F2904A /* TRFound.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TRFound.storyboard; sourceTree = "<group>"; };
 		C22BD58D1D91106A00C53223 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C27226111D8FBD3C00C998CA /* TRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNavigationController.h; sourceTree = "<group>"; };
 		C27226121D8FBD3C00C998CA /* TRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNavigationController.m; sourceTree = "<group>"; };
@@ -92,6 +94,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B23969D51DA9DC0000F2904A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B23969D61DA9DC0000F2904A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B23969D71DA9DC3000F2904A /* TRFound.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C2915A631D8D378C00842952 = {
 			isa = PBXGroup;
 			children = (
@@ -164,8 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				C2915AA71D8D3E7D00842952 /* Controller */,
-				C2915AA81D8D3E7D00842952 /* Model */,
-				C2915AA91D8D3E7D00842952 /* View */,
+				B23969D51DA9DC0000F2904A /* Model */,
+				B23969D61DA9DC0000F2904A /* View */,
 			);
 			path = Found;
 			sourceTree = "<group>";
@@ -177,20 +194,6 @@
 				C2771D711D8F8BDE006972CD /* TRFoundTableViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		C2915AA81D8D3E7D00842952 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C2915AA91D8D3E7D00842952 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		C2915AAA1D8D3E7D00842952 /* Home */ = {
@@ -424,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2915A7F1D8D378D00842952 /* Assets.xcassets in Resources */,
+				B23969D81DA9DC3000F2904A /* TRFound.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
