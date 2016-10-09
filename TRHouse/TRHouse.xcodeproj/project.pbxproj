@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B23969D81DA9DC3000F2904A /* TRFound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23969D71DA9DC3000F2904A /* TRFound.storyboard */; };
+		B23969DC1DAA378900F2904A /* TRCircleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B23969DB1DAA378900F2904A /* TRCircleTableViewController.m */; };
 		C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27226121D8FBD3C00C998CA /* TRNavigationController.m */; };
 		C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */; };
 		C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */; };
@@ -43,6 +44,8 @@
 
 /* Begin PBXFileReference section */
 		B23969D71DA9DC3000F2904A /* TRFound.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TRFound.storyboard; sourceTree = "<group>"; };
+		B23969DA1DAA378900F2904A /* TRCircleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRCircleTableViewController.h; sourceTree = "<group>"; };
+		B23969DB1DAA378900F2904A /* TRCircleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRCircleTableViewController.m; sourceTree = "<group>"; };
 		C22BD58D1D91106A00C53223 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C27226111D8FBD3C00C998CA /* TRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNavigationController.h; sourceTree = "<group>"; };
 		C27226121D8FBD3C00C998CA /* TRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNavigationController.m; sourceTree = "<group>"; };
@@ -113,6 +116,15 @@
 				B23969D71DA9DC3000F2904A /* TRFound.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		B23969D91DAA363100F2904A /* Dev */ = {
+			isa = PBXGroup;
+			children = (
+				B23969DA1DAA378900F2904A /* TRCircleTableViewController.h */,
+				B23969DB1DAA378900F2904A /* TRCircleTableViewController.m */,
+			);
+			name = Dev;
 			sourceTree = "<group>";
 		};
 		C2915A631D8D378C00842952 = {
@@ -196,6 +208,7 @@
 		C2915AA71D8D3E7D00842952 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B23969D91DAA363100F2904A /* Dev */,
 				C2771D701D8F8BDE006972CD /* TRFoundTableViewController.h */,
 				C2771D711D8F8BDE006972CD /* TRFoundTableViewController.m */,
 			);
@@ -473,6 +486,7 @@
 				C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */,
 				C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */,
 				C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */,
+				B23969DC1DAA378900F2904A /* TRCircleTableViewController.m in Sources */,
 				C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */,
 				C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */,
 				C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */,

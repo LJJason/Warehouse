@@ -1,21 +1,18 @@
 //
-//  TRFoundTableViewController.m
+//  TRCircleTableViewController.m
 //  TRHouse
 //
-//  Created by wgf on 16/9/19.
+//  Created by admin1 on 2016/10/9.
 //  Copyright © 2016年 wgf. All rights reserved.
 //
 
-#import "TRFoundTableViewController.h"
+#import "TRCircleTableViewController.h"
 
-@interface TRFoundTableViewController ()<UITableViewDataSource,UITableViewDelegate>
-- (IBAction)HotActivityAction:(UIButton *)sender forEvent:(UIEvent *)event;
-- (IBAction)LookActivityAction:(UIButton *)sender forEvent:(UIEvent *)event;
-
+@interface TRCircleTableViewController ()
 
 @end
 
-@implementation TRFoundTableViewController
+@implementation TRCircleTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -25,7 +22,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationItem.title = @"发现";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,18 +30,26 @@
 }
 
 #pragma mark - Table view data source
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    
-    return 3;
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Incomplete implementation, return the number of sections
+    return 0;
 }
 
-
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    
-    return 10;
-    
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete implementation, return the number of rows
+    return 0;
 }
+
+/*
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    
+    // Configure the cell...
+    
+    return cell;
+}
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -81,6 +85,7 @@
 }
 */
 
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -88,14 +93,6 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
+*/
 
-
-- (IBAction)HotActivityAction:(UIButton *)sender forEvent:(UIEvent *)event {
-}
-
-- (IBAction)LookActivityAction:(UIButton *)sender forEvent:(UIEvent *)event {
-}
-
-- (IBAction)LJcircleAction:(UIButton *)sender forEvent:(UIEvent *)event {
-}
 @end
