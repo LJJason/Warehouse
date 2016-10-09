@@ -40,7 +40,7 @@
     //互动
     [self addChildViewController:[[TRInteractiveTableViewController alloc] init] withTitle:@"互动" withImageName:@"tabbar_inter"];
     //发现
-    [self addChildViewController:[[TRFoundTableViewController alloc] init] withTitle:@"发现" withImageName:@"tabbar_found"];
+    [self addChildViewController:[TRFoundTableViewController instantiateInitialViewControllerWithStoryboardName:@"TRFound"] withTitle:@"发现" withImageName:@"tabbar_found"];
     //我
     [self addChildViewController:[[TRMeTableViewController alloc] init] withTitle:@"我" withImageName:@"tabbar_me"];
     

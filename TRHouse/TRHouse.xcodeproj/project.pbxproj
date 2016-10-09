@@ -20,6 +20,8 @@
 		C2915ABD1D8D3E7D00842952 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915AB91D8D3E7D00842952 /* main.m */; };
 		C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2915ABA1D8D3E7D00842952 /* TRHouse.xcdatamodeld */; };
 		C2915AC21D8D407000842952 /* TRTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915AC11D8D407000842952 /* TRTabBarController.m */; };
+		C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */; };
+		C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,10 @@
 		C2915ABB1D8D3E7D00842952 /* TRHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TRHouse.xcdatamodel; sourceTree = "<group>"; };
 		C2915AC01D8D407000842952 /* TRTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTabBarController.h; sourceTree = "<group>"; };
 		C2915AC11D8D407000842952 /* TRTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTabBarController.m; sourceTree = "<group>"; };
+		C297FAEF1DAA1B4100F7CC61 /* UIView+GFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GFExtension.h"; sourceTree = "<group>"; };
+		C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GFExtension.m"; sourceTree = "<group>"; };
+		C297FAF11DAA1B4100F7CC61 /* UIViewController+TRExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TRExtension.h"; sourceTree = "<group>"; };
+		C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TRExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +304,7 @@
 		C2915AB61D8D3E7D00842952 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				C297FAEE1DAA1B2A00F7CC61 /* Category */,
 				C2915ABF1D8D404E00842952 /* Controller */,
 				C2915AB71D8D3E7D00842952 /* AppDelegate.h */,
 				C2915AB81D8D3E7D00842952 /* AppDelegate.m */,
@@ -317,6 +324,17 @@
 				C27226121D8FBD3C00C998CA /* TRNavigationController.m */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		C297FAEE1DAA1B2A00F7CC61 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				C297FAEF1DAA1B4100F7CC61 /* UIView+GFExtension.h */,
+				C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */,
+				C297FAF11DAA1B4100F7CC61 /* UIViewController+TRExtension.h */,
+				C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,6 +475,8 @@
 				C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */,
 				C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */,
 				C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */,
+				C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */,
+				C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */,
 				C2915AC21D8D407000842952 /* TRTabBarController.m in Sources */,
 				C2915ABD1D8D3E7D00842952 /* main.m in Sources */,
 				C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */,
