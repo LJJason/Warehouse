@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface TRTourViewController : UIViewController
-
+@property (nonatomic,copy)NSString *Url;
 @end

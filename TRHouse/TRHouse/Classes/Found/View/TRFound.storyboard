@@ -194,7 +194,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="N2b-fD-27w" kind="show" id="eoQ-gK-oMc"/>
+                                            <segue destination="N2b-fD-27w" kind="show" identifier="Tour" id="eoQ-gK-oMc"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="YMQ-RG-tYj">
@@ -219,8 +219,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="nAn-2g-dIP" secondAttribute="bottom" constant="10" id="pSP-0A-q0U"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="N2b-fD-27w" kind="show" identifier="News" id="uQ6-xv-Aff"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Hhr-2Q-Z3L">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Hhr-2Q-Z3L" customClass="Happy">
                                         <rect key="frame" x="0.0" y="316" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hhr-2Q-Z3L" id="bFh-cu-yNB">
@@ -242,6 +245,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="24P-hd-1in" secondAttribute="bottom" constant="10" id="zOc-6v-2Yb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="N2b-fD-27w" kind="show" identifier="Happy" id="OXd-oa-150"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="sNb-cN-zLj">
                                         <rect key="frame" x="0.0" y="360" width="375" height="44"/>
@@ -294,27 +300,66 @@
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D15-Vs-ijy">
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </webView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="d9F-0F-ccx">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="gMj-Fu-seJ"/>
+                                </constraints>
+                            </progressView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v7U-mZ-NRb">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0Qi-zP-gW1"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="←" id="y4C-zJ-vgA">
+                                        <connections>
+                                            <action selector="toback:" destination="N2b-fD-27w" id="ku2-IE-2xz"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="→" id="pYi-l3-e3b">
+                                        <connections>
+                                            <action selector="toStart:" destination="N2b-fD-27w" id="le9-2c-Vo8"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Vpz-Ey-jLy"/>
+                                    <barButtonItem systemItem="refresh" id="Uqi-b7-GJE">
+                                        <connections>
+                                            <action selector="RefreshAction:" destination="N2b-fD-27w" id="hze-yf-dgU"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="v7U-mZ-NRb" firstAttribute="leading" secondItem="aO6-Fz-SSr" secondAttribute="leading" id="048-wn-WR4"/>
                             <constraint firstItem="D15-Vs-ijy" firstAttribute="top" secondItem="aO6-Fz-SSr" secondAttribute="top" id="41b-y7-Ke0"/>
-                            <constraint firstItem="NTw-j0-0NN" firstAttribute="top" secondItem="D15-Vs-ijy" secondAttribute="bottom" id="6wK-o4-i7G"/>
+                            <constraint firstAttribute="bottom" secondItem="v7U-mZ-NRb" secondAttribute="bottom" id="4fQ-7q-yMA"/>
                             <constraint firstItem="D15-Vs-ijy" firstAttribute="leading" secondItem="aO6-Fz-SSr" secondAttribute="leading" id="Ba5-Xu-12u"/>
+                            <constraint firstItem="d9F-0F-ccx" firstAttribute="leading" secondItem="aO6-Fz-SSr" secondAttribute="leading" id="Xp9-b8-hQn"/>
+                            <constraint firstAttribute="trailing" secondItem="v7U-mZ-NRb" secondAttribute="trailing" id="bEK-U3-Sxs"/>
+                            <constraint firstItem="NTw-j0-0NN" firstAttribute="top" secondItem="D15-Vs-ijy" secondAttribute="bottom" constant="50" id="e1I-SY-E0d"/>
                             <constraint firstAttribute="trailing" secondItem="D15-Vs-ijy" secondAttribute="trailing" id="nf3-md-qdj"/>
+                            <constraint firstAttribute="trailing" secondItem="d9F-0F-ccx" secondAttribute="trailing" id="xDQ-w1-JQc"/>
+                            <constraint firstItem="d9F-0F-ccx" firstAttribute="top" secondItem="0pk-kb-ryO" secondAttribute="bottom" id="zrO-cU-0dX"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="ForWard" destination="pYi-l3-e3b" id="BTs-US-WjY"/>
+                        <outlet property="ProgressView" destination="d9F-0F-ccx" id="YqE-2f-lRW"/>
+                        <outlet property="goback" destination="y4C-zJ-vgA" id="6E9-8D-wEG"/>
                         <outlet property="webView" destination="D15-Vs-ijy" id="brV-an-45n"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s0m-1m-rE5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1148" y="-452.02398800599701"/>
+            <point key="canvasLocation" x="1148" y="-474.51274362818594"/>
         </scene>
         <!--Circle Table View Controller-->
         <scene sceneID="q9O-X1-1py">
             <objects>
-                <tableViewController id="ggV-TV-sDH" customClass="TRCircleTableViewController" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="ggV-TV-sDH" customClass="TRCircleTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ijV-Io-gTR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -344,4 +389,7 @@
         <image name="Hot" width="128" height="128"/>
         <image name="Hot 2" width="128" height="128"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="OXd-oa-150"/>
+    </inferredMetricsTieBreakers>
 </document>

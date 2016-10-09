@@ -7,9 +7,19 @@
 //
 
 #import "TRTourViewController.h"
+#import <NJKWebViewProgress.h>
 
 @interface TRTourViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (strong,nonatomic)  NJKWebViewProgress *progress;
+@property (weak, nonatomic) IBOutlet UIProgressView *ProgressView;
+- (IBAction)toStart:(UIBarButtonItem *)sender;
+
+- (IBAction)toback:(UIBarButtonItem *)sender;
+- (IBAction)RefreshAction:(UIBarButtonItem *)sender;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *goback;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *ForWard;
+
 @end
 
 @implementation TRTourViewController
@@ -20,54 +30,66 @@
     [super viewDidLoad];
    
     
-    self.title = @"旅游攻略";
+  
+    
+    [self WebViewWithProgressinit];
+    
+    [self UrlRequestand:self.Url];
+    
+
+}
+
+- (void)WebViewWithProgressinit{
     
     self.webView.opaque = NO;
     self.webView.backgroundColor = [UIColor clearColor];
     self.webView.delegate = self;
     
     
-   
-    NSURL *Url = [NSURL URLWithString:@"http://www.baidu.com"];
-    NSURLRequest *requst = [NSURLRequest requestWithURL:Url];
-    [self.webView loadRequest:requst];
-    
-    
-   
+    self.progress = [[NJKWebViewProgress alloc]init];;
+    self.webView.delegate = self.progress;
+    __weak typeof (self) weakSelf = self;
+    self.progress.progressBlock = ^(float progress){
+        [weakSelf.ProgressView setProgress:progress animated:YES];
+        weakSelf.ProgressView.hidden = (progress == 1.0);
+    };
+    self.progress.progressDelegate = self;
+    self.progress.webViewProxyDelegate = self;
     
 }
-
+- (void)UrlRequestand:(NSString * )url{
+    
+    NSURL *Url = [NSURL URLWithString:url];
+    NSURLRequest *requst = [NSURLRequest requestWithURL:Url];
+    [self.webView loadRequest:requst];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)webViewDidStartLoad:(UIWebView *)webView{
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
     
-    
-}
--(void)webViewDidFinishLoad:(UIWebView *)webView{
-    
-    
-//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"提示" message:@"请求不成功请检查您的网络" preferredStyle:UIAlertControllerStyleActionSheet];
-////    UIAlertAction *alertac = [UIAlertAction al
+    self.goback.enabled = webView.canGoBack;
+    self.ForWard.enabled = webView.canGoForward;
     
 }
-- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    
     
 
+
+
+
+- (IBAction)toStart:(UIBarButtonItem *)sender {
+    [self.webView goForward];
     
-    return YES;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)toback:(UIBarButtonItem *)sender {
+    [self.webView goBack];
 }
-*/
 
+- (IBAction)RefreshAction:(UIBarButtonItem *)sender {
+    [self.webView reload];
+}
 @end

@@ -7,11 +7,13 @@
 //
 
 #import "TRFoundTableViewController.h"
+#import "TRTourViewController.h"
 
 @interface TRFoundTableViewController ()<UITableViewDataSource,UITableViewDelegate>
 - (IBAction)HotActivityAction:(UIButton *)sender forEvent:(UIEvent *)event;
 - (IBAction)LookActivityAction:(UIButton *)sender forEvent:(UIEvent *)event;
 
+@property (strong,nonatomic)TRTourViewController *vc;
 
 @end
 
@@ -32,14 +34,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - Table view data source
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    
-    return 3;
-
-}
-
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
@@ -85,8 +79,25 @@
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    self.vc = segue.destinationViewController;
+
+    
+    if ([segue.identifier isEqualToString:@"Tour"]) {
+        
+        self.vc.Url = TourUrl;
+        self.vc.title = @"旅游攻略";
+
+    }else if([segue.identifier isEqualToString:@"News"]){
+        
+        self.vc.Url = @"http://www.baidu.com";
+        self.vc.title = @"奇闻趣事多";
+    }else if ([segue.identifier isEqualToString:@"Happy"]){
+        
+        self.vc.Url = @"http://www.gxdxw.cn/";
+        self.vc.title = @"欢乐笑语汇";
+        
+    }
+    
 }
 
 

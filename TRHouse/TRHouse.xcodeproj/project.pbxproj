@@ -149,16 +149,8 @@
 		C221D9381DAA763100438B27 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				C221D9391DAA763200438B27 /* WebViewProgress */,
 			);
 			path = Lib;
-			sourceTree = "<group>";
-		};
-		C221D9391DAA763200438B27 /* WebViewProgress */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = WebViewProgress;
 			sourceTree = "<group>";
 		};
 		C2915A631D8D378C00842952 = {
