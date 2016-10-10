@@ -10,7 +10,7 @@
 #import <NJKWebViewProgress.h>
 #import "TRNoInternetConnectionView.h"
 
-@interface TRTourViewController ()<UIWebViewDelegate>
+@interface TRTourViewController ()<UIWebViewDelegate,NJKWebViewProgressDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (strong,nonatomic)  NJKWebViewProgress *progress;
 @property (weak, nonatomic) IBOutlet UIProgressView *ProgressView;
@@ -40,6 +40,8 @@
 
 }
 
+#pragma mark ------------webView网络的请求-------------
+//判断网络的类型
 -(void)refreshstate{
     
     [TRHttpTool setReachabilityStatusChangeBlock:^(TRNetworking status) {
@@ -91,22 +93,18 @@
     NSURLRequest *requst = [NSURLRequest requestWithURL:Url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:20];
     [self.webView loadRequest:requst];
 }
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+
+
+#pragma mark ----------NJKWebViewProgressDelegate---------
+
+- (void)webViewProgress:(NJKWebViewProgress *)webViewProgress updateProgress:(float)progress{
+    
+    self.ProgressView.progress = progress;
 }
 
-- (void)webViewDidFinishLoad:(UIWebView *)webView{
-    
-    self.goback.enabled = webView.canGoBack;
-    self.ForWard.enabled = webView.canGoForward;
-    
-}
-    
-    
-
-
-
+#pragma mark -----------绑定按钮的实现方法---------------
 
 - (IBAction)toStart:(UIBarButtonItem *)sender {
     [self.webView goForward];
@@ -119,5 +117,22 @@
 
 - (IBAction)RefreshAction:(UIBarButtonItem *)sender {
     [self.webView reload];
+}
+
+#pragma mark------------UIWebViewDelegate------------
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    
+    self.goback.enabled = webView.canGoBack;
+    self.ForWard.enabled = webView.canGoForward;
+    
+}
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    
+    [self webError];
+    
+}
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 @end

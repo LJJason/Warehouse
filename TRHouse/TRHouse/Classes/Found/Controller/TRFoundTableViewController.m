@@ -96,6 +96,7 @@
         self.vc.Url = TRHappyUrl;
         self.vc.title = @"欢乐笑语汇";
         
+      
     }
     
 }
