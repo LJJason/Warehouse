@@ -60,7 +60,7 @@
 - (void)UrlRequestand:(NSString * )url{
     
     NSURL *Url = [NSURL URLWithString:url];
-    NSURLRequest *requst = [NSURLRequest requestWithURL:Url];
+    NSURLRequest *requst = [NSURLRequest requestWithURL:Url cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:20];
     [self.webView loadRequest:requst];
 }
 - (void)didReceiveMemoryWarning {
