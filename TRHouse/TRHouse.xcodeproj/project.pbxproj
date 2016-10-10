@@ -27,6 +27,8 @@
 		C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */; };
 		C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */; };
 		C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C29E7B581DAB7C2600327F92 /* TRHttpTool.m */; };
+		C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C29E7B5C1DAB805700327F92 /* TRNoInternetConnectionView.m */; };
+		C29E7B5F1DAB805700327F92 /* TRNoInternetConnectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C29E7B5D1DAB805700327F92 /* TRNoInternetConnectionView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +91,9 @@
 		C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TRExtension.m"; sourceTree = "<group>"; };
 		C29E7B571DAB7C2600327F92 /* TRHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRHttpTool.h; sourceTree = "<group>"; };
 		C29E7B581DAB7C2600327F92 /* TRHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRHttpTool.m; sourceTree = "<group>"; };
+		C29E7B5B1DAB805700327F92 /* TRNoInternetConnectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNoInternetConnectionView.h; sourceTree = "<group>"; };
+		C29E7B5C1DAB805700327F92 /* TRNoInternetConnectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNoInternetConnectionView.m; sourceTree = "<group>"; };
+		C29E7B5D1DAB805700327F92 /* TRNoInternetConnectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRNoInternetConnectionView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -353,6 +358,7 @@
 		C2915AB61D8D3E7D00842952 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				C29E7B5A1DAB803700327F92 /* View */,
 				C297FAEE1DAA1B2A00F7CC61 /* Category */,
 				C2915ABF1D8D404E00842952 /* Controller */,
 				C2959F6F1DAB1D01009B75FB /* TRConst.h */,
@@ -403,6 +409,16 @@
 				C29E7B581DAB7C2600327F92 /* TRHttpTool.m */,
 			);
 			path = Http;
+			sourceTree = "<group>";
+		};
+		C29E7B5A1DAB803700327F92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C29E7B5B1DAB805700327F92 /* TRNoInternetConnectionView.h */,
+				C29E7B5C1DAB805700327F92 /* TRNoInternetConnectionView.m */,
+				C29E7B5D1DAB805700327F92 /* TRNoInternetConnectionView.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		E509FA414993010A967070B5 /* Frameworks */ = {
@@ -524,6 +540,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2915A7F1D8D378D00842952 /* Assets.xcassets in Resources */,
+				C29E7B5F1DAB805700327F92 /* TRNoInternetConnectionView.xib in Resources */,
 				B23969D81DA9DC3000F2904A /* TRFound.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,6 +628,7 @@
 				C2915ABD1D8D3E7D00842952 /* main.m in Sources */,
 				C2959F711DAB1D01009B75FB /* TRConst.m in Sources */,
 				C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */,
+				C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */,
 				C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
