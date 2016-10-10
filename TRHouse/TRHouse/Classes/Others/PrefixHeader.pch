@@ -14,6 +14,7 @@
 #import "UIView+GFExtension.h"
 #import "UIViewController+TRExtension.h"
 #import "TRConst.h"
+#import "TRHttpTool.h"
 
 #ifdef DEBUG
 #define TRGLog(...) NSLog(__VA_ARGS__)
