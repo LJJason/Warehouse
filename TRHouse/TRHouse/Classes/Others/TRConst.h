@@ -10,4 +10,8 @@
 
 /*** 旅游攻略的接口 */
 UIKIT_EXTERN NSString * const TRTourUrl;
+/*** 奇闻趣事多的接口 */
+UIKIT_EXTERN NSString * const TRNewsUrl;
+/*** 欢乐笑语汇的接口 */
+UIKIT_EXTERN NSString * const TRHappyUrl;
 

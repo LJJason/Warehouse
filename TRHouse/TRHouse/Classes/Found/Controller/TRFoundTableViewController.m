@@ -84,16 +84,16 @@
     
     if ([segue.identifier isEqualToString:@"Tour"]) {
         
-        self.vc.Url = TourUrl;
+        self.vc.Url = TRTourUrl;
         self.vc.title = @"旅游攻略";
 
     }else if([segue.identifier isEqualToString:@"News"]){
         
-        self.vc.Url = @"http://www.baidu.com";
+        self.vc.Url = TRNewsUrl;
         self.vc.title = @"奇闻趣事多";
     }else if ([segue.identifier isEqualToString:@"Happy"]){
         
-        self.vc.Url = @"http://www.gxdxw.cn/";
+        self.vc.Url = TRHappyUrl;
         self.vc.title = @"欢乐笑语汇";
         
     }

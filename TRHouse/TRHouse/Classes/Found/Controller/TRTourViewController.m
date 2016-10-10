@@ -53,7 +53,7 @@
         [weakSelf.ProgressView setProgress:progress animated:YES];
         weakSelf.ProgressView.hidden = (progress == 1.0);
     };
-    self.progress.progressDelegate = self;
+//    self.progress.progressDelegate = self;
     self.progress.webViewProxyDelegate = self;
     
 }
