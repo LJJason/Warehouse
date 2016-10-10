@@ -23,6 +23,7 @@
 		C2915ABD1D8D3E7D00842952 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915AB91D8D3E7D00842952 /* main.m */; };
 		C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2915ABA1D8D3E7D00842952 /* TRHouse.xcdatamodeld */; };
 		C2915AC21D8D407000842952 /* TRTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915AC11D8D407000842952 /* TRTabBarController.m */; };
+		C2959F711DAB1D01009B75FB /* TRConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C2959F701DAB1D01009B75FB /* TRConst.m */; };
 		C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */; };
 		C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,8 @@
 		C2915ABB1D8D3E7D00842952 /* TRHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TRHouse.xcdatamodel; sourceTree = "<group>"; };
 		C2915AC01D8D407000842952 /* TRTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTabBarController.h; sourceTree = "<group>"; };
 		C2915AC11D8D407000842952 /* TRTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTabBarController.m; sourceTree = "<group>"; };
+		C2959F6F1DAB1D01009B75FB /* TRConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRConst.h; sourceTree = "<group>"; };
+		C2959F701DAB1D01009B75FB /* TRConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRConst.m; sourceTree = "<group>"; };
 		C297FAEF1DAA1B4100F7CC61 /* UIView+GFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GFExtension.h"; sourceTree = "<group>"; };
 		C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GFExtension.m"; sourceTree = "<group>"; };
 		C297FAF11DAA1B4100F7CC61 /* UIViewController+TRExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TRExtension.h"; sourceTree = "<group>"; };
@@ -348,6 +351,8 @@
 			children = (
 				C297FAEE1DAA1B2A00F7CC61 /* Category */,
 				C2915ABF1D8D404E00842952 /* Controller */,
+				C2959F6F1DAB1D01009B75FB /* TRConst.h */,
+				C2959F701DAB1D01009B75FB /* TRConst.m */,
 				C2915AB71D8D3E7D00842952 /* AppDelegate.h */,
 				C2915AB81D8D3E7D00842952 /* AppDelegate.m */,
 				C2915AB91D8D3E7D00842952 /* main.m */,
@@ -582,6 +587,7 @@
 				C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */,
 				C2915AC21D8D407000842952 /* TRTabBarController.m in Sources */,
 				C2915ABD1D8D3E7D00842952 /* main.m in Sources */,
+				C2959F711DAB1D01009B75FB /* TRConst.m in Sources */,
 				C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */,
 				C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */,
 			);

@@ -13,6 +13,7 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 #import "UIView+GFExtension.h"
 #import "UIViewController+TRExtension.h"
+#import "TRConst.h"
 
 #ifdef DEBUG
 #define TRGLog(...) NSLog(__VA_ARGS__)
@@ -26,8 +27,7 @@
 // 全局色
 #define TRGlobalColor TRColor(229, 229, 229)
 
-//旅游攻略网页网址
-#define TourUrl @"http://www.lvmama.com/?losc=018582&tele=499&cm_mmc=baidu10-_-cpc-_-sem-_-pc&utm_source=baidu10&utm_medium=sem&utm_campaign=cpc"
+
 
 
 #endif /* PrefixHeader_pch */
