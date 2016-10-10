@@ -8,6 +8,7 @@
 
 #import "TRTourViewController.h"
 #import <NJKWebViewProgress.h>
+#import "TRNoInternetConnectionView.h"
 
 @interface TRTourViewController ()<UIWebViewDelegate>
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
@@ -30,13 +31,36 @@
     [super viewDidLoad];
    
     
-  
+    [self refreshstate];
     
     [self WebViewWithProgressinit];
     
     [self UrlRequestand:self.Url];
     
 
+}
+
+-(void)refreshstate{
+    
+    [TRHttpTool setReachabilityStatusChangeBlock:^(TRNetworking status) {
+        if (status == TRNetworkingFailure) {
+            
+            [self webError];
+        }
+    }];
+    
+    
+    
+}
+
+- (void)webError{
+    TRNoInternetConnectionView *internet = [TRNoInternetConnectionView noInternetConnectionView];
+    internet.frame = self.view.frame;
+    [self.webView addSubview:internet];
+    internet.reloadAgainBlock = ^{
+        [self WebViewWithProgressinit];
+    };
+    
 }
 
 - (void)WebViewWithProgressinit{
@@ -56,6 +80,10 @@
 //    self.progress.progressDelegate = self;
     self.progress.webViewProxyDelegate = self;
     
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        
+        [self refreshstate];
+    });
 }
 - (void)UrlRequestand:(NSString * )url{
     
