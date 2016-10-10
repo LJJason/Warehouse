@@ -26,6 +26,7 @@
 		C2959F711DAB1D01009B75FB /* TRConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C2959F701DAB1D01009B75FB /* TRConst.m */; };
 		C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */; };
 		C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */; };
+		C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C29E7B581DAB7C2600327F92 /* TRHttpTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,8 @@
 		C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GFExtension.m"; sourceTree = "<group>"; };
 		C297FAF11DAA1B4100F7CC61 /* UIViewController+TRExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TRExtension.h"; sourceTree = "<group>"; };
 		C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TRExtension.m"; sourceTree = "<group>"; };
+		C29E7B571DAB7C2600327F92 /* TRHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRHttpTool.h; sourceTree = "<group>"; };
+		C29E7B581DAB7C2600327F92 /* TRHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRHttpTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +220,7 @@
 		C2915AA51D8D3E7D00842952 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C29E7B551DAB7BCB00327F92 /* Tool */,
 				C221D9381DAA763100438B27 /* Lib */,
 				C2915AAA1D8D3E7D00842952 /* Home */,
 				C2915AAE1D8D3E7D00842952 /* Interactive */,
@@ -382,6 +386,23 @@
 				C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		C29E7B551DAB7BCB00327F92 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				C29E7B561DAB7BCB00327F92 /* Http */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		C29E7B561DAB7BCB00327F92 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				C29E7B571DAB7C2600327F92 /* TRHttpTool.h */,
+				C29E7B581DAB7C2600327F92 /* TRHttpTool.m */,
+			);
+			path = Http;
 			sourceTree = "<group>";
 		};
 		E509FA414993010A967070B5 /* Frameworks */ = {
@@ -584,6 +605,7 @@
 				C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */,
 				C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */,
 				C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */,
+				C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */,
 				C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */,
 				C2915AC21D8D407000842952 /* TRTabBarController.m in Sources */,
 				C2915ABD1D8D3E7D00842952 /* main.m in Sources */,
