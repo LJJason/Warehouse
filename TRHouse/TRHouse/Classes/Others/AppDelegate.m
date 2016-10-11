@@ -22,7 +22,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     TRTabBarController *trVc = [[TRTabBarController alloc] init];
-    trVc.view.backgroundColor = [UIColor redColor];
+    
     
     self.window.rootViewController = trVc;
     

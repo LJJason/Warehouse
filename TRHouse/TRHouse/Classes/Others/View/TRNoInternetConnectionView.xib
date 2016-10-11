@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TRNoInternetConnectionView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wifi" translatesAutoresizingMaskIntoConstraints="NO" id="m74-5Q-pib"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cs0-u6-cq3">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="5" id="7yP-Pk-MpM"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请检查网络连接" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U2c-ZC-fI8">
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SbY-72-UQq">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="70" id="1fa-vk-GY3"/>
+                        <constraint firstAttribute="height" constant="35" id="G3x-TD-Vem"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="重新加载" backgroundImage="grey">
+                        <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="reloadAgain" destination="iN0-l3-epB" eventType="touchUpInside" id="jYt-TG-cu2"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="U2c-ZC-fI8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="1mm-Ve-DKA"/>
+                <constraint firstItem="Cs0-u6-cq3" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="22d-KL-hTA"/>
+                <constraint firstItem="m74-5Q-pib" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="5gx-0h-tHe"/>
+                <constraint firstItem="Cs0-u6-cq3" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9FF-hB-5Yg"/>
+                <constraint firstItem="m74-5Q-pib" firstAttribute="top" secondItem="Cs0-u6-cq3" secondAttribute="bottom" id="Cct-n5-APe"/>
+                <constraint firstItem="Cs0-u6-cq3" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.27" id="Dta-af-wdH"/>
+                <constraint firstItem="U2c-ZC-fI8" firstAttribute="top" secondItem="m74-5Q-pib" secondAttribute="bottom" constant="5" id="H6T-rJ-BZR"/>
+                <constraint firstItem="SbY-72-UQq" firstAttribute="top" secondItem="U2c-ZC-fI8" secondAttribute="bottom" constant="10" id="HyF-E6-RN0"/>
+                <constraint firstItem="SbY-72-UQq" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VsI-Ym-FOV"/>
+                <constraint firstAttribute="trailing" secondItem="m74-5Q-pib" secondAttribute="trailing" constant="10" id="huZ-cx-AoM"/>
+                <constraint firstAttribute="trailing" secondItem="U2c-ZC-fI8" secondAttribute="trailing" constant="10" id="lTK-Sa-PUu"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="grey" width="489" height="495"/>
+        <image name="wifi" width="128" height="128"/>
+    </resources>
+</document>
