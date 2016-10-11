@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aBe-L2-GYb">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="aBe-L2-GYb">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -223,7 +223,7 @@
                                             <segue destination="N2b-fD-27w" kind="show" identifier="News" id="uQ6-xv-Aff"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Hhr-2Q-Z3L" customClass="Happy">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="HappyCell" id="Hhr-2Q-Z3L">
                                         <rect key="frame" x="0.0" y="316" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hhr-2Q-Z3L" id="bFh-cu-yNB">
@@ -245,9 +245,6 @@
                                                 <constraint firstAttribute="bottom" secondItem="24P-hd-1in" secondAttribute="bottom" constant="10" id="zOc-6v-2Yb"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="N2b-fD-27w" kind="show" identifier="Happy" id="OXd-oa-150"/>
-                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="sNb-cN-zLj">
                                         <rect key="frame" x="0.0" y="360" width="375" height="44"/>
@@ -390,6 +387,6 @@
         <image name="Hot 2" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OXd-oa-150"/>
+        <segue reference="eoQ-gK-oMc"/>
     </inferredMetricsTieBreakers>
 </document>

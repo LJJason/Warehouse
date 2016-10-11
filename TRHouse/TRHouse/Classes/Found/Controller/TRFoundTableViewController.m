@@ -8,6 +8,7 @@
 
 #import "TRFoundTableViewController.h"
 #import "TRTourViewController.h"
+#import "GFEssenceViewController.h"
 
 @interface TRFoundTableViewController ()<UITableViewDataSource,UITableViewDelegate>
 - (IBAction)HotActivityAction:(UIButton *)sender forEvent:(UIEvent *)event;
@@ -28,6 +29,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"发现";
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,6 +42,23 @@
     return 10;
     
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    TRGLog(@"%@", indexPath);
+    
+    if (indexPath.section == 2 && indexPath.row == 2) {
+        
+        GFEssenceViewController *essVc = [[GFEssenceViewController alloc] init];
+        [self.navigationController pushViewController:essVc animated:YES];
+        
+    }
+    
+    
+    
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -91,12 +110,6 @@
         
         self.vc.Url = TRNewsUrl;
         self.vc.title = @"奇闻趣事多";
-    }else if ([segue.identifier isEqualToString:@"Happy"]){
-        
-        self.vc.Url = TRHappyUrl;
-        self.vc.title = @"欢乐笑语汇";
-        
-      
     }
     
 }

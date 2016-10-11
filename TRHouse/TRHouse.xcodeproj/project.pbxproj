@@ -11,6 +11,35 @@
 		930BDCA51DAACD6300BAE473 /* TRTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930BDCA41DAACD6300BAE473 /* TRTourViewController.m */; };
 		B23969D81DA9DC3000F2904A /* TRFound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23969D71DA9DC3000F2904A /* TRFound.storyboard */; };
 		B23969DC1DAA378900F2904A /* TRCircleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B23969DB1DAA378900F2904A /* TRCircleTableViewController.m */; };
+		B2773BDC1DACC19F00B0A899 /* GFCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773BD41DACC19F00B0A899 /* GFCommentViewController.m */; };
+		B2773BDD1DACC19F00B0A899 /* GFCommentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2773BD51DACC19F00B0A899 /* GFCommentViewController.xib */; };
+		B2773BDE1DACC19F00B0A899 /* GFEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773BD71DACC19F00B0A899 /* GFEssenceViewController.m */; };
+		B2773BDF1DACC19F00B0A899 /* GFPieceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773BD91DACC19F00B0A899 /* GFPieceViewController.m */; };
+		B2773BFB1DACC1E200B0A899 /* GFCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773BE31DACC1E200B0A899 /* GFCommentCell.m */; };
+		B2773BFC1DACC1E200B0A899 /* GFCommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2773BE41DACC1E200B0A899 /* GFCommentCell.xib */; };
+		B2773BFD1DACC1E200B0A899 /* GFCommentHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773BE61DACC1E200B0A899 /* GFCommentHeaderView.m */; };
+		B2773BFE1DACC1E200B0A899 /* GFPictureView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773BE81DACC1E200B0A899 /* GFPictureView.m */; };
+		B2773BFF1DACC1E200B0A899 /* GFPictureView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2773BE91DACC1E200B0A899 /* GFPictureView.xib */; };
+		B2773C001DACC1E200B0A899 /* GFPieceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773BEB1DACC1E200B0A899 /* GFPieceCell.m */; };
+		B2773C011DACC1E200B0A899 /* GFPieceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2773BEC1DACC1E200B0A899 /* GFPieceCell.xib */; };
+		B2773C021DACC1E200B0A899 /* GFProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773BEE1DACC1E200B0A899 /* GFProgressView.m */; };
+		B2773C031DACC1E200B0A899 /* GFRecommendTagsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773BF01DACC1E200B0A899 /* GFRecommendTagsCell.m */; };
+		B2773C041DACC1E200B0A899 /* GFRecommendTagsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2773BF11DACC1E200B0A899 /* GFRecommendTagsCell.xib */; };
+		B2773C051DACC1E200B0A899 /* GFSeeBigPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773BF31DACC1E200B0A899 /* GFSeeBigPictureViewController.m */; };
+		B2773C061DACC1E200B0A899 /* GFSeeBigPictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2773BF41DACC1E200B0A899 /* GFSeeBigPictureViewController.xib */; };
+		B2773C071DACC1E200B0A899 /* GFVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773BF61DACC1E200B0A899 /* GFVideoView.m */; };
+		B2773C081DACC1E200B0A899 /* GFVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2773BF71DACC1E200B0A899 /* GFVideoView.xib */; };
+		B2773C091DACC1E200B0A899 /* GFVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773BF91DACC1E200B0A899 /* GFVoiceView.m */; };
+		B2773C0A1DACC1E200B0A899 /* GFVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B2773BFA1DACC1E200B0A899 /* GFVoiceView.xib */; };
+		B2773C141DACC23300B0A899 /* GFPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C0D1DACC23300B0A899 /* GFPiece.m */; };
+		B2773C151DACC23300B0A899 /* GFPieceComment.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C0F1DACC23300B0A899 /* GFPieceComment.m */; };
+		B2773C161DACC23300B0A899 /* GFRecommendTags.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C111DACC23300B0A899 /* GFRecommendTags.m */; };
+		B2773C171DACC23300B0A899 /* GFUser.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C131DACC23300B0A899 /* GFUser.m */; };
+		B2773C1A1DACC2A500B0A899 /* GFConst.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C191DACC2A500B0A899 /* GFConst.m */; };
+		B2773C1D1DACC3B700B0A899 /* NSDate+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C1C1DACC3B700B0A899 /* NSDate+GFExtension.m */; };
+		B2773C201DACC41200B0A899 /* UIImageView+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C1F1DACC41200B0A899 /* UIImageView+GFExtension.m */; };
+		B2773C231DACC44000B0A899 /* UIImage+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C221DACC44000B0A899 /* UIImage+GFExtension.m */; };
+		B2773C261DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C251DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m */; };
 		C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27226121D8FBD3C00C998CA /* TRNavigationController.m */; };
 		C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */; };
 		C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */; };
@@ -56,6 +85,56 @@
 		B23969D71DA9DC3000F2904A /* TRFound.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TRFound.storyboard; sourceTree = "<group>"; };
 		B23969DA1DAA378900F2904A /* TRCircleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRCircleTableViewController.h; sourceTree = "<group>"; };
 		B23969DB1DAA378900F2904A /* TRCircleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRCircleTableViewController.m; sourceTree = "<group>"; };
+		B2773BD31DACC19F00B0A899 /* GFCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCommentViewController.h; sourceTree = "<group>"; };
+		B2773BD41DACC19F00B0A899 /* GFCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFCommentViewController.m; sourceTree = "<group>"; };
+		B2773BD51DACC19F00B0A899 /* GFCommentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GFCommentViewController.xib; sourceTree = "<group>"; };
+		B2773BD61DACC19F00B0A899 /* GFEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFEssenceViewController.h; sourceTree = "<group>"; };
+		B2773BD71DACC19F00B0A899 /* GFEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFEssenceViewController.m; sourceTree = "<group>"; };
+		B2773BD81DACC19F00B0A899 /* GFPieceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFPieceViewController.h; sourceTree = "<group>"; };
+		B2773BD91DACC19F00B0A899 /* GFPieceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFPieceViewController.m; sourceTree = "<group>"; };
+		B2773BE21DACC1E200B0A899 /* GFCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCommentCell.h; sourceTree = "<group>"; };
+		B2773BE31DACC1E200B0A899 /* GFCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFCommentCell.m; sourceTree = "<group>"; };
+		B2773BE41DACC1E200B0A899 /* GFCommentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GFCommentCell.xib; sourceTree = "<group>"; };
+		B2773BE51DACC1E200B0A899 /* GFCommentHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFCommentHeaderView.h; sourceTree = "<group>"; };
+		B2773BE61DACC1E200B0A899 /* GFCommentHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFCommentHeaderView.m; sourceTree = "<group>"; };
+		B2773BE71DACC1E200B0A899 /* GFPictureView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFPictureView.h; sourceTree = "<group>"; };
+		B2773BE81DACC1E200B0A899 /* GFPictureView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFPictureView.m; sourceTree = "<group>"; };
+		B2773BE91DACC1E200B0A899 /* GFPictureView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GFPictureView.xib; sourceTree = "<group>"; };
+		B2773BEA1DACC1E200B0A899 /* GFPieceCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFPieceCell.h; sourceTree = "<group>"; };
+		B2773BEB1DACC1E200B0A899 /* GFPieceCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFPieceCell.m; sourceTree = "<group>"; };
+		B2773BEC1DACC1E200B0A899 /* GFPieceCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GFPieceCell.xib; sourceTree = "<group>"; };
+		B2773BED1DACC1E200B0A899 /* GFProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFProgressView.h; sourceTree = "<group>"; };
+		B2773BEE1DACC1E200B0A899 /* GFProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFProgressView.m; sourceTree = "<group>"; };
+		B2773BEF1DACC1E200B0A899 /* GFRecommendTagsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFRecommendTagsCell.h; sourceTree = "<group>"; };
+		B2773BF01DACC1E200B0A899 /* GFRecommendTagsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFRecommendTagsCell.m; sourceTree = "<group>"; };
+		B2773BF11DACC1E200B0A899 /* GFRecommendTagsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GFRecommendTagsCell.xib; sourceTree = "<group>"; };
+		B2773BF21DACC1E200B0A899 /* GFSeeBigPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFSeeBigPictureViewController.h; sourceTree = "<group>"; };
+		B2773BF31DACC1E200B0A899 /* GFSeeBigPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFSeeBigPictureViewController.m; sourceTree = "<group>"; };
+		B2773BF41DACC1E200B0A899 /* GFSeeBigPictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GFSeeBigPictureViewController.xib; sourceTree = "<group>"; };
+		B2773BF51DACC1E200B0A899 /* GFVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFVideoView.h; sourceTree = "<group>"; };
+		B2773BF61DACC1E200B0A899 /* GFVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFVideoView.m; sourceTree = "<group>"; };
+		B2773BF71DACC1E200B0A899 /* GFVideoView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GFVideoView.xib; sourceTree = "<group>"; };
+		B2773BF81DACC1E200B0A899 /* GFVoiceView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFVoiceView.h; sourceTree = "<group>"; };
+		B2773BF91DACC1E200B0A899 /* GFVoiceView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFVoiceView.m; sourceTree = "<group>"; };
+		B2773BFA1DACC1E200B0A899 /* GFVoiceView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GFVoiceView.xib; sourceTree = "<group>"; };
+		B2773C0C1DACC23300B0A899 /* GFPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFPiece.h; sourceTree = "<group>"; };
+		B2773C0D1DACC23300B0A899 /* GFPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFPiece.m; sourceTree = "<group>"; };
+		B2773C0E1DACC23300B0A899 /* GFPieceComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFPieceComment.h; sourceTree = "<group>"; };
+		B2773C0F1DACC23300B0A899 /* GFPieceComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFPieceComment.m; sourceTree = "<group>"; };
+		B2773C101DACC23300B0A899 /* GFRecommendTags.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFRecommendTags.h; sourceTree = "<group>"; };
+		B2773C111DACC23300B0A899 /* GFRecommendTags.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFRecommendTags.m; sourceTree = "<group>"; };
+		B2773C121DACC23300B0A899 /* GFUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GFUser.h; sourceTree = "<group>"; };
+		B2773C131DACC23300B0A899 /* GFUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFUser.m; sourceTree = "<group>"; };
+		B2773C181DACC2A500B0A899 /* GFConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GFConst.h; path = Controller/GFConst.h; sourceTree = "<group>"; };
+		B2773C191DACC2A500B0A899 /* GFConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GFConst.m; path = Controller/GFConst.m; sourceTree = "<group>"; };
+		B2773C1B1DACC3B700B0A899 /* NSDate+GFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+GFExtension.h"; sourceTree = "<group>"; };
+		B2773C1C1DACC3B700B0A899 /* NSDate+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GFExtension.m"; sourceTree = "<group>"; };
+		B2773C1E1DACC41200B0A899 /* UIImageView+GFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+GFExtension.h"; sourceTree = "<group>"; };
+		B2773C1F1DACC41200B0A899 /* UIImageView+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+GFExtension.m"; sourceTree = "<group>"; };
+		B2773C211DACC44000B0A899 /* UIImage+GFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+GFExtension.h"; sourceTree = "<group>"; };
+		B2773C221DACC44000B0A899 /* UIImage+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GFExtension.m"; sourceTree = "<group>"; };
+		B2773C241DACC4C000B0A899 /* UIBarButtonItem+GFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+GFExtension.h"; sourceTree = "<group>"; };
+		B2773C251DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+GFExtension.m"; sourceTree = "<group>"; };
 		B6F0BE0F3B86B414511B1FFC /* Pods-TRHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRHouse/Pods-TRHouse.debug.xcconfig"; sourceTree = "<group>"; };
 		C22BD58D1D91106A00C53223 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C27226111D8FBD3C00C998CA /* TRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNavigationController.h; sourceTree = "<group>"; };
@@ -131,16 +210,10 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		B23969D51DA9DC0000F2904A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		B23969D61DA9DC0000F2904A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B2773BE11DACC1D600B0A899 /* Happy */,
 				B23969D71DA9DC3000F2904A /* TRFound.storyboard */,
 			);
 			path = View;
@@ -155,6 +228,67 @@
 				930BDCA41DAACD6300BAE473 /* TRTourViewController.m */,
 			);
 			name = Dev;
+			sourceTree = "<group>";
+		};
+		B2773BD21DACC18300B0A899 /* Happy */ = {
+			isa = PBXGroup;
+			children = (
+				B2773BD31DACC19F00B0A899 /* GFCommentViewController.h */,
+				B2773BD41DACC19F00B0A899 /* GFCommentViewController.m */,
+				B2773BD51DACC19F00B0A899 /* GFCommentViewController.xib */,
+				B2773BD61DACC19F00B0A899 /* GFEssenceViewController.h */,
+				B2773BD71DACC19F00B0A899 /* GFEssenceViewController.m */,
+				B2773BD81DACC19F00B0A899 /* GFPieceViewController.h */,
+				B2773BD91DACC19F00B0A899 /* GFPieceViewController.m */,
+			);
+			path = Happy;
+			sourceTree = "<group>";
+		};
+		B2773BE11DACC1D600B0A899 /* Happy */ = {
+			isa = PBXGroup;
+			children = (
+				B2773BE21DACC1E200B0A899 /* GFCommentCell.h */,
+				B2773BE31DACC1E200B0A899 /* GFCommentCell.m */,
+				B2773BE41DACC1E200B0A899 /* GFCommentCell.xib */,
+				B2773BE51DACC1E200B0A899 /* GFCommentHeaderView.h */,
+				B2773BE61DACC1E200B0A899 /* GFCommentHeaderView.m */,
+				B2773BE71DACC1E200B0A899 /* GFPictureView.h */,
+				B2773BE81DACC1E200B0A899 /* GFPictureView.m */,
+				B2773BE91DACC1E200B0A899 /* GFPictureView.xib */,
+				B2773BEA1DACC1E200B0A899 /* GFPieceCell.h */,
+				B2773BEB1DACC1E200B0A899 /* GFPieceCell.m */,
+				B2773BEC1DACC1E200B0A899 /* GFPieceCell.xib */,
+				B2773BED1DACC1E200B0A899 /* GFProgressView.h */,
+				B2773BEE1DACC1E200B0A899 /* GFProgressView.m */,
+				B2773BEF1DACC1E200B0A899 /* GFRecommendTagsCell.h */,
+				B2773BF01DACC1E200B0A899 /* GFRecommendTagsCell.m */,
+				B2773BF11DACC1E200B0A899 /* GFRecommendTagsCell.xib */,
+				B2773BF21DACC1E200B0A899 /* GFSeeBigPictureViewController.h */,
+				B2773BF31DACC1E200B0A899 /* GFSeeBigPictureViewController.m */,
+				B2773BF41DACC1E200B0A899 /* GFSeeBigPictureViewController.xib */,
+				B2773BF51DACC1E200B0A899 /* GFVideoView.h */,
+				B2773BF61DACC1E200B0A899 /* GFVideoView.m */,
+				B2773BF71DACC1E200B0A899 /* GFVideoView.xib */,
+				B2773BF81DACC1E200B0A899 /* GFVoiceView.h */,
+				B2773BF91DACC1E200B0A899 /* GFVoiceView.m */,
+				B2773BFA1DACC1E200B0A899 /* GFVoiceView.xib */,
+			);
+			path = Happy;
+			sourceTree = "<group>";
+		};
+		B2773C0B1DACC20B00B0A899 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B2773C0C1DACC23300B0A899 /* GFPiece.h */,
+				B2773C0D1DACC23300B0A899 /* GFPiece.m */,
+				B2773C0E1DACC23300B0A899 /* GFPieceComment.h */,
+				B2773C0F1DACC23300B0A899 /* GFPieceComment.m */,
+				B2773C101DACC23300B0A899 /* GFRecommendTags.h */,
+				B2773C111DACC23300B0A899 /* GFRecommendTags.m */,
+				B2773C121DACC23300B0A899 /* GFUser.h */,
+				B2773C131DACC23300B0A899 /* GFUser.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C221D9381DAA763100438B27 /* Lib */ = {
@@ -240,7 +374,7 @@
 			isa = PBXGroup;
 			children = (
 				C2915AA71D8D3E7D00842952 /* Controller */,
-				B23969D51DA9DC0000F2904A /* Model */,
+				B2773C0B1DACC20B00B0A899 /* Model */,
 				B23969D61DA9DC0000F2904A /* View */,
 			);
 			path = Found;
@@ -249,6 +383,7 @@
 		C2915AA71D8D3E7D00842952 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B2773BD21DACC18300B0A899 /* Happy */,
 				B23969D91DAA363100F2904A /* Dev */,
 				C2771D701D8F8BDE006972CD /* TRFoundTableViewController.h */,
 				C2771D711D8F8BDE006972CD /* TRFoundTableViewController.m */,
@@ -363,6 +498,8 @@
 				C2915ABF1D8D404E00842952 /* Controller */,
 				C2959F6F1DAB1D01009B75FB /* TRConst.h */,
 				C2959F701DAB1D01009B75FB /* TRConst.m */,
+				B2773C181DACC2A500B0A899 /* GFConst.h */,
+				B2773C191DACC2A500B0A899 /* GFConst.m */,
 				C2915AB71D8D3E7D00842952 /* AppDelegate.h */,
 				C2915AB81D8D3E7D00842952 /* AppDelegate.m */,
 				C2915AB91D8D3E7D00842952 /* main.m */,
@@ -386,6 +523,14 @@
 		C297FAEE1DAA1B2A00F7CC61 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				B2773C241DACC4C000B0A899 /* UIBarButtonItem+GFExtension.h */,
+				B2773C251DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m */,
+				B2773C211DACC44000B0A899 /* UIImage+GFExtension.h */,
+				B2773C221DACC44000B0A899 /* UIImage+GFExtension.m */,
+				B2773C1E1DACC41200B0A899 /* UIImageView+GFExtension.h */,
+				B2773C1F1DACC41200B0A899 /* UIImageView+GFExtension.m */,
+				B2773C1B1DACC3B700B0A899 /* NSDate+GFExtension.h */,
+				B2773C1C1DACC3B700B0A899 /* NSDate+GFExtension.m */,
 				C297FAEF1DAA1B4100F7CC61 /* UIView+GFExtension.h */,
 				C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */,
 				C297FAF11DAA1B4100F7CC61 /* UIViewController+TRExtension.h */,
@@ -539,9 +684,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2773BFF1DACC1E200B0A899 /* GFPictureView.xib in Resources */,
+				B2773C061DACC1E200B0A899 /* GFSeeBigPictureViewController.xib in Resources */,
 				C2915A7F1D8D378D00842952 /* Assets.xcassets in Resources */,
+				B2773C0A1DACC1E200B0A899 /* GFVoiceView.xib in Resources */,
+				B2773C081DACC1E200B0A899 /* GFVideoView.xib in Resources */,
 				C29E7B5F1DAB805700327F92 /* TRNoInternetConnectionView.xib in Resources */,
+				B2773C011DACC1E200B0A899 /* GFPieceCell.xib in Resources */,
 				B23969D81DA9DC3000F2904A /* TRFound.storyboard in Resources */,
+				B2773BDD1DACC19F00B0A899 /* GFCommentViewController.xib in Resources */,
+				B2773C041DACC1E200B0A899 /* GFRecommendTagsCell.xib in Resources */,
+				B2773BFC1DACC1E200B0A899 /* GFCommentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,18 +768,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */,
+				B2773BDF1DACC19F00B0A899 /* GFPieceViewController.m in Sources */,
+				B2773C231DACC44000B0A899 /* UIImage+GFExtension.m in Sources */,
+				B2773C161DACC23300B0A899 /* GFRecommendTags.m in Sources */,
 				C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */,
+				B2773C141DACC23300B0A899 /* GFPiece.m in Sources */,
+				B2773C201DACC41200B0A899 /* UIImageView+GFExtension.m in Sources */,
+				B2773C021DACC1E200B0A899 /* GFProgressView.m in Sources */,
+				B2773C001DACC1E200B0A899 /* GFPieceCell.m in Sources */,
+				B2773C091DACC1E200B0A899 /* GFVoiceView.m in Sources */,
+				B2773C031DACC1E200B0A899 /* GFRecommendTagsCell.m in Sources */,
 				C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */,
 				B23969DC1DAA378900F2904A /* TRCircleTableViewController.m in Sources */,
+				B2773BFE1DACC1E200B0A899 /* GFPictureView.m in Sources */,
+				B2773BFD1DACC1E200B0A899 /* GFCommentHeaderView.m in Sources */,
 				930BDCA51DAACD6300BAE473 /* TRTourViewController.m in Sources */,
 				C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */,
+				B2773C1A1DACC2A500B0A899 /* GFConst.m in Sources */,
+				B2773BDE1DACC19F00B0A899 /* GFEssenceViewController.m in Sources */,
 				C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */,
+				B2773C071DACC1E200B0A899 /* GFVideoView.m in Sources */,
+				B2773C171DACC23300B0A899 /* GFUser.m in Sources */,
 				C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */,
+				B2773BFB1DACC1E200B0A899 /* GFCommentCell.m in Sources */,
+				B2773C261DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m in Sources */,
+				B2773C151DACC23300B0A899 /* GFPieceComment.m in Sources */,
 				C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */,
+				B2773C051DACC1E200B0A899 /* GFSeeBigPictureViewController.m in Sources */,
 				C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */,
 				C2915AC21D8D407000842952 /* TRTabBarController.m in Sources */,
 				C2915ABD1D8D3E7D00842952 /* main.m in Sources */,
 				C2959F711DAB1D01009B75FB /* TRConst.m in Sources */,
+				B2773BDC1DACC19F00B0A899 /* GFCommentViewController.m in Sources */,
+				B2773C1D1DACC3B700B0A899 /* NSDate+GFExtension.m in Sources */,
 				C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */,
 				C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */,
 				C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */,
