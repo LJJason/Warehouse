@@ -1,10 +1,4 @@
-//
-//  GFCommentViewController.m
-//  百思不得姐
-//
-//  Created by wgf on 16/6/1.
-//  Copyright © 2016年 wgf. All rights reserved.
-//
+
 
 #import "GFCommentViewController.h"
 #import "GFPieceCell.h"

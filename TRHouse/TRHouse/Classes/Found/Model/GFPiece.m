@@ -1,10 +1,4 @@
-//
-//  GFPiece.m
-//  百思不得姐
-//
-//  Created by wgf on 16/5/10.
-//  Copyright © 2016年 wgf. All rights reserved.
-//
+
 
 #import "GFPiece.h"
 #import "GFPieceComment.h"
