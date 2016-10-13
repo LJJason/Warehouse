@@ -40,6 +40,8 @@
 		B2773C201DACC41200B0A899 /* UIImageView+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C1F1DACC41200B0A899 /* UIImageView+GFExtension.m */; };
 		B2773C231DACC44000B0A899 /* UIImage+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C221DACC44000B0A899 /* UIImage+GFExtension.m */; };
 		B2773C261DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C251DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m */; };
+		B2F788F61DAF26B600D74716 /* TRPost.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F788F51DAF26B600D74716 /* TRPost.m */; };
+		B2F788F91DAF673C00D74716 /* TRPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F788F81DAF673C00D74716 /* TRPostTableViewCell.m */; };
 		C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27226121D8FBD3C00C998CA /* TRNavigationController.m */; };
 		C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */; };
 		C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */; };
@@ -135,6 +137,10 @@
 		B2773C221DACC44000B0A899 /* UIImage+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GFExtension.m"; sourceTree = "<group>"; };
 		B2773C241DACC4C000B0A899 /* UIBarButtonItem+GFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+GFExtension.h"; sourceTree = "<group>"; };
 		B2773C251DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+GFExtension.m"; sourceTree = "<group>"; };
+		B2F788F41DAF26B600D74716 /* TRPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPost.h; sourceTree = "<group>"; };
+		B2F788F51DAF26B600D74716 /* TRPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPost.m; sourceTree = "<group>"; };
+		B2F788F71DAF673C00D74716 /* TRPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPostTableViewCell.h; sourceTree = "<group>"; };
+		B2F788F81DAF673C00D74716 /* TRPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPostTableViewCell.m; sourceTree = "<group>"; };
 		B6F0BE0F3B86B414511B1FFC /* Pods-TRHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRHouse/Pods-TRHouse.debug.xcconfig"; sourceTree = "<group>"; };
 		C22BD58D1D91106A00C53223 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C27226111D8FBD3C00C998CA /* TRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNavigationController.h; sourceTree = "<group>"; };
@@ -215,6 +221,8 @@
 			children = (
 				B2773BE11DACC1D600B0A899 /* Happy */,
 				B23969D71DA9DC3000F2904A /* TRFound.storyboard */,
+				B2F788F71DAF673C00D74716 /* TRPostTableViewCell.h */,
+				B2F788F81DAF673C00D74716 /* TRPostTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,6 +295,8 @@
 				B2773C111DACC23300B0A899 /* GFRecommendTags.m */,
 				B2773C121DACC23300B0A899 /* GFUser.h */,
 				B2773C131DACC23300B0A899 /* GFUser.m */,
+				B2F788F41DAF26B600D74716 /* TRPost.h */,
+				B2F788F51DAF26B600D74716 /* TRPost.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -770,6 +780,7 @@
 				C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */,
 				B2773BDF1DACC19F00B0A899 /* GFPieceViewController.m in Sources */,
 				B2773C231DACC44000B0A899 /* UIImage+GFExtension.m in Sources */,
+				B2F788F61DAF26B600D74716 /* TRPost.m in Sources */,
 				B2773C161DACC23300B0A899 /* GFRecommendTags.m in Sources */,
 				C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */,
 				B2773C141DACC23300B0A899 /* GFPiece.m in Sources */,
@@ -788,6 +799,7 @@
 				B2773BDE1DACC19F00B0A899 /* GFEssenceViewController.m in Sources */,
 				C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */,
 				B2773C071DACC1E200B0A899 /* GFVideoView.m in Sources */,
+				B2F788F91DAF673C00D74716 /* TRPostTableViewCell.m in Sources */,
 				B2773C171DACC23300B0A899 /* GFUser.m in Sources */,
 				C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */,
 				B2773BFB1DACC1E200B0A899 /* GFCommentCell.m in Sources */,
