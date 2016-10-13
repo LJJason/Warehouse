@@ -42,7 +42,7 @@
     //发现
     [self addChildViewController:[TRFoundTableViewController instantiateInitialViewControllerWithStoryboardName:@"TRFound"] withTitle:@"发现" withImageName:@"tabbar_found"];
     //我
-    [self addChildViewController:[[TRMeTableViewController alloc] init] withTitle:@"我" withImageName:@"tabbar_me"];
+    [self addChildViewController:[TRMeTableViewController instantiateInitialViewControllerWithStoryboardName:@"Me"] withTitle:@"我" withImageName:@"tabbar_me"];
     
 }
 

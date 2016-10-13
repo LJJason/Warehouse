@@ -60,6 +60,9 @@
 		C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C29E7B581DAB7C2600327F92 /* TRHttpTool.m */; };
 		C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C29E7B5C1DAB805700327F92 /* TRNoInternetConnectionView.m */; };
 		C29E7B5F1DAB805700327F92 /* TRNoInternetConnectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C29E7B5D1DAB805700327F92 /* TRNoInternetConnectionView.xib */; };
+		C2B10B061DAFDF01003332FB /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B10B051DAFDF01003332FB /* Me.storyboard */; };
+		C2B10B091DAFE0F1003332FB /* TRMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B10B081DAFE0F1003332FB /* TRMeHeaderView.m */; };
+		C2B10B0B1DAFE0FC003332FB /* TRMeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +182,10 @@
 		C29E7B5B1DAB805700327F92 /* TRNoInternetConnectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNoInternetConnectionView.h; sourceTree = "<group>"; };
 		C29E7B5C1DAB805700327F92 /* TRNoInternetConnectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNoInternetConnectionView.m; sourceTree = "<group>"; };
 		C29E7B5D1DAB805700327F92 /* TRNoInternetConnectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRNoInternetConnectionView.xib; sourceTree = "<group>"; };
+		C2B10B051DAFDF01003332FB /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
+		C2B10B071DAFE0F1003332FB /* TRMeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeHeaderView.h; sourceTree = "<group>"; };
+		C2B10B081DAFE0F1003332FB /* TRMeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeHeaderView.m; sourceTree = "<group>"; };
+		C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRMeHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -471,8 +478,8 @@
 			isa = PBXGroup;
 			children = (
 				C2915AB31D8D3E7D00842952 /* Controller */,
-				C2915AB41D8D3E7D00842952 /* Model */,
-				C2915AB51D8D3E7D00842952 /* View */,
+				C2B10B031DAFDEED003332FB /* Model */,
+				C2B10B041DAFDEED003332FB /* View */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -484,20 +491,6 @@
 				C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		C2915AB41D8D3E7D00842952 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C2915AB51D8D3E7D00842952 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		C2915AB61D8D3E7D00842952 /* Others */ = {
@@ -572,6 +565,24 @@
 				C29E7B5B1DAB805700327F92 /* TRNoInternetConnectionView.h */,
 				C29E7B5C1DAB805700327F92 /* TRNoInternetConnectionView.m */,
 				C29E7B5D1DAB805700327F92 /* TRNoInternetConnectionView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2B10B031DAFDEED003332FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2B10B041DAFDEED003332FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2B10B051DAFDF01003332FB /* Me.storyboard */,
+				C2B10B071DAFE0F1003332FB /* TRMeHeaderView.h */,
+				C2B10B081DAFE0F1003332FB /* TRMeHeaderView.m */,
+				C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -696,11 +707,13 @@
 			files = (
 				B2773BFF1DACC1E200B0A899 /* GFPictureView.xib in Resources */,
 				B2773C061DACC1E200B0A899 /* GFSeeBigPictureViewController.xib in Resources */,
+				C2B10B061DAFDF01003332FB /* Me.storyboard in Resources */,
 				C2915A7F1D8D378D00842952 /* Assets.xcassets in Resources */,
 				B2773C0A1DACC1E200B0A899 /* GFVoiceView.xib in Resources */,
 				B2773C081DACC1E200B0A899 /* GFVideoView.xib in Resources */,
 				C29E7B5F1DAB805700327F92 /* TRNoInternetConnectionView.xib in Resources */,
 				B2773C011DACC1E200B0A899 /* GFPieceCell.xib in Resources */,
+				C2B10B0B1DAFE0FC003332FB /* TRMeHeaderView.xib in Resources */,
 				B23969D81DA9DC3000F2904A /* TRFound.storyboard in Resources */,
 				B2773BDD1DACC19F00B0A899 /* GFCommentViewController.xib in Resources */,
 				B2773C041DACC1E200B0A899 /* GFRecommendTagsCell.xib in Resources */,
@@ -816,6 +829,7 @@
 				C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */,
 				C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */,
 				C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */,
+				C2B10B091DAFE0F1003332FB /* TRMeHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
