@@ -1,10 +1,4 @@
-//
-//  GFPictureView.m
-//  百思不得姐
-//
-//  Created by wgf on 16/5/16.
-//  Copyright © 2016年 wgf. All rights reserved.
-//
+
 
 #import "GFPictureView.h"
 #import "GFPiece.h"
@@ -72,8 +66,9 @@
 
     //立马设置上次保存的下载进度
     [self.progressView setProgress:piece.pictureProgress animated:NO];
+    
     //设置图片
-    [self.pictureImageView sd_setImageWithURL:[NSURL URLWithString:piece.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [self.pictureImageView sd_setImageWithURL:[NSURL URLWithString:piece.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
         self.progressView.hidden = NO;
         //注意:这里SDWebImage使用的是异步下载图片, 至ios9以后, 所以下面的更新UI要必须要在主线程进行
         piece.pictureProgress = 1.0 * receivedSize / expectedSize;

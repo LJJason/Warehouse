@@ -1,10 +1,4 @@
-//
-//  GFSeeBigPictureViewController.m
-//  百思不得姐
-//
-//  Created by wgf on 16/5/19.
-//  Copyright © 2016年 wgf. All rights reserved.
-//
+
 
 #import "GFSeeBigPictureViewController.h"
 #import "GFPiece.h"
@@ -48,7 +42,7 @@
     
     [self.progressView setProgress:self.piece.pictureProgress animated:YES];
     
-    [imageView sd_setImageWithURL:[NSURL URLWithString:self.piece.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [imageView sd_setImageWithURL:[NSURL URLWithString:self.piece.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
         
         [self.progressView setProgress:1.0 * receivedSize / expectedSize animated:YES];
         

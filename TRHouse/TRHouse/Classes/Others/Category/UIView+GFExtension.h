@@ -1,10 +1,3 @@
-//
-//  UIView+GFExtension.h
-
-//
-//  Created by wgf on 15/4/26.
-//  Copyright © 2015年 wgf. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 

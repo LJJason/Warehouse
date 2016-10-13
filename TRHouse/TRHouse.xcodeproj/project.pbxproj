@@ -40,6 +40,8 @@
 		B2773C201DACC41200B0A899 /* UIImageView+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C1F1DACC41200B0A899 /* UIImageView+GFExtension.m */; };
 		B2773C231DACC44000B0A899 /* UIImage+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C221DACC44000B0A899 /* UIImage+GFExtension.m */; };
 		B2773C261DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C251DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m */; };
+		B2F788F61DAF26B600D74716 /* TRPost.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F788F51DAF26B600D74716 /* TRPost.m */; };
+		B2F788F91DAF673C00D74716 /* TRPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F788F81DAF673C00D74716 /* TRPostTableViewCell.m */; };
 		C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27226121D8FBD3C00C998CA /* TRNavigationController.m */; };
 		C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */; };
 		C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */; };
@@ -58,6 +60,9 @@
 		C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C29E7B581DAB7C2600327F92 /* TRHttpTool.m */; };
 		C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C29E7B5C1DAB805700327F92 /* TRNoInternetConnectionView.m */; };
 		C29E7B5F1DAB805700327F92 /* TRNoInternetConnectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C29E7B5D1DAB805700327F92 /* TRNoInternetConnectionView.xib */; };
+		C2B10B061DAFDF01003332FB /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B10B051DAFDF01003332FB /* Me.storyboard */; };
+		C2B10B091DAFE0F1003332FB /* TRMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B10B081DAFE0F1003332FB /* TRMeHeaderView.m */; };
+		C2B10B0B1DAFE0FC003332FB /* TRMeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +140,10 @@
 		B2773C221DACC44000B0A899 /* UIImage+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GFExtension.m"; sourceTree = "<group>"; };
 		B2773C241DACC4C000B0A899 /* UIBarButtonItem+GFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+GFExtension.h"; sourceTree = "<group>"; };
 		B2773C251DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+GFExtension.m"; sourceTree = "<group>"; };
+		B2F788F41DAF26B600D74716 /* TRPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPost.h; sourceTree = "<group>"; };
+		B2F788F51DAF26B600D74716 /* TRPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPost.m; sourceTree = "<group>"; };
+		B2F788F71DAF673C00D74716 /* TRPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPostTableViewCell.h; sourceTree = "<group>"; };
+		B2F788F81DAF673C00D74716 /* TRPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPostTableViewCell.m; sourceTree = "<group>"; };
 		B6F0BE0F3B86B414511B1FFC /* Pods-TRHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRHouse/Pods-TRHouse.debug.xcconfig"; sourceTree = "<group>"; };
 		C22BD58D1D91106A00C53223 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C27226111D8FBD3C00C998CA /* TRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNavigationController.h; sourceTree = "<group>"; };
@@ -173,6 +182,10 @@
 		C29E7B5B1DAB805700327F92 /* TRNoInternetConnectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNoInternetConnectionView.h; sourceTree = "<group>"; };
 		C29E7B5C1DAB805700327F92 /* TRNoInternetConnectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNoInternetConnectionView.m; sourceTree = "<group>"; };
 		C29E7B5D1DAB805700327F92 /* TRNoInternetConnectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRNoInternetConnectionView.xib; sourceTree = "<group>"; };
+		C2B10B051DAFDF01003332FB /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
+		C2B10B071DAFE0F1003332FB /* TRMeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeHeaderView.h; sourceTree = "<group>"; };
+		C2B10B081DAFE0F1003332FB /* TRMeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeHeaderView.m; sourceTree = "<group>"; };
+		C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRMeHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,6 +228,8 @@
 			children = (
 				B2773BE11DACC1D600B0A899 /* Happy */,
 				B23969D71DA9DC3000F2904A /* TRFound.storyboard */,
+				B2F788F71DAF673C00D74716 /* TRPostTableViewCell.h */,
+				B2F788F81DAF673C00D74716 /* TRPostTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,6 +302,8 @@
 				B2773C111DACC23300B0A899 /* GFRecommendTags.m */,
 				B2773C121DACC23300B0A899 /* GFUser.h */,
 				B2773C131DACC23300B0A899 /* GFUser.m */,
+				B2F788F41DAF26B600D74716 /* TRPost.h */,
+				B2F788F51DAF26B600D74716 /* TRPost.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -461,8 +478,8 @@
 			isa = PBXGroup;
 			children = (
 				C2915AB31D8D3E7D00842952 /* Controller */,
-				C2915AB41D8D3E7D00842952 /* Model */,
-				C2915AB51D8D3E7D00842952 /* View */,
+				C2B10B031DAFDEED003332FB /* Model */,
+				C2B10B041DAFDEED003332FB /* View */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -474,20 +491,6 @@
 				C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		C2915AB41D8D3E7D00842952 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C2915AB51D8D3E7D00842952 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		C2915AB61D8D3E7D00842952 /* Others */ = {
@@ -562,6 +565,24 @@
 				C29E7B5B1DAB805700327F92 /* TRNoInternetConnectionView.h */,
 				C29E7B5C1DAB805700327F92 /* TRNoInternetConnectionView.m */,
 				C29E7B5D1DAB805700327F92 /* TRNoInternetConnectionView.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C2B10B031DAFDEED003332FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2B10B041DAFDEED003332FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2B10B051DAFDF01003332FB /* Me.storyboard */,
+				C2B10B071DAFE0F1003332FB /* TRMeHeaderView.h */,
+				C2B10B081DAFE0F1003332FB /* TRMeHeaderView.m */,
+				C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -686,11 +707,13 @@
 			files = (
 				B2773BFF1DACC1E200B0A899 /* GFPictureView.xib in Resources */,
 				B2773C061DACC1E200B0A899 /* GFSeeBigPictureViewController.xib in Resources */,
+				C2B10B061DAFDF01003332FB /* Me.storyboard in Resources */,
 				C2915A7F1D8D378D00842952 /* Assets.xcassets in Resources */,
 				B2773C0A1DACC1E200B0A899 /* GFVoiceView.xib in Resources */,
 				B2773C081DACC1E200B0A899 /* GFVideoView.xib in Resources */,
 				C29E7B5F1DAB805700327F92 /* TRNoInternetConnectionView.xib in Resources */,
 				B2773C011DACC1E200B0A899 /* GFPieceCell.xib in Resources */,
+				C2B10B0B1DAFE0FC003332FB /* TRMeHeaderView.xib in Resources */,
 				B23969D81DA9DC3000F2904A /* TRFound.storyboard in Resources */,
 				B2773BDD1DACC19F00B0A899 /* GFCommentViewController.xib in Resources */,
 				B2773C041DACC1E200B0A899 /* GFRecommendTagsCell.xib in Resources */,
@@ -770,6 +793,7 @@
 				C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */,
 				B2773BDF1DACC19F00B0A899 /* GFPieceViewController.m in Sources */,
 				B2773C231DACC44000B0A899 /* UIImage+GFExtension.m in Sources */,
+				B2F788F61DAF26B600D74716 /* TRPost.m in Sources */,
 				B2773C161DACC23300B0A899 /* GFRecommendTags.m in Sources */,
 				C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */,
 				B2773C141DACC23300B0A899 /* GFPiece.m in Sources */,
@@ -788,6 +812,7 @@
 				B2773BDE1DACC19F00B0A899 /* GFEssenceViewController.m in Sources */,
 				C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */,
 				B2773C071DACC1E200B0A899 /* GFVideoView.m in Sources */,
+				B2F788F91DAF673C00D74716 /* TRPostTableViewCell.m in Sources */,
 				B2773C171DACC23300B0A899 /* GFUser.m in Sources */,
 				C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */,
 				B2773BFB1DACC1E200B0A899 /* GFCommentCell.m in Sources */,
@@ -804,6 +829,7 @@
 				C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */,
 				C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */,
 				C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */,
+				C2B10B091DAFE0F1003332FB /* TRMeHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

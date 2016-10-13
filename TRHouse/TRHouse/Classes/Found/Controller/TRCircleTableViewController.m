@@ -7,21 +7,48 @@
 //
 
 #import "TRCircleTableViewController.h"
+#import "TRPostTableViewCell.h"
+#import "TRPost.h"
+
+
 
 @interface TRCircleTableViewController ()
+/** 模型数组 */
+@property (nonatomic,strong) NSMutableArray *posts;
+
 
 @end
 
 @implementation TRCircleTableViewController
+//懒加载
+- (NSMutableArray *)posts{
+    if (!_posts) {
+        _posts = [NSMutableArray array];
+    }
+    return _posts;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.tableView.rowHeight = 400;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+//    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    
+    
+    [TRHttpTool GET:@"http://yearwood.top/TRHouse/getAllPost" parameters:nil success:^(id responseObject) {
+         TRGLog(@"%@",responseObject);
+        self.posts = [TRPost mj_objectArrayWithKeyValuesArray:responseObject[@"posts"]];
+        
+        [self.tableView reloadData];
+        
+       
+    } failure:^(NSError *error) {
+        
+        TRGLog(@"Fail");
+    }];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -31,25 +58,23 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.posts.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    TRPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"postCell"];
+    TRPost *post = self.posts[indexPath.row];
     
-    // Configure the cell...
+    TRGLog(@"%@", post.postcontent);
+    
+    cell.posts = post;
     
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

@@ -1,10 +1,4 @@
-//
-//  GFUser.h
-//  百思不得姐
-//
-//  Created by wgf on 16/5/30.
-//  Copyright © 2016年 wgf. All rights reserved.
-//  用户模型
+
 
 #import <Foundation/Foundation.h>
 

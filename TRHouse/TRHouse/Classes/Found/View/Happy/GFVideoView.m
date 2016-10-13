@@ -1,10 +1,4 @@
-//
-//  GFVideoView.m
-//  百思不得姐
-//
-//  Created by wgf on 16/5/29.
-//  Copyright © 2016年 wgf. All rights reserved.
-//
+
 
 #import "GFVideoView.h"
 #import "GFPiece.h"
