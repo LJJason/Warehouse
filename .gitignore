@@ -20,13 +20,13 @@ xcuserdata/
 ## Other
 *.moved-aside
 *.xcuserstate
-
+.DS_Store
 ## Obj-C/Swift specific
 *.hmap
 *.ipa
 *.dSYM.zip
 *.dSYM
-
+.DS_Store
 # CocoaPods
 #
 # We recommend against adding the Pods directory to your .gitignore. However

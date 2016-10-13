@@ -11,6 +11,15 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#import "UIView+GFExtension.h"
+#import "UIViewController+TRExtension.h"
+#import "TRConst.h"
+#import "TRHttpTool.h"
+#import "GFConst.h"
+#import <SVProgressHUD.h>
+#import <UIImageView+WebCache.h>
+#import <MJRefresh.h>
+#import <MJExtension.h>
 
 #ifdef DEBUG
 #define TRGLog(...) NSLog(__VA_ARGS__)
@@ -23,6 +32,13 @@
 #define TRColor(r, g, b, a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/1.0]
 // 全局色
 #define TRGlobalColor TRColor(229, 229, 229)
+
+#define GFRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0];
+
+#define GFGlobalBg GFRGBColor(223, 223, 223)
+//取出屏幕的宽度和高度
+#define TRScreenW [UIScreen mainScreen].bounds.size.width
+#define TRScreenH [UIScreen mainScreen].bounds.size.height
 
 
 #endif /* PrefixHeader_pch */

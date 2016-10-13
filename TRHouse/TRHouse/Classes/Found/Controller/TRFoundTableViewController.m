@@ -7,8 +7,14 @@
 //
 
 #import "TRFoundTableViewController.h"
+#import "TRTourViewController.h"
+#import "GFEssenceViewController.h"
 
 @interface TRFoundTableViewController ()<UITableViewDataSource,UITableViewDelegate>
+- (IBAction)HotActivityAction:(UIButton *)sender forEvent:(UIEvent *)event;
+- (IBAction)LookActivityAction:(UIButton *)sender forEvent:(UIEvent *)event;
+
+@property (strong,nonatomic)TRTourViewController *vc;
 
 @end
 
@@ -23,6 +29,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"发现";
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,12 +37,28 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
     
-    return 3;
-
+    return 10;
+    
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    TRGLog(@"%@", indexPath);
+    
+    if (indexPath.section == 2 && indexPath.row == 2) {
+        
+        GFEssenceViewController *essVc = [[GFEssenceViewController alloc] init];
+        [self.navigationController pushViewController:essVc animated:YES];
+        
+    }
+    
+    
+    
+}
+
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -71,14 +94,33 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+    self.vc = segue.destinationViewController;
 
+    
+    if ([segue.identifier isEqualToString:@"Tour"]) {
+        
+        self.vc.Url = TRTourUrl;
+        self.vc.title = @"旅游攻略";
+
+    }else if([segue.identifier isEqualToString:@"News"]){
+        
+        self.vc.Url = TRNewsUrl;
+        self.vc.title = @"奇闻趣事多";
+    }
+    
+}
+
+
+- (IBAction)HotActivityAction:(UIButton *)sender forEvent:(UIEvent *)event {
+}
+
+- (IBAction)LookActivityAction:(UIButton *)sender forEvent:(UIEvent *)event {
+}
+
+- (IBAction)LJcircleAction:(UIButton *)sender forEvent:(UIEvent *)event {
+}
 @end

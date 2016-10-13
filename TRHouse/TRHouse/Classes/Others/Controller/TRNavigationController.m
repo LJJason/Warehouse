@@ -24,11 +24,19 @@
     
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+//重写pushViewController拦截导航栏的一些东西
+- (void) pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    
+    
+    
+    if (self.childViewControllers.count > 0) {
+        
+        viewController.hidesBottomBarWhenPushed = YES;
+    }
+    
+    [super pushViewController:viewController animated:animated];
+    
 }
-
 /*
 #pragma mark - Navigation
 

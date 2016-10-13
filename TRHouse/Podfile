@@ -1,0 +1,14 @@
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, "9.0"
+
+
+target :TRHouse do
+
+pod 'MJExtension'
+pod 'NJKWebViewProgress'
+pod 'AFNetworking'
+pod 'MJRefresh'
+pod 'SDWebImage', :git => 'https://github.com/rs/SDWebImage.git'
+pod 'DACircularProgress'
+pod 'SVProgressHUD'
+end
