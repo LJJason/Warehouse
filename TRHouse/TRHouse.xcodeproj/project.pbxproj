@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B81AEA3CD0C5E3B37D3E1AC /* libPods-TRHouse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B68D0083076E8AF8B14CEDA /* libPods-TRHouse.a */; };
 		930BDCA51DAACD6300BAE473 /* TRTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930BDCA41DAACD6300BAE473 /* TRTourViewController.m */; };
+		B227CACA1DB070BD005E13D4 /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = B227CAC81DB070BD005E13D4 /* Toast.m */; };
 		B23969D81DA9DC3000F2904A /* TRFound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23969D71DA9DC3000F2904A /* TRFound.storyboard */; };
 		B23969DC1DAA378900F2904A /* TRCircleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B23969DB1DAA378900F2904A /* TRCircleTableViewController.m */; };
 		B2773BDC1DACC19F00B0A899 /* GFCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773BD41DACC19F00B0A899 /* GFCommentViewController.m */; };
@@ -87,6 +88,8 @@
 		930BDCA31DAACD6300BAE473 /* TRTourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTourViewController.h; sourceTree = "<group>"; };
 		930BDCA41DAACD6300BAE473 /* TRTourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTourViewController.m; sourceTree = "<group>"; };
 		B1185A83EE4D695B6EA4C065 /* Pods-TRHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRHouse/Pods-TRHouse.release.xcconfig"; sourceTree = "<group>"; };
+		B227CAC81DB070BD005E13D4 /* Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Toast.m; sourceTree = "<group>"; };
+		B227CAC91DB070BD005E13D4 /* Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toast.h; sourceTree = "<group>"; };
 		B23969D71DA9DC3000F2904A /* TRFound.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TRFound.storyboard; sourceTree = "<group>"; };
 		B23969DA1DAA378900F2904A /* TRCircleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRCircleTableViewController.h; sourceTree = "<group>"; };
 		B23969DB1DAA378900F2904A /* TRCircleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRCircleTableViewController.m; sourceTree = "<group>"; };
@@ -223,6 +226,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B227CAC71DB070A8005E13D4 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				B227CAC91DB070BD005E13D4 /* Toast.h */,
+				B227CAC81DB070BD005E13D4 /* Toast.m */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
 		B23969D61DA9DC0000F2904A /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,13 +320,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		C221D9381DAA763100438B27 /* Lib */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Lib;
-			sourceTree = "<group>";
-		};
 		C2915A631D8D378C00842952 = {
 			isa = PBXGroup;
 			children = (
@@ -376,8 +381,8 @@
 		C2915AA51D8D3E7D00842952 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				B227CAC71DB070A8005E13D4 /* Lib */,
 				C29E7B551DAB7BCB00327F92 /* Tool */,
-				C221D9381DAA763100438B27 /* Lib */,
 				C2915AAA1D8D3E7D00842952 /* Home */,
 				C2915AAE1D8D3E7D00842952 /* Interactive */,
 				C2915AA61D8D3E7D00842952 /* Found */,
@@ -818,6 +823,7 @@
 				B2773BFB1DACC1E200B0A899 /* GFCommentCell.m in Sources */,
 				B2773C261DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m in Sources */,
 				B2773C151DACC23300B0A899 /* GFPieceComment.m in Sources */,
+				B227CACA1DB070BD005E13D4 /* Toast.m in Sources */,
 				C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */,
 				B2773C051DACC1E200B0A899 /* GFSeeBigPictureViewController.m in Sources */,
 				C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */,
