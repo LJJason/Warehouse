@@ -37,10 +37,10 @@
 //    NSMutableDictionary *param = [NSMutableDictionary dictionary];
     
     
-    [TRHttpTool GET:@"http://yearwood.top/TRHouse/getAllPost" parameters:nil success:^(id responseObject) {
-         TRGLog(@"%@",responseObject);
+    [TRHttpTool GET:@"http://192.168.61.79:8080/TRHouse/getAllPost" parameters:nil success:^(id responseObject) {
+//         TRGLog(@"%@",responseObject);
         self.posts = [TRPost mj_objectArrayWithKeyValuesArray:responseObject[@"posts"]];
-        
+        TRGLog(@"%@",responseObject[@"posts"][0][@"praiseUser"]);
         [self.tableView reloadData];
         
        
@@ -68,9 +68,18 @@
     TRPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"postCell"];
     TRPost *post = self.posts[indexPath.row];
     
-    TRGLog(@"%@", post.postcontent);
+//    TRGLog(@"%@", post.postcontent);
     
     cell.posts = post;
+    cell.likeBlock = ^(TRPostTableViewCell *cell, NSString *user) {
+        NSIndexPath *selectIndex = [self.tableView indexPathForCell:cell];
+        
+        TRPost *selectPost = self.posts[selectIndex.row];
+        [selectPost.praiseUser addObject:user];
+        [self.tableView reloadRowsAtIndexPaths:@[selectIndex] withRowAnimation:UITableViewRowAnimationNone];
+        
+        
+    };
     
     return cell;
 }

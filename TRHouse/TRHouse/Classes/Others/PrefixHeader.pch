@@ -20,6 +20,7 @@
 #import <UIImageView+WebCache.h>
 #import <MJRefresh.h>
 #import <MJExtension.h>
+#import "Toast.h"
 
 #ifdef DEBUG
 #define TRGLog(...) NSLog(__VA_ARGS__)
