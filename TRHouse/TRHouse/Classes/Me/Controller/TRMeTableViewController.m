@@ -33,6 +33,7 @@
     self.meHeader = meHeader;
     
     [self.headerView addSubview:meHeader];
+    self.tableView.tableFooterView = [[UIView alloc] init];
     
 }
 
