@@ -13,34 +13,47 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5x1-O2-o4L">
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2Ke-dt-CXx">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4tY-fO-wct">
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="Owj-sR-Gcb"/>
+                            </constraints>
+                        </view>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultUserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2Ke-dt-CXx">
                             <constraints>
                                 <constraint firstAttribute="width" constant="40" id="Dep-3Y-y0U"/>
                                 <constraint firstAttribute="height" constant="40" id="PnS-FS-gsa"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                     <integer key="value" value="20"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcp-L1-tyT">
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录/注册" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcp-L1-tyT">
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYx-ux-RMo"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CYx-ux-RMo">
+                            <connections>
+                                <action selector="loginOrMe" destination="iN0-l3-epB" eventType="touchUpInside" id="cSz-Qh-25i"/>
+                            </connections>
+                        </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="rcp-L1-tyT" firstAttribute="leading" secondItem="2Ke-dt-CXx" secondAttribute="trailing" constant="20" id="0n4-oD-7D4"/>
                         <constraint firstItem="CYx-ux-RMo" firstAttribute="top" secondItem="5x1-O2-o4L" secondAttribute="top" id="2sG-WR-Wpj"/>
                         <constraint firstAttribute="bottom" secondItem="CYx-ux-RMo" secondAttribute="bottom" id="EiP-rR-15X"/>
                         <constraint firstAttribute="height" constant="80" id="Mzt-B7-NCq"/>
+                        <constraint firstItem="4tY-fO-wct" firstAttribute="leading" secondItem="5x1-O2-o4L" secondAttribute="leading" constant="5" id="PfW-Gd-u2h"/>
                         <constraint firstItem="CYx-ux-RMo" firstAttribute="leading" secondItem="5x1-O2-o4L" secondAttribute="leading" id="Rd8-Bw-vh2"/>
                         <constraint firstItem="2Ke-dt-CXx" firstAttribute="centerY" secondItem="5x1-O2-o4L" secondAttribute="centerY" id="ZrF-j4-v6x"/>
                         <constraint firstItem="2Ke-dt-CXx" firstAttribute="leading" secondItem="5x1-O2-o4L" secondAttribute="leading" constant="20" id="b0J-1d-dmY"/>
                         <constraint firstAttribute="trailing" secondItem="CYx-ux-RMo" secondAttribute="trailing" id="l6p-ru-ivx"/>
+                        <constraint firstAttribute="trailing" secondItem="4tY-fO-wct" secondAttribute="trailing" id="uzZ-YB-kim"/>
+                        <constraint firstAttribute="bottom" secondItem="4tY-fO-wct" secondAttribute="bottom" id="vR6-p8-5IW"/>
                         <constraint firstItem="rcp-L1-tyT" firstAttribute="centerY" secondItem="5x1-O2-o4L" secondAttribute="centerY" id="yuE-yz-0Cv"/>
                     </constraints>
                 </view>
@@ -59,25 +72,25 @@
                             <state key="normal" title="收藏"/>
                         </button>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8p-Yi-FAp">
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="Zrs-wZ-day"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2s7-Mf-fDa">
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="JHu-wU-jHP"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKH-np-Sh8">
-                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="1" id="H8B-gP-Xeg"/>
                             </constraints>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="ZA0-Yv-vlW" firstAttribute="width" secondItem="bxl-AG-f8z" secondAttribute="width" id="1Ka-bh-ei6"/>
                         <constraint firstAttribute="bottom" secondItem="bxl-AG-f8z" secondAttribute="bottom" id="3sB-ex-M7x"/>
@@ -127,15 +140,24 @@
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                         </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PvN-pJ-wwk">
+                            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="t7Q-iS-Phn"/>
+                            </constraints>
+                        </view>
                     </subviews>
-                    <color key="backgroundColor" red="0.51980086430000005" green="1" blue="0.26102932249999999" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
+                        <constraint firstItem="PvN-pJ-wwk" firstAttribute="leading" secondItem="1bm-0p-3h2" secondAttribute="leading" constant="10" id="0Eq-vn-J8J"/>
+                        <constraint firstAttribute="bottom" secondItem="PvN-pJ-wwk" secondAttribute="bottom" id="4Ip-94-JNR"/>
                         <constraint firstItem="dH5-It-cOU" firstAttribute="centerY" secondItem="1bm-0p-3h2" secondAttribute="centerY" id="50B-WS-mDN"/>
                         <constraint firstItem="wg5-QV-HZ3" firstAttribute="leading" secondItem="1bm-0p-3h2" secondAttribute="leading" id="BBT-wo-v0x"/>
                         <constraint firstItem="QwL-0Y-JR4" firstAttribute="centerY" secondItem="1bm-0p-3h2" secondAttribute="centerY" id="D6e-aN-xD3"/>
                         <constraint firstAttribute="bottom" secondItem="wg5-QV-HZ3" secondAttribute="bottom" id="IuS-ye-rVN"/>
                         <constraint firstAttribute="trailing" secondItem="wg5-QV-HZ3" secondAttribute="trailing" id="JZY-DS-A3H"/>
                         <constraint firstAttribute="height" constant="40" id="YWC-9l-hoY"/>
+                        <constraint firstAttribute="trailing" secondItem="PvN-pJ-wwk" secondAttribute="trailing" id="gJP-Ze-zXd"/>
                         <constraint firstItem="dH5-It-cOU" firstAttribute="leading" secondItem="1bm-0p-3h2" secondAttribute="leading" constant="10" id="pa5-D3-NFp"/>
                         <constraint firstItem="QwL-0Y-JR4" firstAttribute="leading" secondItem="dH5-It-cOU" secondAttribute="trailing" constant="15" id="wWn-Je-iyX"/>
                         <constraint firstItem="wg5-QV-HZ3" firstAttribute="top" secondItem="1bm-0p-3h2" secondAttribute="top" id="zeH-fa-uUP"/>
@@ -147,28 +169,36 @@
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <inset key="titleEdgeInsets" minX="-45" minY="30" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="12" minY="-10" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="待付款" image="payment"/>
+                            <state key="normal" title="待付款" image="payment">
+                                <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xyM-Da-RPG">
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <inset key="titleEdgeInsets" minX="-38" minY="30" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="23" minY="-10" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="待使用" image="beUsed"/>
+                            <state key="normal" title="待使用" image="beUsed">
+                                <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gFW-15-K8Z">
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <inset key="titleEdgeInsets" minX="-30" minY="30" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="23" minY="-15" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="待评价" image="evaluate"/>
+                            <state key="normal" title="待评价" image="evaluate">
+                                <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeh-pw-CeU">
                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                             <inset key="titleEdgeInsets" minX="-30" minY="30" maxX="0.0" maxY="0.0"/>
                             <inset key="imageEdgeInsets" minX="23" minY="-15" maxX="0.0" maxY="0.0"/>
-                            <state key="normal" title="退款/售后" image="refund"/>
+                            <state key="normal" title="退款/售后" image="refund">
+                                <color key="titleColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstAttribute="bottom" secondItem="xyM-Da-RPG" secondAttribute="bottom" id="3ye-64-e0Y"/>
                         <constraint firstItem="jeh-pw-CeU" firstAttribute="width" secondItem="R26-TF-8HN" secondAttribute="width" id="4t9-zf-O6n"/>
@@ -190,7 +220,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.90588235289999997" green="0.90588235289999997" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="5x1-O2-o4L" secondAttribute="trailing" id="0Mx-jx-YI6"/>
                 <constraint firstAttribute="trailing" secondItem="1bm-0p-3h2" secondAttribute="trailing" id="17g-Bd-8xK"/>
@@ -212,6 +242,7 @@
     </objects>
     <resources>
         <image name="beUsed" width="29" height="19"/>
+        <image name="defaultUserIcon" width="50" height="50"/>
         <image name="evaluate" width="29" height="27"/>
         <image name="order" width="82" height="80"/>
         <image name="payment" width="41" height="26"/>

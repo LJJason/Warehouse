@@ -30,9 +30,12 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationItem.title = @"我的";
     TRMeHeaderView *meHeader = [TRMeHeaderView meHeaderView];
+    
+    
     self.meHeader = meHeader;
     
     [self.headerView addSubview:meHeader];
+    self.tableView.tableFooterView = [[UIView alloc] init];
     
 }
 

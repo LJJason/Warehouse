@@ -64,6 +64,9 @@
 		C2B10B061DAFDF01003332FB /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B10B051DAFDF01003332FB /* Me.storyboard */; };
 		C2B10B091DAFE0F1003332FB /* TRMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B10B081DAFE0F1003332FB /* TRMeHeaderView.m */; };
 		C2B10B0B1DAFE0FC003332FB /* TRMeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */; };
+		C2C0B5AE1DB13ADB0099AF31 /* LoginAndRegist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C0B5AD1DB13ADB0099AF31 /* LoginAndRegist.storyboard */; };
+		C2C0B5B11DB145AF0099AF31 /* TRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C0B5B01DB145AF0099AF31 /* TRLoginViewController.m */; };
+		C2C0B5B41DB14ACE0099AF31 /* TRRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C0B5B31DB14ACE0099AF31 /* TRRegistViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -189,6 +192,11 @@
 		C2B10B071DAFE0F1003332FB /* TRMeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeHeaderView.h; sourceTree = "<group>"; };
 		C2B10B081DAFE0F1003332FB /* TRMeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeHeaderView.m; sourceTree = "<group>"; };
 		C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRMeHeaderView.xib; sourceTree = "<group>"; };
+		C2C0B5AD1DB13ADB0099AF31 /* LoginAndRegist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginAndRegist.storyboard; sourceTree = "<group>"; };
+		C2C0B5AF1DB145AF0099AF31 /* TRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLoginViewController.h; sourceTree = "<group>"; };
+		C2C0B5B01DB145AF0099AF31 /* TRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLoginViewController.m; sourceTree = "<group>"; };
+		C2C0B5B21DB14ACE0099AF31 /* TRRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRegistViewController.h; sourceTree = "<group>"; };
+		C2C0B5B31DB14ACE0099AF31 /* TRRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRegistViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -381,6 +389,7 @@
 		C2915AA51D8D3E7D00842952 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C2C0B5A91DB131E70099AF31 /* LoginAndRegist */,
 				B227CAC71DB070A8005E13D4 /* Lib */,
 				C29E7B551DAB7BCB00327F92 /* Tool */,
 				C2915AAA1D8D3E7D00842952 /* Home */,
@@ -592,6 +601,42 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C2C0B5A91DB131E70099AF31 /* LoginAndRegist */ = {
+			isa = PBXGroup;
+			children = (
+				C2C0B5AA1DB131E70099AF31 /* Controller */,
+				C2C0B5AB1DB131E70099AF31 /* Model */,
+				C2C0B5AC1DB131E70099AF31 /* View */,
+			);
+			path = LoginAndRegist;
+			sourceTree = "<group>";
+		};
+		C2C0B5AA1DB131E70099AF31 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C2C0B5AF1DB145AF0099AF31 /* TRLoginViewController.h */,
+				C2C0B5B01DB145AF0099AF31 /* TRLoginViewController.m */,
+				C2C0B5B21DB14ACE0099AF31 /* TRRegistViewController.h */,
+				C2C0B5B31DB14ACE0099AF31 /* TRRegistViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C2C0B5AB1DB131E70099AF31 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C2C0B5AC1DB131E70099AF31 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C2C0B5AD1DB13ADB0099AF31 /* LoginAndRegist.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		E509FA414993010A967070B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -716,6 +761,7 @@
 				C2915A7F1D8D378D00842952 /* Assets.xcassets in Resources */,
 				B2773C0A1DACC1E200B0A899 /* GFVoiceView.xib in Resources */,
 				B2773C081DACC1E200B0A899 /* GFVideoView.xib in Resources */,
+				C2C0B5AE1DB13ADB0099AF31 /* LoginAndRegist.storyboard in Resources */,
 				C29E7B5F1DAB805700327F92 /* TRNoInternetConnectionView.xib in Resources */,
 				B2773C011DACC1E200B0A899 /* GFPieceCell.xib in Resources */,
 				C2B10B0B1DAFE0FC003332FB /* TRMeHeaderView.xib in Resources */,
@@ -809,6 +855,7 @@
 				B2773C031DACC1E200B0A899 /* GFRecommendTagsCell.m in Sources */,
 				C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */,
 				B23969DC1DAA378900F2904A /* TRCircleTableViewController.m in Sources */,
+				C2C0B5B11DB145AF0099AF31 /* TRLoginViewController.m in Sources */,
 				B2773BFE1DACC1E200B0A899 /* GFPictureView.m in Sources */,
 				B2773BFD1DACC1E200B0A899 /* GFCommentHeaderView.m in Sources */,
 				930BDCA51DAACD6300BAE473 /* TRTourViewController.m in Sources */,
@@ -829,6 +876,7 @@
 				C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */,
 				C2915AC21D8D407000842952 /* TRTabBarController.m in Sources */,
 				C2915ABD1D8D3E7D00842952 /* main.m in Sources */,
+				C2C0B5B41DB14ACE0099AF31 /* TRRegistViewController.m in Sources */,
 				C2959F711DAB1D01009B75FB /* TRConst.m in Sources */,
 				B2773BDC1DACC19F00B0A899 /* GFCommentViewController.m in Sources */,
 				B2773C1D1DACC3B700B0A899 /* NSDate+GFExtension.m in Sources */,
