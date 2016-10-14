@@ -14,9 +14,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *postTimelbl;
 @property (weak, nonatomic) IBOutlet UIImageView *iconImage;
 @property (weak, nonatomic) IBOutlet UIButton *praiseUserBtn;
-- (IBAction)likeClickAction:(UIButton *)sender forEvent:(UIEvent *)event;
+
 @property (weak, nonatomic) IBOutlet UIButton *commentCountBtn;
-- (IBAction)commentClickAction:(UIButton *)sender forEvent:(UIEvent *)event;
+
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *postCellrowHeight;
 
 @end
 
@@ -33,7 +34,14 @@
 //    self.iconImage.image = [UIImage imageNamed:posts.icon];
 //    [[SDWebImageDownloader sharedDownloader] setValue:@"iPhone" forHTTPHeaderField:@"User-Agent"];
     [self.iconImage sd_setImageWithURL:[NSURL URLWithString:posts.icon]];
-    TRGLog(@"%@",posts.icon);
+//    TRGLog(@"%@",posts.icon);
+    TRGLog(@"%@",self.posts.praiseUser);
+    NSString *users = [posts.praiseUser componentsJoinedByString:@","];
+    NSRange range = [users rangeOfString:@"13426545523"];
+    
+    TRGLog(@"%@",users);
+    
+    self.praiseUserBtn.enabled = range.length ? NO : YES;
 }
 
 
@@ -49,8 +57,39 @@
 }
 
 - (IBAction)likeClickAction:(UIButton *)sender forEvent:(UIEvent *)event {
-    
     sender.enabled = NO;
+    NSMutableDictionary *parament = [NSMutableDictionary dictionary];
+    parament[@"uid"] = @"13426545523";
+    parament[@"ID"] =  @(self.posts.ID);
+    
+    [TRHttpTool POST:@"http://192.168.61.79:8080/TRHouse/like" parameters:parament success:^(id responseObject) {
+        
+        NSInteger state = [responseObject[@"state"] integerValue];
+        if (state) {
+            
+            if (self.likeBlock) {
+                self.likeBlock(self, parament[@"uid"]);
+            }
+            
+        }else{
+            
+            sender.enabled = YES;
+            [Toast makeText:@"点赞失败"];
+
+            
+        }
+        
+        
+        
+    } failure:^(NSError *error) {
+        sender.enabled = YES;
+        [Toast makeText:@"请检查网络连接"];
+        
+    }];
+    
+    
+    
+    
     
     if (!sender.enabled) {
         

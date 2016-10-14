@@ -7,6 +7,7 @@
 //
 
 #import "TRMeHeaderView.h"
+#import "TRLoginViewController.h"
 
 @implementation TRMeHeaderView
 
@@ -20,6 +21,13 @@
 
 + (instancetype)meHeaderView {
     return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil] firstObject];
+}
+- (IBAction)loginOrMe {
+    
+    TRLoginViewController *loginVc = [TRLoginViewController instantiateInitialViewControllerWithStoryboardName:@"LoginAndRegist"];
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:loginVc animated:YES completion:nil];
+    
 }
 
 @end

@@ -22,7 +22,7 @@
 /** 帖子创建时间 */
 @property (nonatomic,copy) NSString *posttime;
 /** 点赞的用户 */
-@property (nonatomic,strong) NSArray *praiseUser;
+@property (nonatomic,strong) NSMutableArray *praiseUser;
 /** 发帖用户id(手机号码) */
 @property (nonatomic,copy) NSString *userid;
 /** 发帖用户昵称 */
