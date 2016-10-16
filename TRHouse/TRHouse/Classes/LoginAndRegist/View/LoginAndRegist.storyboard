@@ -154,10 +154,15 @@
                     </view>
                     <navigationItem key="navigationItem" title="注册" id="Uai-yj-NwH">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="btC-G8-aJj">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oAf-OU-EDP">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oAf-OU-EDP">
+                                <rect key="frame" x="16" y="11" width="52" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <inset key="contentEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="返回" image="navigationButtonReturn">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="back" destination="Jhd-kK-9s5" eventType="touchUpInside" id="Tq9-b7-Dkd"/>
                                 </connections>
@@ -174,6 +179,7 @@
         <image name="defaultUserIcon" width="50" height="50"/>
         <image name="login_bg" width="1242" height="2208"/>
         <image name="login_close_icon" width="16" height="16"/>
+        <image name="navigationButtonReturn" width="15" height="21"/>
         <image name="pwdBox" width="280" height="40"/>
         <image name="userNamebox" width="280" height="40"/>
     </resources>
