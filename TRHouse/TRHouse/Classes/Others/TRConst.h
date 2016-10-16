@@ -15,3 +15,15 @@ UIKIT_EXTERN NSString * const TRNewsUrl;
 /*** 欢乐笑语汇的接口 */
 UIKIT_EXTERN NSString * const TRHappyUrl;
 
+/*** 获取验证码的接口 */
+UIKIT_EXTERN NSString * const TRGetVcCodeUrl;
+
+/*** 注册的接口 */
+UIKIT_EXTERN NSString * const TRRegistUrl;
+
+/*** 登录的接口 */
+UIKIT_EXTERN NSString * const TRLoginUrl;
+
+
+
+

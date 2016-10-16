@@ -10,4 +10,7 @@
 
 @interface TRLoginViewController : UIViewController
 
+/** 刷新数据 */
+@property (nonatomic, copy) void (^refreshDataBlock)();
+
 @end

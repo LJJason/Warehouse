@@ -7,8 +7,8 @@
 //
 
 #import "TRMeHeaderView.h"
-#import "TRLoginViewController.h"
 
+#import "TRAccountTool.h"
 @implementation TRMeHeaderView
 
 /*
@@ -24,9 +24,13 @@
 }
 - (IBAction)loginOrMe {
     
-    TRLoginViewController *loginVc = [TRLoginViewController instantiateInitialViewControllerWithStoryboardName:@"LoginAndRegist"];
-    
-    [[UIApplication sharedApplication].keyWindow.rootViewController presentViewController:loginVc animated:YES completion:nil];
+    if ([TRAccountTool account]) {
+        
+    }else {//没有登录
+        if (self.loginBlock) {
+            self.loginBlock();
+        }
+    }
     
 }
 
