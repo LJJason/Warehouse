@@ -8,6 +8,7 @@
 
 #import "TRMeTableViewController.h"
 #import "TRMeHeaderView.h"
+#import "TRLoginViewController.h"
 
 @interface TRMeTableViewController ()
 @property (weak, nonatomic) IBOutlet UIView *headerView;
@@ -28,14 +29,29 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    
+    
+}
+
+/**
+ *  设置tableView和nav相关
+ */
+- (void) setupHeaderViewAndNav{
+    
     self.navigationItem.title = @"我的";
+    
     TRMeHeaderView *meHeader = [TRMeHeaderView meHeaderView];
-    
-    
     self.meHeader = meHeader;
     
     [self.headerView addSubview:meHeader];
     self.tableView.tableFooterView = [[UIView alloc] init];
+    meHeader.loginBlock = ^{
+        TRLoginViewController *loginVc = [TRLoginViewController instantiateInitialViewControllerWithStoryboardName:@"LoginAndRegist"];
+        
+        
+        [self presentViewController:loginVc animated:YES completion:nil];
+    };
     
 }
 
