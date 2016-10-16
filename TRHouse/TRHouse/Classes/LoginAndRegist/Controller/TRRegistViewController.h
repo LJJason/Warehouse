@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TRRegistViewController : UIViewController
+@interface TRRegistViewController : UITableViewController
 
 /** 点击返回按钮 */
 @property (nonatomic, copy) void (^cancelBlock)();

@@ -55,6 +55,15 @@
 		C2915ABD1D8D3E7D00842952 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915AB91D8D3E7D00842952 /* main.m */; };
 		C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C2915ABA1D8D3E7D00842952 /* TRHouse.xcdatamodeld */; };
 		C2915AC21D8D407000842952 /* TRTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915AC11D8D407000842952 /* TRTabBarController.m */; };
+		C29163EC1DB3CE6700769BA1 /* TRGetVcCodeParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C29163E91DB3CE6700769BA1 /* TRGetVcCodeParam.m */; };
+		C29163ED1DB3CE6700769BA1 /* TRRegistParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C29163EB1DB3CE6700769BA1 /* TRRegistParam.m */; };
+		C29163F01DB3CE7400769BA1 /* TRRegistTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C29163EF1DB3CE7400769BA1 /* TRRegistTool.m */; };
+		C29163F31DB3CF0E00769BA1 /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = C29163F21DB3CF0E00769BA1 /* Utilities.m */; };
+		C29163F71DB3D7F900769BA1 /* TRProgressTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C29163F61DB3D7F900769BA1 /* TRProgressTool.m */; };
+		C29163FC1DB3E05F00769BA1 /* TRAccountParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C29163FB1DB3E05F00769BA1 /* TRAccountParam.m */; };
+		C29163FF1DB3E07300769BA1 /* TRAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C29163FE1DB3E07300769BA1 /* TRAccountTool.m */; };
+		C29164021DB3E0BC00769BA1 /* TRAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = C29164011DB3E0BC00769BA1 /* TRAccount.m */; };
+		C29164061DB3E15100769BA1 /* TRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C29164051DB3E15100769BA1 /* TRUser.m */; };
 		C2959F711DAB1D01009B75FB /* TRConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C2959F701DAB1D01009B75FB /* TRConst.m */; };
 		C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */; };
 		C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */; };
@@ -177,6 +186,24 @@
 		C2915ABB1D8D3E7D00842952 /* TRHouse.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TRHouse.xcdatamodel; sourceTree = "<group>"; };
 		C2915AC01D8D407000842952 /* TRTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTabBarController.h; sourceTree = "<group>"; };
 		C2915AC11D8D407000842952 /* TRTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTabBarController.m; sourceTree = "<group>"; };
+		C29163E81DB3CE6700769BA1 /* TRGetVcCodeParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGetVcCodeParam.h; sourceTree = "<group>"; };
+		C29163E91DB3CE6700769BA1 /* TRGetVcCodeParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGetVcCodeParam.m; sourceTree = "<group>"; };
+		C29163EA1DB3CE6700769BA1 /* TRRegistParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRegistParam.h; sourceTree = "<group>"; };
+		C29163EB1DB3CE6700769BA1 /* TRRegistParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRegistParam.m; sourceTree = "<group>"; };
+		C29163EE1DB3CE7400769BA1 /* TRRegistTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRegistTool.h; sourceTree = "<group>"; };
+		C29163EF1DB3CE7400769BA1 /* TRRegistTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRegistTool.m; sourceTree = "<group>"; };
+		C29163F11DB3CF0E00769BA1 /* Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
+		C29163F21DB3CF0E00769BA1 /* Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		C29163F51DB3D7F900769BA1 /* TRProgressTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRProgressTool.h; sourceTree = "<group>"; };
+		C29163F61DB3D7F900769BA1 /* TRProgressTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRProgressTool.m; sourceTree = "<group>"; };
+		C29163FA1DB3E05F00769BA1 /* TRAccountParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAccountParam.h; sourceTree = "<group>"; };
+		C29163FB1DB3E05F00769BA1 /* TRAccountParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRAccountParam.m; sourceTree = "<group>"; };
+		C29163FD1DB3E07300769BA1 /* TRAccountTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAccountTool.h; sourceTree = "<group>"; };
+		C29163FE1DB3E07300769BA1 /* TRAccountTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRAccountTool.m; sourceTree = "<group>"; };
+		C29164001DB3E0BC00769BA1 /* TRAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRAccount.h; sourceTree = "<group>"; };
+		C29164011DB3E0BC00769BA1 /* TRAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRAccount.m; sourceTree = "<group>"; };
+		C29164041DB3E15100769BA1 /* TRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRUser.h; sourceTree = "<group>"; };
+		C29164051DB3E15100769BA1 /* TRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRUser.m; sourceTree = "<group>"; };
 		C2959F6F1DAB1D01009B75FB /* TRConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRConst.h; sourceTree = "<group>"; };
 		C2959F701DAB1D01009B75FB /* TRConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRConst.m; sourceTree = "<group>"; };
 		C297FAEF1DAA1B4100F7CC61 /* UIView+GFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GFExtension.h"; sourceTree = "<group>"; };
@@ -237,6 +264,8 @@
 		B227CAC71DB070A8005E13D4 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				C29163F11DB3CF0E00769BA1 /* Utilities.h */,
+				C29163F21DB3CF0E00769BA1 /* Utilities.m */,
 				B227CAC91DB070BD005E13D4 /* Toast.h */,
 				B227CAC81DB070BD005E13D4 /* Toast.m */,
 			);
@@ -510,6 +539,7 @@
 		C2915AB61D8D3E7D00842952 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				C29164031DB3E13B00769BA1 /* Model */,
 				C29E7B5A1DAB803700327F92 /* View */,
 				C297FAEE1DAA1B2A00F7CC61 /* Category */,
 				C2915ABF1D8D404E00842952 /* Controller */,
@@ -537,6 +567,64 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		C29163E61DB3CE4200769BA1 /* Regist */ = {
+			isa = PBXGroup;
+			children = (
+				C29163EE1DB3CE7400769BA1 /* TRRegistTool.h */,
+				C29163EF1DB3CE7400769BA1 /* TRRegistTool.m */,
+				C29163E71DB3CE5900769BA1 /* Param */,
+			);
+			path = Regist;
+			sourceTree = "<group>";
+		};
+		C29163E71DB3CE5900769BA1 /* Param */ = {
+			isa = PBXGroup;
+			children = (
+				C29163E81DB3CE6700769BA1 /* TRGetVcCodeParam.h */,
+				C29163E91DB3CE6700769BA1 /* TRGetVcCodeParam.m */,
+				C29163EA1DB3CE6700769BA1 /* TRRegistParam.h */,
+				C29163EB1DB3CE6700769BA1 /* TRRegistParam.m */,
+			);
+			path = Param;
+			sourceTree = "<group>";
+		};
+		C29163F41DB3D7EC00769BA1 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				C29163F51DB3D7F900769BA1 /* TRProgressTool.h */,
+				C29163F61DB3D7F900769BA1 /* TRProgressTool.m */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		C29163F81DB3E05000769BA1 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				C29163FD1DB3E07300769BA1 /* TRAccountTool.h */,
+				C29163FE1DB3E07300769BA1 /* TRAccountTool.m */,
+				C29163F91DB3E05000769BA1 /* Param */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		C29163F91DB3E05000769BA1 /* Param */ = {
+			isa = PBXGroup;
+			children = (
+				C29163FA1DB3E05F00769BA1 /* TRAccountParam.h */,
+				C29163FB1DB3E05F00769BA1 /* TRAccountParam.m */,
+			);
+			path = Param;
+			sourceTree = "<group>";
+		};
+		C29164031DB3E13B00769BA1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C29164041DB3E15100769BA1 /* TRUser.h */,
+				C29164051DB3E15100769BA1 /* TRUser.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C297FAEE1DAA1B2A00F7CC61 /* Category */ = {
 			isa = PBXGroup;
 			children = (
@@ -559,6 +647,9 @@
 		C29E7B551DAB7BCB00327F92 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				C29163F81DB3E05000769BA1 /* Account */,
+				C29163F41DB3D7EC00769BA1 /* HUD */,
+				C29163E61DB3CE4200769BA1 /* Regist */,
 				C29E7B561DAB7BCB00327F92 /* Http */,
 			);
 			path = Tool;
@@ -625,6 +716,8 @@
 		C2C0B5AB1DB131E70099AF31 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C29164001DB3E0BC00769BA1 /* TRAccount.h */,
+				C29164011DB3E0BC00769BA1 /* TRAccount.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -845,20 +938,26 @@
 				B2773BDF1DACC19F00B0A899 /* GFPieceViewController.m in Sources */,
 				B2773C231DACC44000B0A899 /* UIImage+GFExtension.m in Sources */,
 				B2F788F61DAF26B600D74716 /* TRPost.m in Sources */,
+				C29163ED1DB3CE6700769BA1 /* TRRegistParam.m in Sources */,
 				B2773C161DACC23300B0A899 /* GFRecommendTags.m in Sources */,
 				C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */,
 				B2773C141DACC23300B0A899 /* GFPiece.m in Sources */,
 				B2773C201DACC41200B0A899 /* UIImageView+GFExtension.m in Sources */,
+				C29163FF1DB3E07300769BA1 /* TRAccountTool.m in Sources */,
 				B2773C021DACC1E200B0A899 /* GFProgressView.m in Sources */,
 				B2773C001DACC1E200B0A899 /* GFPieceCell.m in Sources */,
 				B2773C091DACC1E200B0A899 /* GFVoiceView.m in Sources */,
+				C29164021DB3E0BC00769BA1 /* TRAccount.m in Sources */,
 				B2773C031DACC1E200B0A899 /* GFRecommendTagsCell.m in Sources */,
 				C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */,
+				C29164061DB3E15100769BA1 /* TRUser.m in Sources */,
 				B23969DC1DAA378900F2904A /* TRCircleTableViewController.m in Sources */,
 				C2C0B5B11DB145AF0099AF31 /* TRLoginViewController.m in Sources */,
 				B2773BFE1DACC1E200B0A899 /* GFPictureView.m in Sources */,
 				B2773BFD1DACC1E200B0A899 /* GFCommentHeaderView.m in Sources */,
 				930BDCA51DAACD6300BAE473 /* TRTourViewController.m in Sources */,
+				C29163F01DB3CE7400769BA1 /* TRRegistTool.m in Sources */,
+				C29163F71DB3D7F900769BA1 /* TRProgressTool.m in Sources */,
 				C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */,
 				B2773C1A1DACC2A500B0A899 /* GFConst.m in Sources */,
 				B2773BDE1DACC19F00B0A899 /* GFEssenceViewController.m in Sources */,
@@ -866,6 +965,7 @@
 				B2773C071DACC1E200B0A899 /* GFVideoView.m in Sources */,
 				B2F788F91DAF673C00D74716 /* TRPostTableViewCell.m in Sources */,
 				B2773C171DACC23300B0A899 /* GFUser.m in Sources */,
+				C29163F31DB3CF0E00769BA1 /* Utilities.m in Sources */,
 				C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */,
 				B2773BFB1DACC1E200B0A899 /* GFCommentCell.m in Sources */,
 				B2773C261DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m in Sources */,
@@ -873,6 +973,7 @@
 				B227CACA1DB070BD005E13D4 /* Toast.m in Sources */,
 				C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */,
 				B2773C051DACC1E200B0A899 /* GFSeeBigPictureViewController.m in Sources */,
+				C29163EC1DB3CE6700769BA1 /* TRGetVcCodeParam.m in Sources */,
 				C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */,
 				C2915AC21D8D407000842952 /* TRTabBarController.m in Sources */,
 				C2915ABD1D8D3E7D00842952 /* main.m in Sources */,
@@ -883,6 +984,7 @@
 				C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */,
 				C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */,
 				C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */,
+				C29163FC1DB3E05F00769BA1 /* TRAccountParam.m in Sources */,
 				C2B10B091DAFE0F1003332FB /* TRMeHeaderView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
