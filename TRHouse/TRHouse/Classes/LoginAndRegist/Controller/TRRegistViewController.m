@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -27,7 +28,18 @@
 
 - (IBAction)back {
     
-    [self dismissViewControllerAnimated:NO completion:nil];
+    [UIView animateWithDuration:0.25 animations:^{
+        self.navigationController.view.frame = CGRectMake(TRScreenW + 20, 0, TRScreenW, TRScreenH);
+        self.annimation();
+        [self.view endEditing:YES];
+    } completion:^(BOOL finished) {
+        
+        if (self.cancelBlock) {
+            self.cancelBlock();
+        }
+    }];
+    
+    
 }
 
 

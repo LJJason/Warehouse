@@ -8,6 +8,7 @@
 
 #import "TRLoginViewController.h"
 #import "TRNavigationController.h"
+#import "TRRegistViewController.h"
 
 @interface TRLoginViewController ()
 
@@ -31,11 +32,34 @@
 - (IBAction)registClick {
     TRNavigationController *nav = [TRNavigationController viewControllerWtithStoryboardName:@"LoginAndRegist" identifier:@"TRNavigationController"];
     
-    [self presentViewController:nav animated:NO completion:nil];
+    
+    [self pushToNextViewController:nav];
     
     
 }
 
+- (void)pushToNextViewController:(UIViewController *)nav {
+    
+    TRRegistViewController *vc = nav.childViewControllers[0];
+    vc.cancelBlock = ^ {
+        
+        if (self.childViewControllers.count > 0) {
+            [self setValue:nil forKey:@"childViewControllers"];
+        }
+    };
+    vc.annimation = ^ {
+        self.view.x = 0;
+    };
+    
+    [[UIApplication sharedApplication].keyWindow addSubview:nav.view];
+    [self addChildViewController:nav];
+    nav.view.frame = CGRectMake(TRScreenW, 0, TRScreenW, TRScreenH);
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.view.x = -TRScreenW + 300;
+        nav.view.x = 0;
+    }];
+}
 
 
 
