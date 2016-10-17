@@ -18,10 +18,46 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentCountBtn;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *postCellrowHeight;
+@property (weak, nonatomic) IBOutlet UIView *imageContent;
+
 
 @end
 
 @implementation TRPostTableViewCell
+
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    CGFloat margin = 10;
+    
+    CGFloat imgW = (TRScreenW - (margin * 4) ) / 3;
+    CGFloat imgH = imgW;
+    
+    NSInteger imageCount ;
+    
+    if (self.posts.postphotos.count <= 9) {
+        imageCount = self.posts.postphotos.count;
+    }
+//    else if (self.posts.postphotos.count > 9){
+//        imageCount = 9;
+//    }
+
+    
+    
+    for (int i = 0; i < imageCount; i++) {
+       
+    CGFloat ImgX = (i%3)*(imgW+margin);
+    CGFloat ImgY = (i/3)*(imgH+margin);
+        
+        UIImageView *imageV = [[UIImageView alloc]initWithFrame:CGRectMake(ImgX, ImgY, imgW, imgH)];
+        imageV.backgroundColor = [UIColor redColor];
+        [_imageContent addSubview:imageV];
+        
+        
+    }
+    
+    
+    
+}
 
 
 - (void)setPosts:(TRPost *)posts{
@@ -29,6 +65,7 @@
     
     self.postContent.text = posts.postcontent;
     self.userNamelbl.text = posts.userName;
+    self.postTimelbl.text = posts.posttime;
     [self.praiseUserBtn setTitle:[NSString stringWithFormat:@"%zd",posts.praiseUser.count]forState:UIControlStateNormal];
     [self.commentCountBtn setTitle:[NSString stringWithFormat:@"%zd",posts.commentCount]forState:UIControlStateNormal];
 //    self.iconImage.image = [UIImage imageNamed:posts.icon];
@@ -42,18 +79,8 @@
     TRLog(@"%@",users);
     
     self.praiseUserBtn.enabled = range.length ? NO : YES;
-}
-
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    
+    
 }
 
 - (IBAction)likeClickAction:(UIButton *)sender forEvent:(UIEvent *)event {
