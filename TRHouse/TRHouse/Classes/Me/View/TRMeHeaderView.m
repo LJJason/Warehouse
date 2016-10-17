@@ -10,6 +10,7 @@
 
 #import "TRAccountTool.h"
 #import "TRPersonal.h"
+#import "TRPersonalHomeViewController.h"
 
 @interface TRMeHeaderView ()
 
@@ -51,6 +52,11 @@
 - (IBAction)loginOrMe {
     
     if ([TRAccountTool account]) {
+        TRPersonalHomeViewController *homeVc = [TRPersonalHomeViewController viewControllerWtithStoryboardName:@"Me" identifier:@"TRPersonalHomeViewController"];
+        
+        homeVc.personal = self.personal;
+        
+        [[UIApplication sharedApplication].keyWindow.rootViewController.childViewControllers[3] pushViewController:homeVc animated:YES];
         
     }else {//没有登录
         if (self.loginBlock) {

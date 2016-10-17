@@ -14,3 +14,6 @@ NSString * const TRRegistUrl = @"http://localhost:8080/TRHouse/regist";
 /*** 登录的接口 */
 NSString * const TRLoginUrl = @"http://yearwood.top/TRHouse/login";
 
+/*** 登录的接口 */
+NSString * const TRGetPersonalUrl = @"http://localhost:8080/TRHouse/getPersonal";
+

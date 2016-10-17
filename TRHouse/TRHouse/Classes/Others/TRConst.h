@@ -24,6 +24,9 @@ UIKIT_EXTERN NSString * const TRRegistUrl;
 /*** 登录的接口 */
 UIKIT_EXTERN NSString * const TRLoginUrl;
 
+/*** 登录的接口 */
+UIKIT_EXTERN NSString * const TRGetPersonalUrl;
+
 
 
 

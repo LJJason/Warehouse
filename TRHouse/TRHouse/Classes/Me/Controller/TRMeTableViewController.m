@@ -9,6 +9,11 @@
 #import "TRMeTableViewController.h"
 #import "TRMeHeaderView.h"
 #import "TRLoginViewController.h"
+#import "TRAccountTool.h"
+#import "TRGetPersonalParam.h"
+#import "TRAccount.h"
+#import "TRProgressTool.h"
+#import "TRPersonal.h"
 
 @interface TRMeTableViewController ()
 
@@ -32,8 +37,8 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     // 设置tableView和nav相关
     [self setupHeaderViewAndNav];
-    
-    
+    //加载数据
+    [self refreshData];
 }
 
 /**
@@ -50,19 +55,52 @@
     self.tableView.tableFooterView = [[UIView alloc] init];
     meHeader.loginBlock = ^{
         [self loginVc];
-        
     };
     
 }
 
+/**
+ *  跳转控制器
+ */
 - (void)loginVc {
     
     TRLoginViewController *loginVc = [TRLoginViewController instantiateInitialViewControllerWithStoryboardName:@"LoginAndRegist"];
     loginVc.refreshDataBlock = ^ {
-        
+        [self refreshData];
     };
     [self presentViewController:loginVc animated:YES completion:nil];
 }
+
+
+/**
+ *  加载数据
+ */
+- (void)refreshData {
+    if ([TRAccountTool account]) {
+        
+        [TRProgressTool showWithMessage:@"正在加载..."];
+        
+        TRGetPersonalParam *param = [[TRGetPersonalParam alloc] init];
+        TRAccount *account = [TRAccountTool account];
+        param.uid = account.uid;
+        
+        [TRHttpTool GET:TRGetPersonalUrl parameters:param.mj_keyValues success:^(id responseObject) {
+            [TRProgressTool dismiss];
+            self.meHeader.personal = [TRPersonal mj_objectWithKeyValues:responseObject];
+            
+        } failure:^(NSError *error) {
+            
+            [TRProgressTool dismiss];
+            [Toast makeText:@"请检查网络连接!!"];
+            
+        }];
+        
+        
+    }
+    
+    
+}
+
 
 - (void)viewWillLayoutSubviews {
     

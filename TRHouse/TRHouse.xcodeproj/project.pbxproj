@@ -77,6 +77,8 @@
 		C2C0B5AE1DB13ADB0099AF31 /* LoginAndRegist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C0B5AD1DB13ADB0099AF31 /* LoginAndRegist.storyboard */; };
 		C2C0B5B11DB145AF0099AF31 /* TRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C0B5B01DB145AF0099AF31 /* TRLoginViewController.m */; };
 		C2C0B5B41DB14ACE0099AF31 /* TRRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C0B5B31DB14ACE0099AF31 /* TRRegistViewController.m */; };
+		C2C409B01DB4ACFC00AC1F12 /* TRGetPersonalParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C409AF1DB4ACFC00AC1F12 /* TRGetPersonalParam.m */; };
+		C2C409B31DB4B3E900AC1F12 /* TRPersonalHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C409B21DB4B3E900AC1F12 /* TRPersonalHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -227,6 +229,10 @@
 		C2C0B5B01DB145AF0099AF31 /* TRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLoginViewController.m; sourceTree = "<group>"; };
 		C2C0B5B21DB14ACE0099AF31 /* TRRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRegistViewController.h; sourceTree = "<group>"; };
 		C2C0B5B31DB14ACE0099AF31 /* TRRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRegistViewController.m; sourceTree = "<group>"; };
+		C2C409AE1DB4ACFC00AC1F12 /* TRGetPersonalParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGetPersonalParam.h; sourceTree = "<group>"; };
+		C2C409AF1DB4ACFC00AC1F12 /* TRGetPersonalParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGetPersonalParam.m; sourceTree = "<group>"; };
+		C2C409B11DB4B3E900AC1F12 /* TRPersonalHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPersonalHomeViewController.h; sourceTree = "<group>"; };
+		C2C409B21DB4B3E900AC1F12 /* TRPersonalHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPersonalHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -535,6 +541,8 @@
 			children = (
 				C2771D731D8F8BEA006972CD /* TRMeTableViewController.h */,
 				C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */,
+				C2C409B11DB4B3E900AC1F12 /* TRPersonalHomeViewController.h */,
+				C2C409B21DB4B3E900AC1F12 /* TRPersonalHomeViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -650,6 +658,7 @@
 		C29E7B551DAB7BCB00327F92 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				C2C409AC1DB4ACC700AC1F12 /* GetPersonal */,
 				C29163F81DB3E05000769BA1 /* Account */,
 				C29163F41DB3D7EC00769BA1 /* HUD */,
 				C29163E61DB3CE4200769BA1 /* Regist */,
@@ -733,6 +742,23 @@
 				C2C0B5AD1DB13ADB0099AF31 /* LoginAndRegist.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C2C409AC1DB4ACC700AC1F12 /* GetPersonal */ = {
+			isa = PBXGroup;
+			children = (
+				C2C409AD1DB4ACDF00AC1F12 /* Param */,
+			);
+			path = GetPersonal;
+			sourceTree = "<group>";
+		};
+		C2C409AD1DB4ACDF00AC1F12 /* Param */ = {
+			isa = PBXGroup;
+			children = (
+				C2C409AE1DB4ACFC00AC1F12 /* TRGetPersonalParam.h */,
+				C2C409AF1DB4ACFC00AC1F12 /* TRGetPersonalParam.m */,
+			);
+			path = Param;
 			sourceTree = "<group>";
 		};
 		E509FA414993010A967070B5 /* Frameworks */ = {
@@ -961,6 +987,7 @@
 				B2773BFE1DACC1E200B0A899 /* GFPictureView.m in Sources */,
 				B2773BFD1DACC1E200B0A899 /* GFCommentHeaderView.m in Sources */,
 				930BDCA51DAACD6300BAE473 /* TRTourViewController.m in Sources */,
+				C2C409B01DB4ACFC00AC1F12 /* TRGetPersonalParam.m in Sources */,
 				C29163F01DB3CE7400769BA1 /* TRRegistTool.m in Sources */,
 				C29163F71DB3D7F900769BA1 /* TRProgressTool.m in Sources */,
 				C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */,
@@ -979,6 +1006,7 @@
 				B227CACA1DB070BD005E13D4 /* Toast.m in Sources */,
 				C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */,
 				B2773C051DACC1E200B0A899 /* GFSeeBigPictureViewController.m in Sources */,
+				C2C409B31DB4B3E900AC1F12 /* TRPersonalHomeViewController.m in Sources */,
 				C29163EC1DB3CE6700769BA1 /* TRGetVcCodeParam.m in Sources */,
 				C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */,
 				C2915AC21D8D407000842952 /* TRTabBarController.m in Sources */,
