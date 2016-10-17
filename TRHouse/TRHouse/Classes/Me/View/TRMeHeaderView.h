@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class TRPersonal;
 
 @interface TRMeHeaderView : UIView
 
@@ -14,5 +15,9 @@
 
 /** 登录 */
 @property (nonatomic, copy) void (^loginBlock)();
+
+
+/** TRPersonal模型 */
+@property (nonatomic, strong) TRPersonal *personal;
 
 @end

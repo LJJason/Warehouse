@@ -240,6 +240,11 @@
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="2Ke-dt-CXx" id="7C4-yU-UYh"/>
+                <outlet property="interactiveBtn" destination="bxl-AG-f8z" id="pNu-3U-FOv"/>
+                <outlet property="userNameLbl" destination="rcp-L1-tyT" id="0GI-Hw-lM8"/>
+            </connections>
             <point key="canvasLocation" x="34" y="-118.5"/>
         </view>
     </objects>
