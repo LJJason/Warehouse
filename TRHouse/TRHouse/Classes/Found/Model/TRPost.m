@@ -52,5 +52,19 @@
     
     
 }
-
+- (CGFloat)cellRowHeight{
+    NSInteger imageCount = 0;
+    if (self.postphotos.count <= 9) {
+        imageCount = self.postphotos.count;
+    }else if (self.postphotos.count > 9){
+        imageCount = 9;
+    }
+    CGFloat margin = 10;
+    CGFloat imgW = (TRScreenW - (margin * 4) ) / 3;
+    
+    CGSize textSize = [self.postcontent boundingRectWithSize:CGSizeMake(TRScreenW-20, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:14]} context:nil].size;
+    CGFloat rowHeight = (imageCount / 3+1) * imgW+90+textSize.height;
+    
+    return rowHeight;
+}
 @end

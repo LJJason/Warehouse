@@ -12,7 +12,9 @@
 
 @property (nonatomic,strong) TRPost *posts;
 
+
 /** 点赞按钮回调 */
 @property (nonatomic,copy) void (^likeBlock)(TRPostTableViewCell *cell, NSString *user);
+
 
 @end

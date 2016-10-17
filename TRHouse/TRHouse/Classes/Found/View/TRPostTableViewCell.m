@@ -26,57 +26,64 @@
 @implementation TRPostTableViewCell
 
 - (void)awakeFromNib{
-    [super awakeFromNib];
+    
+    
+}
+
+- (void)setPosts:(TRPost *)posts{
+    _posts = posts;
+    
+    
+    
     CGFloat margin = 10;
     
     CGFloat imgW = (TRScreenW - (margin * 4) ) / 3;
     CGFloat imgH = imgW;
     
-    NSInteger imageCount ;
+    NSInteger imageCount = 0 ;
     
     if (self.posts.postphotos.count <= 9) {
         imageCount = self.posts.postphotos.count;
-    }
-//    else if (self.posts.postphotos.count > 9){
-//        imageCount = 9;
-//    }
-
+    }else if (self.posts.postphotos.count > 9){
+            imageCount = 9;
+        }
     
     
+    TRLog(@"%zd",imageCount);
     for (int i = 0; i < imageCount; i++) {
-       
+        
     CGFloat ImgX = (i%3)*(imgW+margin);
     CGFloat ImgY = (i/3)*(imgH+margin);
         
-        UIImageView *imageV = [[UIImageView alloc]initWithFrame:CGRectMake(ImgX, ImgY, imgW, imgH)];
-        imageV.backgroundColor = [UIColor redColor];
-        [_imageContent addSubview:imageV];
+    UIImageView *imageV = [[UIImageView alloc]initWithFrame:CGRectMake(ImgX, ImgY, imgW, imgH)];
         
+    [imageV sd_setImageWithURL:posts.postphotos[i]];
+    [_imageContent addSubview:imageV];
+    imageV.contentMode = UIViewContentModeScaleAspectFill;
+    imageV.clipsToBounds = YES;
         
+       
     }
     
+    CGFloat rowHeight = (imageCount / 3+1) * imgW;
+    
+    _postCellrowHeight.constant = rowHeight;
+    
+    _posts.cellRowHeight = rowHeight+123;
     
     
-}
 
-
-- (void)setPosts:(TRPost *)posts{
-    _posts = posts;
-    
     self.postContent.text = posts.postcontent;
     self.userNamelbl.text = posts.userName;
     self.postTimelbl.text = posts.posttime;
     [self.praiseUserBtn setTitle:[NSString stringWithFormat:@"%zd",posts.praiseUser.count]forState:UIControlStateNormal];
     [self.commentCountBtn setTitle:[NSString stringWithFormat:@"%zd",posts.commentCount]forState:UIControlStateNormal];
-//    self.iconImage.image = [UIImage imageNamed:posts.icon];
-//    [[SDWebImageDownloader sharedDownloader] setValue:@"iPhone" forHTTPHeaderField:@"User-Agent"];
-    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:posts.icon]];
-//    TRGLog(@"%@",posts.icon);
-    TRLog(@"%@",self.posts.praiseUser);
+
+    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:posts.icon]placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+
+  
     NSString *users = [posts.praiseUser componentsJoinedByString:@","];
     NSRange range = [users rangeOfString:@"13426545523"];
-    
-    TRLog(@"%@",users);
     
     self.praiseUserBtn.enabled = range.length ? NO : YES;
     

@@ -17,6 +17,7 @@
 @property (nonatomic,strong) NSMutableArray *posts;
 
 
+
 @end
 
 @implementation TRCircleTableViewController
@@ -82,6 +83,14 @@
     };
     
     return cell;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    TRPost *post = self.posts[indexPath.row];
+    
+    return post.cellRowHeight;
+    
 }
 
 
