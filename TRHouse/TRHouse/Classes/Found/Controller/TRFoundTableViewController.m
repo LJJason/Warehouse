@@ -45,7 +45,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    TRGLog(@"%@", indexPath);
+    TRLog(@"%@", indexPath);
     
     if (indexPath.section == 2 && indexPath.row == 2) {
         

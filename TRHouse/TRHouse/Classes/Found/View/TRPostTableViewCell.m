@@ -35,11 +35,11 @@
 //    [[SDWebImageDownloader sharedDownloader] setValue:@"iPhone" forHTTPHeaderField:@"User-Agent"];
     [self.iconImage sd_setImageWithURL:[NSURL URLWithString:posts.icon]];
 //    TRGLog(@"%@",posts.icon);
-    TRGLog(@"%@",self.posts.praiseUser);
+    TRLog(@"%@",self.posts.praiseUser);
     NSString *users = [posts.praiseUser componentsJoinedByString:@","];
     NSRange range = [users rangeOfString:@"13426545523"];
     
-    TRGLog(@"%@",users);
+    TRLog(@"%@",users);
     
     self.praiseUserBtn.enabled = range.length ? NO : YES;
 }
