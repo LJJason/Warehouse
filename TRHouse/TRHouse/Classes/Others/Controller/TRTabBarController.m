@@ -38,7 +38,7 @@
     //首页
     [self addChildViewController:[[TRHomeTableViewController alloc] init] withTitle:@"生活" withImageName:@"tabbar_Home"];
     //互动
-    [self addChildViewController:[[TRInteractiveTableViewController alloc] init] withTitle:@"互动" withImageName:@"tabbar_inter"];
+    [self addChildViewController:[TRInteractiveTableViewController instantiateInitialViewControllerWithStoryboardName:@"Interactive"] withTitle:@"互动" withImageName:@"tabbar_inter"];
     //发现
     [self addChildViewController:[TRFoundTableViewController instantiateInitialViewControllerWithStoryboardName:@"TRFound"] withTitle:@"发现" withImageName:@"tabbar_found"];
     //我

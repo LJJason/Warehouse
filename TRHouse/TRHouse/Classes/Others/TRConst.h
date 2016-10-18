@@ -33,5 +33,8 @@ UIKIT_EXTERN NSString * const TRGetMeInteractiveUrl;
 /*** 获取一拍即合内容的接口 */
 UIKIT_EXTERN NSString * const TRGetInteractiveUrl;
 
+/*** 获取所有互动的接口 */
+UIKIT_EXTERN NSString * const TRGetAllInteractiveUrl;
+
 
 

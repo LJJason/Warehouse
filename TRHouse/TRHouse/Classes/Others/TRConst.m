@@ -23,3 +23,6 @@ NSString * const TRGetMeInteractiveUrl = @"http://localhost:8080/TRHouse/getMeIn
 
 /*** 获取一拍即合内容的接口 */
 NSString * const TRGetInteractiveUrl = @"http://localhost:8080/TRHouse/getInteractive";
+
+/*** 获取所有互动的接口 */
+NSString * const TRGetAllInteractiveUrl = @"http://localhost:8080/TRHouse/getAllInteractive";
