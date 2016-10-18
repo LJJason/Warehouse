@@ -29,12 +29,18 @@
     
     UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:@"退出当前登录" message:@"你确定要退出当前登录吗?" preferredStyle:UIAlertControllerStyleAlert];
     
-    
+    __weak typeof(self) weakSelf = self;
     
     [alertControl addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
         // 点击确定按钮的时候, 会调用这个block
+        
+        if (weakSelf.logoutBlock) {
+            weakSelf.logoutBlock();
+        }
+        
         [TRAccountTool saveAccount:nil];
-        [self.navigationController popViewControllerAnimated:YES];
+        [TRAccountTool saveLoginState:NO];
+        [weakSelf.navigationController popViewControllerAnimated:YES];
         
     }]];
     
@@ -45,7 +51,10 @@
 }
 
 
-
+- (void)dealloc
+{
+    TRLog(@"gg");
+}
 
 /*
 #pragma mark - Navigation

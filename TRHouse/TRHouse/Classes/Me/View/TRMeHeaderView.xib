@@ -66,6 +66,9 @@
                             <state key="normal" title="互动">
                                 <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="interactiveBtnClick" destination="iN0-l3-epB" eventType="touchUpInside" id="ihe-5z-XY6"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRS-2C-qCi">
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>

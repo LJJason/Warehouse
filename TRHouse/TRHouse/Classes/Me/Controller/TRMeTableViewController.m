@@ -15,6 +15,7 @@
 #import "TRProgressTool.h"
 #import "TRPersonal.h"
 #import "TRPersonalHomeViewController.h"
+#import "TRSettingsTableViewController.h"
 
 
 @interface TRMeTableViewController ()
@@ -78,28 +79,42 @@
  *  加载数据
  */
 - (void)refreshData {
-    if ([TRAccountTool account]) {
-        
-        [TRProgressTool showWithMessage:@"正在加载..."];
-        
-        TRGetPersonalParam *param = [[TRGetPersonalParam alloc] init];
-        TRAccount *account = [TRAccountTool account];
-        param.uid = account.uid;
-        
-        [TRHttpTool GET:TRGetPersonalUrl parameters:param.mj_keyValues success:^(id responseObject) {
-            [TRProgressTool dismiss];
-            self.meHeader.personal = [TRPersonal mj_objectWithKeyValues:responseObject];
-            
-        } failure:^(NSError *error) {
-            
-            [TRProgressTool dismiss];
-            [Toast makeText:@"请检查网络连接!!"];
-            
-        }];
-        
-        
-    }
     
+    [TRProgressTool showWithMessage:@"正在加载..."];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    
+        if ([TRAccountTool loginState]) {
+            
+            if ([TRAccountTool account]) {
+                
+                TRGetPersonalParam *param = [[TRGetPersonalParam alloc] init];
+                TRAccount *account = [TRAccountTool account];
+                param.uid = account.uid;
+                
+                [TRHttpTool GET:TRGetPersonalUrl parameters:param.mj_keyValues success:^(id responseObject) {
+                    [TRProgressTool dismiss];
+                    self.meHeader.personal = [TRPersonal mj_objectWithKeyValues:responseObject];
+                    
+                } failure:^(NSError *error) {
+                    
+                    [TRProgressTool dismiss];
+                    [Toast makeText:@"请检查网络连接!!"];
+                    
+                }];
+                
+            }
+            
+        }else {
+            
+            TRPersonal *personal = [[TRPersonal  alloc] init];
+            personal.userName = @"登录/注册";
+            personal.icon = @"";
+            personal.count = 0;
+            self.meHeader.personal = personal;
+            [TRProgressTool dismiss];
+        }
+    });
     
 }
 
@@ -115,15 +130,15 @@
  */
 - (IBAction)myHomePage {
     
-    if ([TRAccountTool account]) {//已登录
+    if ([TRAccountTool loginState]) {//已登录
         
-        
-        
+        TRPersonalHomeViewController *homeVc = [TRPersonalHomeViewController viewControllerWtithStoryboardName:@"Me" identifier:@"TRPersonalHomeViewController"];
+        homeVc.personal = self.meHeader.personal;
+        [self.navigationController pushViewController:homeVc animated:YES];
     }else {//未登录
         //跳转登录界面
         [self loginVc];
     }
-    
     
 }
 
@@ -131,22 +146,35 @@
  *  个人设置
  */
 - (IBAction)mySetting {
-}
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-    id destinationViewController = segue.destinationViewController;
     
-    if ([destinationViewController isKindOfClass:[TRPersonalHomeViewController class]]) {
-        TRPersonalHomeViewController *homeVc = destinationViewController;
-        homeVc.personal = self.meHeader.personal;
+    if ([TRAccountTool loginState]) {//已登录
+        
+        TRSettingsTableViewController *settingVc = [TRSettingsTableViewController viewControllerWtithStoryboardName:@"Me" identifier:@"TRSettingsTableViewController"];
+        settingVc.logoutBlock = ^ {
+            [self refreshData];
+        };
+        [self.navigationController pushViewController:settingVc animated:YES];
+    }else {//未登录
+        //跳转登录界面
+        [self loginVc];
     }
     
 }
+
+//#pragma mark - Navigation
+//
+//// In a storyboard-based application, you will often want to do a little preparation before navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//    id destinationViewController = segue.destinationViewController;
+//    
+//    if ([destinationViewController isKindOfClass:[TRPersonalHomeViewController class]]) {
+//        TRPersonalHomeViewController *homeVc = destinationViewController;
+//        homeVc.personal = self.meHeader.personal;
+//    }
+//    
+//}
 
 
 @end

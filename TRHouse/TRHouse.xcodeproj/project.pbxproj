@@ -80,6 +80,7 @@
 		C2C0B5B11DB145AF0099AF31 /* TRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C0B5B01DB145AF0099AF31 /* TRLoginViewController.m */; };
 		C2C0B5B41DB14ACE0099AF31 /* TRRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C0B5B31DB14ACE0099AF31 /* TRRegistViewController.m */; };
 		C2C0E9041DB5F47A002222B2 /* TRSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C0E9031DB5F47A002222B2 /* TRSettingsTableViewController.m */; };
+		C2C0E90A1DB60DEA002222B2 /* TRMeInteractiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C0E9091DB60DEA002222B2 /* TRMeInteractiveTableViewController.m */; };
 		C2C409B01DB4ACFC00AC1F12 /* TRGetPersonalParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C409AF1DB4ACFC00AC1F12 /* TRGetPersonalParam.m */; };
 		C2C409B31DB4B3E900AC1F12 /* TRPersonalHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C409B21DB4B3E900AC1F12 /* TRPersonalHomeViewController.m */; };
 /* End PBXBuildFile section */
@@ -237,6 +238,8 @@
 		C2C0B5B31DB14ACE0099AF31 /* TRRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRegistViewController.m; sourceTree = "<group>"; };
 		C2C0E9021DB5F47A002222B2 /* TRSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSettingsTableViewController.h; sourceTree = "<group>"; };
 		C2C0E9031DB5F47A002222B2 /* TRSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSettingsTableViewController.m; sourceTree = "<group>"; };
+		C2C0E9081DB60DEA002222B2 /* TRMeInteractiveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeInteractiveTableViewController.h; sourceTree = "<group>"; };
+		C2C0E9091DB60DEA002222B2 /* TRMeInteractiveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeInteractiveTableViewController.m; sourceTree = "<group>"; };
 		C2C409AE1DB4ACFC00AC1F12 /* TRGetPersonalParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGetPersonalParam.h; sourceTree = "<group>"; };
 		C2C409AF1DB4ACFC00AC1F12 /* TRGetPersonalParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGetPersonalParam.m; sourceTree = "<group>"; };
 		C2C409B11DB4B3E900AC1F12 /* TRPersonalHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPersonalHomeViewController.h; sourceTree = "<group>"; };
@@ -556,6 +559,8 @@
 				C2C409B21DB4B3E900AC1F12 /* TRPersonalHomeViewController.m */,
 				C2C0E9021DB5F47A002222B2 /* TRSettingsTableViewController.h */,
 				C2C0E9031DB5F47A002222B2 /* TRSettingsTableViewController.m */,
+				C2C0E9081DB60DEA002222B2 /* TRMeInteractiveTableViewController.h */,
+				C2C0E9091DB60DEA002222B2 /* TRMeInteractiveTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1031,6 +1036,7 @@
 				C2959F711DAB1D01009B75FB /* TRConst.m in Sources */,
 				B2773BDC1DACC19F00B0A899 /* GFCommentViewController.m in Sources */,
 				B2773C1D1DACC3B700B0A899 /* NSDate+GFExtension.m in Sources */,
+				C2C0E90A1DB60DEA002222B2 /* TRMeInteractiveTableViewController.m in Sources */,
 				C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */,
 				C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */,
 				C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */,

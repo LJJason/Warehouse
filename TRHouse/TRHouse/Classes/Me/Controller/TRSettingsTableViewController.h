@@ -10,6 +10,7 @@
 
 @interface TRSettingsTableViewController : UITableViewController
 
-
+/** 退出登录 */
+@property (nonatomic, copy) void (^logoutBlock)();
 
 @end
