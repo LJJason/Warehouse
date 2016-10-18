@@ -8,6 +8,7 @@
 
 #import "TRPostTableViewCell.h"
 #import "TRPost.h"
+
 @interface TRPostTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *postContent;
 @property (weak, nonatomic) IBOutlet UILabel *userNamelbl;
@@ -18,7 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentCountBtn;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *postCellrowHeight;
-@property (weak, nonatomic) IBOutlet UIView *imageContent;
+
 
 
 @end
@@ -26,6 +27,8 @@
 @implementation TRPostTableViewCell
 
 - (void)awakeFromNib{
+    
+    [super awakeFromNib];
     
     
 }
@@ -35,42 +38,7 @@
     
     
     
-    CGFloat margin = 10;
-    
-    CGFloat imgW = (TRScreenW - (margin * 4) ) / 3;
-    CGFloat imgH = imgW;
-    
-    NSInteger imageCount = 0 ;
-    
-    if (self.posts.postphotos.count <= 9) {
-        imageCount = self.posts.postphotos.count;
-    }else if (self.posts.postphotos.count > 9){
-            imageCount = 9;
-        }
-    
-    
-    TRLog(@"%zd",imageCount);
-    for (int i = 0; i < imageCount; i++) {
-        
-    CGFloat ImgX = (i%3)*(imgW+margin);
-    CGFloat ImgY = (i/3)*(imgH+margin);
-        
-    UIImageView *imageV = [[UIImageView alloc]initWithFrame:CGRectMake(ImgX, ImgY, imgW, imgH)];
-        
-    [imageV sd_setImageWithURL:posts.postphotos[i]];
-    [_imageContent addSubview:imageV];
-    imageV.contentMode = UIViewContentModeScaleAspectFill;
-    imageV.clipsToBounds = YES;
-        
-       
-    }
-    
-    CGFloat rowHeight = (imageCount / 3+1) * imgW;
-    
-    _postCellrowHeight.constant = rowHeight;
-    
-    _posts.cellRowHeight = rowHeight+123;
-    
+      
     
 
     self.postContent.text = posts.postcontent;
