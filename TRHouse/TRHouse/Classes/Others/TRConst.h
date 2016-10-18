@@ -27,6 +27,11 @@ UIKIT_EXTERN NSString * const TRLoginUrl;
 /*** 登录的接口 */
 UIKIT_EXTERN NSString * const TRGetPersonalUrl;
 
+/*** 获取别人发来的一拍即合请求的接口 */
+UIKIT_EXTERN NSString * const TRGetMeInteractiveUrl;
+
+/*** 获取一拍即合内容的接口 */
+UIKIT_EXTERN NSString * const TRGetInteractiveUrl;
 
 
 

@@ -69,6 +69,9 @@
 		C2959F711DAB1D01009B75FB /* TRConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C2959F701DAB1D01009B75FB /* TRConst.m */; };
 		C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */; };
 		C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */; };
+		C29AD5B01DB6491B00510D06 /* TRMeInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5AF1DB6491B00510D06 /* TRMeInteractive.m */; };
+		C29AD5B31DB6603600510D06 /* TRMeInterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5B21DB6603600510D06 /* TRMeInterTableViewCell.m */; };
+		C29AD5B61DB66C9A00510D06 /* TRMeDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5B51DB66C9A00510D06 /* TRMeDetailTableViewController.m */; };
 		C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C29E7B581DAB7C2600327F92 /* TRHttpTool.m */; };
 		C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C29E7B5C1DAB805700327F92 /* TRNoInternetConnectionView.m */; };
 		C29E7B5F1DAB805700327F92 /* TRNoInternetConnectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C29E7B5D1DAB805700327F92 /* TRNoInternetConnectionView.xib */; };
@@ -220,6 +223,12 @@
 		C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GFExtension.m"; sourceTree = "<group>"; };
 		C297FAF11DAA1B4100F7CC61 /* UIViewController+TRExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TRExtension.h"; sourceTree = "<group>"; };
 		C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TRExtension.m"; sourceTree = "<group>"; };
+		C29AD5AE1DB6491B00510D06 /* TRMeInteractive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeInteractive.h; sourceTree = "<group>"; };
+		C29AD5AF1DB6491B00510D06 /* TRMeInteractive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeInteractive.m; sourceTree = "<group>"; };
+		C29AD5B11DB6603600510D06 /* TRMeInterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeInterTableViewCell.h; sourceTree = "<group>"; };
+		C29AD5B21DB6603600510D06 /* TRMeInterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeInterTableViewCell.m; sourceTree = "<group>"; };
+		C29AD5B41DB66C9A00510D06 /* TRMeDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeDetailTableViewController.h; sourceTree = "<group>"; };
+		C29AD5B51DB66C9A00510D06 /* TRMeDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeDetailTableViewController.m; sourceTree = "<group>"; };
 		C29E7B571DAB7C2600327F92 /* TRHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRHttpTool.h; sourceTree = "<group>"; };
 		C29E7B581DAB7C2600327F92 /* TRHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRHttpTool.m; sourceTree = "<group>"; };
 		C29E7B5B1DAB805700327F92 /* TRNoInternetConnectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNoInternetConnectionView.h; sourceTree = "<group>"; };
@@ -561,6 +570,8 @@
 				C2C0E9031DB5F47A002222B2 /* TRSettingsTableViewController.m */,
 				C2C0E9081DB60DEA002222B2 /* TRMeInteractiveTableViewController.h */,
 				C2C0E9091DB60DEA002222B2 /* TRMeInteractiveTableViewController.m */,
+				C29AD5B41DB66C9A00510D06 /* TRMeDetailTableViewController.h */,
+				C29AD5B51DB66C9A00510D06 /* TRMeDetailTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -709,6 +720,8 @@
 			children = (
 				C2B5855C1DB4759D00C37479 /* TRPersonal.h */,
 				C2B5855D1DB4759D00C37479 /* TRPersonal.m */,
+				C29AD5AE1DB6491B00510D06 /* TRMeInteractive.h */,
+				C29AD5AF1DB6491B00510D06 /* TRMeInteractive.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -720,6 +733,8 @@
 				C2B10B071DAFE0F1003332FB /* TRMeHeaderView.h */,
 				C2B10B081DAFE0F1003332FB /* TRMeHeaderView.m */,
 				C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */,
+				C29AD5B11DB6603600510D06 /* TRMeInterTableViewCell.h */,
+				C29AD5B21DB6603600510D06 /* TRMeInterTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1016,6 +1031,7 @@
 				C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */,
 				B2773C071DACC1E200B0A899 /* GFVideoView.m in Sources */,
 				B2F788F91DAF673C00D74716 /* TRPostTableViewCell.m in Sources */,
+				C29AD5B31DB6603600510D06 /* TRMeInterTableViewCell.m in Sources */,
 				B2773C171DACC23300B0A899 /* GFUser.m in Sources */,
 				C2B5855E1DB4759D00C37479 /* TRPersonal.m in Sources */,
 				C29163F31DB3CF0E00769BA1 /* Utilities.m in Sources */,
@@ -1039,6 +1055,8 @@
 				C2C0E90A1DB60DEA002222B2 /* TRMeInteractiveTableViewController.m in Sources */,
 				C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */,
 				C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */,
+				C29AD5B01DB6491B00510D06 /* TRMeInteractive.m in Sources */,
+				C29AD5B61DB66C9A00510D06 /* TRMeDetailTableViewController.m in Sources */,
 				C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */,
 				C29163FC1DB3E05F00769BA1 /* TRAccountParam.m in Sources */,
 				C2B10B091DAFE0F1003332FB /* TRMeHeaderView.m in Sources */,

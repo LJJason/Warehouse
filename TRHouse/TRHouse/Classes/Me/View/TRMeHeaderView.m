@@ -43,7 +43,7 @@
     
     //设置互动
     [self.interactiveBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%zd", personal.count]] forState:UIControlStateNormal];
-    
+    TRLog(@"%zd", personal.count);
 }
 
 + (instancetype)meHeaderView {
@@ -71,7 +71,7 @@
 - (IBAction)interactiveBtnClick {
     
     if ([TRAccountTool loginState]) {
-        TRMeInteractiveTableViewController *inter = [[TRMeInteractiveTableViewController alloc] init];
+        TRMeInteractiveTableViewController *inter = [TRMeInteractiveTableViewController viewControllerWtithStoryboardName:@"Me" identifier:@"TRMeInteractiveTableViewController"];
         
         [[UIApplication sharedApplication].keyWindow.rootViewController.childViewControllers[3] pushViewController:inter animated:YES];
         

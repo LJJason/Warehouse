@@ -7,8 +7,17 @@
 //
 
 #import "TRMeInteractiveTableViewController.h"
+#import "TRAccountTool.h"
+#import "TRAccount.h"
+#import "TRMeInteractive.h"
+#import "TRMeInterTableViewCell.h"
+#import "TRMeDetailTableViewController.h"
 
 @interface TRMeInteractiveTableViewController ()
+
+
+/** 存储一拍即合的请求 */
+@property (nonatomic, strong) NSArray *meInteractive;
 
 @end
 
@@ -17,84 +26,107 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    [self setupNav];
+    //加载数据
+    [self setupRefresh];
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+//设置导航条相关
+- (void)setupNav{
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     self.navigationItem.title = @"互动";
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+/**
+ *  添加刷新控件
+ */
+- (void)setupRefresh{
+    
+    //添加下拉刷新控件
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadData)];
+    //根据拖拽比例自动切换透明度
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    
+    //一进来就开始刷新
+    [self.tableView.mj_header beginRefreshing];
+    
+}
+
+
+- (void)loadData{
+    
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    TRAccount *account = [TRAccountTool account];
+    param[@"uid"] = account.uid;
+    
+    [TRHttpTool GET:TRGetMeInteractiveUrl parameters:param success:^(id responseObject) {
+        
+        self.meInteractive = [TRMeInteractive mj_objectArrayWithKeyValuesArray:responseObject];
+        //刷新表格
+        [self.tableView reloadData];
+        
+        //结束刷新
+        [self.tableView.mj_header endRefreshing];
+        
+        
+    } failure:^(NSError *error) {
+        //结束刷新
+        [self.tableView.mj_header endRefreshing];
+    }];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    if (section == 1) {
+        return 0;
+    }else {
+        return self.meInteractive.count;
+    }
 }
 
-/*
+static NSString * const cellID = @"cellMe";
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    if (indexPath.section == 0) {
+        TRMeInterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+        
+        cell.meInter = self.meInteractive[indexPath.row];
+        
+        return cell;
+        
+    }else {
+        TRMeInterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+        
+        return cell;
+    }
     
-    return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    if (section) {
+        return @"我的互动";
+    }else {
+        return @"互动请求";
+    }
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.section == 0) {
+        TRMeDetailTableViewController *detailVc = [TRMeDetailTableViewController viewControllerWtithStoryboardName:@"Me" identifier:@"TRMeDetailTableViewController"];
+        detailVc.meInter = self.meInteractive[indexPath.row];
+        [self.navigationController pushViewController:detailVc animated:YES];
+    }
+    
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
