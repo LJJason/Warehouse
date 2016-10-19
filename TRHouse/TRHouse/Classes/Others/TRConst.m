@@ -1,6 +1,18 @@
 
 #import <UIKit/UIKit.h>
 
+/*** 首页页的StoryboardName */
+NSString * const TRHomeStoryboardName = @"Home";
+
+/*** 互动页的StoryboardName */
+NSString * const TRInteractiveStoryboardName = @"Interactive";
+
+/*** 发现页的StoryboardName */
+NSString * const TRFoundStoryboardName = @"TRFound";
+
+/*** me页的StoryboardName */
+NSString * const TRMeStoryboardName = @"Me";
+
 /*** 旅游攻略的接口 */
 NSString * const TRTourUrl = @"https://lvyou.baidu.com/notes/";
 NSString * const TRNewsUrl = @"http://www.4908.cn/";
@@ -44,4 +56,12 @@ NSString * const TRSendInteractiveCommentUrl = @"http://localhost:8080/TRHouse/s
 /*** 首页新品推荐的接口 */
 NSString * const TRGetNewRoomUrl = @"http://localhost:8080/TRHouse/getNewRoom";
 
+/*** 首页轮播推荐的接口 */
+NSString * const TRGetRecommendedRoomUrl = @"http://localhost:8080/TRHouse/getRecommendedRoom";
+
+/*** 首页热门的接口 */
+NSString * const TRGetHotRoomUrl = @"http://localhost:8080/TRHouse/getHotRoom";
+
+/*** 首页精选的接口 */
+NSString * const TRGetSelectRoomUrl = @"http://localhost:8080/TRHouse/getSelectRoom";
 

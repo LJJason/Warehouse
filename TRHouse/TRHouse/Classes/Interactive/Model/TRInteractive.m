@@ -45,10 +45,10 @@
             }
             
         }else if(createTime.isYesterday){//昨天
-            fmt.dateFormat = @"昨天 HH:mm:ss";
+            fmt.dateFormat = @"昨天 HH:mm";
             return [fmt stringFromDate:createTime];
         }else{//一天前
-            fmt.dateFormat = @"MM-dd HH:mm:ss";
+            fmt.dateFormat = @"MM-dd HH:mm";
             return [fmt stringFromDate:createTime];
         }
         

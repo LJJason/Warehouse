@@ -53,7 +53,7 @@
 - (IBAction)loginOrMe {
     
     if ([TRAccountTool loginState]) {
-        TRPersonalHomeViewController *homeVc = [TRPersonalHomeViewController viewControllerWtithStoryboardName:@"Me" identifier:@"TRPersonalHomeViewController"];
+        TRPersonalHomeViewController *homeVc = [TRPersonalHomeViewController viewControllerWtithStoryboardName:TRMeStoryboardName identifier:NSStringFromClass([TRPersonalHomeViewController class])];
         
         homeVc.personal = self.personal;
         
@@ -71,7 +71,7 @@
 - (IBAction)interactiveBtnClick {
     
     if ([TRAccountTool loginState]) {
-        TRMeInteractiveTableViewController *inter = [TRMeInteractiveTableViewController viewControllerWtithStoryboardName:@"Me" identifier:@"TRMeInteractiveTableViewController"];
+        TRMeInteractiveTableViewController *inter = [TRMeInteractiveTableViewController viewControllerWtithStoryboardName:TRMeStoryboardName identifier:NSStringFromClass([TRMeInteractiveTableViewController class])];
         
         [[UIApplication sharedApplication].keyWindow.rootViewController.childViewControllers[3] pushViewController:inter animated:YES];
         

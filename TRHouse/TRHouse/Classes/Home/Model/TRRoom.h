@@ -35,6 +35,6 @@
 @property (nonatomic, copy) NSString *phoneNum;
 
 /** 销量 */
-@property (nonatomic, assign) NSInteger *sales;
+@property (nonatomic, assign) NSInteger sales;
 
 @end

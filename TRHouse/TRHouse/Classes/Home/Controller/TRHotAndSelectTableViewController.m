@@ -1,17 +1,20 @@
 //
-//  TRHomeTableViewController.m
+//  TRHotAndSelectTableViewController.m
 //  TRHouse
 //
-//  Created by wgf on 16/9/19.
+//  Created by wgf on 16/10/20.
 //  Copyright © 2016年 wgf. All rights reserved.
 //
 
-#import "TRHomeTableViewController.h"
-#import "TRRoom.h"
+#import "TRHotAndSelectTableViewController.h"
 #import "TRTableViewCell.h"
-#import "TRHomeHeaderView.h"
+#import "TRRoom.h"
 
-@interface TRHomeTableViewController ()
+@interface TRHotAndSelectTableViewController ()
+
+
+/** room模型数组 */
+@property (nonatomic, strong) NSMutableArray *rooms;
 
 /** 互动最大的条数 */
 @property (nonatomic, assign) NSInteger maxCount;
@@ -19,54 +22,19 @@
 /** 当前页码 */
 @property (nonatomic, assign) NSInteger page;
 
-
-/** 新品推荐的模型数组 */
-@property (nonatomic, strong) NSMutableArray *rooms;
-
-
-/** 推荐的模型数组 */
-@property (nonatomic, strong) NSArray *recommendRoom;
-
-
-/** header */
-@property (nonatomic, strong) TRHomeHeaderView *headerView;
-
 @end
 
-@implementation TRHomeTableViewController
+@implementation TRHotAndSelectTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //设置导航条相关
-    [self setupNav];
     
-    [self setupHeader];
+    self.navigationItem.title = self.navTitle;
     
-    //添加刷新控件
     [self setupRefresh];
-    
-    [self loadRecommendData];
 }
 
-- (void)setupHeader{
-    
-    TRHomeHeaderView *header = [[TRHomeHeaderView alloc] init];
-    header.height = 400.0;
-    self.headerView = header;
-    self.tableView.tableHeaderView = header;
-    
-}
-
-/**
- *  设置导航条相关
- */
-- (void)setupNav{
-    self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nav_home"]];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_map"] style:UIBarButtonItemStyleDone target:self action:@selector(mapButtonClick)];
-    self.navigationItem.title = @"首页";
-}
-
-static NSString * const cellId = @"cellId";
+static NSString * const cellId = @"hotCellId";
 
 /**
  *  添加刷新控件
@@ -88,24 +56,6 @@ static NSString * const cellId = @"cellId";
     //注册cell
     [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([TRTableViewCell class]) bundle:nil] forCellReuseIdentifier:cellId];
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    
-    
-}
-
-- (void)loadRecommendData{
-    
-    [TRHttpTool GET:TRGetRecommendedRoomUrl parameters:nil success:^(id responseObject) {
-        
-        self.recommendRoom = [TRRoom mj_objectArrayWithKeyValuesArray:responseObject];
-        self.headerView.rooms = self.recommendRoom;
-        
-    } failure:^(NSError *error) {
-        //结束刷新
-        [self.tableView.mj_header endRefreshing];
-        [Toast makeText:@"加载失败!!"];
-        self.tableView.mj_footer.hidden = NO;
-    }];
-    
 }
 
 /**
@@ -114,7 +64,7 @@ static NSString * const cellId = @"cellId";
 - (void)loadNewRoom{
     
     
-    [TRHttpTool GET:TRGetNewRoomUrl parameters:nil success:^(id responseObject) {
+    [TRHttpTool GET:self.urlStr parameters:nil success:^(id responseObject) {
         
         self.maxCount = [responseObject[@"maxCount"] integerValue];
         
@@ -139,6 +89,7 @@ static NSString * const cellId = @"cellId";
     }];
 }
 
+
 /**
  *  加载更多数据
  */
@@ -148,7 +99,7 @@ static NSString * const cellId = @"cellId";
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"page"] = @(page);
     
-    [TRHttpTool GET:TRGetAllInteractiveUrl parameters:param success:^(id responseObject) {
+    [TRHttpTool GET:self.urlStr parameters:param success:^(id responseObject) {
         
         [self.rooms addObjectsFromArray:[TRRoom mj_objectArrayWithKeyValuesArray:responseObject[@"list"]]];
         
@@ -170,7 +121,6 @@ static NSString * const cellId = @"cellId";
     }];
 }
 
-
 /**
  *  监测footer的状态
  */
@@ -183,19 +133,9 @@ static NSString * const cellId = @"cellId";
     }
 }
 
-#pragma mark - mapButton
-
-- (void)mapButtonClick
-{
-    NSLog(@"%s", __func__);
-    
-}
-
-
-#pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
+    
     return self.rooms.count;
 }
 
@@ -208,11 +148,9 @@ static NSString * const cellId = @"cellId";
     return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"新品推荐";
-}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 130.0;
 }
+
 @end

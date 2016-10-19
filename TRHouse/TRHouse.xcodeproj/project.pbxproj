@@ -46,6 +46,13 @@
 		B29AC81B1DB7455B00AD1C6E /* TRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AC81A1DB7455B00AD1C6E /* TRImageView.m */; };
 		B2F788F61DAF26B600D74716 /* TRPost.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F788F51DAF26B600D74716 /* TRPost.m */; };
 		B2F788F91DAF673C00D74716 /* TRPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F788F81DAF673C00D74716 /* TRPostTableViewCell.m */; };
+		C23A678E1DB79EF500755FFC /* TRTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A678C1DB79EF500755FFC /* TRTableViewCell.m */; };
+		C23A678F1DB79EF500755FFC /* TRTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23A678D1DB79EF500755FFC /* TRTableViewCell.xib */; };
+		C23A67921DB7AB4F00755FFC /* TRHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A67911DB7AB4F00755FFC /* TRHomeHeaderView.m */; };
+		C23A67951DB7ADAC00755FFC /* TRHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A67941DB7ADAC00755FFC /* TRHeaderCell.m */; };
+		C23A67971DB7BFB400755FFC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23A67961DB7BFB400755FFC /* Home.storyboard */; };
+		C23A679A1DB7D03F00755FFC /* TRHotAndSelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A67991DB7D03F00755FFC /* TRHotAndSelectTableViewController.m */; };
+		C23A679D1DB7D5FD00755FFC /* TRRoomDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A679C1DB7D5FD00755FFC /* TRRoomDetailTableViewController.m */; };
 		C26FD4131DB71F9200F9ED4B /* TRInteractiveCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26FD4121DB71F9200F9ED4B /* TRInteractiveCommentCell.m */; };
 		C26FD4161DB7205200F9ED4B /* TRInteractiveComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C26FD4151DB7205200F9ED4B /* TRInteractiveComment.m */; };
 		C26FD4181DB744CD00F9ED4B /* TRInteractiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26FD4171DB744CD00F9ED4B /* TRInteractiveCell.xib */; };
@@ -217,6 +224,18 @@
 		B2F788F81DAF673C00D74716 /* TRPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPostTableViewCell.m; sourceTree = "<group>"; };
 		B6F0BE0F3B86B414511B1FFC /* Pods-TRHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRHouse/Pods-TRHouse.debug.xcconfig"; sourceTree = "<group>"; };
 		C22BD58D1D91106A00C53223 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		C23A678B1DB79EF500755FFC /* TRTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTableViewCell.h; sourceTree = "<group>"; };
+		C23A678C1DB79EF500755FFC /* TRTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTableViewCell.m; sourceTree = "<group>"; };
+		C23A678D1DB79EF500755FFC /* TRTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRTableViewCell.xib; sourceTree = "<group>"; };
+		C23A67901DB7AB4F00755FFC /* TRHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRHomeHeaderView.h; sourceTree = "<group>"; };
+		C23A67911DB7AB4F00755FFC /* TRHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRHomeHeaderView.m; sourceTree = "<group>"; };
+		C23A67931DB7ADAC00755FFC /* TRHeaderCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRHeaderCell.h; sourceTree = "<group>"; };
+		C23A67941DB7ADAC00755FFC /* TRHeaderCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRHeaderCell.m; sourceTree = "<group>"; };
+		C23A67961DB7BFB400755FFC /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		C23A67981DB7D03F00755FFC /* TRHotAndSelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRHotAndSelectTableViewController.h; sourceTree = "<group>"; };
+		C23A67991DB7D03F00755FFC /* TRHotAndSelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRHotAndSelectTableViewController.m; sourceTree = "<group>"; };
+		C23A679B1DB7D5FD00755FFC /* TRRoomDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRoomDetailTableViewController.h; sourceTree = "<group>"; };
+		C23A679C1DB7D5FD00755FFC /* TRRoomDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRoomDetailTableViewController.m; sourceTree = "<group>"; };
 		C26FD4111DB71F9200F9ED4B /* TRInteractiveCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRInteractiveCommentCell.h; sourceTree = "<group>"; };
 		C26FD4121DB71F9200F9ED4B /* TRInteractiveCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRInteractiveCommentCell.m; sourceTree = "<group>"; };
 		C26FD4141DB7205200F9ED4B /* TRInteractiveComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRInteractiveComment.h; sourceTree = "<group>"; };
@@ -511,6 +530,14 @@
 		C26FD41A1DB76D3E00F9ED4B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C23A678B1DB79EF500755FFC /* TRTableViewCell.h */,
+				C23A678C1DB79EF500755FFC /* TRTableViewCell.m */,
+				C23A678D1DB79EF500755FFC /* TRTableViewCell.xib */,
+				C23A67901DB7AB4F00755FFC /* TRHomeHeaderView.h */,
+				C23A67911DB7AB4F00755FFC /* TRHomeHeaderView.m */,
+				C23A67931DB7ADAC00755FFC /* TRHeaderCell.h */,
+				C23A67941DB7ADAC00755FFC /* TRHeaderCell.m */,
+				C23A67961DB7BFB400755FFC /* Home.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -624,6 +651,10 @@
 			children = (
 				C2771D6A1D8F8B89006972CD /* TRHomeTableViewController.h */,
 				C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */,
+				C23A67981DB7D03F00755FFC /* TRHotAndSelectTableViewController.h */,
+				C23A67991DB7D03F00755FFC /* TRHotAndSelectTableViewController.m */,
+				C23A679B1DB7D5FD00755FFC /* TRRoomDetailTableViewController.h */,
+				C23A679C1DB7D5FD00755FFC /* TRRoomDetailTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1138,7 +1169,9 @@
 				C2C0B5AE1DB13ADB0099AF31 /* LoginAndRegist.storyboard in Resources */,
 				C29E7B5F1DAB805700327F92 /* TRNoInternetConnectionView.xib in Resources */,
 				B2773C011DACC1E200B0A899 /* GFPieceCell.xib in Resources */,
+				C23A67971DB7BFB400755FFC /* Home.storyboard in Resources */,
 				C2B10B0B1DAFE0FC003332FB /* TRMeHeaderView.xib in Resources */,
+				C23A678F1DB79EF500755FFC /* TRTableViewCell.xib in Resources */,
 				C29AD5BA1DB6797100510D06 /* Interactive.storyboard in Resources */,
 				C29AD5FC1DB6946E00510D06 /* navi_back@2x.png in Resources */,
 				B23969D81DA9DC3000F2904A /* TRFound.storyboard in Resources */,
@@ -1232,8 +1265,10 @@
 				B2773C141DACC23300B0A899 /* GFPiece.m in Sources */,
 				B2773C201DACC41200B0A899 /* UIImageView+GFExtension.m in Sources */,
 				C29163FF1DB3E07300769BA1 /* TRAccountTool.m in Sources */,
+				C23A679D1DB7D5FD00755FFC /* TRRoomDetailTableViewController.m in Sources */,
 				B2773C021DACC1E200B0A899 /* GFProgressView.m in Sources */,
 				C29AD5F91DB6946E00510D06 /* AlbumNavigationController.m in Sources */,
+				C23A678E1DB79EF500755FFC /* TRTableViewCell.m in Sources */,
 				B2773C001DACC1E200B0A899 /* GFPieceCell.m in Sources */,
 				B2773C091DACC1E200B0A899 /* GFVoiceView.m in Sources */,
 				C29164021DB3E0BC00769BA1 /* TRAccount.m in Sources */,
@@ -1273,6 +1308,7 @@
 				C29AD60B1DB6946E00510D06 /* PhotoPickerModel.m in Sources */,
 				C29AD5C31DB68E3700510D06 /* CZComposeViewController.m in Sources */,
 				B2773BFB1DACC1E200B0A899 /* GFCommentCell.m in Sources */,
+				C23A67921DB7AB4F00755FFC /* TRHomeHeaderView.m in Sources */,
 				B2773C261DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m in Sources */,
 				B2773C151DACC23300B0A899 /* GFPieceComment.m in Sources */,
 				B227CACA1DB070BD005E13D4 /* Toast.m in Sources */,
@@ -1283,10 +1319,12 @@
 				C2E9A3011DB6FACD00F0936D /* TRComposeParam.m in Sources */,
 				B214BF261DB60B72002CDF95 /* ViewController.m in Sources */,
 				C29163EC1DB3CE6700769BA1 /* TRGetVcCodeParam.m in Sources */,
+				C23A67951DB7ADAC00755FFC /* TRHeaderCell.m in Sources */,
 				C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */,
 				C29AD5CA1DB68E5300510D06 /* CZComposePhotosView.m in Sources */,
 				C29AD5CC1DB68E5300510D06 /* CZTextView.m in Sources */,
 				C2915AC21D8D407000842952 /* TRTabBarController.m in Sources */,
+				C23A679A1DB7D03F00755FFC /* TRHotAndSelectTableViewController.m in Sources */,
 				C2915ABD1D8D3E7D00842952 /* main.m in Sources */,
 				C29AD5CB1DB68E5300510D06 /* CZComposeToolBar.m in Sources */,
 				C2C0B5B41DB14ACE0099AF31 /* TRRegistViewController.m in Sources */,

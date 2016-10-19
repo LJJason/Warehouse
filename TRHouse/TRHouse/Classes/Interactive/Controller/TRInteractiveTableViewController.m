@@ -11,6 +11,8 @@
 #import "TRInteractiveCell.h"
 #import "CZComposeViewController.h"
 #import "TRInteractiveCommentViewController.h"
+#import "TRAccountTool.h"
+#import "TRLoginViewController.h"
 
 @interface TRInteractiveTableViewController ()
 
@@ -151,12 +153,34 @@ static NSString * const cellId = @"TRInteractiveCell";
 }
 
 - (void)compose{
-    CZComposeViewController *compVc = [[CZComposeViewController alloc] init];
-    compVc.composeInteractiveSuccessBlock = ^{
-        [self.tableView.mj_header beginRefreshing];
-    };
     
-    [self.navigationController pushViewController:compVc animated:YES];
+    if ([TRAccountTool loginState]) {
+        CZComposeViewController *compVc = [[CZComposeViewController alloc] init];
+        compVc.composeInteractiveSuccessBlock = ^{
+            [self.tableView.mj_header beginRefreshing];
+        };
+        
+        [self.navigationController pushViewController:compVc animated:YES];
+    }else{
+        //没有登录
+        [self loginVc];
+    }
+    
+    
+}
+
+/**
+ *  跳转控制器
+ */
+- (void)loginVc {
+    
+    [Toast makeText:@"请先登录!"];
+    
+    TRLoginViewController *loginVc = [TRLoginViewController instantiateInitialViewControllerWithStoryboardName:@"LoginAndRegist"];
+    loginVc.refreshDataBlock = ^ {
+        
+    };
+    [self presentViewController:loginVc animated:YES completion:nil];
 }
 
 #pragma mark - Table view data source
@@ -182,7 +206,7 @@ static NSString * const cellId = @"TRInteractiveCell";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    TRInteractiveCommentViewController *commentVc = [TRInteractiveCommentViewController viewControllerWtithStoryboardName:@"Interactive" identifier:NSStringFromClass([TRInteractiveCommentViewController class])];
+    TRInteractiveCommentViewController *commentVc = [TRInteractiveCommentViewController viewControllerWtithStoryboardName:TRInteractiveStoryboardName identifier:NSStringFromClass([TRInteractiveCommentViewController class])];
     
     commentVc.inter = self.interactives[indexPath.row];
     [self.navigationController pushViewController:commentVc animated:YES];

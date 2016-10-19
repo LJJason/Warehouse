@@ -8,6 +8,18 @@
 
 #import <UIKit/UIKit.h>
 
+/*** 首页页的StoryboardName */
+UIKIT_EXTERN NSString * const TRHomeStoryboardName;
+
+/*** 互动页的StoryboardName */
+UIKIT_EXTERN NSString * const TRInteractiveStoryboardName;
+
+/*** 发现页的StoryboardName */
+UIKIT_EXTERN NSString * const TRFoundStoryboardName;
+
+/*** me页的StoryboardName */
+UIKIT_EXTERN NSString * const TRMeStoryboardName;
+
 /*** 旅游攻略的接口 */
 UIKIT_EXTERN NSString * const TRTourUrl;
 /*** 奇闻趣事多的接口 */
@@ -53,6 +65,13 @@ UIKIT_EXTERN NSString * const TRSendInteractiveCommentUrl;
 /*** 首页新品推荐的接口 */
 UIKIT_EXTERN NSString * const TRGetNewRoomUrl;
 
+/*** 首页轮播推荐的接口 */
+UIKIT_EXTERN NSString * const TRGetRecommendedRoomUrl;
 
+/*** 首页热门的接口 */
+UIKIT_EXTERN NSString * const TRGetHotRoomUrl;
+
+/*** 首页精选的接口 */
+UIKIT_EXTERN NSString * const TRGetSelectRoomUrl;
 
 

@@ -221,7 +221,6 @@
 // 互动
 - (void)compose
 {
-    
     [self.view endEditing:YES];
     //有图片
     if (self.images.count > 0) {

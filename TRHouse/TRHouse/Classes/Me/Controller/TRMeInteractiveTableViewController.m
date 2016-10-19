@@ -122,7 +122,7 @@ static NSString * const cellID = @"cellMe";
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
     if (indexPath.section == 0) {
-        TRMeDetailTableViewController *detailVc = [TRMeDetailTableViewController viewControllerWtithStoryboardName:@"Me" identifier:@"TRMeDetailTableViewController"];
+        TRMeDetailTableViewController *detailVc = [TRMeDetailTableViewController viewControllerWtithStoryboardName:TRMeStoryboardName identifier:NSStringFromClass([TRMeDetailTableViewController class])];
         detailVc.meInter = self.meInteractive[indexPath.row];
         [self.navigationController pushViewController:detailVc animated:YES];
     }

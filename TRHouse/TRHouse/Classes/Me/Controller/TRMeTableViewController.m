@@ -132,7 +132,7 @@
     
     if ([TRAccountTool loginState]) {//已登录
         
-        TRPersonalHomeViewController *homeVc = [TRPersonalHomeViewController viewControllerWtithStoryboardName:@"Me" identifier:@"TRPersonalHomeViewController"];
+        TRPersonalHomeViewController *homeVc = [TRPersonalHomeViewController viewControllerWtithStoryboardName:TRMeStoryboardName identifier:NSStringFromClass([TRPersonalHomeViewController class])];
         homeVc.personal = self.meHeader.personal;
         [self.navigationController pushViewController:homeVc animated:YES];
     }else {//未登录
@@ -149,7 +149,7 @@
     
     if ([TRAccountTool loginState]) {//已登录
         
-        TRSettingsTableViewController *settingVc = [TRSettingsTableViewController viewControllerWtithStoryboardName:@"Me" identifier:@"TRSettingsTableViewController"];
+        TRSettingsTableViewController *settingVc = [TRSettingsTableViewController viewControllerWtithStoryboardName:TRMeStoryboardName identifier:NSStringFromClass([TRSettingsTableViewController class])];
         settingVc.logoutBlock = ^ {
             [self refreshData];
         };
@@ -161,20 +161,6 @@
     
 }
 
-//#pragma mark - Navigation
-//
-//// In a storyboard-based application, you will often want to do a little preparation before navigation
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    // Get the new view controller using [segue destinationViewController].
-//    // Pass the selected object to the new view controller.
-//    id destinationViewController = segue.destinationViewController;
-//    
-//    if ([destinationViewController isKindOfClass:[TRPersonalHomeViewController class]]) {
-//        TRPersonalHomeViewController *homeVc = destinationViewController;
-//        homeVc.personal = self.meHeader.personal;
-//    }
-//    
-//}
 
 
 @end
