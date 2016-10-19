@@ -5,8 +5,10 @@
 #import "CZComposePhotosView.h"
 #import "TRProgressTool.h"
 #import "AlbumNavigationController.h"
-//#import "CZComposeTool.h"
-//#import "MBProgressHUD+MJ.h"
+#import "TRUploadTool.h"
+#import "TRComposeParam.h"
+#import "TRAccount.h"
+#import "TRAccountTool.h"
 
 
 
@@ -220,10 +222,64 @@
 - (void)compose
 {
     
-
+    [self.view endEditing:YES];
+    
+    [TRProgressTool showWithMessage:@"正在提交..."];
+    //上房间照片
+    [TRUploadTool uploadMoreImage:self.images success:^(NSArray *imagePath) {
+        
+        if (imagePath.count < self.images.count) {
+            
+            [TRProgressTool dismiss];
+            [Toast makeText:@"提交失败!!请检查网络连接"];
+            
+        }else {
+            //存储认证信息
+            [self saveDataWith:imagePath];
+        }
+    }];
+    
 }
 
-
+- (void)saveDataWith:(NSArray *)imagePath{
+    
+    if (_textView.text.length == 0) {
+        _textView.text = @"分享照片";
+    }
+    
+    //图片路径
+    NSString *pathStr = [imagePath componentsJoinedByString:@","];
+    
+    //创建参数实例
+    TRComposeParam *parma = [[TRComposeParam alloc] init];
+    //获取账号信息
+    TRAccount *account = [TRAccountTool account];
+    
+    parma.uid = account.uid;
+    parma.photos = pathStr;
+    parma.content = _textView.text;
+    
+    //存储认证信息
+    [TRHttpTool POST:TRComposeInteractiveUrl parameters:parma.mj_keyValues success:^(id responseObject) {
+        [TRProgressTool dismiss];
+        TRLog(@"%@", responseObject);
+        
+        NSInteger state = [responseObject[@"state"] integerValue];
+        
+        if (state == 1) {
+            if (self.composeInteractiveSuccessBlock) {
+                self.composeInteractiveSuccessBlock();
+                [self.navigationController popViewControllerAnimated:YES];
+            }
+        }else {
+            [Toast makeText:@"提交失败!!请检查网络连接!"];
+        }
+        
+    } failure:^(NSError *error) {
+        [TRProgressTool dismiss];
+        [Toast makeText:@"提交失败!!请检查网络连接!"];
+    }];
+}
 
 
 

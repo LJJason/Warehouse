@@ -36,5 +36,12 @@ UIKIT_EXTERN NSString * const TRGetInteractiveUrl;
 /*** 获取所有互动的接口 */
 UIKIT_EXTERN NSString * const TRGetAllInteractiveUrl;
 
+/*** 获取所有互动的接口 */
+UIKIT_EXTERN NSString * const TRComposeInteractiveUrl;
+
+/*** 获取七牛token的接口 */
+UIKIT_EXTERN NSString * const TRGetTokenUrl;
+
+
 
 

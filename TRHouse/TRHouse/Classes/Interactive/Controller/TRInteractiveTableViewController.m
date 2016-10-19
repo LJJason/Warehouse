@@ -146,6 +146,9 @@
 
 - (void)compose{
     CZComposeViewController *compVc = [[CZComposeViewController alloc] init];
+    compVc.composeInteractiveSuccessBlock = ^{
+        [self.tableView.mj_header beginRefreshing];
+    };
     
     [self.navigationController pushViewController:compVc animated:YES];
 }

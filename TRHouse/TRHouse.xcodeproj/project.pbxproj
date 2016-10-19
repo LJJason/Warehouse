@@ -119,6 +119,8 @@
 		C2C0E90A1DB60DEA002222B2 /* TRMeInteractiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C0E9091DB60DEA002222B2 /* TRMeInteractiveTableViewController.m */; };
 		C2C409B01DB4ACFC00AC1F12 /* TRGetPersonalParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C409AF1DB4ACFC00AC1F12 /* TRGetPersonalParam.m */; };
 		C2C409B31DB4B3E900AC1F12 /* TRPersonalHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C409B21DB4B3E900AC1F12 /* TRPersonalHomeViewController.m */; };
+		C2E9A2FE1DB6F93B00F0936D /* TRUploadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9A2FD1DB6F93B00F0936D /* TRUploadTool.m */; };
+		C2E9A3011DB6FACD00F0936D /* TRComposeParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9A3001DB6FACD00F0936D /* TRComposeParam.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -337,6 +339,10 @@
 		C2C409AF1DB4ACFC00AC1F12 /* TRGetPersonalParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGetPersonalParam.m; sourceTree = "<group>"; };
 		C2C409B11DB4B3E900AC1F12 /* TRPersonalHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPersonalHomeViewController.h; sourceTree = "<group>"; };
 		C2C409B21DB4B3E900AC1F12 /* TRPersonalHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPersonalHomeViewController.m; sourceTree = "<group>"; };
+		C2E9A2FC1DB6F93B00F0936D /* TRUploadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRUploadTool.h; sourceTree = "<group>"; };
+		C2E9A2FD1DB6F93B00F0936D /* TRUploadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRUploadTool.m; sourceTree = "<group>"; };
+		C2E9A2FF1DB6FACD00F0936D /* TRComposeParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRComposeParam.h; sourceTree = "<group>"; };
+		C2E9A3001DB6FACD00F0936D /* TRComposeParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRComposeParam.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -838,6 +844,7 @@
 		C29E7B551DAB7BCB00327F92 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				C2E9A2FA1DB6F8C600F0936D /* Upload */,
 				C2C409AC1DB4ACC700AC1F12 /* GetPersonal */,
 				C29163F81DB3E05000769BA1 /* Account */,
 				C29163F41DB3D7EC00769BA1 /* HUD */,
@@ -941,6 +948,25 @@
 			children = (
 				C2C409AE1DB4ACFC00AC1F12 /* TRGetPersonalParam.h */,
 				C2C409AF1DB4ACFC00AC1F12 /* TRGetPersonalParam.m */,
+			);
+			path = Param;
+			sourceTree = "<group>";
+		};
+		C2E9A2FA1DB6F8C600F0936D /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				C2E9A2FB1DB6F8C600F0936D /* Param */,
+				C2E9A2FC1DB6F93B00F0936D /* TRUploadTool.h */,
+				C2E9A2FD1DB6F93B00F0936D /* TRUploadTool.m */,
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
+		C2E9A2FB1DB6F8C600F0936D /* Param */ = {
+			isa = PBXGroup;
+			children = (
+				C2E9A2FF1DB6FACD00F0936D /* TRComposeParam.h */,
+				C2E9A3001DB6FACD00F0936D /* TRComposeParam.m */,
 			);
 			path = Param;
 			sourceTree = "<group>";
@@ -1189,6 +1215,7 @@
 				C29164061DB3E15100769BA1 /* TRUser.m in Sources */,
 				B23969DC1DAA378900F2904A /* TRCircleTableViewController.m in Sources */,
 				C2C0B5B11DB145AF0099AF31 /* TRLoginViewController.m in Sources */,
+				C2E9A2FE1DB6F93B00F0936D /* TRUploadTool.m in Sources */,
 				C29AD5F61DB6946E00510D06 /* AlbumDataModel.m in Sources */,
 				B2773BFE1DACC1E200B0A899 /* GFPictureView.m in Sources */,
 				B2773BFD1DACC1E200B0A899 /* GFCommentHeaderView.m in Sources */,
@@ -1221,6 +1248,7 @@
 				C29AD5C01DB6818100510D06 /* TRInteractive.m in Sources */,
 				B2773C051DACC1E200B0A899 /* GFSeeBigPictureViewController.m in Sources */,
 				C2C409B31DB4B3E900AC1F12 /* TRPersonalHomeViewController.m in Sources */,
+				C2E9A3011DB6FACD00F0936D /* TRComposeParam.m in Sources */,
 				B214BF261DB60B72002CDF95 /* ViewController.m in Sources */,
 				C29163EC1DB3CE6700769BA1 /* TRGetVcCodeParam.m in Sources */,
 				C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */,

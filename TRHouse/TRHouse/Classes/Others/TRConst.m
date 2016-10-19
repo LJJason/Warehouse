@@ -26,3 +26,12 @@ NSString * const TRGetInteractiveUrl = @"http://localhost:8080/TRHouse/getIntera
 
 /*** 获取所有互动的接口 */
 NSString * const TRGetAllInteractiveUrl = @"http://localhost:8080/TRHouse/getAllInteractive";
+
+/*** 获取所有互动的接口 */
+NSString * const TRComposeInteractiveUrl = @"http://localhost:8080/TRHouse/interactiveting";
+
+/*** 获取七牛token的接口 */
+NSString * const TRGetTokenUrl = @"http://yearwood.top/TRMerchants/gettoken";
+
+
+

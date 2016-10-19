@@ -42,7 +42,7 @@
     
     [self.progressView setProgress:self.piece.pictureProgress animated:YES];
     
-    [imageView sd_setImageWithURL:[NSURL URLWithString:self.piece.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+    [imageView sd_setImageWithURL:[NSURL URLWithString:self.piece.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         
         [self.progressView setProgress:1.0 * receivedSize / expectedSize animated:YES];
         
