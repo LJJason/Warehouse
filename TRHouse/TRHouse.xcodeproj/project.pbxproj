@@ -49,6 +49,7 @@
 		C26FD4131DB71F9200F9ED4B /* TRInteractiveCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26FD4121DB71F9200F9ED4B /* TRInteractiveCommentCell.m */; };
 		C26FD4161DB7205200F9ED4B /* TRInteractiveComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C26FD4151DB7205200F9ED4B /* TRInteractiveComment.m */; };
 		C26FD4181DB744CD00F9ED4B /* TRInteractiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26FD4171DB744CD00F9ED4B /* TRInteractiveCell.xib */; };
+		C26FD41D1DB76D5100F9ED4B /* TRRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = C26FD41C1DB76D5100F9ED4B /* TRRoom.m */; };
 		C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27226121D8FBD3C00C998CA /* TRNavigationController.m */; };
 		C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */; };
 		C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */; };
@@ -221,6 +222,8 @@
 		C26FD4141DB7205200F9ED4B /* TRInteractiveComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRInteractiveComment.h; sourceTree = "<group>"; };
 		C26FD4151DB7205200F9ED4B /* TRInteractiveComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRInteractiveComment.m; sourceTree = "<group>"; };
 		C26FD4171DB744CD00F9ED4B /* TRInteractiveCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRInteractiveCell.xib; sourceTree = "<group>"; };
+		C26FD41B1DB76D5100F9ED4B /* TRRoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRoom.h; sourceTree = "<group>"; };
+		C26FD41C1DB76D5100F9ED4B /* TRRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRoom.m; sourceTree = "<group>"; };
 		C27226111D8FBD3C00C998CA /* TRNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNavigationController.h; sourceTree = "<group>"; };
 		C27226121D8FBD3C00C998CA /* TRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNavigationController.m; sourceTree = "<group>"; };
 		C2771D6A1D8F8B89006972CD /* TRHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRHomeTableViewController.h; sourceTree = "<group>"; };
@@ -496,6 +499,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C26FD4191DB76D3E00F9ED4B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C26FD41B1DB76D5100F9ED4B /* TRRoom.h */,
+				C26FD41C1DB76D5100F9ED4B /* TRRoom.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C26FD41A1DB76D3E00F9ED4B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C2915A631D8D378C00842952 = {
 			isa = PBXGroup;
 			children = (
@@ -594,8 +613,8 @@
 			isa = PBXGroup;
 			children = (
 				C2915AAB1D8D3E7D00842952 /* Controller */,
-				C2915AAC1D8D3E7D00842952 /* Model */,
-				C2915AAD1D8D3E7D00842952 /* View */,
+				C26FD4191DB76D3E00F9ED4B /* Model */,
+				C26FD41A1DB76D3E00F9ED4B /* View */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -607,20 +626,6 @@
 				C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		C2915AAC1D8D3E7D00842952 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C2915AAD1D8D3E7D00842952 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		C2915AAE1D8D3E7D00842952 /* Interactive */ = {
@@ -1286,6 +1291,7 @@
 				C29AD5CB1DB68E5300510D06 /* CZComposeToolBar.m in Sources */,
 				C2C0B5B41DB14ACE0099AF31 /* TRRegistViewController.m in Sources */,
 				C2959F711DAB1D01009B75FB /* TRConst.m in Sources */,
+				C26FD41D1DB76D5100F9ED4B /* TRRoom.m in Sources */,
 				B2773BDC1DACC19F00B0A899 /* GFCommentViewController.m in Sources */,
 				B2773C1D1DACC3B700B0A899 /* NSDate+GFExtension.m in Sources */,
 				C2C0E90A1DB60DEA002222B2 /* TRMeInteractiveTableViewController.m in Sources */,

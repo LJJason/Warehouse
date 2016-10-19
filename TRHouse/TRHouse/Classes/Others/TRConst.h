@@ -50,7 +50,8 @@ UIKIT_EXTERN NSString * const TRGetAllInteractiveCommentsUrl;
 /*** 发互动评论的接口 */
 UIKIT_EXTERN NSString * const TRSendInteractiveCommentUrl;
 
-
+/*** 首页新品推荐的接口 */
+UIKIT_EXTERN NSString * const TRGetNewRoomUrl;
 
 
 

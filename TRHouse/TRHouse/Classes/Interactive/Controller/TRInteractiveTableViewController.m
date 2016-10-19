@@ -108,7 +108,7 @@ static NSString * const cellId = @"TRInteractiveCell";
 }
 
 /**
- *  加载跟多数据
+ *  加载更多数据
  */
 - (void)loadMoreInter{
     NSInteger page = self.page + 1;
@@ -145,6 +145,8 @@ static NSString * const cellId = @"TRInteractiveCell";
     if (self.interactives.count == self.maxCount) {
         //没有更多数据
         [self.tableView.mj_footer endRefreshingWithNoMoreData];
+    }else {
+        [self.tableView.mj_footer resetNoMoreData];
     }
 }
 
