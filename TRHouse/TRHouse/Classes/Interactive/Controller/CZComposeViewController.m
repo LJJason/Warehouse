@@ -218,12 +218,22 @@
     _rightItem = rightItem;
 }
 
-// 互动微博
+// 互动
 - (void)compose
 {
     
     [self.view endEditing:YES];
+    //有图片
+    if (self.images.count > 0) {
+        [self sendImage];
+    }else {
+        //没图片
+        [self saveDataWith:nil];
+    }
     
+}
+
+- (void)sendImage{
     [TRProgressTool showWithMessage:@"正在提交..."];
     //上房间照片
     [TRUploadTool uploadMoreImage:self.images success:^(NSArray *imagePath) {
@@ -238,8 +248,8 @@
             [self saveDataWith:imagePath];
         }
     }];
-    
 }
+
 
 - (void)saveDataWith:(NSArray *)imagePath{
     
@@ -247,22 +257,24 @@
         _textView.text = @"分享照片";
     }
     
-    //图片路径
-    NSString *pathStr = [imagePath componentsJoinedByString:@","];
-    
     //创建参数实例
     TRComposeParam *parma = [[TRComposeParam alloc] init];
     //获取账号信息
     TRAccount *account = [TRAccountTool account];
     
     parma.uid = account.uid;
-    parma.photos = pathStr;
+    
     parma.content = _textView.text;
+    
+    if (self.images.count > 0) {
+        //图片路径
+        NSString *pathStr = [imagePath componentsJoinedByString:@","];
+        parma.photos = pathStr;
+    }
     
     //存储认证信息
     [TRHttpTool POST:TRComposeInteractiveUrl parameters:parma.mj_keyValues success:^(id responseObject) {
         [TRProgressTool dismiss];
-        TRLog(@"%@", responseObject);
         
         NSInteger state = [responseObject[@"state"] integerValue];
         

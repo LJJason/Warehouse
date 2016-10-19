@@ -42,6 +42,16 @@ UIKIT_EXTERN NSString * const TRComposeInteractiveUrl;
 /*** 获取七牛token的接口 */
 UIKIT_EXTERN NSString * const TRGetTokenUrl;
 
+/**
+ *  获取互动评论的接口
+ */
+UIKIT_EXTERN NSString * const TRGetAllInteractiveCommentsUrl;
+
+/*** 发互动评论的接口 */
+UIKIT_EXTERN NSString * const TRSendInteractiveCommentUrl;
+
+
+
 
 
 

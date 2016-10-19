@@ -1,20 +1,20 @@
 //
-//  TRInteractiveCell.h
+//  TRInteractiveCommentViewController.h
 //  TRHouse
 //
-//  Created by wgf on 16/10/18.
+//  Created by wgf on 16/10/19.
 //  Copyright © 2016年 wgf. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 @class TRInteractive;
 
-@interface TRInteractiveCell : UITableViewCell
+
+@interface TRInteractiveCommentViewController : UIViewController
 
 
 /** 互动模型 */
 @property (nonatomic, strong) TRInteractive *inter;
 
-+ (instancetype)cell;
 
 @end

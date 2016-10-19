@@ -10,18 +10,20 @@
 #import "TRInteractive.h"
 #import "TRInteractiveCell.h"
 #import "CZComposeViewController.h"
+#import "TRInteractiveCommentViewController.h"
 
 @interface TRInteractiveTableViewController ()
 
 /** 互动最大的条数 */
 @property (nonatomic, assign) NSInteger maxCount;
 
+/** 当前页码 */
+@property (nonatomic, assign) NSInteger page;
 
 /** 所有的互动信息 */
 @property (nonatomic, strong) NSMutableArray *interactives;
 
-/** 当前页码 */
-@property (nonatomic, assign) NSInteger page;
+
 
 @end
 
@@ -51,6 +53,8 @@
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"发布" style:UIBarButtonItemStyleDone target:self action:@selector(compose)];
 }
 
+static NSString * const cellId = @"TRInteractiveCell";
+
 /**
  *  添加刷新控件
  */
@@ -68,6 +72,8 @@
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreInter)];
     //隐藏点击加载更多
     self.tableView.mj_footer.hidden = YES;
+    
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([TRInteractiveCell class]) bundle:nil]  forCellReuseIdentifier:cellId];
 }
 
 /**
@@ -106,8 +112,6 @@
  */
 - (void)loadMoreInter{
     NSInteger page = self.page + 1;
-    
-    TRLog(@"%zd", page);
     
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"page"] = @(page);
@@ -161,7 +165,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TRInteractiveCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TRInteractiveCell"];
+    TRInteractiveCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
     cell.inter = self.interactives[indexPath.row];
     
@@ -172,6 +176,15 @@
     TRInteractive *inter = self.interactives[indexPath.row];
     
     return inter.rowHeight;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    TRInteractiveCommentViewController *commentVc = [TRInteractiveCommentViewController viewControllerWtithStoryboardName:@"Interactive" identifier:NSStringFromClass([TRInteractiveCommentViewController class])];
+    
+    commentVc.inter = self.interactives[indexPath.row];
+    [self.navigationController pushViewController:commentVc animated:YES];
+    
 }
 
 @end

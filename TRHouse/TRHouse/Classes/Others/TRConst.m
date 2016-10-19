@@ -33,5 +33,12 @@ NSString * const TRComposeInteractiveUrl = @"http://localhost:8080/TRHouse/inter
 /*** 获取七牛token的接口 */
 NSString * const TRGetTokenUrl = @"http://yearwood.top/TRMerchants/gettoken";
 
+/**
+ *  获取互动评论的接口
+ */
+NSString * const TRGetAllInteractiveCommentsUrl = @"http://localhost:8080/TRHouse/getInteractiveComment";
+
+/*** 发互动评论的接口 */
+NSString * const TRSendInteractiveCommentUrl = @"http://localhost:8080/TRHouse/sendInteractiveComment";
 
 
