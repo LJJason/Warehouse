@@ -28,6 +28,8 @@
 /** 发帖用户昵称 */
 @property (nonatomic,copy) NSString *userName;
 
+@property (nonatomic,assign) CGFloat cellRowHeight;
+
 
 
 @end

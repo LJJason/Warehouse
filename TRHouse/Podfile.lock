@@ -15,6 +15,8 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - DACircularProgress (2.3.1)
+  - HappyDNS (0.3.10)
+  - HUPhotoBrowser (1.2.0)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - NJKWebViewProgress (0.2.3):
@@ -22,38 +24,37 @@ PODS:
     - NJKWebViewProgress/ProgressView (= 0.2.3)
   - NJKWebViewProgress/Core (0.2.3)
   - NJKWebViewProgress/ProgressView (0.2.3)
-  - SDWebImage (4.0.0-beta2):
-    - SDWebImage/Core (= 4.0.0-beta2)
-  - SDWebImage/Core (4.0.0-beta2)
+  - Qiniu (7.1.0.1):
+    - AFNetworking (~> 3)
+    - HappyDNS (~> 0.3)
+  - SDWebImage (3.8.1):
+    - SDWebImage/Core (= 3.8.1)
+  - SDWebImage/Core (3.8.1)
   - SVProgressHUD (2.0.3)
 
 DEPENDENCIES:
   - AFNetworking
   - DACircularProgress
+  - HUPhotoBrowser
   - MJExtension
   - MJRefresh
   - NJKWebViewProgress
-  - SDWebImage (from `https://github.com/rs/SDWebImage.git`)
+  - Qiniu
+  - SDWebImage
   - SVProgressHUD
-
-EXTERNAL SOURCES:
-  SDWebImage:
-    :git: https://github.com/rs/SDWebImage.git
-
-CHECKOUT OPTIONS:
-  SDWebImage:
-    :commit: 032ab1dd6d633ed30b8850eddc27f7073191f317
-    :git: https://github.com/rs/SDWebImage.git
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   DACircularProgress: 4dd437c0fc3da5161cb289e07ac449493d41db71
+  HappyDNS: 06a9fed2796663fd87626dbf02552933265bf059
+  HUPhotoBrowser: 0dd14753cd43f0de5111a7f8d8aad74df790c641
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
-  SDWebImage: e379f33106cf8d6766f970c0ef1c3fb609c94d78
+  Qiniu: 0e92ff0d1b9afbc55275306671284e4ebeb08d03
+  SDWebImage: 35f9627a3e44b4f292a8a8ce6a531fa488239b91
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 7a0269d91f6b79390b707d631f9c9cd08fd37cca
+PODFILE CHECKSUM: 6da991c1ec0586b79e994d16a69d79aa04ee4b23
 
 COCOAPODS: 1.0.1

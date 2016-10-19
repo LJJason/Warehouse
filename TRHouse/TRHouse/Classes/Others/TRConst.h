@@ -24,6 +24,24 @@ UIKIT_EXTERN NSString * const TRRegistUrl;
 /*** 登录的接口 */
 UIKIT_EXTERN NSString * const TRLoginUrl;
 
+/*** 登录的接口 */
+UIKIT_EXTERN NSString * const TRGetPersonalUrl;
+
+/*** 获取别人发来的一拍即合请求的接口 */
+UIKIT_EXTERN NSString * const TRGetMeInteractiveUrl;
+
+/*** 获取一拍即合内容的接口 */
+UIKIT_EXTERN NSString * const TRGetInteractiveUrl;
+
+/*** 获取所有互动的接口 */
+UIKIT_EXTERN NSString * const TRGetAllInteractiveUrl;
+
+/*** 获取所有互动的接口 */
+UIKIT_EXTERN NSString * const TRComposeInteractiveUrl;
+
+/*** 获取七牛token的接口 */
+UIKIT_EXTERN NSString * const TRGetTokenUrl;
+
 
 
 

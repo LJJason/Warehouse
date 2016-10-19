@@ -9,8 +9,17 @@
 #import "TRMeTableViewController.h"
 #import "TRMeHeaderView.h"
 #import "TRLoginViewController.h"
+#import "TRAccountTool.h"
+#import "TRGetPersonalParam.h"
+#import "TRAccount.h"
+#import "TRProgressTool.h"
+#import "TRPersonal.h"
+#import "TRPersonalHomeViewController.h"
+#import "TRSettingsTableViewController.h"
+
 
 @interface TRMeTableViewController ()
+
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 
 
@@ -29,9 +38,10 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    
-    
+    // 设置tableView和nav相关
+    [self setupHeaderViewAndNav];
+    //加载数据
+    [self refreshData];
 }
 
 /**
@@ -47,83 +57,124 @@
     [self.headerView addSubview:meHeader];
     self.tableView.tableFooterView = [[UIView alloc] init];
     meHeader.loginBlock = ^{
-        TRLoginViewController *loginVc = [TRLoginViewController instantiateInitialViewControllerWithStoryboardName:@"LoginAndRegist"];
-        
-        
-        [self presentViewController:loginVc animated:YES completion:nil];
+        [self loginVc];
     };
     
 }
+
+/**
+ *  跳转控制器
+ */
+- (void)loginVc {
+    
+    TRLoginViewController *loginVc = [TRLoginViewController instantiateInitialViewControllerWithStoryboardName:@"LoginAndRegist"];
+    loginVc.refreshDataBlock = ^ {
+        [self refreshData];
+    };
+    [self presentViewController:loginVc animated:YES completion:nil];
+}
+
+
+/**
+ *  加载数据
+ */
+- (void)refreshData {
+    
+    [TRProgressTool showWithMessage:@"正在加载..."];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    
+        if ([TRAccountTool loginState]) {
+            
+            if ([TRAccountTool account]) {
+                
+                TRGetPersonalParam *param = [[TRGetPersonalParam alloc] init];
+                TRAccount *account = [TRAccountTool account];
+                param.uid = account.uid;
+                
+                [TRHttpTool GET:TRGetPersonalUrl parameters:param.mj_keyValues success:^(id responseObject) {
+                    [TRProgressTool dismiss];
+                    self.meHeader.personal = [TRPersonal mj_objectWithKeyValues:responseObject];
+                    
+                } failure:^(NSError *error) {
+                    
+                    [TRProgressTool dismiss];
+                    [Toast makeText:@"请检查网络连接!!"];
+                    
+                }];
+                
+            }
+            
+        }else {
+            
+            TRPersonal *personal = [[TRPersonal  alloc] init];
+            personal.userName = @"登录/注册";
+            personal.icon = @"";
+            personal.count = 0;
+            self.meHeader.personal = personal;
+            [TRProgressTool dismiss];
+        }
+    });
+    
+}
+
 
 - (void)viewWillLayoutSubviews {
     
     self.meHeader.frame = self.headerView.frame;
     
 }
-#pragma mark - Table view data source
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//#warning Incomplete implementation, return the number of sections
-//    return 0;
-//}
+/**
+ *  个人主页
+ */
+- (IBAction)myHomePage {
+    
+    if ([TRAccountTool loginState]) {//已登录
+        
+        TRPersonalHomeViewController *homeVc = [TRPersonalHomeViewController viewControllerWtithStoryboardName:@"Me" identifier:@"TRPersonalHomeViewController"];
+        homeVc.personal = self.meHeader.personal;
+        [self.navigationController pushViewController:homeVc animated:YES];
+    }else {//未登录
+        //跳转登录界面
+        [self loginVc];
+    }
+    
+}
+
+/**
+ *  个人设置
+ */
+- (IBAction)mySetting {
+    
+    if ([TRAccountTool loginState]) {//已登录
+        
+        TRSettingsTableViewController *settingVc = [TRSettingsTableViewController viewControllerWtithStoryboardName:@"Me" identifier:@"TRSettingsTableViewController"];
+        settingVc.logoutBlock = ^ {
+            [self refreshData];
+        };
+        [self.navigationController pushViewController:settingVc animated:YES];
+    }else {//未登录
+        //跳转登录界面
+        [self loginVc];
+    }
+    
+}
+
+//#pragma mark - Navigation
 //
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//#warning Incomplete implementation, return the number of rows
-//    return 0;
+//// In a storyboard-based application, you will often want to do a little preparation before navigation
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+//    // Get the new view controller using [segue destinationViewController].
+//    // Pass the selected object to the new view controller.
+//    id destinationViewController = segue.destinationViewController;
+//    
+//    if ([destinationViewController isKindOfClass:[TRPersonalHomeViewController class]]) {
+//        TRPersonalHomeViewController *homeVc = destinationViewController;
+//        homeVc.personal = self.meHeader.personal;
+//    }
+//    
 //}
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

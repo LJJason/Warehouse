@@ -17,6 +17,7 @@
 @property (nonatomic,strong) NSMutableArray *posts;
 
 
+
 @end
 
 @implementation TRCircleTableViewController
@@ -40,13 +41,13 @@
     [TRHttpTool GET:@"http://192.168.61.79:8080/TRHouse/getAllPost" parameters:nil success:^(id responseObject) {
 //         TRGLog(@"%@",responseObject);
         self.posts = [TRPost mj_objectArrayWithKeyValuesArray:responseObject[@"posts"]];
-        TRGLog(@"%@",responseObject[@"posts"][0][@"praiseUser"]);
+        TRLog(@"%@",responseObject[@"posts"][0][@"praiseUser"]);
         [self.tableView reloadData];
         
        
     } failure:^(NSError *error) {
         
-        TRGLog(@"Fail");
+        TRLog(@"Fail");
     }];
     
 }
@@ -82,6 +83,14 @@
     };
     
     return cell;
+}
+
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    TRPost *post = self.posts[indexPath.row];
+    
+    return post.cellRowHeight;
+    
 }
 
 

@@ -7,93 +7,171 @@
 //
 
 #import "TRInteractiveTableViewController.h"
+#import "TRInteractive.h"
+#import "TRInteractiveCell.h"
+#import "CZComposeViewController.h"
 
 @interface TRInteractiveTableViewController ()
+
+/** 互动最大的条数 */
+@property (nonatomic, assign) NSInteger maxCount;
+
+
+/** 所有的互动信息 */
+@property (nonatomic, strong) NSMutableArray *interactives;
+
+/** 当前页码 */
+@property (nonatomic, assign) NSInteger page;
 
 @end
 
 @implementation TRInteractiveTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.navigationItem.title = @"互动";
+- (NSMutableArray *)interactives {
+    if (!_interactives) {
+        _interactives = [NSMutableArray array];
+    }
+    return _interactives;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    //设置导航条
+    [self setupNav];
+    //设置刷新控件
+    [self setupRefresh];
+    
+}
+
+/**
+ *  设置导航条相关
+ */
+- (void)setupNav{
+    self.navigationItem.title = @"互动";
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"发布" style:UIBarButtonItemStyleDone target:self action:@selector(compose)];
+}
+
+/**
+ *  添加刷新控件
+ */
+- (void)setupRefresh{
+    
+    //添加下拉刷新控件
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewInter)];
+    //根据拖拽比例自动切换透明度
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    
+    //一进来就开始刷新
+    [self.tableView.mj_header beginRefreshing];
+    
+    //添加上拉刷新控件
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreInter)];
+    //隐藏点击加载更多
+    self.tableView.mj_footer.hidden = YES;
+}
+
+/**
+ *  加载新的数据
+ */
+- (void)loadNewInter{
+    
+    
+    [TRHttpTool GET:TRGetAllInteractiveUrl parameters:nil success:^(id responseObject) {
+        
+        self.maxCount = [responseObject[@"maxCount"] integerValue];
+        
+        self.interactives = [TRInteractive mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        [self.tableView reloadData];
+        
+        //结束刷新
+        [self.tableView.mj_header endRefreshing];
+        
+        //清空页码
+        self.page = 1;
+        self.tableView.mj_footer.hidden = NO;
+        
+        //监测footer的状态
+        [self chackFooterState];
+    } failure:^(NSError *error) {
+        //结束刷新
+        [self.tableView.mj_header endRefreshing];
+        [Toast makeText:@"加载失败!!"];
+        self.tableView.mj_footer.hidden = NO;
+    }];
+}
+
+/**
+ *  加载跟多数据
+ */
+- (void)loadMoreInter{
+    NSInteger page = self.page + 1;
+    
+    TRLog(@"%zd", page);
+    
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"page"] = @(page);
+    
+    [TRHttpTool GET:TRGetAllInteractiveUrl parameters:param success:^(id responseObject) {
+        
+        [self.interactives addObjectsFromArray:[TRInteractive mj_objectArrayWithKeyValuesArray:responseObject[@"list"]]];
+        
+        [self.tableView reloadData];
+        //结束刷新
+        [self.tableView.mj_footer endRefreshing];
+        
+        //
+        self.page = page;
+        
+        
+        //监测footer的状态
+        [self chackFooterState];
+        
+    } failure:^(NSError *error) {
+        //结束刷新
+        [self.tableView.mj_footer endRefreshing];
+        [Toast makeText:@"加载失败!!"];
+    }];
+}
+
+/**
+ *  监测footer的状态
+ */
+- (void)chackFooterState{
+    if (self.interactives.count == self.maxCount) {
+        //没有更多数据
+        [self.tableView.mj_footer endRefreshingWithNoMoreData];
+    }
+}
+
+- (void)compose{
+    CZComposeViewController *compVc = [[CZComposeViewController alloc] init];
+    compVc.composeInteractiveSuccessBlock = ^{
+        [self.tableView.mj_header beginRefreshing];
+    };
+    
+    [self.navigationController pushViewController:compVc animated:YES];
 }
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.interactives.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    TRInteractiveCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TRInteractiveCell"];
     
-    // Configure the cell...
+    cell.inter = self.interactives[indexPath.row];
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    TRInteractive *inter = self.interactives[indexPath.row];
+    
+    return inter.rowHeight;
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

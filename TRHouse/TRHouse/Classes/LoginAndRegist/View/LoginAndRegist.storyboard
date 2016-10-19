@@ -37,7 +37,7 @@
                                             <action selector="login" destination="dY4-pY-nrk" eventType="touchUpInside" id="Pfr-xm-DZn"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rcv-KM-7I0">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="rcv-KM-7I0">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ZaV-9V-pRt"/>
                                         </constraints>
@@ -45,13 +45,13 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Au-X2-gGJ">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2Au-X2-gGJ">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="eqZ-ss-d66"/>
                                         </constraints>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -73,14 +73,14 @@
                                     <constraint firstItem="gub-wg-Wts" firstAttribute="top" secondItem="CTj-SW-VCH" secondAttribute="bottom" constant="20" id="xOU-Nt-Xsb"/>
                                 </constraints>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultUserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="adg-3b-4Nq">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultUserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="adg-3b-4Nq">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="DR9-Q3-dIB"/>
-                                    <constraint firstAttribute="width" constant="60" id="aKB-fc-Iaq"/>
+                                    <constraint firstAttribute="height" constant="80" id="DR9-Q3-dIB"/>
+                                    <constraint firstAttribute="width" constant="80" id="aKB-fc-Iaq"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="30"/>
+                                        <integer key="value" value="40"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
@@ -91,7 +91,9 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Aq-tT-ZGZ">
-                                <state key="normal" title="注册"/>
+                                <state key="normal" title="注册">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="registClick" destination="dY4-pY-nrk" eventType="touchUpInside" id="Mur-8O-5df"/>
                                 </connections>
@@ -116,7 +118,7 @@
                             <constraint firstItem="zb7-6X-vve" firstAttribute="top" secondItem="84r-Eo-Jbu" secondAttribute="bottom" constant="20" id="YnD-p3-8la"/>
                             <constraint firstItem="Uh9-h1-XV7" firstAttribute="leading" secondItem="QvC-c0-cUX" secondAttribute="leading" id="eQR-YZ-0lV"/>
                             <constraint firstItem="FL3-tb-jbK" firstAttribute="trailing" secondItem="gub-wg-Wts" secondAttribute="trailing" id="een-1m-SV5"/>
-                            <constraint firstItem="YU6-xM-RuL" firstAttribute="top" secondItem="adg-3b-4Nq" secondAttribute="bottom" constant="30" id="fmG-pW-Xqo"/>
+                            <constraint firstItem="YU6-xM-RuL" firstAttribute="top" secondItem="adg-3b-4Nq" secondAttribute="bottom" constant="35" id="fmG-pW-Xqo"/>
                             <constraint firstItem="YU6-xM-RuL" firstAttribute="centerY" secondItem="QvC-c0-cUX" secondAttribute="centerY" id="top-CT-e1F"/>
                             <constraint firstItem="FL3-tb-jbK" firstAttribute="top" secondItem="YU6-xM-RuL" secondAttribute="bottom" id="zp9-NI-NVR"/>
                         </constraints>
@@ -134,7 +136,7 @@
         <scene sceneID="O8n-ki-DuU">
             <objects>
                 <navigationController storyboardIdentifier="TRNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7P8-Dq-87l" customClass="TRNavigationController" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Hp5-6m-NIS">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hp5-6m-NIS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

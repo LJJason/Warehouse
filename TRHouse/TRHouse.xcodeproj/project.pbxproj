@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2B81AEA3CD0C5E3B37D3E1AC /* libPods-TRHouse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B68D0083076E8AF8B14CEDA /* libPods-TRHouse.a */; };
 		930BDCA51DAACD6300BAE473 /* TRTourViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930BDCA41DAACD6300BAE473 /* TRTourViewController.m */; };
+		B214BF261DB60B72002CDF95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B214BF251DB60B72002CDF95 /* ViewController.m */; };
+		B214BF281DB60B7B002CDF95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B214BF271DB60B7B002CDF95 /* Main.storyboard */; };
 		B227CACA1DB070BD005E13D4 /* Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = B227CAC81DB070BD005E13D4 /* Toast.m */; };
 		B23969D81DA9DC3000F2904A /* TRFound.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B23969D71DA9DC3000F2904A /* TRFound.storyboard */; };
 		B23969DC1DAA378900F2904A /* TRCircleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B23969DB1DAA378900F2904A /* TRCircleTableViewController.m */; };
@@ -67,15 +69,58 @@
 		C2959F711DAB1D01009B75FB /* TRConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C2959F701DAB1D01009B75FB /* TRConst.m */; };
 		C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */; };
 		C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */; };
+		C29AD5B01DB6491B00510D06 /* TRMeInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5AF1DB6491B00510D06 /* TRMeInteractive.m */; };
+		C29AD5B31DB6603600510D06 /* TRMeInterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5B21DB6603600510D06 /* TRMeInterTableViewCell.m */; };
+		C29AD5B61DB66C9A00510D06 /* TRMeDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5B51DB66C9A00510D06 /* TRMeDetailTableViewController.m */; };
+		C29AD5BA1DB6797100510D06 /* Interactive.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5B91DB6797100510D06 /* Interactive.storyboard */; };
+		C29AD5BD1DB67BD800510D06 /* TRInteractiveCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5BC1DB67BD800510D06 /* TRInteractiveCell.m */; };
+		C29AD5C01DB6818100510D06 /* TRInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5BF1DB6818100510D06 /* TRInteractive.m */; };
+		C29AD5C31DB68E3700510D06 /* CZComposeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5C21DB68E3700510D06 /* CZComposeViewController.m */; };
+		C29AD5CA1DB68E5300510D06 /* CZComposePhotosView.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5C51DB68E5300510D06 /* CZComposePhotosView.m */; };
+		C29AD5CB1DB68E5300510D06 /* CZComposeToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5C71DB68E5300510D06 /* CZComposeToolBar.m */; };
+		C29AD5CC1DB68E5300510D06 /* CZTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5C91DB68E5300510D06 /* CZTextView.m */; };
+		C29AD5F51DB6946E00510D06 /* AlbumDataHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5CF1DB6946E00510D06 /* AlbumDataHandle.m */; };
+		C29AD5F61DB6946E00510D06 /* AlbumDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5D11DB6946E00510D06 /* AlbumDataModel.m */; };
+		C29AD5F71DB6946E00510D06 /* AlbumListController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5D31DB6946E00510D06 /* AlbumListController.m */; };
+		C29AD5F81DB6946E00510D06 /* AlbumListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5D51DB6946E00510D06 /* AlbumListTableViewCell.m */; };
+		C29AD5F91DB6946E00510D06 /* AlbumNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5D71DB6946E00510D06 /* AlbumNavigationController.m */; };
+		C29AD5FA1DB6946E00510D06 /* MMVideoPreviewPlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5D91DB6946E00510D06 /* MMVideoPreviewPlay@2x.png */; };
+		C29AD5FB1DB6946E00510D06 /* MMVideoPreviewPlayHL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5DA1DB6946E00510D06 /* MMVideoPreviewPlayHL@2x.png */; };
+		C29AD5FC1DB6946E00510D06 /* navi_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5DB1DB6946E00510D06 /* navi_back@2x.png */; };
+		C29AD5FD1DB6946E00510D06 /* photo_def_photoPickerVc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5DC1DB6946E00510D06 /* photo_def_photoPickerVc@2x.png */; };
+		C29AD5FE1DB6946E00510D06 /* photo_def_previewVc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5DD1DB6946E00510D06 /* photo_def_previewVc@2x.png */; };
+		C29AD5FF1DB6946E00510D06 /* photo_number_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5DE1DB6946E00510D06 /* photo_number_icon@2x.png */; };
+		C29AD6001DB6946E00510D06 /* photo_original_def@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5DF1DB6946E00510D06 /* photo_original_def@2x.png */; };
+		C29AD6011DB6946E00510D06 /* photo_original_sel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5E01DB6946E00510D06 /* photo_original_sel@2x.png */; };
+		C29AD6021DB6946E00510D06 /* photo_sel_photoPickerVc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5E11DB6946E00510D06 /* photo_sel_photoPickerVc@2x.png */; };
+		C29AD6031DB6946E00510D06 /* photo_sel_previewVc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5E21DB6946E00510D06 /* photo_sel_previewVc@2x.png */; };
+		C29AD6041DB6946E00510D06 /* preview_number_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5E31DB6946E00510D06 /* preview_number_icon@2x.png */; };
+		C29AD6051DB6946E00510D06 /* preview_original_def@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5E41DB6946E00510D06 /* preview_original_def@2x.png */; };
+		C29AD6061DB6946E00510D06 /* TableViewArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5E51DB6946E00510D06 /* TableViewArrow@2x.png */; };
+		C29AD6071DB6946E00510D06 /* VideoSendIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5E61DB6946E00510D06 /* VideoSendIcon@2x.png */; };
+		C29AD6081DB6946E00510D06 /* PhotoPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5E91DB6946E00510D06 /* PhotoPickerCell.m */; };
+		C29AD6091DB6946E00510D06 /* PhotoPickerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C29AD5EA1DB6946E00510D06 /* PhotoPickerCell.xib */; };
+		C29AD60A1DB6946E00510D06 /* PhotoPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5EC1DB6946E00510D06 /* PhotoPickerController.m */; };
+		C29AD60B1DB6946E00510D06 /* PhotoPickerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5EE1DB6946E00510D06 /* PhotoPickerModel.m */; };
+		C29AD60C1DB6946E00510D06 /* PhotoPreviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5F01DB6946E00510D06 /* PhotoPreviewCell.m */; };
+		C29AD60D1DB6946E00510D06 /* PhotoPreviewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5F21DB6946E00510D06 /* PhotoPreviewController.m */; };
+		C29AD60E1DB6946E00510D06 /* VideoPlayerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5F41DB6946E00510D06 /* VideoPlayerController.m */; };
 		C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C29E7B581DAB7C2600327F92 /* TRHttpTool.m */; };
 		C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C29E7B5C1DAB805700327F92 /* TRNoInternetConnectionView.m */; };
 		C29E7B5F1DAB805700327F92 /* TRNoInternetConnectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C29E7B5D1DAB805700327F92 /* TRNoInternetConnectionView.xib */; };
 		C2B10B061DAFDF01003332FB /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B10B051DAFDF01003332FB /* Me.storyboard */; };
 		C2B10B091DAFE0F1003332FB /* TRMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B10B081DAFE0F1003332FB /* TRMeHeaderView.m */; };
 		C2B10B0B1DAFE0FC003332FB /* TRMeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */; };
+		C2B5855E1DB4759D00C37479 /* TRPersonal.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B5855D1DB4759D00C37479 /* TRPersonal.m */; };
 		C2C0B5AE1DB13ADB0099AF31 /* LoginAndRegist.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2C0B5AD1DB13ADB0099AF31 /* LoginAndRegist.storyboard */; };
 		C2C0B5B11DB145AF0099AF31 /* TRLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C0B5B01DB145AF0099AF31 /* TRLoginViewController.m */; };
 		C2C0B5B41DB14ACE0099AF31 /* TRRegistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C0B5B31DB14ACE0099AF31 /* TRRegistViewController.m */; };
+		C2C0E9041DB5F47A002222B2 /* TRSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C0E9031DB5F47A002222B2 /* TRSettingsTableViewController.m */; };
+		C2C0E90A1DB60DEA002222B2 /* TRMeInteractiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C0E9091DB60DEA002222B2 /* TRMeInteractiveTableViewController.m */; };
+		C2C409B01DB4ACFC00AC1F12 /* TRGetPersonalParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C409AF1DB4ACFC00AC1F12 /* TRGetPersonalParam.m */; };
+		C2C409B31DB4B3E900AC1F12 /* TRPersonalHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C409B21DB4B3E900AC1F12 /* TRPersonalHomeViewController.m */; };
+		C2E9A2FE1DB6F93B00F0936D /* TRUploadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9A2FD1DB6F93B00F0936D /* TRUploadTool.m */; };
+		C2E9A3011DB6FACD00F0936D /* TRComposeParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9A3001DB6FACD00F0936D /* TRComposeParam.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +145,9 @@
 		930BDCA31DAACD6300BAE473 /* TRTourViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTourViewController.h; sourceTree = "<group>"; };
 		930BDCA41DAACD6300BAE473 /* TRTourViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTourViewController.m; sourceTree = "<group>"; };
 		B1185A83EE4D695B6EA4C065 /* Pods-TRHouse.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRHouse.release.xcconfig"; path = "Pods/Target Support Files/Pods-TRHouse/Pods-TRHouse.release.xcconfig"; sourceTree = "<group>"; };
+		B214BF241DB60B72002CDF95 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B214BF251DB60B72002CDF95 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B214BF271DB60B7B002CDF95 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B227CAC81DB070BD005E13D4 /* Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Toast.m; sourceTree = "<group>"; };
 		B227CAC91DB070BD005E13D4 /* Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Toast.h; sourceTree = "<group>"; };
 		B23969D71DA9DC3000F2904A /* TRFound.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = TRFound.storyboard; sourceTree = "<group>"; };
@@ -210,6 +258,63 @@
 		C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GFExtension.m"; sourceTree = "<group>"; };
 		C297FAF11DAA1B4100F7CC61 /* UIViewController+TRExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TRExtension.h"; sourceTree = "<group>"; };
 		C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TRExtension.m"; sourceTree = "<group>"; };
+		C29AD5AE1DB6491B00510D06 /* TRMeInteractive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeInteractive.h; sourceTree = "<group>"; };
+		C29AD5AF1DB6491B00510D06 /* TRMeInteractive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeInteractive.m; sourceTree = "<group>"; };
+		C29AD5B11DB6603600510D06 /* TRMeInterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeInterTableViewCell.h; sourceTree = "<group>"; };
+		C29AD5B21DB6603600510D06 /* TRMeInterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeInterTableViewCell.m; sourceTree = "<group>"; };
+		C29AD5B41DB66C9A00510D06 /* TRMeDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeDetailTableViewController.h; sourceTree = "<group>"; };
+		C29AD5B51DB66C9A00510D06 /* TRMeDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeDetailTableViewController.m; sourceTree = "<group>"; };
+		C29AD5B91DB6797100510D06 /* Interactive.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Interactive.storyboard; sourceTree = "<group>"; };
+		C29AD5BB1DB67BD800510D06 /* TRInteractiveCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRInteractiveCell.h; sourceTree = "<group>"; };
+		C29AD5BC1DB67BD800510D06 /* TRInteractiveCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRInteractiveCell.m; sourceTree = "<group>"; };
+		C29AD5BE1DB6818100510D06 /* TRInteractive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRInteractive.h; sourceTree = "<group>"; };
+		C29AD5BF1DB6818100510D06 /* TRInteractive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRInteractive.m; sourceTree = "<group>"; };
+		C29AD5C11DB68E3600510D06 /* CZComposeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZComposeViewController.h; sourceTree = "<group>"; };
+		C29AD5C21DB68E3700510D06 /* CZComposeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZComposeViewController.m; sourceTree = "<group>"; };
+		C29AD5C41DB68E5300510D06 /* CZComposePhotosView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZComposePhotosView.h; sourceTree = "<group>"; };
+		C29AD5C51DB68E5300510D06 /* CZComposePhotosView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZComposePhotosView.m; sourceTree = "<group>"; };
+		C29AD5C61DB68E5300510D06 /* CZComposeToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZComposeToolBar.h; sourceTree = "<group>"; };
+		C29AD5C71DB68E5300510D06 /* CZComposeToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZComposeToolBar.m; sourceTree = "<group>"; };
+		C29AD5C81DB68E5300510D06 /* CZTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CZTextView.h; sourceTree = "<group>"; };
+		C29AD5C91DB68E5300510D06 /* CZTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CZTextView.m; sourceTree = "<group>"; };
+		C29AD5CE1DB6946E00510D06 /* AlbumDataHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumDataHandle.h; sourceTree = "<group>"; };
+		C29AD5CF1DB6946E00510D06 /* AlbumDataHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumDataHandle.m; sourceTree = "<group>"; };
+		C29AD5D01DB6946E00510D06 /* AlbumDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumDataModel.h; sourceTree = "<group>"; };
+		C29AD5D11DB6946E00510D06 /* AlbumDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumDataModel.m; sourceTree = "<group>"; };
+		C29AD5D21DB6946E00510D06 /* AlbumListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumListController.h; sourceTree = "<group>"; };
+		C29AD5D31DB6946E00510D06 /* AlbumListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumListController.m; sourceTree = "<group>"; };
+		C29AD5D41DB6946E00510D06 /* AlbumListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumListTableViewCell.h; sourceTree = "<group>"; };
+		C29AD5D51DB6946E00510D06 /* AlbumListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumListTableViewCell.m; sourceTree = "<group>"; };
+		C29AD5D61DB6946E00510D06 /* AlbumNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumNavigationController.h; sourceTree = "<group>"; };
+		C29AD5D71DB6946E00510D06 /* AlbumNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumNavigationController.m; sourceTree = "<group>"; };
+		C29AD5D91DB6946E00510D06 /* MMVideoPreviewPlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MMVideoPreviewPlay@2x.png"; sourceTree = "<group>"; };
+		C29AD5DA1DB6946E00510D06 /* MMVideoPreviewPlayHL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MMVideoPreviewPlayHL@2x.png"; sourceTree = "<group>"; };
+		C29AD5DB1DB6946E00510D06 /* navi_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "navi_back@2x.png"; sourceTree = "<group>"; };
+		C29AD5DC1DB6946E00510D06 /* photo_def_photoPickerVc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_def_photoPickerVc@2x.png"; sourceTree = "<group>"; };
+		C29AD5DD1DB6946E00510D06 /* photo_def_previewVc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_def_previewVc@2x.png"; sourceTree = "<group>"; };
+		C29AD5DE1DB6946E00510D06 /* photo_number_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_number_icon@2x.png"; sourceTree = "<group>"; };
+		C29AD5DF1DB6946E00510D06 /* photo_original_def@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_original_def@2x.png"; sourceTree = "<group>"; };
+		C29AD5E01DB6946E00510D06 /* photo_original_sel@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_original_sel@2x.png"; sourceTree = "<group>"; };
+		C29AD5E11DB6946E00510D06 /* photo_sel_photoPickerVc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_sel_photoPickerVc@2x.png"; sourceTree = "<group>"; };
+		C29AD5E21DB6946E00510D06 /* photo_sel_previewVc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo_sel_previewVc@2x.png"; sourceTree = "<group>"; };
+		C29AD5E31DB6946E00510D06 /* preview_number_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preview_number_icon@2x.png"; sourceTree = "<group>"; };
+		C29AD5E41DB6946E00510D06 /* preview_original_def@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "preview_original_def@2x.png"; sourceTree = "<group>"; };
+		C29AD5E51DB6946E00510D06 /* TableViewArrow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TableViewArrow@2x.png"; sourceTree = "<group>"; };
+		C29AD5E61DB6946E00510D06 /* VideoSendIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "VideoSendIcon@2x.png"; sourceTree = "<group>"; };
+		C29AD5E71DB6946E00510D06 /* MediaType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MediaType.h; sourceTree = "<group>"; };
+		C29AD5E81DB6946E00510D06 /* PhotoPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPickerCell.h; sourceTree = "<group>"; };
+		C29AD5E91DB6946E00510D06 /* PhotoPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerCell.m; sourceTree = "<group>"; };
+		C29AD5EA1DB6946E00510D06 /* PhotoPickerCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PhotoPickerCell.xib; sourceTree = "<group>"; };
+		C29AD5EB1DB6946E00510D06 /* PhotoPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPickerController.h; sourceTree = "<group>"; };
+		C29AD5EC1DB6946E00510D06 /* PhotoPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerController.m; sourceTree = "<group>"; };
+		C29AD5ED1DB6946E00510D06 /* PhotoPickerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPickerModel.h; sourceTree = "<group>"; };
+		C29AD5EE1DB6946E00510D06 /* PhotoPickerModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPickerModel.m; sourceTree = "<group>"; };
+		C29AD5EF1DB6946E00510D06 /* PhotoPreviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPreviewCell.h; sourceTree = "<group>"; };
+		C29AD5F01DB6946E00510D06 /* PhotoPreviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPreviewCell.m; sourceTree = "<group>"; };
+		C29AD5F11DB6946E00510D06 /* PhotoPreviewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoPreviewController.h; sourceTree = "<group>"; };
+		C29AD5F21DB6946E00510D06 /* PhotoPreviewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoPreviewController.m; sourceTree = "<group>"; };
+		C29AD5F31DB6946E00510D06 /* VideoPlayerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoPlayerController.h; sourceTree = "<group>"; };
+		C29AD5F41DB6946E00510D06 /* VideoPlayerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoPlayerController.m; sourceTree = "<group>"; };
 		C29E7B571DAB7C2600327F92 /* TRHttpTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRHttpTool.h; sourceTree = "<group>"; };
 		C29E7B581DAB7C2600327F92 /* TRHttpTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRHttpTool.m; sourceTree = "<group>"; };
 		C29E7B5B1DAB805700327F92 /* TRNoInternetConnectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNoInternetConnectionView.h; sourceTree = "<group>"; };
@@ -219,11 +324,25 @@
 		C2B10B071DAFE0F1003332FB /* TRMeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeHeaderView.h; sourceTree = "<group>"; };
 		C2B10B081DAFE0F1003332FB /* TRMeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeHeaderView.m; sourceTree = "<group>"; };
 		C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRMeHeaderView.xib; sourceTree = "<group>"; };
+		C2B5855C1DB4759D00C37479 /* TRPersonal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPersonal.h; sourceTree = "<group>"; };
+		C2B5855D1DB4759D00C37479 /* TRPersonal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPersonal.m; sourceTree = "<group>"; };
 		C2C0B5AD1DB13ADB0099AF31 /* LoginAndRegist.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LoginAndRegist.storyboard; sourceTree = "<group>"; };
 		C2C0B5AF1DB145AF0099AF31 /* TRLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRLoginViewController.h; sourceTree = "<group>"; };
 		C2C0B5B01DB145AF0099AF31 /* TRLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRLoginViewController.m; sourceTree = "<group>"; };
 		C2C0B5B21DB14ACE0099AF31 /* TRRegistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRegistViewController.h; sourceTree = "<group>"; };
 		C2C0B5B31DB14ACE0099AF31 /* TRRegistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRegistViewController.m; sourceTree = "<group>"; };
+		C2C0E9021DB5F47A002222B2 /* TRSettingsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSettingsTableViewController.h; sourceTree = "<group>"; };
+		C2C0E9031DB5F47A002222B2 /* TRSettingsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSettingsTableViewController.m; sourceTree = "<group>"; };
+		C2C0E9081DB60DEA002222B2 /* TRMeInteractiveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeInteractiveTableViewController.h; sourceTree = "<group>"; };
+		C2C0E9091DB60DEA002222B2 /* TRMeInteractiveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeInteractiveTableViewController.m; sourceTree = "<group>"; };
+		C2C409AE1DB4ACFC00AC1F12 /* TRGetPersonalParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGetPersonalParam.h; sourceTree = "<group>"; };
+		C2C409AF1DB4ACFC00AC1F12 /* TRGetPersonalParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGetPersonalParam.m; sourceTree = "<group>"; };
+		C2C409B11DB4B3E900AC1F12 /* TRPersonalHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPersonalHomeViewController.h; sourceTree = "<group>"; };
+		C2C409B21DB4B3E900AC1F12 /* TRPersonalHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPersonalHomeViewController.m; sourceTree = "<group>"; };
+		C2E9A2FC1DB6F93B00F0936D /* TRUploadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRUploadTool.h; sourceTree = "<group>"; };
+		C2E9A2FD1DB6F93B00F0936D /* TRUploadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRUploadTool.m; sourceTree = "<group>"; };
+		C2E9A2FF1DB6FACD00F0936D /* TRComposeParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRComposeParam.h; sourceTree = "<group>"; };
+		C2E9A3001DB6FACD00F0936D /* TRComposeParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRComposeParam.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +383,7 @@
 		B227CAC71DB070A8005E13D4 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				C29AD5CD1DB6946E00510D06 /* Album */,
 				C29163F11DB3CF0E00769BA1 /* Utilities.h */,
 				C29163F21DB3CF0E00769BA1 /* Utilities.m */,
 				B227CAC91DB070BD005E13D4 /* Toast.h */,
@@ -286,6 +406,8 @@
 		B23969D91DAA363100F2904A /* Dev */ = {
 			isa = PBXGroup;
 			children = (
+				B214BF241DB60B72002CDF95 /* ViewController.h */,
+				B214BF251DB60B72002CDF95 /* ViewController.m */,
 				B23969DA1DAA378900F2904A /* TRCircleTableViewController.h */,
 				B23969DB1DAA378900F2904A /* TRCircleTableViewController.m */,
 				930BDCA31DAACD6300BAE473 /* TRTourViewController.h */,
@@ -311,6 +433,7 @@
 		B2773BE11DACC1D600B0A899 /* Happy */ = {
 			isa = PBXGroup;
 			children = (
+				B214BF271DB60B7B002CDF95 /* Main.storyboard */,
 				B2773BE21DACC1E200B0A899 /* GFCommentCell.h */,
 				B2773BE31DACC1E200B0A899 /* GFCommentCell.m */,
 				B2773BE41DACC1E200B0A899 /* GFCommentCell.xib */,
@@ -488,8 +611,8 @@
 			isa = PBXGroup;
 			children = (
 				C2915AAF1D8D3E7D00842952 /* Controller */,
-				C2915AB01D8D3E7D00842952 /* Model */,
-				C2915AB11D8D3E7D00842952 /* View */,
+				C29AD5B71DB6795900510D06 /* Model */,
+				C29AD5B81DB6795900510D06 /* View */,
 			);
 			path = Interactive;
 			sourceTree = "<group>";
@@ -499,22 +622,10 @@
 			children = (
 				C2771D6D1D8F8BCF006972CD /* TRInteractiveTableViewController.h */,
 				C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */,
+				C29AD5C11DB68E3600510D06 /* CZComposeViewController.h */,
+				C29AD5C21DB68E3700510D06 /* CZComposeViewController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		C2915AB01D8D3E7D00842952 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		C2915AB11D8D3E7D00842952 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		C2915AB21D8D3E7D00842952 /* Me */ = {
@@ -532,6 +643,14 @@
 			children = (
 				C2771D731D8F8BEA006972CD /* TRMeTableViewController.h */,
 				C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */,
+				C2C409B11DB4B3E900AC1F12 /* TRPersonalHomeViewController.h */,
+				C2C409B21DB4B3E900AC1F12 /* TRPersonalHomeViewController.m */,
+				C2C0E9021DB5F47A002222B2 /* TRSettingsTableViewController.h */,
+				C2C0E9031DB5F47A002222B2 /* TRSettingsTableViewController.m */,
+				C2C0E9081DB60DEA002222B2 /* TRMeInteractiveTableViewController.h */,
+				C2C0E9091DB60DEA002222B2 /* TRMeInteractiveTableViewController.m */,
+				C29AD5B41DB66C9A00510D06 /* TRMeDetailTableViewController.h */,
+				C29AD5B51DB66C9A00510D06 /* TRMeDetailTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -644,9 +763,89 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		C29AD5B71DB6795900510D06 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C29AD5BE1DB6818100510D06 /* TRInteractive.h */,
+				C29AD5BF1DB6818100510D06 /* TRInteractive.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C29AD5B81DB6795900510D06 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C29AD5B91DB6797100510D06 /* Interactive.storyboard */,
+				C29AD5BB1DB67BD800510D06 /* TRInteractiveCell.h */,
+				C29AD5BC1DB67BD800510D06 /* TRInteractiveCell.m */,
+				C29AD5C41DB68E5300510D06 /* CZComposePhotosView.h */,
+				C29AD5C51DB68E5300510D06 /* CZComposePhotosView.m */,
+				C29AD5C61DB68E5300510D06 /* CZComposeToolBar.h */,
+				C29AD5C71DB68E5300510D06 /* CZComposeToolBar.m */,
+				C29AD5C81DB68E5300510D06 /* CZTextView.h */,
+				C29AD5C91DB68E5300510D06 /* CZTextView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C29AD5CD1DB6946E00510D06 /* Album */ = {
+			isa = PBXGroup;
+			children = (
+				C29AD5CE1DB6946E00510D06 /* AlbumDataHandle.h */,
+				C29AD5CF1DB6946E00510D06 /* AlbumDataHandle.m */,
+				C29AD5D01DB6946E00510D06 /* AlbumDataModel.h */,
+				C29AD5D11DB6946E00510D06 /* AlbumDataModel.m */,
+				C29AD5D21DB6946E00510D06 /* AlbumListController.h */,
+				C29AD5D31DB6946E00510D06 /* AlbumListController.m */,
+				C29AD5D41DB6946E00510D06 /* AlbumListTableViewCell.h */,
+				C29AD5D51DB6946E00510D06 /* AlbumListTableViewCell.m */,
+				C29AD5D61DB6946E00510D06 /* AlbumNavigationController.h */,
+				C29AD5D71DB6946E00510D06 /* AlbumNavigationController.m */,
+				C29AD5D81DB6946E00510D06 /* Images */,
+				C29AD5E71DB6946E00510D06 /* MediaType.h */,
+				C29AD5E81DB6946E00510D06 /* PhotoPickerCell.h */,
+				C29AD5E91DB6946E00510D06 /* PhotoPickerCell.m */,
+				C29AD5EA1DB6946E00510D06 /* PhotoPickerCell.xib */,
+				C29AD5EB1DB6946E00510D06 /* PhotoPickerController.h */,
+				C29AD5EC1DB6946E00510D06 /* PhotoPickerController.m */,
+				C29AD5ED1DB6946E00510D06 /* PhotoPickerModel.h */,
+				C29AD5EE1DB6946E00510D06 /* PhotoPickerModel.m */,
+				C29AD5EF1DB6946E00510D06 /* PhotoPreviewCell.h */,
+				C29AD5F01DB6946E00510D06 /* PhotoPreviewCell.m */,
+				C29AD5F11DB6946E00510D06 /* PhotoPreviewController.h */,
+				C29AD5F21DB6946E00510D06 /* PhotoPreviewController.m */,
+				C29AD5F31DB6946E00510D06 /* VideoPlayerController.h */,
+				C29AD5F41DB6946E00510D06 /* VideoPlayerController.m */,
+			);
+			path = Album;
+			sourceTree = "<group>";
+		};
+		C29AD5D81DB6946E00510D06 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C29AD5D91DB6946E00510D06 /* MMVideoPreviewPlay@2x.png */,
+				C29AD5DA1DB6946E00510D06 /* MMVideoPreviewPlayHL@2x.png */,
+				C29AD5DB1DB6946E00510D06 /* navi_back@2x.png */,
+				C29AD5DC1DB6946E00510D06 /* photo_def_photoPickerVc@2x.png */,
+				C29AD5DD1DB6946E00510D06 /* photo_def_previewVc@2x.png */,
+				C29AD5DE1DB6946E00510D06 /* photo_number_icon@2x.png */,
+				C29AD5DF1DB6946E00510D06 /* photo_original_def@2x.png */,
+				C29AD5E01DB6946E00510D06 /* photo_original_sel@2x.png */,
+				C29AD5E11DB6946E00510D06 /* photo_sel_photoPickerVc@2x.png */,
+				C29AD5E21DB6946E00510D06 /* photo_sel_previewVc@2x.png */,
+				C29AD5E31DB6946E00510D06 /* preview_number_icon@2x.png */,
+				C29AD5E41DB6946E00510D06 /* preview_original_def@2x.png */,
+				C29AD5E51DB6946E00510D06 /* TableViewArrow@2x.png */,
+				C29AD5E61DB6946E00510D06 /* VideoSendIcon@2x.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		C29E7B551DAB7BCB00327F92 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				C2E9A2FA1DB6F8C600F0936D /* Upload */,
+				C2C409AC1DB4ACC700AC1F12 /* GetPersonal */,
 				C29163F81DB3E05000769BA1 /* Account */,
 				C29163F41DB3D7EC00769BA1 /* HUD */,
 				C29163E61DB3CE4200769BA1 /* Regist */,
@@ -677,6 +876,10 @@
 		C2B10B031DAFDEED003332FB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C2B5855C1DB4759D00C37479 /* TRPersonal.h */,
+				C2B5855D1DB4759D00C37479 /* TRPersonal.m */,
+				C29AD5AE1DB6491B00510D06 /* TRMeInteractive.h */,
+				C29AD5AF1DB6491B00510D06 /* TRMeInteractive.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -688,6 +891,8 @@
 				C2B10B071DAFE0F1003332FB /* TRMeHeaderView.h */,
 				C2B10B081DAFE0F1003332FB /* TRMeHeaderView.m */,
 				C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */,
+				C29AD5B11DB6603600510D06 /* TRMeInterTableViewCell.h */,
+				C29AD5B21DB6603600510D06 /* TRMeInterTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -728,6 +933,42 @@
 				C2C0B5AD1DB13ADB0099AF31 /* LoginAndRegist.storyboard */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		C2C409AC1DB4ACC700AC1F12 /* GetPersonal */ = {
+			isa = PBXGroup;
+			children = (
+				C2C409AD1DB4ACDF00AC1F12 /* Param */,
+			);
+			path = GetPersonal;
+			sourceTree = "<group>";
+		};
+		C2C409AD1DB4ACDF00AC1F12 /* Param */ = {
+			isa = PBXGroup;
+			children = (
+				C2C409AE1DB4ACFC00AC1F12 /* TRGetPersonalParam.h */,
+				C2C409AF1DB4ACFC00AC1F12 /* TRGetPersonalParam.m */,
+			);
+			path = Param;
+			sourceTree = "<group>";
+		};
+		C2E9A2FA1DB6F8C600F0936D /* Upload */ = {
+			isa = PBXGroup;
+			children = (
+				C2E9A2FB1DB6F8C600F0936D /* Param */,
+				C2E9A2FC1DB6F93B00F0936D /* TRUploadTool.h */,
+				C2E9A2FD1DB6F93B00F0936D /* TRUploadTool.m */,
+			);
+			path = Upload;
+			sourceTree = "<group>";
+		};
+		C2E9A2FB1DB6F8C600F0936D /* Param */ = {
+			isa = PBXGroup;
+			children = (
+				C2E9A2FF1DB6FACD00F0936D /* TRComposeParam.h */,
+				C2E9A3001DB6FACD00F0936D /* TRComposeParam.m */,
+			);
+			path = Param;
 			sourceTree = "<group>";
 		};
 		E509FA414993010A967070B5 /* Frameworks */ = {
@@ -848,20 +1089,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C29AD6061DB6946E00510D06 /* TableViewArrow@2x.png in Resources */,
 				B2773BFF1DACC1E200B0A899 /* GFPictureView.xib in Resources */,
 				B2773C061DACC1E200B0A899 /* GFSeeBigPictureViewController.xib in Resources */,
 				C2B10B061DAFDF01003332FB /* Me.storyboard in Resources */,
 				C2915A7F1D8D378D00842952 /* Assets.xcassets in Resources */,
+				C29AD6041DB6946E00510D06 /* preview_number_icon@2x.png in Resources */,
+				C29AD5FA1DB6946E00510D06 /* MMVideoPreviewPlay@2x.png in Resources */,
 				B2773C0A1DACC1E200B0A899 /* GFVoiceView.xib in Resources */,
 				B2773C081DACC1E200B0A899 /* GFVideoView.xib in Resources */,
+				C29AD6051DB6946E00510D06 /* preview_original_def@2x.png in Resources */,
+				C29AD6011DB6946E00510D06 /* photo_original_sel@2x.png in Resources */,
+				C29AD6091DB6946E00510D06 /* PhotoPickerCell.xib in Resources */,
+				C29AD5FD1DB6946E00510D06 /* photo_def_photoPickerVc@2x.png in Resources */,
+				C29AD6001DB6946E00510D06 /* photo_original_def@2x.png in Resources */,
+				C29AD5FB1DB6946E00510D06 /* MMVideoPreviewPlayHL@2x.png in Resources */,
+				B214BF281DB60B7B002CDF95 /* Main.storyboard in Resources */,
+				C29AD6031DB6946E00510D06 /* photo_sel_previewVc@2x.png in Resources */,
 				C2C0B5AE1DB13ADB0099AF31 /* LoginAndRegist.storyboard in Resources */,
 				C29E7B5F1DAB805700327F92 /* TRNoInternetConnectionView.xib in Resources */,
 				B2773C011DACC1E200B0A899 /* GFPieceCell.xib in Resources */,
 				C2B10B0B1DAFE0FC003332FB /* TRMeHeaderView.xib in Resources */,
+				C29AD5BA1DB6797100510D06 /* Interactive.storyboard in Resources */,
+				C29AD5FC1DB6946E00510D06 /* navi_back@2x.png in Resources */,
 				B23969D81DA9DC3000F2904A /* TRFound.storyboard in Resources */,
 				B2773BDD1DACC19F00B0A899 /* GFCommentViewController.xib in Resources */,
+				C29AD6021DB6946E00510D06 /* photo_sel_photoPickerVc@2x.png in Resources */,
+				C29AD6071DB6946E00510D06 /* VideoSendIcon@2x.png in Resources */,
 				B2773C041DACC1E200B0A899 /* GFRecommendTagsCell.xib in Resources */,
+				C29AD5FE1DB6946E00510D06 /* photo_def_previewVc@2x.png in Resources */,
 				B2773BFC1DACC1E200B0A899 /* GFCommentCell.xib in Resources */,
+				C29AD5FF1DB6946E00510D06 /* photo_number_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -945,47 +1203,75 @@
 				B2773C201DACC41200B0A899 /* UIImageView+GFExtension.m in Sources */,
 				C29163FF1DB3E07300769BA1 /* TRAccountTool.m in Sources */,
 				B2773C021DACC1E200B0A899 /* GFProgressView.m in Sources */,
+				C29AD5F91DB6946E00510D06 /* AlbumNavigationController.m in Sources */,
 				B2773C001DACC1E200B0A899 /* GFPieceCell.m in Sources */,
 				B2773C091DACC1E200B0A899 /* GFVoiceView.m in Sources */,
 				C29164021DB3E0BC00769BA1 /* TRAccount.m in Sources */,
 				B2773C031DACC1E200B0A899 /* GFRecommendTagsCell.m in Sources */,
+				C29AD60A1DB6946E00510D06 /* PhotoPickerController.m in Sources */,
 				C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */,
+				C29AD6081DB6946E00510D06 /* PhotoPickerCell.m in Sources */,
+				C2C0E9041DB5F47A002222B2 /* TRSettingsTableViewController.m in Sources */,
 				C29164061DB3E15100769BA1 /* TRUser.m in Sources */,
 				B23969DC1DAA378900F2904A /* TRCircleTableViewController.m in Sources */,
 				C2C0B5B11DB145AF0099AF31 /* TRLoginViewController.m in Sources */,
+				C2E9A2FE1DB6F93B00F0936D /* TRUploadTool.m in Sources */,
+				C29AD5F61DB6946E00510D06 /* AlbumDataModel.m in Sources */,
 				B2773BFE1DACC1E200B0A899 /* GFPictureView.m in Sources */,
 				B2773BFD1DACC1E200B0A899 /* GFCommentHeaderView.m in Sources */,
 				930BDCA51DAACD6300BAE473 /* TRTourViewController.m in Sources */,
+				C2C409B01DB4ACFC00AC1F12 /* TRGetPersonalParam.m in Sources */,
 				C29163F01DB3CE7400769BA1 /* TRRegistTool.m in Sources */,
 				C29163F71DB3D7F900769BA1 /* TRProgressTool.m in Sources */,
+				C29AD60E1DB6946E00510D06 /* VideoPlayerController.m in Sources */,
+				C29AD60D1DB6946E00510D06 /* PhotoPreviewController.m in Sources */,
+				C29AD5BD1DB67BD800510D06 /* TRInteractiveCell.m in Sources */,
 				C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */,
 				B2773C1A1DACC2A500B0A899 /* GFConst.m in Sources */,
 				B2773BDE1DACC19F00B0A899 /* GFEssenceViewController.m in Sources */,
 				C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */,
 				B2773C071DACC1E200B0A899 /* GFVideoView.m in Sources */,
 				B2F788F91DAF673C00D74716 /* TRPostTableViewCell.m in Sources */,
+				C29AD5B31DB6603600510D06 /* TRMeInterTableViewCell.m in Sources */,
 				B2773C171DACC23300B0A899 /* GFUser.m in Sources */,
+				C2B5855E1DB4759D00C37479 /* TRPersonal.m in Sources */,
 				C29163F31DB3CF0E00769BA1 /* Utilities.m in Sources */,
+				C29AD60C1DB6946E00510D06 /* PhotoPreviewCell.m in Sources */,
 				C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */,
+				C29AD60B1DB6946E00510D06 /* PhotoPickerModel.m in Sources */,
+				C29AD5C31DB68E3700510D06 /* CZComposeViewController.m in Sources */,
 				B2773BFB1DACC1E200B0A899 /* GFCommentCell.m in Sources */,
 				B2773C261DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m in Sources */,
 				B2773C151DACC23300B0A899 /* GFPieceComment.m in Sources */,
 				B227CACA1DB070BD005E13D4 /* Toast.m in Sources */,
 				C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */,
+				C29AD5C01DB6818100510D06 /* TRInteractive.m in Sources */,
 				B2773C051DACC1E200B0A899 /* GFSeeBigPictureViewController.m in Sources */,
+				C2C409B31DB4B3E900AC1F12 /* TRPersonalHomeViewController.m in Sources */,
+				C2E9A3011DB6FACD00F0936D /* TRComposeParam.m in Sources */,
+				B214BF261DB60B72002CDF95 /* ViewController.m in Sources */,
 				C29163EC1DB3CE6700769BA1 /* TRGetVcCodeParam.m in Sources */,
 				C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */,
+				C29AD5CA1DB68E5300510D06 /* CZComposePhotosView.m in Sources */,
+				C29AD5CC1DB68E5300510D06 /* CZTextView.m in Sources */,
 				C2915AC21D8D407000842952 /* TRTabBarController.m in Sources */,
 				C2915ABD1D8D3E7D00842952 /* main.m in Sources */,
+				C29AD5CB1DB68E5300510D06 /* CZComposeToolBar.m in Sources */,
 				C2C0B5B41DB14ACE0099AF31 /* TRRegistViewController.m in Sources */,
 				C2959F711DAB1D01009B75FB /* TRConst.m in Sources */,
 				B2773BDC1DACC19F00B0A899 /* GFCommentViewController.m in Sources */,
 				B2773C1D1DACC3B700B0A899 /* NSDate+GFExtension.m in Sources */,
+				C2C0E90A1DB60DEA002222B2 /* TRMeInteractiveTableViewController.m in Sources */,
 				C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */,
 				C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */,
+				C29AD5B01DB6491B00510D06 /* TRMeInteractive.m in Sources */,
+				C29AD5F51DB6946E00510D06 /* AlbumDataHandle.m in Sources */,
+				C29AD5F71DB6946E00510D06 /* AlbumListController.m in Sources */,
+				C29AD5B61DB66C9A00510D06 /* TRMeDetailTableViewController.m in Sources */,
 				C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */,
 				C29163FC1DB3E05F00769BA1 /* TRAccountParam.m in Sources */,
 				C2B10B091DAFE0F1003332FB /* TRMeHeaderView.m in Sources */,
+				C29AD5F81DB6946E00510D06 /* AlbumListTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
