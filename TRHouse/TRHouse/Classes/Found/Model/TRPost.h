@@ -30,6 +30,10 @@
 
 @property (nonatomic,assign) CGFloat cellRowHeight;
 
+@property (nonatomic,assign) CGFloat imageHeight;
+
+
+
 
 
 @end

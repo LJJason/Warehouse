@@ -52,12 +52,32 @@
     
     
 }
-- (NSArray *)postphotos{
-    
-    
-    
-    return _postphotos;
-}
+//- (void)setPostphotos:(NSArray *)postphotos{
+//    
+//    CGFloat imgWH = (TRScreenW -40)/3;
+//    
+//    _postphotos = postphotos;
+//    if (!postphotos) {
+//        self.imageHeight = 0;
+//        return;
+//    }else if (postphotos.count >= 9){
+//        
+//        self.imageHeight = TRScreenW+imgWH;
+//        
+//    }else if (postphotos.count < 9 && postphotos.count >6){
+//         self.imageHeight = TRScreenW;
+//    }else if (postphotos.count < 7 && postphotos.count >3){
+//        self.imageHeight = TRScreenW - imgWH;
+//    }else if (postphotos.count < 4 && postphotos.count >0)
+//    {
+//        self.imageHeight = TRScreenW - (2 * imgWH);
+//    }else if(postphotos.count == 0){
+//        
+//        self.imageHeight = 0;
+//    }
+//    
+//    
+//}
 
 - (CGFloat)cellRowHeight{
    

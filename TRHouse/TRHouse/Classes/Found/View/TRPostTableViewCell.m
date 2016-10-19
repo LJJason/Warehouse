@@ -8,6 +8,7 @@
 
 #import "TRPostTableViewCell.h"
 #import "TRPost.h"
+#import "TRImageView.h"
 
 @interface TRPostTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *postContent;
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentCountBtn;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *postCellrowHeight;
+@property (nonatomic,strong)TRImageView *imageViews;
 
 
 
@@ -26,19 +28,20 @@
 
 @implementation TRPostTableViewCell
 
+
 - (void)awakeFromNib{
-    
     [super awakeFromNib];
     
     
+//   TRImageView *view = [[TRImageView alloc]init];
+//    self.imageViews = view;
+//    [self.contentView addSubview:view];
+//    view.backgroundColor = [UIColor redColor];
 }
 
 - (void)setPosts:(TRPost *)posts{
     _posts = posts;
     
-    
-    
-      
     
 
     self.postContent.text = posts.postcontent;
@@ -55,6 +58,12 @@
     
     self.praiseUserBtn.enabled = range.length ? NO : YES;
     
+    if (posts.postphotos.count == 0 ) {
+        
+        self.imageViews.hidden = YES;
+    }else{
+        self.imageViews.hidden = NO;
+    }
     
 }
 
@@ -100,6 +109,15 @@
     
     
 }
+
+//- (void)layoutSubviews
+//{
+//    CGFloat margin = 10;
+//    CGFloat maximgY = CGRectGetMaxY(self.postTimelbl.frame);
+//    self.imageViews.frame = CGRectMake(10, maximgY, TRScreenW - 2 * margin, self.posts.imageHeight);
+//    
+//}
+
 - (IBAction)commentClickAction:(UIButton *)sender forEvent:(UIEvent *)event {
 }
 @end

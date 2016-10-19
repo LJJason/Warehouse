@@ -43,6 +43,7 @@
 		B2773C201DACC41200B0A899 /* UIImageView+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C1F1DACC41200B0A899 /* UIImageView+GFExtension.m */; };
 		B2773C231DACC44000B0A899 /* UIImage+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C221DACC44000B0A899 /* UIImage+GFExtension.m */; };
 		B2773C261DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C251DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m */; };
+		B29AC81B1DB7455B00AD1C6E /* TRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AC81A1DB7455B00AD1C6E /* TRImageView.m */; };
 		B2F788F61DAF26B600D74716 /* TRPost.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F788F51DAF26B600D74716 /* TRPost.m */; };
 		B2F788F91DAF673C00D74716 /* TRPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F788F81DAF673C00D74716 /* TRPostTableViewCell.m */; };
 		C26FD4131DB71F9200F9ED4B /* TRInteractiveCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26FD4121DB71F9200F9ED4B /* TRInteractiveCommentCell.m */; };
@@ -207,6 +208,8 @@
 		B2773C221DACC44000B0A899 /* UIImage+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+GFExtension.m"; sourceTree = "<group>"; };
 		B2773C241DACC4C000B0A899 /* UIBarButtonItem+GFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+GFExtension.h"; sourceTree = "<group>"; };
 		B2773C251DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+GFExtension.m"; sourceTree = "<group>"; };
+		B29AC8191DB7455B00AD1C6E /* TRImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRImageView.h; sourceTree = "<group>"; };
+		B29AC81A1DB7455B00AD1C6E /* TRImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRImageView.m; sourceTree = "<group>"; };
 		B2F788F41DAF26B600D74716 /* TRPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPost.h; sourceTree = "<group>"; };
 		B2F788F51DAF26B600D74716 /* TRPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPost.m; sourceTree = "<group>"; };
 		B2F788F71DAF673C00D74716 /* TRPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPostTableViewCell.h; sourceTree = "<group>"; };
@@ -410,6 +413,8 @@
 				B23969D71DA9DC3000F2904A /* TRFound.storyboard */,
 				B2F788F71DAF673C00D74716 /* TRPostTableViewCell.h */,
 				B2F788F81DAF673C00D74716 /* TRPostTableViewCell.m */,
+				B29AC8191DB7455B00AD1C6E /* TRImageView.h */,
+				B29AC81A1DB7455B00AD1C6E /* TRImageView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1284,6 +1289,7 @@
 				B2773BDC1DACC19F00B0A899 /* GFCommentViewController.m in Sources */,
 				B2773C1D1DACC3B700B0A899 /* NSDate+GFExtension.m in Sources */,
 				C2C0E90A1DB60DEA002222B2 /* TRMeInteractiveTableViewController.m in Sources */,
+				B29AC81B1DB7455B00AD1C6E /* TRImageView.m in Sources */,
 				C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */,
 				C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */,
 				C29AD5B01DB6491B00510D06 /* TRMeInteractive.m in Sources */,
