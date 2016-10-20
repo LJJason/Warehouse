@@ -24,9 +24,9 @@ NSString * const TRGetVcCodeUrl = @"http://yearwood.top/TRHouse/sendSms";
 /*** 注册的接口 */
 NSString * const TRRegistUrl = @"http://localhost:8080/TRHouse/regist";
 /*** 登录的接口 */
-NSString * const TRLoginUrl = @"http://yearwood.top/TRHouse/login";
+NSString * const TRLoginUrl = @"http://localhost:8080/TRHouse/login";
 
-/*** 登录的接口 */
+/*** 获取个人资料的接口 */
 NSString * const TRGetPersonalUrl = @"http://localhost:8080/TRHouse/getPersonal";
 
 /*** 获取别人发来的一拍即合请求的接口 */
@@ -64,4 +64,49 @@ NSString * const TRGetHotRoomUrl = @"http://localhost:8080/TRHouse/getHotRoom";
 
 /*** 首页精选的接口 */
 NSString * const TRGetSelectRoomUrl = @"http://localhost:8080/TRHouse/getSelectRoom";
+
+
+/*** 点赞的接口 */
+NSString * const TRLikeUrl = @"http://localhost:8080/TRHouse/like";
+
+/*** 获取临居圈的数据的接口 */
+NSString * const TRGetAllPostsUrl = @"http://localhost:8080/TRHouse/getAllPost";
+
+
+/*** 获取我的帖子的数据的接口 */
+NSString * const TRGetMePostsUrl = @"http://localhost:8080/TRHouse/getMePosts";
+
+/*** 获取我的互动的数据的接口 */
+NSString * const TRGetMeHomeInteractive = @"http://localhost:8080/TRHouse/getMeHomeInteractive";
+
+/*** 修改昵称的接口 */
+NSString * const TRChangeUserNameUrl = @"http://localhost:8080/TRHouse/updateUserName";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

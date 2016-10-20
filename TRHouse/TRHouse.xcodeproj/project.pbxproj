@@ -46,6 +46,12 @@
 		B29AC81B1DB7455B00AD1C6E /* TRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AC81A1DB7455B00AD1C6E /* TRImageView.m */; };
 		B2F788F61DAF26B600D74716 /* TRPost.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F788F51DAF26B600D74716 /* TRPost.m */; };
 		B2F788F91DAF673C00D74716 /* TRPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F788F81DAF673C00D74716 /* TRPostTableViewCell.m */; };
+		C21309141DB8FDDD003EE39C /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C21309131DB8FDDD003EE39C /* Me.storyboard */; };
+		C21309191DB8FE15003EE39C /* TRPersonalSettingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21309161DB8FE15003EE39C /* TRPersonalSettingTableViewController.m */; };
+		C213091A1DB8FE15003EE39C /* TRChangeUserNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21309181DB8FE15003EE39C /* TRChangeUserNameViewController.m */; };
+		C213091D1DB8FE8A003EE39C /* TRConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C213091C1DB8FE8A003EE39C /* TRConst.m */; };
+		C213091F1DB8FECF003EE39C /* TRPersonalHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C213091E1DB8FECF003EE39C /* TRPersonalHomeViewController.m */; };
+		C21309221DB8FF27003EE39C /* TRInteractiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21309211DB8FF27003EE39C /* TRInteractiveTableViewController.m */; };
 		C23A678E1DB79EF500755FFC /* TRTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A678C1DB79EF500755FFC /* TRTableViewCell.m */; };
 		C23A678F1DB79EF500755FFC /* TRTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23A678D1DB79EF500755FFC /* TRTableViewCell.xib */; };
 		C23A67921DB7AB4F00755FFC /* TRHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A67911DB7AB4F00755FFC /* TRHomeHeaderView.m */; };
@@ -59,7 +65,6 @@
 		C26FD41D1DB76D5100F9ED4B /* TRRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = C26FD41C1DB76D5100F9ED4B /* TRRoom.m */; };
 		C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27226121D8FBD3C00C998CA /* TRNavigationController.m */; };
 		C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */; };
-		C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */; };
 		C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D711D8F8BDE006972CD /* TRFoundTableViewController.m */; };
 		C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */; };
 		C2915A7F1D8D378D00842952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2915A7E1D8D378D00842952 /* Assets.xcassets */; };
@@ -78,7 +83,6 @@
 		C29163FF1DB3E07300769BA1 /* TRAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C29163FE1DB3E07300769BA1 /* TRAccountTool.m */; };
 		C29164021DB3E0BC00769BA1 /* TRAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = C29164011DB3E0BC00769BA1 /* TRAccount.m */; };
 		C29164061DB3E15100769BA1 /* TRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C29164051DB3E15100769BA1 /* TRUser.m */; };
-		C2959F711DAB1D01009B75FB /* TRConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C2959F701DAB1D01009B75FB /* TRConst.m */; };
 		C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */; };
 		C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */; };
 		C29AD5B01DB6491B00510D06 /* TRMeInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5AF1DB6491B00510D06 /* TRMeInteractive.m */; };
@@ -120,7 +124,6 @@
 		C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C29E7B581DAB7C2600327F92 /* TRHttpTool.m */; };
 		C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = C29E7B5C1DAB805700327F92 /* TRNoInternetConnectionView.m */; };
 		C29E7B5F1DAB805700327F92 /* TRNoInternetConnectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C29E7B5D1DAB805700327F92 /* TRNoInternetConnectionView.xib */; };
-		C2B10B061DAFDF01003332FB /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2B10B051DAFDF01003332FB /* Me.storyboard */; };
 		C2B10B091DAFE0F1003332FB /* TRMeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B10B081DAFE0F1003332FB /* TRMeHeaderView.m */; };
 		C2B10B0B1DAFE0FC003332FB /* TRMeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */; };
 		C2B5855E1DB4759D00C37479 /* TRPersonal.m in Sources */ = {isa = PBXBuildFile; fileRef = C2B5855D1DB4759D00C37479 /* TRPersonal.m */; };
@@ -130,7 +133,6 @@
 		C2C0E9041DB5F47A002222B2 /* TRSettingsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C0E9031DB5F47A002222B2 /* TRSettingsTableViewController.m */; };
 		C2C0E90A1DB60DEA002222B2 /* TRMeInteractiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C0E9091DB60DEA002222B2 /* TRMeInteractiveTableViewController.m */; };
 		C2C409B01DB4ACFC00AC1F12 /* TRGetPersonalParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C409AF1DB4ACFC00AC1F12 /* TRGetPersonalParam.m */; };
-		C2C409B31DB4B3E900AC1F12 /* TRPersonalHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C409B21DB4B3E900AC1F12 /* TRPersonalHomeViewController.m */; };
 		C2E9A2FE1DB6F93B00F0936D /* TRUploadTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9A2FD1DB6F93B00F0936D /* TRUploadTool.m */; };
 		C2E9A3011DB6FACD00F0936D /* TRComposeParam.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9A3001DB6FACD00F0936D /* TRComposeParam.m */; };
 		C2E9A3041DB7138F00F0936D /* TRInteractiveCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9A3031DB7138F00F0936D /* TRInteractiveCommentViewController.m */; };
@@ -223,6 +225,16 @@
 		B2F788F71DAF673C00D74716 /* TRPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPostTableViewCell.h; sourceTree = "<group>"; };
 		B2F788F81DAF673C00D74716 /* TRPostTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPostTableViewCell.m; sourceTree = "<group>"; };
 		B6F0BE0F3B86B414511B1FFC /* Pods-TRHouse.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TRHouse.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TRHouse/Pods-TRHouse.debug.xcconfig"; sourceTree = "<group>"; };
+		C21309131DB8FDDD003EE39C /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
+		C21309151DB8FE15003EE39C /* TRPersonalSettingTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPersonalSettingTableViewController.h; sourceTree = "<group>"; };
+		C21309161DB8FE15003EE39C /* TRPersonalSettingTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPersonalSettingTableViewController.m; sourceTree = "<group>"; };
+		C21309171DB8FE15003EE39C /* TRChangeUserNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRChangeUserNameViewController.h; sourceTree = "<group>"; };
+		C21309181DB8FE15003EE39C /* TRChangeUserNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRChangeUserNameViewController.m; sourceTree = "<group>"; };
+		C213091B1DB8FE8A003EE39C /* TRConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRConst.h; sourceTree = "<group>"; };
+		C213091C1DB8FE8A003EE39C /* TRConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRConst.m; sourceTree = "<group>"; };
+		C213091E1DB8FECF003EE39C /* TRPersonalHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPersonalHomeViewController.m; sourceTree = "<group>"; };
+		C21309201DB8FF27003EE39C /* TRInteractiveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRInteractiveTableViewController.h; sourceTree = "<group>"; };
+		C21309211DB8FF27003EE39C /* TRInteractiveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRInteractiveTableViewController.m; sourceTree = "<group>"; };
 		C22BD58D1D91106A00C53223 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C23A678B1DB79EF500755FFC /* TRTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTableViewCell.h; sourceTree = "<group>"; };
 		C23A678C1DB79EF500755FFC /* TRTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTableViewCell.m; sourceTree = "<group>"; };
@@ -247,8 +259,6 @@
 		C27226121D8FBD3C00C998CA /* TRNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNavigationController.m; sourceTree = "<group>"; };
 		C2771D6A1D8F8B89006972CD /* TRHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRHomeTableViewController.h; sourceTree = "<group>"; };
 		C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRHomeTableViewController.m; sourceTree = "<group>"; };
-		C2771D6D1D8F8BCF006972CD /* TRInteractiveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRInteractiveTableViewController.h; sourceTree = "<group>"; };
-		C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRInteractiveTableViewController.m; sourceTree = "<group>"; };
 		C2771D701D8F8BDE006972CD /* TRFoundTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRFoundTableViewController.h; sourceTree = "<group>"; };
 		C2771D711D8F8BDE006972CD /* TRFoundTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRFoundTableViewController.m; sourceTree = "<group>"; };
 		C2771D731D8F8BEA006972CD /* TRMeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeTableViewController.h; sourceTree = "<group>"; };
@@ -286,8 +296,6 @@
 		C29164011DB3E0BC00769BA1 /* TRAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRAccount.m; sourceTree = "<group>"; };
 		C29164041DB3E15100769BA1 /* TRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRUser.h; sourceTree = "<group>"; };
 		C29164051DB3E15100769BA1 /* TRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRUser.m; sourceTree = "<group>"; };
-		C2959F6F1DAB1D01009B75FB /* TRConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRConst.h; sourceTree = "<group>"; };
-		C2959F701DAB1D01009B75FB /* TRConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRConst.m; sourceTree = "<group>"; };
 		C297FAEF1DAA1B4100F7CC61 /* UIView+GFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GFExtension.h"; sourceTree = "<group>"; };
 		C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GFExtension.m"; sourceTree = "<group>"; };
 		C297FAF11DAA1B4100F7CC61 /* UIViewController+TRExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TRExtension.h"; sourceTree = "<group>"; };
@@ -354,7 +362,6 @@
 		C29E7B5B1DAB805700327F92 /* TRNoInternetConnectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRNoInternetConnectionView.h; sourceTree = "<group>"; };
 		C29E7B5C1DAB805700327F92 /* TRNoInternetConnectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRNoInternetConnectionView.m; sourceTree = "<group>"; };
 		C29E7B5D1DAB805700327F92 /* TRNoInternetConnectionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRNoInternetConnectionView.xib; sourceTree = "<group>"; };
-		C2B10B051DAFDF01003332FB /* Me.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Me.storyboard; sourceTree = "<group>"; };
 		C2B10B071DAFE0F1003332FB /* TRMeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeHeaderView.h; sourceTree = "<group>"; };
 		C2B10B081DAFE0F1003332FB /* TRMeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeHeaderView.m; sourceTree = "<group>"; };
 		C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRMeHeaderView.xib; sourceTree = "<group>"; };
@@ -372,7 +379,6 @@
 		C2C409AE1DB4ACFC00AC1F12 /* TRGetPersonalParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRGetPersonalParam.h; sourceTree = "<group>"; };
 		C2C409AF1DB4ACFC00AC1F12 /* TRGetPersonalParam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRGetPersonalParam.m; sourceTree = "<group>"; };
 		C2C409B11DB4B3E900AC1F12 /* TRPersonalHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPersonalHomeViewController.h; sourceTree = "<group>"; };
-		C2C409B21DB4B3E900AC1F12 /* TRPersonalHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPersonalHomeViewController.m; sourceTree = "<group>"; };
 		C2E9A2FC1DB6F93B00F0936D /* TRUploadTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRUploadTool.h; sourceTree = "<group>"; };
 		C2E9A2FD1DB6F93B00F0936D /* TRUploadTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRUploadTool.m; sourceTree = "<group>"; };
 		C2E9A2FF1DB6FACD00F0936D /* TRComposeParam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRComposeParam.h; sourceTree = "<group>"; };
@@ -672,8 +678,8 @@
 		C2915AAF1D8D3E7D00842952 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				C2771D6D1D8F8BCF006972CD /* TRInteractiveTableViewController.h */,
-				C2771D6E1D8F8BCF006972CD /* TRInteractiveTableViewController.m */,
+				C21309201DB8FF27003EE39C /* TRInteractiveTableViewController.h */,
+				C21309211DB8FF27003EE39C /* TRInteractiveTableViewController.m */,
 				C29AD5C11DB68E3600510D06 /* CZComposeViewController.h */,
 				C29AD5C21DB68E3700510D06 /* CZComposeViewController.m */,
 				C2E9A3021DB7138F00F0936D /* TRInteractiveCommentViewController.h */,
@@ -698,13 +704,17 @@
 				C2771D731D8F8BEA006972CD /* TRMeTableViewController.h */,
 				C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */,
 				C2C409B11DB4B3E900AC1F12 /* TRPersonalHomeViewController.h */,
-				C2C409B21DB4B3E900AC1F12 /* TRPersonalHomeViewController.m */,
+				C213091E1DB8FECF003EE39C /* TRPersonalHomeViewController.m */,
 				C2C0E9021DB5F47A002222B2 /* TRSettingsTableViewController.h */,
 				C2C0E9031DB5F47A002222B2 /* TRSettingsTableViewController.m */,
 				C2C0E9081DB60DEA002222B2 /* TRMeInteractiveTableViewController.h */,
 				C2C0E9091DB60DEA002222B2 /* TRMeInteractiveTableViewController.m */,
 				C29AD5B41DB66C9A00510D06 /* TRMeDetailTableViewController.h */,
 				C29AD5B51DB66C9A00510D06 /* TRMeDetailTableViewController.m */,
+				C21309151DB8FE15003EE39C /* TRPersonalSettingTableViewController.h */,
+				C21309161DB8FE15003EE39C /* TRPersonalSettingTableViewController.m */,
+				C21309171DB8FE15003EE39C /* TRChangeUserNameViewController.h */,
+				C21309181DB8FE15003EE39C /* TRChangeUserNameViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -716,10 +726,10 @@
 				C29E7B5A1DAB803700327F92 /* View */,
 				C297FAEE1DAA1B2A00F7CC61 /* Category */,
 				C2915ABF1D8D404E00842952 /* Controller */,
-				C2959F6F1DAB1D01009B75FB /* TRConst.h */,
-				C2959F701DAB1D01009B75FB /* TRConst.m */,
 				B2773C181DACC2A500B0A899 /* GFConst.h */,
 				B2773C191DACC2A500B0A899 /* GFConst.m */,
+				C213091B1DB8FE8A003EE39C /* TRConst.h */,
+				C213091C1DB8FE8A003EE39C /* TRConst.m */,
 				C2915AB71D8D3E7D00842952 /* AppDelegate.h */,
 				C2915AB81D8D3E7D00842952 /* AppDelegate.m */,
 				C2915AB91D8D3E7D00842952 /* main.m */,
@@ -946,7 +956,7 @@
 		C2B10B041DAFDEED003332FB /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C2B10B051DAFDF01003332FB /* Me.storyboard */,
+				C21309131DB8FDDD003EE39C /* Me.storyboard */,
 				C2B10B071DAFE0F1003332FB /* TRMeHeaderView.h */,
 				C2B10B081DAFE0F1003332FB /* TRMeHeaderView.m */,
 				C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */,
@@ -1151,7 +1161,6 @@
 				C29AD6061DB6946E00510D06 /* TableViewArrow@2x.png in Resources */,
 				B2773BFF1DACC1E200B0A899 /* GFPictureView.xib in Resources */,
 				B2773C061DACC1E200B0A899 /* GFSeeBigPictureViewController.xib in Resources */,
-				C2B10B061DAFDF01003332FB /* Me.storyboard in Resources */,
 				C2915A7F1D8D378D00842952 /* Assets.xcassets in Resources */,
 				C29AD6041DB6946E00510D06 /* preview_number_icon@2x.png in Resources */,
 				C29AD5FA1DB6946E00510D06 /* MMVideoPreviewPlay@2x.png in Resources */,
@@ -1177,6 +1186,7 @@
 				B23969D81DA9DC3000F2904A /* TRFound.storyboard in Resources */,
 				B2773BDD1DACC19F00B0A899 /* GFCommentViewController.xib in Resources */,
 				C29AD6021DB6946E00510D06 /* photo_sel_photoPickerVc@2x.png in Resources */,
+				C21309141DB8FDDD003EE39C /* Me.storyboard in Resources */,
 				C29AD6071DB6946E00510D06 /* VideoSendIcon@2x.png in Resources */,
 				B2773C041DACC1E200B0A899 /* GFRecommendTagsCell.xib in Resources */,
 				C29AD5FE1DB6946E00510D06 /* photo_def_previewVc@2x.png in Resources */,
@@ -1254,10 +1264,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2771D6F1D8F8BCF006972CD /* TRInteractiveTableViewController.m in Sources */,
 				B2773BDF1DACC19F00B0A899 /* GFPieceViewController.m in Sources */,
 				B2773C231DACC44000B0A899 /* UIImage+GFExtension.m in Sources */,
 				B2F788F61DAF26B600D74716 /* TRPost.m in Sources */,
+				C213091A1DB8FE15003EE39C /* TRChangeUserNameViewController.m in Sources */,
 				C26FD4131DB71F9200F9ED4B /* TRInteractiveCommentCell.m in Sources */,
 				C29163ED1DB3CE6700769BA1 /* TRRegistParam.m in Sources */,
 				B2773C161DACC23300B0A899 /* GFRecommendTags.m in Sources */,
@@ -1276,6 +1286,7 @@
 				C29AD60A1DB6946E00510D06 /* PhotoPickerController.m in Sources */,
 				C27226131D8FBD3C00C998CA /* TRNavigationController.m in Sources */,
 				C29AD6081DB6946E00510D06 /* PhotoPickerCell.m in Sources */,
+				C213091F1DB8FECF003EE39C /* TRPersonalHomeViewController.m in Sources */,
 				C2C0E9041DB5F47A002222B2 /* TRSettingsTableViewController.m in Sources */,
 				C29164061DB3E15100769BA1 /* TRUser.m in Sources */,
 				B23969DC1DAA378900F2904A /* TRCircleTableViewController.m in Sources */,
@@ -1294,6 +1305,7 @@
 				C29AD5BD1DB67BD800510D06 /* TRInteractiveCell.m in Sources */,
 				C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */,
 				B2773C1A1DACC2A500B0A899 /* GFConst.m in Sources */,
+				C213091D1DB8FE8A003EE39C /* TRConst.m in Sources */,
 				B2773BDE1DACC19F00B0A899 /* GFEssenceViewController.m in Sources */,
 				C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */,
 				B2773C071DACC1E200B0A899 /* GFVideoView.m in Sources */,
@@ -1315,7 +1327,6 @@
 				C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */,
 				C29AD5C01DB6818100510D06 /* TRInteractive.m in Sources */,
 				B2773C051DACC1E200B0A899 /* GFSeeBigPictureViewController.m in Sources */,
-				C2C409B31DB4B3E900AC1F12 /* TRPersonalHomeViewController.m in Sources */,
 				C2E9A3011DB6FACD00F0936D /* TRComposeParam.m in Sources */,
 				B214BF261DB60B72002CDF95 /* ViewController.m in Sources */,
 				C29163EC1DB3CE6700769BA1 /* TRGetVcCodeParam.m in Sources */,
@@ -1328,13 +1339,14 @@
 				C2915ABD1D8D3E7D00842952 /* main.m in Sources */,
 				C29AD5CB1DB68E5300510D06 /* CZComposeToolBar.m in Sources */,
 				C2C0B5B41DB14ACE0099AF31 /* TRRegistViewController.m in Sources */,
-				C2959F711DAB1D01009B75FB /* TRConst.m in Sources */,
 				C26FD41D1DB76D5100F9ED4B /* TRRoom.m in Sources */,
 				B2773BDC1DACC19F00B0A899 /* GFCommentViewController.m in Sources */,
 				B2773C1D1DACC3B700B0A899 /* NSDate+GFExtension.m in Sources */,
 				C2C0E90A1DB60DEA002222B2 /* TRMeInteractiveTableViewController.m in Sources */,
 				B29AC81B1DB7455B00AD1C6E /* TRImageView.m in Sources */,
+				C21309221DB8FF27003EE39C /* TRInteractiveTableViewController.m in Sources */,
 				C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */,
+				C21309191DB8FE15003EE39C /* TRPersonalSettingTableViewController.m in Sources */,
 				C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */,
 				C29AD5B01DB6491B00510D06 /* TRMeInteractive.m in Sources */,
 				C29AD5F51DB6946E00510D06 /* AlbumDataHandle.m in Sources */,

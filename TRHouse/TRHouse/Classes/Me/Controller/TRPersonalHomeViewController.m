@@ -10,7 +10,7 @@
 #import "TRPersonal.h"
 
 #import "TRInteractiveTableViewController.h"
-#import "TRFoundTableViewController.h"
+#import "TRCircleTableViewController.h"
 
 @interface TRPersonalHomeViewController ()<UIScrollViewDelegate>
 
@@ -81,11 +81,13 @@
     
     TRInteractiveTableViewController *interVc = [TRInteractiveTableViewController instantiateInitialViewControllerWithStoryboardName:TRInteractiveStoryboardName];
     interVc.title = @"互动";
+    interVc.urlStr = TRGetMeHomeInteractive;
     [self addChildViewController:interVc];
     
-//    TRInteractiveTableViewController *interVc = [TRInteractiveTableViewController viewControllerWtithStoryboardName:TRMeStoryboardName identifier:NSStringFromClass([TRInteractiveTableViewController class])];
-//    interVc.title = @"互动";
-//    [self addChildViewController:interVc];
+    TRCircleTableViewController *postVc = [TRCircleTableViewController viewControllerWtithStoryboardName:TRFoundStoryboardName identifier:NSStringFromClass([TRCircleTableViewController class])];
+    postVc.title = @"帖子";
+    postVc.urlStr = TRGetMePostsUrl;
+    [self addChildViewController:postVc];
     
 }
 
@@ -97,9 +99,9 @@
     UIView *titlesView = [[UIView alloc] init];
     self.titlesView = titlesView;
     //设置背景色切设置透明度为0.7
-    titlesView.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.7];
+    titlesView.backgroundColor = [[UIColor whiteColor] colorWithAlphaComponent:0.7];
     
-    titlesView.y = 304;
+    titlesView.y = 224;
     titlesView.width = self.view.width;
     titlesView.height = GFTitlesViewH;
     
@@ -163,7 +165,7 @@
     UIScrollView *contentView = [[UIScrollView alloc] init];
     //    contentView.backgroundColor = [UIColor redColor];
     contentView.x = 0;
-    contentView.y = 340;
+    contentView.y = 260;
     contentView.width = self.view.width;
     contentView.height = self.view.height - contentView.y;
     //设置分页

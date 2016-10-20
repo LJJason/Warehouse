@@ -74,4 +74,40 @@ UIKIT_EXTERN NSString * const TRGetHotRoomUrl;
 /*** 首页精选的接口 */
 UIKIT_EXTERN NSString * const TRGetSelectRoomUrl;
 
+/*** 点赞的接口 */
+UIKIT_EXTERN NSString * const TRLikeUrl;
+
+/*** 获取临居圈的数据的接口 */
+UIKIT_EXTERN NSString * const TRGetAllPostsUrl;
+
+
+/*** 获取我的帖子的数据的接口 */
+UIKIT_EXTERN NSString * const TRGetMePostsUrl;
+
+/*** 获取我的互动的数据的接口 */
+UIKIT_EXTERN NSString * const TRGetMeHomeInteractive;
+
+/*** 修改昵称的接口 */
+UIKIT_EXTERN NSString * const TRChangeUserNameUrl;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

@@ -13,6 +13,7 @@
 #import "TRInteractiveCommentViewController.h"
 #import "TRAccountTool.h"
 #import "TRLoginViewController.h"
+#import "TRAccount.h"
 
 @interface TRInteractiveTableViewController ()
 
@@ -25,7 +26,8 @@
 /** 所有的互动信息 */
 @property (nonatomic, strong) NSMutableArray *interactives;
 
-
+/** 真实请求url */
+@property (nonatomic, copy) NSString *urlString;
 
 @end
 
@@ -40,12 +42,27 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //url处理
+    [self setupUrl];
+    
     //设置导航条
     [self setupNav];
     //设置刷新控件
     [self setupRefresh];
     
 }
+
+/**
+ *  url处理
+ */
+- (void)setupUrl{
+    if (self.urlStr == nil) {
+        self.urlString = TRGetAllInteractiveUrl;
+    }else {
+        self.urlString = self.urlStr;
+    }
+}
+
 
 /**
  *  设置导航条相关
@@ -83,8 +100,15 @@ static NSString * const cellId = @"TRInteractiveCell";
  */
 - (void)loadNewInter{
     
+    NSMutableDictionary *param = nil;
     
-    [TRHttpTool GET:TRGetAllInteractiveUrl parameters:nil success:^(id responseObject) {
+    if (self.urlStr) {
+        param = [NSMutableDictionary dictionary];
+        TRAccount *account = [TRAccountTool account];
+        param[@"uid"] = account.uid;
+    }
+    
+    [TRHttpTool GET:self.urlString parameters:param success:^(id responseObject) {
         
         self.maxCount = [responseObject[@"maxCount"] integerValue];
         
@@ -118,7 +142,12 @@ static NSString * const cellId = @"TRInteractiveCell";
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"page"] = @(page);
     
-    [TRHttpTool GET:TRGetAllInteractiveUrl parameters:param success:^(id responseObject) {
+    if (self.urlStr) {
+        TRAccount *account = [TRAccountTool account];
+        param[@"uid"] = account.uid;
+    }
+    
+    [TRHttpTool GET:self.urlString parameters:param success:^(id responseObject) {
         
         [self.interactives addObjectsFromArray:[TRInteractive mj_objectArrayWithKeyValuesArray:responseObject[@"list"]]];
         

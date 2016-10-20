@@ -9,6 +9,8 @@
 #import "TRCircleTableViewController.h"
 #import "TRPostTableViewCell.h"
 #import "TRPost.h"
+#import "TRAccount.h"
+#import "TRAccountTool.h"
 
 
 @interface TRCircleTableViewController ()
@@ -17,7 +19,8 @@
 /** 当前页码 */
 @property (nonatomic,assign) NSInteger page;
 
-
+/** 请求真实url */
+@property (nonatomic, copy) NSString *urlString;
 
 @end
 
@@ -32,6 +35,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self setupUrl];
     [self setupRefresh];
     
     UIButton *rightItem = [[UIButton alloc]init];
@@ -43,6 +48,19 @@
     
     
 }
+
+
+/**
+ *  url处理
+ */
+- (void)setupUrl{
+    if (self.urlStr == nil) {
+        self.urlString = TRGetAllPostsUrl;
+    }else {
+        self.urlString = self.urlStr;
+    }
+}
+
 
 -(void)setupRefresh
 {   self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadTheData)];
@@ -95,9 +113,15 @@
     
     NSInteger page = self.page + 1;
     NSMutableDictionary *para = [NSMutableDictionary dictionary];
-    para[@"page"]  = @(self.page);
+    para[@"page"]  = @(page);
     
-    [TRHttpTool POST:@"http://192.168.61.79:8080/TRHouse/getAllPost" parameters:para success:^(id responseObject) {
+    if (self.urlStr) {
+        TRAccount *account = [TRAccountTool account];
+        para[@"uid"] = account.uid;
+    }
+
+    
+    [TRHttpTool POST:self.urlString parameters:para success:^(id responseObject) {
         [self.posts addObjectsFromArray:[TRPost mj_objectArrayWithKeyValuesArray:responseObject[@"posts"]]];
         [self.tableView reloadData];
         
@@ -121,9 +145,15 @@
 
 - (void)loadTheData{
     
+    NSMutableDictionary *param = nil;
     
+    if (self.urlStr) {
+        param = [NSMutableDictionary dictionary];
+        TRAccount *account = [TRAccountTool account];
+        param[@"uid"] = account.uid;
+    }
     
-    [TRHttpTool GET:@"http://192.168.61.79:8080/TRHouse/getAllPost" parameters:nil success:^(id responseObject) {
+    [TRHttpTool GET:self.urlString parameters:param success:^(id responseObject) {
         //         TRGLog(@"%@",responseObject);
         self.posts = [TRPost mj_objectArrayWithKeyValuesArray:responseObject[@"posts"]];
         //设置页码
