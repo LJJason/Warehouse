@@ -8,6 +8,7 @@
 
 #import "TRInteractiveCell.h"
 #import "TRInteractive.h"
+#import <HUPhotoBrowser.h>
 
 @interface TRInteractiveCell ()
 /**
@@ -43,6 +44,14 @@
 
 @implementation TRInteractiveCell
 
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapPhoto:)];
+    
+    [self.photoVIew addGestureRecognizer:tap];
+}
+
 - (void)setInter:(TRInteractive *)inter {
     _inter  = inter;
     //设置头像
@@ -55,12 +64,14 @@
     self.contentLbl.text = inter.content;
     //设置配图
     if (inter.photos.count > 0) {
-        [self.photoVIew sd_setImageWithURL:[NSURL URLWithString:inter.photos[0]] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+        [self.photoVIew sd_setImageWithURL:[NSURL URLWithString:[inter.photos firstObject]] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+        self.photoVIew.hidden = NO;
         self.photoCountBtn.hidden = NO;
         //设置图片个数
         [self.photoCountBtn setTitle:[NSString stringWithFormat:@"%zd", inter.photos.count] forState:UIControlStateNormal];
     }else {
         self.photoCountBtn.hidden = YES;
+        self.photoVIew.hidden = YES;
     }
     
 }
@@ -74,6 +85,16 @@
         self.photoLauout.constant = 200.0;
     }
 }
+
+- (void)tapPhoto:(UIGestureRecognizer *)tap
+{
+    [HUPhotoBrowser showFromImageView:self.photoVIew withURLStrings:self.inter.photos atIndex:0];
+}
+
++ (instancetype)cell {
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
+}
+
 
 - (void)setFrame:(CGRect)frame {
     frame.origin.y += 10;

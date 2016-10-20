@@ -8,6 +8,7 @@
 
 #import "TRPostTableViewCell.h"
 #import "TRPost.h"
+#import "TRImageView.h"
 
 @interface TRPostTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *postContent;
@@ -19,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentCountBtn;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *postCellrowHeight;
+@property (nonatomic,strong)TRImageView *imageViews;
 
 
 
@@ -26,20 +28,22 @@
 
 @implementation TRPostTableViewCell
 
+
 - (void)awakeFromNib{
-    
     [super awakeFromNib];
     
+    
+   TRImageView *view = [[TRImageView alloc]init];
+    view.clipsToBounds = YES;
+    self.imageViews = view;
+    [self.contentView addSubview:view];
     
 }
 
 - (void)setPosts:(TRPost *)posts{
     _posts = posts;
     
-    
-    
-      
-    
+    self.imageViews.photos = posts.postphotos;
 
     self.postContent.text = posts.postcontent;
     self.userNamelbl.text = posts.userName;
@@ -100,6 +104,26 @@
     
     
 }
+
+- (void)layoutSubviews
+{
+    if (self.posts.postphotos.count == 0 ) {
+        
+        self.imageViews.hidden = YES;
+        self.imageViews.frame = CGRectMake(0, 0, 0, 0);
+        
+        
+    }else{
+        self.imageViews.hidden = NO;
+        CGFloat margin = 10;
+        CGFloat maximgY = self.posts.textMaxY+margin;
+        self.imageViews.frame = CGRectMake(10, maximgY, TRScreenW - 2 * margin, self.posts.imageHeight);
+    }
+    
+    
+    
+}
+
 - (IBAction)commentClickAction:(UIButton *)sender forEvent:(UIEvent *)event {
 }
 @end

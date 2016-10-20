@@ -27,8 +27,16 @@
 @property (nonatomic,copy) NSString *userid;
 /** 发帖用户昵称 */
 @property (nonatomic,copy) NSString *userName;
-
+/** 单元格高度 */
 @property (nonatomic,assign) CGFloat cellRowHeight;
+
+/** 图片高度 */
+@property (nonatomic,assign) CGFloat imageHeight;
+
+/** 帖子文字的高度 */
+@property (nonatomic,assign) CGFloat textMaxY;
+
+
 
 
 

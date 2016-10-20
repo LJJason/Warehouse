@@ -15,4 +15,6 @@
 /** 互动模型 */
 @property (nonatomic, strong) TRInteractive *inter;
 
++ (instancetype)cell;
+
 @end

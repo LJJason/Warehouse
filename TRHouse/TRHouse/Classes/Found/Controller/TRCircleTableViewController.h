@@ -10,4 +10,7 @@
 
 @interface TRCircleTableViewController : UITableViewController
 
+/** url */
+@property (nonatomic, copy) NSString *urlStr;
+
 @end
