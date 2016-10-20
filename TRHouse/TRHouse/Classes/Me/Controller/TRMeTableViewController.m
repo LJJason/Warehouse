@@ -40,6 +40,11 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     // 设置tableView和nav相关
     [self setupHeaderViewAndNav];
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
     //加载数据
     [self refreshData];
 }
@@ -80,44 +85,35 @@
  */
 - (void)refreshData {
     
-    [TRProgressTool showWithMessage:@"正在加载..."];
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    
-        if ([TRAccountTool loginState]) {
+    if ([TRAccountTool loginState]) {
+        
+        if ([TRAccountTool account]) {
             
-            if ([TRAccountTool account]) {
-                
-                TRGetPersonalParam *param = [[TRGetPersonalParam alloc] init];
-                TRAccount *account = [TRAccountTool account];
-                param.uid = account.uid;
-                
-                [TRHttpTool GET:TRGetPersonalUrl parameters:param.mj_keyValues success:^(id responseObject) {
-                    [TRProgressTool dismiss];
-                    self.meHeader.personal = [TRPersonal mj_objectWithKeyValues:responseObject];
-                    
-                } failure:^(NSError *error) {
-                    
-                    [TRProgressTool dismiss];
-                    [Toast makeText:@"请检查网络连接!!"];
-                    
-                }];
-                
-            }
+            TRGetPersonalParam *param = [[TRGetPersonalParam alloc] init];
+            TRAccount *account = [TRAccountTool account];
+            param.uid = account.uid;
             
-        }else {
+            [TRHttpTool GET:TRGetPersonalUrl parameters:param.mj_keyValues success:^(id responseObject) {
+                self.meHeader.personal = [TRPersonal mj_objectWithKeyValues:responseObject];
+                
+            } failure:^(NSError *error) {
+                
+                [Toast makeText:@"请检查网络连接!!"];
+                
+            }];
             
-            TRPersonal *personal = [[TRPersonal  alloc] init];
-            personal.userName = @"登录/注册";
-            personal.icon = @"";
-            personal.count = 0;
-            self.meHeader.personal = personal;
-            [TRProgressTool dismiss];
         }
-    });
+        
+    }else {
+        
+        TRPersonal *personal = [[TRPersonal  alloc] init];
+        personal.userName = @"登录/注册";
+        personal.icon = @"";
+        personal.count = 0;
+        self.meHeader.personal = personal;
+    }
     
 }
-
 
 - (void)viewWillLayoutSubviews {
     

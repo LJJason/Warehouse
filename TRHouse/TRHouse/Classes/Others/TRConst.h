@@ -97,10 +97,14 @@ UIKIT_EXTERN NSString * const TRGetMeHomeInteractive;
 UIKIT_EXTERN NSString * const TRChangeUserNameUrl;
 
 
+/*** 修改头像的接口 */
+UIKIT_EXTERN NSString * const TRChangeIconUrl;
 
+/*** 查询用户是否存在的接口 */
+UIKIT_EXTERN NSString * const TRGetUserUrl;
 
-
-
+/*** 修改密码的接口 */
+UIKIT_EXTERN NSString * const TRChangePwd;
 
 
 

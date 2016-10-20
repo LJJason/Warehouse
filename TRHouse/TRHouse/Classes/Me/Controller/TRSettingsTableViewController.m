@@ -8,6 +8,7 @@
 
 #import "TRSettingsTableViewController.h"
 #import "TRAccountTool.h"
+#import "TRProgressTool.h"
 
 @interface TRSettingsTableViewController ()
 
@@ -23,6 +24,14 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self setupNav];
+}
+
+- (void)setupNav{
+    self.navigationItem.title = @"个人设置";
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] init];
+    item.title = @"返回";
+    self.navigationItem.backBarButtonItem = item;
 }
 
 - (IBAction)logoutBtn {
@@ -40,7 +49,13 @@
         
         [TRAccountTool saveAccount:nil];
         [TRAccountTool saveLoginState:NO];
-        [weakSelf.navigationController popViewControllerAnimated:YES];
+        
+        [TRProgressTool showWithMessage:@"正在退出..."];
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [TRProgressTool dismiss];
+            [weakSelf.navigationController popViewControllerAnimated:YES];
+        });
         
     }]];
     

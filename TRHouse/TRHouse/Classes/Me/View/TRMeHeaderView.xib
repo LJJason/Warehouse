@@ -21,12 +21,12 @@
                         </view>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultUserIcon" translatesAutoresizingMaskIntoConstraints="NO" id="2Ke-dt-CXx">
                             <constraints>
-                                <constraint firstAttribute="width" constant="40" id="Dep-3Y-y0U"/>
-                                <constraint firstAttribute="height" constant="40" id="PnS-FS-gsa"/>
+                                <constraint firstAttribute="width" constant="50" id="Dep-3Y-y0U"/>
+                                <constraint firstAttribute="height" constant="50" id="PnS-FS-gsa"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                    <integer key="value" value="20"/>
+                                    <integer key="value" value="25"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </imageView>
@@ -266,7 +266,7 @@
     <resources>
         <image name="beUsed" width="29" height="19"/>
         <image name="defaultUserIcon" width="50" height="50"/>
-        <image name="evaluate" width="29" height="27"/>
+        <image name="evaluate" width="29" height="29"/>
         <image name="order" width="82" height="80"/>
         <image name="payment" width="41" height="26"/>
         <image name="refund" width="29" height="29"/>

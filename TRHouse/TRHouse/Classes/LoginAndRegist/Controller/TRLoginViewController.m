@@ -13,7 +13,7 @@
 #import "TRAccountTool.h"
 #import "TRUser.h"
 #import "Utilities.h"
-
+#import "TRForgetPwdTableViewController.h"
 
 @interface TRLoginViewController ()
 
@@ -107,6 +107,37 @@
     
     
 }
+
+- (IBAction)forgetPwdBtnClick {
+    TRNavigationController *nav = [TRNavigationController viewControllerWtithStoryboardName:@"LoginAndRegist" identifier:@"UINavigationController"];
+
+    [self pushForGetViewController:nav];
+    
+}
+
+- (void)pushForGetViewController:(UIViewController *)nav {
+    
+    TRForgetPwdTableViewController *vc = nav.childViewControllers[0];
+    vc.cancelBlock = ^ {
+        
+        if (self.childViewControllers.count > 0) {
+            [self setValue:nil forKey:@"childViewControllers"];
+        }
+    };
+    vc.annimation = ^ {
+        self.view.x = 0;
+    };
+    
+    [[UIApplication sharedApplication].keyWindow addSubview:nav.view];
+    [self addChildViewController:nav];
+    nav.view.frame = CGRectMake(TRScreenW, 0, TRScreenW, TRScreenH);
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.view.x = -TRScreenW + 300;
+        nav.view.x = 0;
+    }];
+}
+
 
 - (void)pushToNextViewController:(UIViewController *)nav {
     

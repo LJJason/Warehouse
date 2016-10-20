@@ -44,8 +44,6 @@
     
     //添加刷新控件
     [self setupRefresh];
-    
-    [self loadRecommendData];
 }
 
 - (void)setupHeader{
@@ -113,6 +111,7 @@ static NSString * const cellId = @"cellId";
  */
 - (void)loadNewRoom{
     
+    [self loadRecommendData];
     
     [TRHttpTool GET:TRGetNewRoomUrl parameters:nil success:^(id responseObject) {
         

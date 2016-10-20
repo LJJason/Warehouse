@@ -43,7 +43,6 @@
     
     //设置互动
     [self.interactiveBtn setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%zd", personal.count]] forState:UIControlStateNormal];
-    TRLog(@"%zd", personal.count);
 }
 
 + (instancetype)meHeaderView {

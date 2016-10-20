@@ -89,6 +89,14 @@ NSString * const TRGetMeHomeInteractive = @"http://localhost:8080/TRHouse/getMeH
 /*** 修改昵称的接口 */
 NSString * const TRChangeUserNameUrl = @"http://localhost:8080/TRHouse/updateUserName";
 
+/*** 修改头像的接口 */
+NSString * const TRChangeIconUrl = @"http://localhost:8080/TRHouse/updateIcon";
+
+/*** 查询用户是否存在的接口 */
+NSString * const TRGetUserUrl = @"http://localhost:8080/TRHouse/getUser";
+
+/*** 修改密码的接口 */
+NSString * const TRChangePwd = @"http://localhost:8080/TRHouse/changePwd";
 
 
 
