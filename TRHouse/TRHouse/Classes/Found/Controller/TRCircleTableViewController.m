@@ -34,6 +34,12 @@
     [super viewDidLoad];
     [self setupRefresh];
     
+    UIButton *rightItem = [[UIButton alloc]init];
+    rightItem.frame = CGRectMake(0, 0, 40, 40);
+    [rightItem setTitle:@"发布" forState:UIControlStateNormal];
+    [rightItem addTarget:self action:@selector(sendPost) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightItem];
+    
     
     
 }
@@ -135,6 +141,14 @@
 
     
 }
+
+- (void)sendPost{
+    
+    
+    
+    
+}
+
 
 /*
 // Override to support conditional editing of the table view.

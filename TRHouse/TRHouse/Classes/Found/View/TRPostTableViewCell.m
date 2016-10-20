@@ -33,16 +33,17 @@
     [super awakeFromNib];
     
     
-//   TRImageView *view = [[TRImageView alloc]init];
-//    self.imageViews = view;
-//    [self.contentView addSubview:view];
-//    view.backgroundColor = [UIColor redColor];
+   TRImageView *view = [[TRImageView alloc]init];
+    view.clipsToBounds = YES;
+    self.imageViews = view;
+    [self.contentView addSubview:view];
+    
 }
 
 - (void)setPosts:(TRPost *)posts{
     _posts = posts;
     
-    
+    self.imageViews.photos = posts.postphotos;
 
     self.postContent.text = posts.postcontent;
     self.userNamelbl.text = posts.userName;
@@ -58,12 +59,6 @@
     
     self.praiseUserBtn.enabled = range.length ? NO : YES;
     
-    if (posts.postphotos.count == 0 ) {
-        
-        self.imageViews.hidden = YES;
-    }else{
-        self.imageViews.hidden = NO;
-    }
     
 }
 
@@ -110,13 +105,24 @@
     
 }
 
-//- (void)layoutSubviews
-//{
-//    CGFloat margin = 10;
-//    CGFloat maximgY = CGRectGetMaxY(self.postTimelbl.frame);
-//    self.imageViews.frame = CGRectMake(10, maximgY, TRScreenW - 2 * margin, self.posts.imageHeight);
-//    
-//}
+- (void)layoutSubviews
+{
+    if (self.posts.postphotos.count == 0 ) {
+        
+        self.imageViews.hidden = YES;
+        self.imageViews.frame = CGRectMake(0, 0, 0, 0);
+        
+        
+    }else{
+        self.imageViews.hidden = NO;
+        CGFloat margin = 10;
+        CGFloat maximgY = self.posts.textMaxY+margin;
+        self.imageViews.frame = CGRectMake(10, maximgY, TRScreenW - 2 * margin, self.posts.imageHeight);
+    }
+    
+    
+    
+}
 
 - (IBAction)commentClickAction:(UIButton *)sender forEvent:(UIEvent *)event {
 }

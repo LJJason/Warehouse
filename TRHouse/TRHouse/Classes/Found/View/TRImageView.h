@@ -10,7 +10,8 @@
 @class TRPost;
 @interface TRImageView : UIView
 
-
+/** 帖子模型 */
+@property (nonatomic,strong) NSArray *photos;
 
 
 @end
