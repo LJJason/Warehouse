@@ -10,4 +10,7 @@
 
 @interface TRInteractiveTableViewController : UITableViewController
 
+/** 请求网址 */
+@property (nonatomic, copy) NSString *urlStr;
+
 @end

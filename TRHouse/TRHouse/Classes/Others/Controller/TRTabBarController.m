@@ -38,11 +38,11 @@
     //首页
     [self addChildViewController:[[TRHomeTableViewController alloc] init] withTitle:@"生活" withImageName:@"tabbar_Home"];
     //互动
-    [self addChildViewController:[[TRInteractiveTableViewController alloc] init] withTitle:@"互动" withImageName:@"tabbar_inter"];
+    [self addChildViewController:[TRInteractiveTableViewController instantiateInitialViewControllerWithStoryboardName:TRInteractiveStoryboardName] withTitle:@"互动" withImageName:@"tabbar_inter"];
     //发现
-    [self addChildViewController:[TRFoundTableViewController instantiateInitialViewControllerWithStoryboardName:@"TRFound"] withTitle:@"发现" withImageName:@"tabbar_found"];
+    [self addChildViewController:[TRFoundTableViewController instantiateInitialViewControllerWithStoryboardName:TRFoundStoryboardName] withTitle:@"发现" withImageName:@"tabbar_found"];
     //我
-    [self addChildViewController:[TRMeTableViewController instantiateInitialViewControllerWithStoryboardName:@"Me"] withTitle:@"我" withImageName:@"tabbar_me"];
+    [self addChildViewController:[TRMeTableViewController instantiateInitialViewControllerWithStoryboardName:TRMeStoryboardName] withTitle:@"我" withImageName:@"tabbar_me"];
     
 }
 

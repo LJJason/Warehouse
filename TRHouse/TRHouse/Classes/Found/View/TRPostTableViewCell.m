@@ -8,6 +8,8 @@
 
 #import "TRPostTableViewCell.h"
 #import "TRPost.h"
+#import "TRImageView.h"
+
 @interface TRPostTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *postContent;
 @property (weak, nonatomic) IBOutlet UILabel *userNamelbl;
@@ -18,42 +20,46 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentCountBtn;
 
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *postCellrowHeight;
+@property (nonatomic,strong)TRImageView *imageViews;
+
+
 
 @end
 
 @implementation TRPostTableViewCell
 
 
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    
+    
+   TRImageView *view = [[TRImageView alloc]init];
+    view.clipsToBounds = YES;
+    self.imageViews = view;
+    [self.contentView addSubview:view];
+    
+}
+
 - (void)setPosts:(TRPost *)posts{
     _posts = posts;
     
+    self.imageViews.photos = posts.postphotos;
+
     self.postContent.text = posts.postcontent;
     self.userNamelbl.text = posts.userName;
+    self.postTimelbl.text = posts.posttime;
     [self.praiseUserBtn setTitle:[NSString stringWithFormat:@"%zd",posts.praiseUser.count]forState:UIControlStateNormal];
     [self.commentCountBtn setTitle:[NSString stringWithFormat:@"%zd",posts.commentCount]forState:UIControlStateNormal];
-//    self.iconImage.image = [UIImage imageNamed:posts.icon];
-//    [[SDWebImageDownloader sharedDownloader] setValue:@"iPhone" forHTTPHeaderField:@"User-Agent"];
-    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:posts.icon]];
-//    TRGLog(@"%@",posts.icon);
-    TRGLog(@"%@",self.posts.praiseUser);
+
+    [self.iconImage sd_setImageWithURL:[NSURL URLWithString:posts.icon]placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+
+  
     NSString *users = [posts.praiseUser componentsJoinedByString:@","];
     NSRange range = [users rangeOfString:@"13426545523"];
     
-    TRGLog(@"%@",users);
-    
     self.praiseUserBtn.enabled = range.length ? NO : YES;
-}
-
-
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    // Initialization code
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+    
+    
 }
 
 - (IBAction)likeClickAction:(UIButton *)sender forEvent:(UIEvent *)event {
@@ -98,6 +104,26 @@
     
     
 }
+
+- (void)layoutSubviews
+{
+    if (self.posts.postphotos.count == 0 ) {
+        
+        self.imageViews.hidden = YES;
+        self.imageViews.frame = CGRectMake(0, 0, 0, 0);
+        
+        
+    }else{
+        self.imageViews.hidden = NO;
+        CGFloat margin = 10;
+        CGFloat maximgY = self.posts.textMaxY+margin;
+        self.imageViews.frame = CGRectMake(10, maximgY, TRScreenW - 2 * margin, self.posts.imageHeight);
+    }
+    
+    
+    
+}
+
 - (IBAction)commentClickAction:(UIButton *)sender forEvent:(UIEvent *)event {
 }
 @end

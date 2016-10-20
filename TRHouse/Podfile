@@ -8,7 +8,10 @@ pod 'MJExtension'
 pod 'NJKWebViewProgress'
 pod 'AFNetworking'
 pod 'MJRefresh'
-pod 'SDWebImage', :git => 'https://github.com/rs/SDWebImage.git'
+pod 'SDWebImage'
 pod 'DACircularProgress'
 pod 'SVProgressHUD'
+pod 'Qiniu'
+pod 'HUPhotoBrowser'
+
 end

@@ -9,24 +9,30 @@
 #import "TRAccountTool.h"
 #import "TRAccountParam.h"
 #import "TRAccount.h"
-
+#import "NSString+Hash.h"
 
 #define TRAccountFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"account.data"]
 #define TRUserFileName [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)[0] stringByAppendingPathComponent:@"user.data"]
+
+#define TRLoginStateKey @"TRLoginState"
+
+
 
 @implementation TRAccountTool
 
 + (void)loginWithPhoneNum:(NSString *)phoneNum pwd:(NSString *)pwd success:(void (^)(TRLoginState))success failure:(void (^)(NSError *))failure {
     TRAccountParam *param = [[TRAccountParam alloc] init];
     param.phoneNum = phoneNum;
-    param.pwd = pwd;
+    //加密
+    param.pwd = [pwd hmacSHA512StringWithKey:salt];
     
     [TRHttpTool POST:TRLoginUrl parameters:param.mj_keyValues success:^(id responseObject) {
         
         NSString *uid = responseObject[@"uid"];
         if ([uid isEqualToString:phoneNum]) {
             [TRAccountTool saveAccount:[TRAccount accountWithDict:responseObject]];
-            
+            //登录成功
+            [TRAccountTool saveLoginState:YES];
             if (success) {
                 success(TRLoginStateOK);
             }
@@ -84,4 +90,19 @@ static TRUser *_user;
     return _user;
 }
 
+
++ (BOOL)loginState {
+    NSUserDefaults *userDefaultes = [NSUserDefaults standardUserDefaults];
+    
+    return [userDefaultes boolForKey:TRLoginStateKey];
+}
+
++ (void)saveLoginState:(BOOL)state {
+    NSUserDefaults *userDefaultes = [NSUserDefaults standardUserDefaults];
+    
+    [userDefaultes setBool:state forKey:TRLoginStateKey];
+    //同步
+    [userDefaultes synchronize];
+    
+}
 @end

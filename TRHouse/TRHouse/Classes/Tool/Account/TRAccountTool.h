@@ -18,6 +18,18 @@ typedef enum {
 
 
 @interface TRAccountTool : NSObject
+/**
+ *  读取用户的登录状态
+ *
+ *  @return 登录状态
+ */
++ (BOOL)loginState;
+/**
+ *  存储登录状态
+ *
+ *  @param state 登录状态
+ */
++ (void)saveLoginState:(BOOL)state;
 
 /**
  *  归档用户账号

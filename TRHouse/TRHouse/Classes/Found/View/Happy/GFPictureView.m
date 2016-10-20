@@ -68,7 +68,7 @@
     [self.progressView setProgress:piece.pictureProgress animated:NO];
     
     //设置图片
-    [self.pictureImageView sd_setImageWithURL:[NSURL URLWithString:piece.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize, NSURL * _Nullable targetURL) {
+    [self.pictureImageView sd_setImageWithURL:[NSURL URLWithString:piece.large_image] placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         self.progressView.hidden = NO;
         //注意:这里SDWebImage使用的是异步下载图片, 至ios9以后, 所以下面的更新UI要必须要在主线程进行
         piece.pictureProgress = 1.0 * receivedSize / expectedSize;

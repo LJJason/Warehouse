@@ -9,6 +9,7 @@
 #import "TRFoundTableViewController.h"
 #import "TRTourViewController.h"
 #import "GFEssenceViewController.h"
+#import "ViewController.h"
 
 @interface TRFoundTableViewController ()<UITableViewDataSource,UITableViewDelegate>
 - (IBAction)HotActivityAction:(UIButton *)sender forEvent:(UIEvent *)event;
@@ -45,7 +46,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    TRGLog(@"%@", indexPath);
+    TRLog(@"%@", indexPath);
     
     if (indexPath.section == 2 && indexPath.row == 2) {
         
@@ -116,6 +117,13 @@
 
 
 - (IBAction)HotActivityAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    
+   
+    
+    ViewController *vc  = [ViewController instantiateInitialViewControllerWithStoryboardName:@"Main"];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+    
 }
 
 - (IBAction)LookActivityAction:(UIButton *)sender forEvent:(UIEvent *)event {
