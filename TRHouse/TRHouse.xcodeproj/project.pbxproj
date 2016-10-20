@@ -52,6 +52,8 @@
 		C213091D1DB8FE8A003EE39C /* TRConst.m in Sources */ = {isa = PBXBuildFile; fileRef = C213091C1DB8FE8A003EE39C /* TRConst.m */; };
 		C213091F1DB8FECF003EE39C /* TRPersonalHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C213091E1DB8FECF003EE39C /* TRPersonalHomeViewController.m */; };
 		C21309221DB8FF27003EE39C /* TRInteractiveTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21309211DB8FF27003EE39C /* TRInteractiveTableViewController.m */; };
+		C21309251DB9054B003EE39C /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = C21309241DB9054B003EE39C /* NSString+Hash.m */; };
+		C21309271DB905E6003EE39C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C21309261DB905E6003EE39C /* Assets.xcassets */; };
 		C23A678E1DB79EF500755FFC /* TRTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A678C1DB79EF500755FFC /* TRTableViewCell.m */; };
 		C23A678F1DB79EF500755FFC /* TRTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23A678D1DB79EF500755FFC /* TRTableViewCell.xib */; };
 		C23A67921DB7AB4F00755FFC /* TRHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A67911DB7AB4F00755FFC /* TRHomeHeaderView.m */; };
@@ -67,7 +69,6 @@
 		C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */; };
 		C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D711D8F8BDE006972CD /* TRFoundTableViewController.m */; };
 		C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */; };
-		C2915A7F1D8D378D00842952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C2915A7E1D8D378D00842952 /* Assets.xcassets */; };
 		C2915A8D1D8D378D00842952 /* TRHouseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915A8C1D8D378D00842952 /* TRHouseTests.m */; };
 		C2915A981D8D378D00842952 /* TRHouseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915A971D8D378D00842952 /* TRHouseUITests.m */; };
 		C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915AB81D8D3E7D00842952 /* AppDelegate.m */; };
@@ -235,6 +236,9 @@
 		C213091E1DB8FECF003EE39C /* TRPersonalHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPersonalHomeViewController.m; sourceTree = "<group>"; };
 		C21309201DB8FF27003EE39C /* TRInteractiveTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRInteractiveTableViewController.h; sourceTree = "<group>"; };
 		C21309211DB8FF27003EE39C /* TRInteractiveTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRInteractiveTableViewController.m; sourceTree = "<group>"; };
+		C21309231DB9054B003EE39C /* NSString+Hash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Hash.h"; sourceTree = "<group>"; };
+		C21309241DB9054B003EE39C /* NSString+Hash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Hash.m"; sourceTree = "<group>"; };
+		C21309261DB905E6003EE39C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C22BD58D1D91106A00C53223 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C23A678B1DB79EF500755FFC /* TRTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTableViewCell.h; sourceTree = "<group>"; };
 		C23A678C1DB79EF500755FFC /* TRTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTableViewCell.m; sourceTree = "<group>"; };
@@ -264,7 +268,6 @@
 		C2771D731D8F8BEA006972CD /* TRMeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeTableViewController.h; sourceTree = "<group>"; };
 		C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeTableViewController.m; sourceTree = "<group>"; };
 		C2915A6C1D8D378D00842952 /* TRHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C2915A7E1D8D378D00842952 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C2915A831D8D378D00842952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2915A881D8D378D00842952 /* TRHouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRHouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2915A8C1D8D378D00842952 /* TRHouseTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TRHouseTests.m; sourceTree = "<group>"; };
@@ -426,6 +429,8 @@
 			isa = PBXGroup;
 			children = (
 				C29AD5CD1DB6946E00510D06 /* Album */,
+				C21309231DB9054B003EE39C /* NSString+Hash.h */,
+				C21309241DB9054B003EE39C /* NSString+Hash.m */,
 				C29163F11DB3CF0E00769BA1 /* Utilities.h */,
 				C29163F21DB3CF0E00769BA1 /* Utilities.m */,
 				B227CAC91DB070BD005E13D4 /* Toast.h */,
@@ -574,7 +579,6 @@
 			isa = PBXGroup;
 			children = (
 				C2915AA51D8D3E7D00842952 /* Classes */,
-				C2915A7E1D8D378D00842952 /* Assets.xcassets */,
 				C2915A6F1D8D378D00842952 /* Supporting Files */,
 			);
 			path = TRHouse;
@@ -583,6 +587,7 @@
 		C2915A6F1D8D378D00842952 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C21309261DB905E6003EE39C /* Assets.xcassets */,
 				C2915A831D8D378D00842952 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -1161,10 +1166,10 @@
 				C29AD6061DB6946E00510D06 /* TableViewArrow@2x.png in Resources */,
 				B2773BFF1DACC1E200B0A899 /* GFPictureView.xib in Resources */,
 				B2773C061DACC1E200B0A899 /* GFSeeBigPictureViewController.xib in Resources */,
-				C2915A7F1D8D378D00842952 /* Assets.xcassets in Resources */,
 				C29AD6041DB6946E00510D06 /* preview_number_icon@2x.png in Resources */,
 				C29AD5FA1DB6946E00510D06 /* MMVideoPreviewPlay@2x.png in Resources */,
 				B2773C0A1DACC1E200B0A899 /* GFVoiceView.xib in Resources */,
+				C21309271DB905E6003EE39C /* Assets.xcassets in Resources */,
 				B2773C081DACC1E200B0A899 /* GFVideoView.xib in Resources */,
 				C29AD6051DB6946E00510D06 /* preview_original_def@2x.png in Resources */,
 				C26FD4181DB744CD00F9ED4B /* TRInteractiveCell.xib in Resources */,
@@ -1316,6 +1321,7 @@
 				C2B5855E1DB4759D00C37479 /* TRPersonal.m in Sources */,
 				C29163F31DB3CF0E00769BA1 /* Utilities.m in Sources */,
 				C29AD60C1DB6946E00510D06 /* PhotoPreviewCell.m in Sources */,
+				C21309251DB9054B003EE39C /* NSString+Hash.m in Sources */,
 				C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */,
 				C29AD60B1DB6946E00510D06 /* PhotoPickerModel.m in Sources */,
 				C29AD5C31DB68E3700510D06 /* CZComposeViewController.m in Sources */,

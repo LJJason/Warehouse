@@ -14,6 +14,7 @@
 #import "TRUser.h"
 #import "Utilities.h"
 
+
 @interface TRLoginViewController ()
 
 /**
@@ -33,6 +34,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    TRUser *user = [TRAccountTool user];
+    self.phoneNumTextField.text = user.userName;
 }
 
 /**
@@ -51,7 +54,7 @@
                 case TRLoginStateOK:
                 {
                     TRUser *user = [[TRUser alloc] init];
-                    user.userName = self.pwdTextField.text;
+                    user.userName = self.phoneNumTextField.text;
                     [TRAccountTool saveUser:user];
                     [self dismissViewControllerAnimated:YES completion:^{
                         if (self.refreshDataBlock) {

@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+//盐
+UIKIT_EXTERN NSString * const salt;
+
 /*** 首页页的StoryboardName */
 UIKIT_EXTERN NSString * const TRHomeStoryboardName;
 

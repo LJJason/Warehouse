@@ -1,6 +1,9 @@
 
 #import <UIKit/UIKit.h>
 
+//盐
+NSString * const salt = @"dfgshdgajnvahheht[q4tu0q4!@#$%*&()(*&^%*(*&^%$%^&*(*&^%$#$%^&djgvkbklsdbfbalesbdgnvabgareugbairbgcnxcnsdgn'aergheorhgg;sdf>RTYUHJKJHGFDSEDRFTGHJKHGFDRRFTGYHJKNHBGFDFGHJIOKIUYTRE$W#$%^&*(IU*YT^R%E$W#ESDXCVBNJBBVGFDRFGHJK";
+
 /*** 首页页的StoryboardName */
 NSString * const TRHomeStoryboardName = @"Home";
 

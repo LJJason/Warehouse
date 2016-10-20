@@ -12,6 +12,7 @@
 #import "TRGetVcCodeParam.h"
 #import "Utilities.h"
 #import "TRProgressTool.h"
+#import "NSString+Hash.h"
 
 @interface TRRegistViewController ()
 
@@ -148,7 +149,7 @@
     
     TRRegistParam *param = [[TRRegistParam alloc] init];
     param.phoneNum = self.phoneNumTextField.text;
-    param.pwd = self.pwdTextField.text;
+    param.pwd = [self.pwdTextField.text hmacSHA512StringWithKey:salt];
     param.verificationCode = self.vcCodeTextField.text;
     [TRProgressTool showWithMessage:@"注册中..."];
     [TRRegistTool registWithParam:param success:^(TRRegistState state) {
