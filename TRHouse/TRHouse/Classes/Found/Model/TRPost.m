@@ -60,17 +60,32 @@
     _postphotos = postphotos;
     if (!postphotos) {
         self.imageHeight = 0;
+        self.imageWidth = 0;
         return;
     }else if (postphotos.count < 9 && postphotos.count >6){
          self.imageHeight = viewW;
+        self.imageWidth = viewW;
     }else if (postphotos.count < 7 && postphotos.count >=4){
         self.imageHeight = viewW - (imgWH);
+        self.imageWidth = viewW;
     }else if (postphotos.count < 4 && postphotos.count >0)
     {
         self.imageHeight = TRScreenW - (2 * (imgWH+margin));
+        
+        if (postphotos.count == 1) {
+            
+            self.imageWidth = imgWH;
+        }else if (postphotos.count == 2){
+            self.imageWidth = imgWH * 2 + margin / 2;
+        }else if (postphotos.count == 3){
+            self.imageWidth = viewW;
+        }
+        
+        
     }else if(postphotos.count == 0){
         
         self.imageHeight = 0;
+        self.imageWidth = 0;
     }
     
     

@@ -1,6 +1,8 @@
 
 #import <UIKit/UIKit.h>
 
+//13426545523   1234
+
 //盐
 NSString * const salt = @"dfgshdgajnvahheht[q4tu0q4!@#$%*&()(*&^%*(*&^%$%^&*(*&^%$#$%^&djgvkbklsdbfbalesbdgnvabgareugbairbgcnxcnsdgn'aergheorhgg;sdf>RTYUHJKJHGFDSEDRFTGHJKHGFDRRFTGYHJKNHBGFDFGHJIOKIUYTRE$W#$%^&*(IU*YT^R%E$W#ESDXCVBNJBBVGFDRFGHJK";
 
@@ -27,7 +29,7 @@ NSString * const TRGetVcCodeUrl = @"http://yearwood.top/TRHouse/sendSms";
 /*** 注册的接口 */
 NSString * const TRRegistUrl = @"http://localhost:8080/TRHouse/regist";
 /*** 登录的接口 */
-NSString * const TRLoginUrl = @"http://localhost:8080/TRHouse/login";
+NSString * const TRLoginUrl = @"http://192.168.61.79:8080/TRHouse/login";
 
 /*** 获取个人资料的接口 */
 NSString * const TRGetPersonalUrl = @"http://localhost:8080/TRHouse/getPersonal";
@@ -40,7 +42,7 @@ NSString * const TRGetMeInteractiveUrl = @"http://localhost:8080/TRHouse/getMeIn
 NSString * const TRGetInteractiveUrl = @"http://localhost:8080/TRHouse/getInteractive";
 
 /*** 获取所有互动的接口 */
-NSString * const TRGetAllInteractiveUrl = @"http://localhost:8080/TRHouse/getAllInteractive";
+NSString * const TRGetAllInteractiveUrl = @"http://192.168.61.79:8080/TRHouse/getAllInteractive";
 
 /*** 获取所有互动的接口 */
 NSString * const TRComposeInteractiveUrl = @"http://localhost:8080/TRHouse/interactiveting";
@@ -51,14 +53,14 @@ NSString * const TRGetTokenUrl = @"http://yearwood.top/TRMerchants/gettoken";
 /**
  *  获取互动评论的接口
  */
-NSString * const TRGetAllInteractiveCommentsUrl = @"http://localhost:8080/TRHouse/getInteractiveComment";
+NSString * const TRGetAllInteractiveCommentsUrl = @"http://192.168.61.79:8080/TRHouse/getInteractiveComment";
 
 /*** 发互动评论的接口 */
-NSString * const TRSendInteractiveCommentUrl = @"http://192.168.1.101:8080/TRHouse/sendInteractiveComment";
+NSString * const TRSendInteractiveCommentUrl = @"http://192.168.61.79:8080/TRHouse/sendInteractiveComment";
 
 
 /*** 发邻居圈评论的接口 */
-NSString * const TRFoundSentPostUrl = @"http://localhost:8080/TRHouse/postings";
+NSString * const TRFoundSentPostUrl = @"http://192.168.61.79:8080/TRHouse/postings";
 
 /*** 首页新品推荐的接口 */
 NSString * const TRGetNewRoomUrl = @"http://localhost:8080/TRHouse/getNewRoom";
@@ -76,8 +78,8 @@ NSString * const TRGetSelectRoomUrl = @"http://localhost:8080/TRHouse/getSelectR
 /*** 点赞的接口 */
 NSString * const TRLikeUrl = @"http://localhost:8080/TRHouse/like";
 
-/*** 获取临居圈的数据的接口 */ //localhost:8080
-NSString * const TRGetAllPostsUrl = @"http://localhost:8080/TRHouse/getAllPost";
+/*** 获取临居圈的数据的接口 */ //localhost:8080  192.168.61.79
+NSString * const TRGetAllPostsUrl = @"http://192.168.61.79:8080/TRHouse/getAllPost";
 
 
 /*** 获取我的帖子的数据的接口 */
