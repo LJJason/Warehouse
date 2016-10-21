@@ -11,6 +11,9 @@
 #import "TRPost.h"
 #import "TRAccount.h"
 #import "TRAccountTool.h"
+#import "TRLoginViewController.h"
+#import "CZComposeViewController.h"
+#import "TRFoundSendViewController.h"
 
 
 @interface TRCircleTableViewController ()
@@ -40,7 +43,7 @@
     [self setupRefresh];
     
     UIButton *rightItem = [[UIButton alloc]init];
-    rightItem.frame = CGRectMake(0, 0, 40, 40);
+    rightItem.frame = CGRectMake(0, 0,40,40);
     [rightItem setTitle:@"发布" forState:UIControlStateNormal];
     [rightItem addTarget:self action:@selector(sendPost) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:rightItem];
@@ -174,11 +177,32 @@
 
 - (void)sendPost{
     
-    
+    if ([TRAccountTool loginState]) {
+        TRFoundSendViewController *compVc = [[TRFoundSendViewController alloc] init];
+        compVc.composeInteractiveSuccessBlock = ^{
+            [self.tableView.mj_header beginRefreshing];
+        };
+        
+        [self.navigationController pushViewController:compVc animated:YES];
+    }else{
+        //没有登录
+        [self loginVc];
+    }
+
     
     
 }
 
+- (void)loginVc {
+    
+    [Toast makeText:@"请先登录!"];
+    
+    TRLoginViewController *loginVc = [TRLoginViewController instantiateInitialViewControllerWithStoryboardName:@"LoginAndRegist"];
+    loginVc.refreshDataBlock = ^ {
+        
+    };
+    [self presentViewController:loginVc animated:YES completion:nil];
+}
 
 /*
 // Override to support conditional editing of the table view.

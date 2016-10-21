@@ -64,7 +64,7 @@
     }else if (postphotos.count < 9 && postphotos.count >6){
          self.imageHeight = viewW;
     }else if (postphotos.count < 7 && postphotos.count >=4){
-        self.imageHeight = viewW - (imgWH+margin);
+        self.imageHeight = viewW - (imgWH);
     }else if (postphotos.count < 4 && postphotos.count >0)
     {
         self.imageHeight = TRScreenW - (2 * (imgWH+margin));
@@ -84,11 +84,11 @@
     self.textMaxY = textSize.height+65;
     
     if (self.postphotos.count == 0) {
-         rowHeight = textSize.height+122;
+         rowHeight = textSize.height + 122;
         
     }else{
        
-         rowHeight = textSize.height+122+self.imageHeight;
+         rowHeight = textSize.height + 122 + self.imageHeight;
     }
     
    

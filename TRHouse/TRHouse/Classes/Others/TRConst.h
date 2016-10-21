@@ -83,6 +83,9 @@ UIKIT_EXTERN NSString * const TRLikeUrl;
 /*** 获取临居圈的数据的接口 */
 UIKIT_EXTERN NSString * const TRGetAllPostsUrl;
 
+/*** 发邻居圈评论的接口 */
+UIKIT_EXTERN NSString * const TRFoundSentPostUrl;
+
 
 /*** 获取我的帖子的数据的接口 */
 UIKIT_EXTERN NSString * const TRGetMePostsUrl;

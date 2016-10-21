@@ -20,7 +20,7 @@
             
             UIImageView *vw = [[UIImageView alloc]init];
             [self addSubview:vw];
-            vw.backgroundColor = [UIColor greenColor];
+            
             vw.clipsToBounds = YES;
             
         }
@@ -43,7 +43,7 @@
         
         UIImageView *image = self.subviews[i];
         
-        [image sd_setImageWithURL:photos[i] placeholderImage:nil];
+        [image sd_setImageWithURL:photos[i] placeholderImage:[UIImage imageNamed:@"default_bg"]];
         }
     }
     
