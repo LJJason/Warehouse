@@ -8,6 +8,7 @@
 
 #import "TRImageView.h"
 #import "TRPost.h"
+#import <HUPhotoBrowser.h>
 @implementation TRImageView
 
 
@@ -20,7 +21,11 @@
             
             UIImageView *vw = [[UIImageView alloc]init];
             [self addSubview:vw];
-            
+           
+            UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapPhoto:)];
+            [vw addGestureRecognizer:tap];
+            vw.userInteractionEnabled = YES;
+            vw.tag = i;
             vw.clipsToBounds = YES;
             
         }
@@ -61,11 +66,13 @@
     for (int i = 0; i < self.subviews.count; i ++) {
         
         UIImageView *imageView = self.subviews[i];
+        
+        
+        
         if (i < self.photos.count) {
             
+            
             imageView.hidden = NO;
-            
-            
             
             CGFloat imgX = (i % 3) * (imgW + margin);
             CGFloat imgY = (i / 3) * (imgW + margin);
@@ -81,4 +88,12 @@
 
 }
 
+- (void)tapPhoto:(UITapGestureRecognizer *)tap{
+   
+    UIImageView *view = (UIImageView *)tap.view;
+    
+
+    [HUPhotoBrowser showFromImageView:view withURLStrings:self.photos placeholderImage:[UIImage imageNamed:@"default_bg"] atIndex:view.tag dismiss:nil];
+    
+}
 @end

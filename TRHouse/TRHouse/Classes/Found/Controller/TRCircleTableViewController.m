@@ -14,6 +14,7 @@
 #import "TRLoginViewController.h"
 #import "CZComposeViewController.h"
 #import "TRFoundSendViewController.h"
+#import <HUPhotoBrowser.h>
 
 
 @interface TRCircleTableViewController ()
@@ -38,6 +39,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //设置标题
+    self.title = @"临居圈";
     
     [self setupUrl];
     [self setupRefresh];
@@ -202,6 +206,13 @@
         
     };
     [self presentViewController:loginVc animated:YES completion:nil];
+}
+
+/* 当点击cell扩大该视图 **/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
 }
 
 /*

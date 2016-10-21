@@ -1,6 +1,8 @@
 
 #import <UIKit/UIKit.h>
 
+//13426545523   1234
+
 //盐
 NSString * const salt = @"dfgshdgajnvahheht[q4tu0q4!@#$%*&()(*&^%*(*&^%$%^&*(*&^%$#$%^&djgvkbklsdbfbalesbdgnvabgareugbairbgcnxcnsdgn'aergheorhgg;sdf>RTYUHJKJHGFDSEDRFTGHJKHGFDRRFTGYHJKNHBGFDFGHJIOKIUYTRE$W#$%^&*(IU*YT^R%E$W#ESDXCVBNJBBVGFDRFGHJK";
 
@@ -54,11 +56,11 @@ NSString * const TRGetTokenUrl = @"http://yearwood.top/TRMerchants/gettoken";
 NSString * const TRGetAllInteractiveCommentsUrl = @"http://localhost:8080/TRHouse/getInteractiveComment";
 
 /*** 发互动评论的接口 */
-NSString * const TRSendInteractiveCommentUrl = @"http://192.168.1.101:8080/TRHouse/sendInteractiveComment";
+NSString * const TRSendInteractiveCommentUrl = @"http://localhost:8080/TRHouse/sendInteractiveComment";
 
 
 /*** 发邻居圈评论的接口 */
-NSString * const TRFoundSentPostUrl = @"http://localhost:8080/TRHouse/postings";
+NSString * const TRFoundSentPostUrl = @"http://192.168.61.79:8080/TRHouse/postings";
 
 /*** 首页新品推荐的接口 */
 NSString * const TRGetNewRoomUrl = @"http://localhost:8080/TRHouse/getNewRoom";
@@ -76,8 +78,8 @@ NSString * const TRGetSelectRoomUrl = @"http://localhost:8080/TRHouse/getSelectR
 /*** 点赞的接口 */
 NSString * const TRLikeUrl = @"http://localhost:8080/TRHouse/like";
 
-/*** 获取临居圈的数据的接口 */ //localhost:8080
-NSString * const TRGetAllPostsUrl = @"http://localhost:8080/TRHouse/getAllPost";
+/*** 获取临居圈的数据的接口 */ //localhost:8080  192.168.61.79
+NSString * const TRGetAllPostsUrl = @"http://192.168.61.79:8080/TRHouse/getAllPost";
 
 
 /*** 获取我的帖子的数据的接口 */
@@ -95,12 +97,14 @@ NSString * const TRChangeIconUrl = @"http://localhost:8080/TRHouse/updateIcon";
 /*** 查询用户是否存在的接口 */
 NSString * const TRGetUserUrl = @"http://localhost:8080/TRHouse/getUser";
 
+/*** 忘记密码的接口 */
+NSString * const TRForgetPwd = @"http://localhost:8080/TRHouse/changePwd";
+
 /*** 修改密码的接口 */
-NSString * const TRChangePwd = @"http://localhost:8080/TRHouse/changePwd";
+NSString * const TRChangeTheOldPwd = @"http://localhost:8080/TRHouse/modifyThePwd";
 
-
-
-
+/*** 意见反馈的接口 */
+NSString * const TRFeedbackPwd = @"http://localhost:8080/TRHouse/feedback";
 
 
 

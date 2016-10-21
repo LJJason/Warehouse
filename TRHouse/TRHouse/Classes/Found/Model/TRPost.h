@@ -33,6 +33,9 @@
 /** 图片高度 */
 @property (nonatomic,assign) CGFloat imageHeight;
 
+/** 图片宽度 */
+@property (nonatomic,assign) CGFloat imageWidth;
+
 /** 帖子文字的高度 */
 @property (nonatomic,assign) CGFloat textMaxY;
 
