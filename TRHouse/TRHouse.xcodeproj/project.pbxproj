@@ -86,6 +86,10 @@
 		C29163FF1DB3E07300769BA1 /* TRAccountTool.m in Sources */ = {isa = PBXBuildFile; fileRef = C29163FE1DB3E07300769BA1 /* TRAccountTool.m */; };
 		C29164021DB3E0BC00769BA1 /* TRAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = C29164011DB3E0BC00769BA1 /* TRAccount.m */; };
 		C29164061DB3E15100769BA1 /* TRUser.m in Sources */ = {isa = PBXBuildFile; fileRef = C29164051DB3E15100769BA1 /* TRUser.m */; };
+		C29707FE1DBA73260021F492 /* TRChangeasswordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29707FD1DBA73260021F492 /* TRChangeasswordTableViewController.m */; };
+		C29708011DBA81A60021F492 /* TRFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29708001DBA81A60021F492 /* TRFeedbackViewController.m */; };
+		C29708041DBA962C0021F492 /* TRFeedbackView.m in Sources */ = {isa = PBXBuildFile; fileRef = C29708031DBA962C0021F492 /* TRFeedbackView.m */; };
+		C29708061DBA96480021F492 /* TRFeedbackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C29708051DBA96480021F492 /* TRFeedbackView.xib */; };
 		C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */; };
 		C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */; };
 		C29AD5B01DB6491B00510D06 /* TRMeInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5AF1DB6491B00510D06 /* TRMeInteractive.m */; };
@@ -305,6 +309,13 @@
 		C29164011DB3E0BC00769BA1 /* TRAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRAccount.m; sourceTree = "<group>"; };
 		C29164041DB3E15100769BA1 /* TRUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRUser.h; sourceTree = "<group>"; };
 		C29164051DB3E15100769BA1 /* TRUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRUser.m; sourceTree = "<group>"; };
+		C29707FC1DBA73260021F492 /* TRChangeasswordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRChangeasswordTableViewController.h; sourceTree = "<group>"; };
+		C29707FD1DBA73260021F492 /* TRChangeasswordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRChangeasswordTableViewController.m; sourceTree = "<group>"; };
+		C29707FF1DBA81A60021F492 /* TRFeedbackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRFeedbackViewController.h; sourceTree = "<group>"; };
+		C29708001DBA81A60021F492 /* TRFeedbackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRFeedbackViewController.m; sourceTree = "<group>"; };
+		C29708021DBA962C0021F492 /* TRFeedbackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRFeedbackView.h; sourceTree = "<group>"; };
+		C29708031DBA962C0021F492 /* TRFeedbackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRFeedbackView.m; sourceTree = "<group>"; };
+		C29708051DBA96480021F492 /* TRFeedbackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRFeedbackView.xib; sourceTree = "<group>"; };
 		C297FAEF1DAA1B4100F7CC61 /* UIView+GFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+GFExtension.h"; sourceTree = "<group>"; };
 		C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GFExtension.m"; sourceTree = "<group>"; };
 		C297FAF11DAA1B4100F7CC61 /* UIViewController+TRExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TRExtension.h"; sourceTree = "<group>"; };
@@ -728,6 +739,10 @@
 				C21309161DB8FE15003EE39C /* TRPersonalSettingTableViewController.m */,
 				C21309171DB8FE15003EE39C /* TRChangeUserNameViewController.h */,
 				C21309181DB8FE15003EE39C /* TRChangeUserNameViewController.m */,
+				C29707FC1DBA73260021F492 /* TRChangeasswordTableViewController.h */,
+				C29707FD1DBA73260021F492 /* TRChangeasswordTableViewController.m */,
+				C29707FF1DBA81A60021F492 /* TRFeedbackViewController.h */,
+				C29708001DBA81A60021F492 /* TRFeedbackViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -975,6 +990,9 @@
 				C2B10B0A1DAFE0FC003332FB /* TRMeHeaderView.xib */,
 				C29AD5B11DB6603600510D06 /* TRMeInterTableViewCell.h */,
 				C29AD5B21DB6603600510D06 /* TRMeInterTableViewCell.m */,
+				C29708021DBA962C0021F492 /* TRFeedbackView.h */,
+				C29708031DBA962C0021F492 /* TRFeedbackView.m */,
+				C29708051DBA96480021F492 /* TRFeedbackView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1206,6 +1224,7 @@
 				B2773C041DACC1E200B0A899 /* GFRecommendTagsCell.xib in Resources */,
 				C29AD5FE1DB6946E00510D06 /* photo_def_previewVc@2x.png in Resources */,
 				B2773BFC1DACC1E200B0A899 /* GFCommentCell.xib in Resources */,
+				C29708061DBA96480021F492 /* TRFeedbackView.xib in Resources */,
 				C29AD5FF1DB6946E00510D06 /* photo_number_icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1316,6 +1335,8 @@
 				C2C409B01DB4ACFC00AC1F12 /* TRGetPersonalParam.m in Sources */,
 				C29163F01DB3CE7400769BA1 /* TRRegistTool.m in Sources */,
 				C29163F71DB3D7F900769BA1 /* TRProgressTool.m in Sources */,
+				C29708041DBA962C0021F492 /* TRFeedbackView.m in Sources */,
+				C29707FE1DBA73260021F492 /* TRChangeasswordTableViewController.m in Sources */,
 				C29AD60E1DB6946E00510D06 /* VideoPlayerController.m in Sources */,
 				C29AD60D1DB6946E00510D06 /* PhotoPreviewController.m in Sources */,
 				C29AD5BD1DB67BD800510D06 /* TRInteractiveCell.m in Sources */,
@@ -1344,6 +1365,7 @@
 				C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */,
 				C29AD5C01DB6818100510D06 /* TRInteractive.m in Sources */,
 				B2773C051DACC1E200B0A899 /* GFSeeBigPictureViewController.m in Sources */,
+				C29708011DBA81A60021F492 /* TRFeedbackViewController.m in Sources */,
 				C2E9A3011DB6FACD00F0936D /* TRComposeParam.m in Sources */,
 				B214BF261DB60B72002CDF95 /* ViewController.m in Sources */,
 				C29163EC1DB3CE6700769BA1 /* TRGetVcCodeParam.m in Sources */,

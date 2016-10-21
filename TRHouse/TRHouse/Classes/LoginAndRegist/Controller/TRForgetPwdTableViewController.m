@@ -182,7 +182,7 @@
     param[@"vcCode"] = self.vcCodeTextField.text;
     
     [TRProgressTool showWithMessage:@"修改中..."];
-    [TRHttpTool POST:TRChangePwd parameters:param success:^(id responseObject) {
+    [TRHttpTool POST:TRForgetPwd parameters:param success:^(id responseObject) {
         [TRProgressTool dismiss];
         NSInteger state = [responseObject[@"state"] integerValue];
         
