@@ -12,6 +12,7 @@
 #import "TRAccount.h"
 #import "TRAccountTool.h"
 #import "TRProgressTool.h"
+#import "TRFeedbackView.h"
 
 @interface TRFeedbackViewController ()<UITextViewDelegate, UIScrollViewDelegate>
 
@@ -102,21 +103,41 @@
     [TRProgressTool showWithMessage:@"正在提交!"];
     [TRHttpTool POST:TRFeedbackPwd parameters:param success:^(id responseObject) {
         NSInteger state = [responseObject[@"state"] integerValue];
-        NSString *message = @"";
         [TRProgressTool dismiss];
         if (state == 1) {
-            self.textView.text = nil;
-            message = @"提交成功, 我们会尽快完善!";
+            //反馈成功
+            [self setupFeedSuccessView];
         }else {
-            message = @"提交失败, 请重新提交!";
+            [Toast makeText:@"提交失败, 请重新提交!"];
         }
-        [Toast makeText:message];
+        
         
     } failure:^(NSError *error) {
         [TRProgressTool dismiss];
         [Toast makeText:@"提交失败, 请检查网络连接!"];
     }];
     
+}
+
+/**
+ *  加载反馈成功view
+ */
+- (void)setupFeedSuccessView{
+    
+    TRFeedbackView *feedView = [TRFeedbackView feedbackView];
+    feedView.frame = CGRectMake(TRScreenW, 0, TRScreenW, TRScreenH);
+    [self.view addSubview:feedView];
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        feedView.x = 0;
+    } completion:^(BOOL finished) {
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"关闭" style:UIBarButtonItemStylePlain target:self action:@selector(cancel)];
+    }];
+    
+}
+
+- (void)cancel{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
