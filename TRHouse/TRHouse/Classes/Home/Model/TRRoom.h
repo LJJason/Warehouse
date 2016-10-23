@@ -37,4 +37,7 @@
 /** 销量 */
 @property (nonatomic, assign) NSInteger sales;
 
+/** 评价 */
+@property (nonatomic, copy) NSString *praise;
+
 @end

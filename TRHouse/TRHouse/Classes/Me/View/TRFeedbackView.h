@@ -10,4 +10,11 @@
 
 @interface TRFeedbackView : UIView
 
+/**
+ *  快速创建
+ *
+ *  @return TRFeedbackView
+ */
++ (instancetype)feedbackView;
+
 @end
