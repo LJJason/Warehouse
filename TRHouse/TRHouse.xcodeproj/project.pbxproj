@@ -62,7 +62,6 @@
 		C23A67951DB7ADAC00755FFC /* TRHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A67941DB7ADAC00755FFC /* TRHeaderCell.m */; };
 		C23A67971DB7BFB400755FFC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23A67961DB7BFB400755FFC /* Home.storyboard */; };
 		C23A679A1DB7D03F00755FFC /* TRHotAndSelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A67991DB7D03F00755FFC /* TRHotAndSelectTableViewController.m */; };
-		C23A679D1DB7D5FD00755FFC /* TRRoomDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A679C1DB7D5FD00755FFC /* TRRoomDetailTableViewController.m */; };
 		C26FD4131DB71F9200F9ED4B /* TRInteractiveCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26FD4121DB71F9200F9ED4B /* TRInteractiveCommentCell.m */; };
 		C26FD4161DB7205200F9ED4B /* TRInteractiveComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C26FD4151DB7205200F9ED4B /* TRInteractiveComment.m */; };
 		C26FD4181DB744CD00F9ED4B /* TRInteractiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26FD4171DB744CD00F9ED4B /* TRInteractiveCell.xib */; };
@@ -71,6 +70,16 @@
 		C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */; };
 		C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D711D8F8BDE006972CD /* TRFoundTableViewController.m */; };
 		C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */; };
+		C279344C1DBC9C51005675E9 /* TRRoomDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C279344B1DBC9C51005675E9 /* TRRoomDetailViewController.m */; };
+		C27934601DBCBB84005675E9 /* CalendarDayCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C279344F1DBCBB84005675E9 /* CalendarDayCell.m */; };
+		C27934611DBCBB84005675E9 /* CalendarDayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C27934511DBCBB84005675E9 /* CalendarDayModel.m */; };
+		C27934621DBCBB84005675E9 /* CalendarHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27934531DBCBB84005675E9 /* CalendarHomeViewController.m */; };
+		C27934631DBCBB84005675E9 /* CalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = C27934551DBCBB84005675E9 /* CalendarLogic.m */; };
+		C27934641DBCBB84005675E9 /* CalendarMonthCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C27934571DBCBB84005675E9 /* CalendarMonthCollectionViewLayout.m */; };
+		C27934651DBCBB84005675E9 /* CalendarMonthHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C27934591DBCBB84005675E9 /* CalendarMonthHeaderView.m */; };
+		C27934661DBCBB84005675E9 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C279345B1DBCBB84005675E9 /* CalendarViewController.m */; };
+		C27934671DBCBB84005675E9 /* chack.png in Resources */ = {isa = PBXBuildFile; fileRef = C279345C1DBCBB84005675E9 /* chack.png */; };
+		C27934681DBCBB84005675E9 /* NSDate+WQCalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = C279345F1DBCBB84005675E9 /* NSDate+WQCalendarLogic.m */; };
 		C2915A8D1D8D378D00842952 /* TRHouseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915A8C1D8D378D00842952 /* TRHouseTests.m */; };
 		C2915A981D8D378D00842952 /* TRHouseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915A971D8D378D00842952 /* TRHouseUITests.m */; };
 		C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915AB81D8D3E7D00842952 /* AppDelegate.m */; };
@@ -260,8 +269,6 @@
 		C23A67961DB7BFB400755FFC /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		C23A67981DB7D03F00755FFC /* TRHotAndSelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRHotAndSelectTableViewController.h; sourceTree = "<group>"; };
 		C23A67991DB7D03F00755FFC /* TRHotAndSelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRHotAndSelectTableViewController.m; sourceTree = "<group>"; };
-		C23A679B1DB7D5FD00755FFC /* TRRoomDetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRoomDetailTableViewController.h; sourceTree = "<group>"; };
-		C23A679C1DB7D5FD00755FFC /* TRRoomDetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRoomDetailTableViewController.m; sourceTree = "<group>"; };
 		C26FD4111DB71F9200F9ED4B /* TRInteractiveCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRInteractiveCommentCell.h; sourceTree = "<group>"; };
 		C26FD4121DB71F9200F9ED4B /* TRInteractiveCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRInteractiveCommentCell.m; sourceTree = "<group>"; };
 		C26FD4141DB7205200F9ED4B /* TRInteractiveComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRInteractiveComment.h; sourceTree = "<group>"; };
@@ -277,6 +284,26 @@
 		C2771D711D8F8BDE006972CD /* TRFoundTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRFoundTableViewController.m; sourceTree = "<group>"; };
 		C2771D731D8F8BEA006972CD /* TRMeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeTableViewController.h; sourceTree = "<group>"; };
 		C2771D741D8F8BEA006972CD /* TRMeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeTableViewController.m; sourceTree = "<group>"; };
+		C279344A1DBC9C51005675E9 /* TRRoomDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRRoomDetailViewController.h; sourceTree = "<group>"; };
+		C279344B1DBC9C51005675E9 /* TRRoomDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRRoomDetailViewController.m; sourceTree = "<group>"; };
+		C279344E1DBCBB84005675E9 /* CalendarDayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDayCell.h; sourceTree = "<group>"; };
+		C279344F1DBCBB84005675E9 /* CalendarDayCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDayCell.m; sourceTree = "<group>"; };
+		C27934501DBCBB84005675E9 /* CalendarDayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarDayModel.h; sourceTree = "<group>"; };
+		C27934511DBCBB84005675E9 /* CalendarDayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarDayModel.m; sourceTree = "<group>"; };
+		C27934521DBCBB84005675E9 /* CalendarHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarHomeViewController.h; sourceTree = "<group>"; };
+		C27934531DBCBB84005675E9 /* CalendarHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarHomeViewController.m; sourceTree = "<group>"; };
+		C27934541DBCBB84005675E9 /* CalendarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarLogic.h; sourceTree = "<group>"; };
+		C27934551DBCBB84005675E9 /* CalendarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarLogic.m; sourceTree = "<group>"; };
+		C27934561DBCBB84005675E9 /* CalendarMonthCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarMonthCollectionViewLayout.h; sourceTree = "<group>"; };
+		C27934571DBCBB84005675E9 /* CalendarMonthCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarMonthCollectionViewLayout.m; sourceTree = "<group>"; };
+		C27934581DBCBB84005675E9 /* CalendarMonthHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarMonthHeaderView.h; sourceTree = "<group>"; };
+		C27934591DBCBB84005675E9 /* CalendarMonthHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarMonthHeaderView.m; sourceTree = "<group>"; };
+		C279345A1DBCBB84005675E9 /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		C279345B1DBCBB84005675E9 /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		C279345C1DBCBB84005675E9 /* chack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = chack.png; sourceTree = "<group>"; };
+		C279345D1DBCBB84005675E9 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
+		C279345E1DBCBB84005675E9 /* NSDate+WQCalendarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WQCalendarLogic.h"; sourceTree = "<group>"; };
+		C279345F1DBCBB84005675E9 /* NSDate+WQCalendarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WQCalendarLogic.m"; sourceTree = "<group>"; };
 		C2915A6C1D8D378D00842952 /* TRHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2915A831D8D378D00842952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2915A881D8D378D00842952 /* TRHouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRHouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -445,6 +472,7 @@
 		B227CAC71DB070A8005E13D4 /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				C279344D1DBCBB84005675E9 /* ZFCalendar */,
 				C29AD5CD1DB6946E00510D06 /* Album */,
 				C21309231DB9054B003EE39C /* NSString+Hash.h */,
 				C21309241DB9054B003EE39C /* NSString+Hash.m */,
@@ -572,6 +600,31 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		C279344D1DBCBB84005675E9 /* ZFCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				C279344E1DBCBB84005675E9 /* CalendarDayCell.h */,
+				C279344F1DBCBB84005675E9 /* CalendarDayCell.m */,
+				C27934501DBCBB84005675E9 /* CalendarDayModel.h */,
+				C27934511DBCBB84005675E9 /* CalendarDayModel.m */,
+				C27934521DBCBB84005675E9 /* CalendarHomeViewController.h */,
+				C27934531DBCBB84005675E9 /* CalendarHomeViewController.m */,
+				C27934541DBCBB84005675E9 /* CalendarLogic.h */,
+				C27934551DBCBB84005675E9 /* CalendarLogic.m */,
+				C27934561DBCBB84005675E9 /* CalendarMonthCollectionViewLayout.h */,
+				C27934571DBCBB84005675E9 /* CalendarMonthCollectionViewLayout.m */,
+				C27934581DBCBB84005675E9 /* CalendarMonthHeaderView.h */,
+				C27934591DBCBB84005675E9 /* CalendarMonthHeaderView.m */,
+				C279345A1DBCBB84005675E9 /* CalendarViewController.h */,
+				C279345B1DBCBB84005675E9 /* CalendarViewController.m */,
+				C279345C1DBCBB84005675E9 /* chack.png */,
+				C279345D1DBCBB84005675E9 /* Color.h */,
+				C279345E1DBCBB84005675E9 /* NSDate+WQCalendarLogic.h */,
+				C279345F1DBCBB84005675E9 /* NSDate+WQCalendarLogic.m */,
+			);
+			path = ZFCalendar;
+			sourceTree = "<group>";
+		};
 		C2915A631D8D378C00842952 = {
 			isa = PBXGroup;
 			children = (
@@ -683,8 +736,8 @@
 				C2771D6B1D8F8B89006972CD /* TRHomeTableViewController.m */,
 				C23A67981DB7D03F00755FFC /* TRHotAndSelectTableViewController.h */,
 				C23A67991DB7D03F00755FFC /* TRHotAndSelectTableViewController.m */,
-				C23A679B1DB7D5FD00755FFC /* TRRoomDetailTableViewController.h */,
-				C23A679C1DB7D5FD00755FFC /* TRRoomDetailTableViewController.m */,
+				C279344A1DBC9C51005675E9 /* TRRoomDetailViewController.h */,
+				C279344B1DBC9C51005675E9 /* TRRoomDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1209,6 +1262,7 @@
 				B214BF281DB60B7B002CDF95 /* Main.storyboard in Resources */,
 				C29AD6031DB6946E00510D06 /* photo_sel_previewVc@2x.png in Resources */,
 				C2C0B5AE1DB13ADB0099AF31 /* LoginAndRegist.storyboard in Resources */,
+				C27934671DBCBB84005675E9 /* chack.png in Resources */,
 				C29E7B5F1DAB805700327F92 /* TRNoInternetConnectionView.xib in Resources */,
 				B2773C011DACC1E200B0A899 /* GFPieceCell.xib in Resources */,
 				C23A67971DB7BFB400755FFC /* Home.storyboard in Resources */,
@@ -1303,16 +1357,20 @@
 				B2F788F61DAF26B600D74716 /* TRPost.m in Sources */,
 				C213091A1DB8FE15003EE39C /* TRChangeUserNameViewController.m in Sources */,
 				C26FD4131DB71F9200F9ED4B /* TRInteractiveCommentCell.m in Sources */,
+				C27934681DBCBB84005675E9 /* NSDate+WQCalendarLogic.m in Sources */,
 				C29163ED1DB3CE6700769BA1 /* TRRegistParam.m in Sources */,
 				B2773C161DACC23300B0A899 /* GFRecommendTags.m in Sources */,
 				C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */,
 				B2773C141DACC23300B0A899 /* GFPiece.m in Sources */,
 				B2773C201DACC41200B0A899 /* UIImageView+GFExtension.m in Sources */,
 				C29163FF1DB3E07300769BA1 /* TRAccountTool.m in Sources */,
-				C23A679D1DB7D5FD00755FFC /* TRRoomDetailTableViewController.m in Sources */,
 				C213092D1DB92443003EE39C /* TRForgetPwdTableViewController.m in Sources */,
+				C27934631DBCBB84005675E9 /* CalendarLogic.m in Sources */,
+				C27934661DBCBB84005675E9 /* CalendarViewController.m in Sources */,
 				B2773C021DACC1E200B0A899 /* GFProgressView.m in Sources */,
+				C27934641DBCBB84005675E9 /* CalendarMonthCollectionViewLayout.m in Sources */,
 				C29AD5F91DB6946E00510D06 /* AlbumNavigationController.m in Sources */,
+				C27934601DBCBB84005675E9 /* CalendarDayCell.m in Sources */,
 				C23A678E1DB79EF500755FFC /* TRTableViewCell.m in Sources */,
 				B2773C001DACC1E200B0A899 /* GFPieceCell.m in Sources */,
 				B2773C091DACC1E200B0A899 /* GFVoiceView.m in Sources */,
@@ -1325,6 +1383,7 @@
 				C2C0E9041DB5F47A002222B2 /* TRSettingsTableViewController.m in Sources */,
 				C29164061DB3E15100769BA1 /* TRUser.m in Sources */,
 				B23969DC1DAA378900F2904A /* TRCircleTableViewController.m in Sources */,
+				C27934621DBCBB84005675E9 /* CalendarHomeViewController.m in Sources */,
 				C2C0B5B11DB145AF0099AF31 /* TRLoginViewController.m in Sources */,
 				C26FD4161DB7205200F9ED4B /* TRInteractiveComment.m in Sources */,
 				C2E9A2FE1DB6F93B00F0936D /* TRUploadTool.m in Sources */,
@@ -1343,6 +1402,7 @@
 				C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */,
 				B2773C1A1DACC2A500B0A899 /* GFConst.m in Sources */,
 				C213091D1DB8FE8A003EE39C /* TRConst.m in Sources */,
+				C27934651DBCBB84005675E9 /* CalendarMonthHeaderView.m in Sources */,
 				B2773BDE1DACC19F00B0A899 /* GFEssenceViewController.m in Sources */,
 				C2771D751D8F8BEA006972CD /* TRMeTableViewController.m in Sources */,
 				B2773C071DACC1E200B0A899 /* GFVideoView.m in Sources */,
@@ -1364,6 +1424,7 @@
 				B227CACA1DB070BD005E13D4 /* Toast.m in Sources */,
 				C29E7B591DAB7C2600327F92 /* TRHttpTool.m in Sources */,
 				C29AD5C01DB6818100510D06 /* TRInteractive.m in Sources */,
+				C27934611DBCBB84005675E9 /* CalendarDayModel.m in Sources */,
 				B2773C051DACC1E200B0A899 /* GFSeeBigPictureViewController.m in Sources */,
 				C29708011DBA81A60021F492 /* TRFeedbackViewController.m in Sources */,
 				C2E9A3011DB6FACD00F0936D /* TRComposeParam.m in Sources */,
@@ -1387,6 +1448,7 @@
 				C21309221DB8FF27003EE39C /* TRInteractiveTableViewController.m in Sources */,
 				C2915ABE1D8D3E7D00842952 /* TRHouse.xcdatamodeld in Sources */,
 				C21309191DB8FE15003EE39C /* TRPersonalSettingTableViewController.m in Sources */,
+				C279344C1DBC9C51005675E9 /* TRRoomDetailViewController.m in Sources */,
 				C29E7B5E1DAB805700327F92 /* TRNoInternetConnectionView.m in Sources */,
 				C29AD5B01DB6491B00510D06 /* TRMeInteractive.m in Sources */,
 				C29AD5F51DB6946E00510D06 /* AlbumDataHandle.m in Sources */,

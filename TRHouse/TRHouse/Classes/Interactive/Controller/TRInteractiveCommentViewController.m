@@ -51,14 +51,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    //头部视图
     [self setupHader];
-    
+    //基本设置
     [self setupBasic];
-    
+    //设置刷新控件
     [self setupRefresh];
 }
 
+/**
+ *  基本设置
+ */
 - (void)setupBasic{
     self.title = @"评论";
     

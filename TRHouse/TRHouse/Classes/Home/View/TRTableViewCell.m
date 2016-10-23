@@ -47,7 +47,7 @@
     _room = room;
     
     //设置图片
-    [self.photoView sd_setImageWithURL:[NSURL URLWithString:[room.photos firstObject]] placeholderImage:[UIImage imageNamed:@""]];
+    [self.photoView sd_setImageWithURL:[NSURL URLWithString:[room.photos firstObject]] placeholderImage:[UIImage imageNamed:@"default_bg"]];
     //设置描述
     self.nameLbl.text = room.describes;
     //设置消费数量
@@ -57,6 +57,14 @@
     //设置价格
     self.priceLbl.text = [NSString stringWithFormat:@"%zd", room.price];
     
+    //设置评价
+    if (room.praise.length > 0) {
+        self.evaluationLbl.textColor = TRColor(255, 153, 51, 1.0);
+        self.evaluationLbl.text = room.praise;
+    }else {
+        self.evaluationLbl.textColor = TRColor(171, 171, 171, 1.0);
+        self.evaluationLbl.text = @"暂无评分";
+    }
 }
 
 @end
