@@ -104,12 +104,14 @@ UIKIT_EXTERN NSString * const TRChangeIconUrl;
 UIKIT_EXTERN NSString * const TRGetUserUrl;
 
 /*** 修改密码的接口 */
-UIKIT_EXTERN NSString * const TRChangePwd;
+UIKIT_EXTERN NSString * const TRForgetPwd;
+
+/*** 修改密码的接口 */
+UIKIT_EXTERN NSString * const TRChangeTheOldPwd;
 
 
-
-
-
+/*** 意见反馈的接口 */
+UIKIT_EXTERN NSString * const TRFeedbackPwd;
 
 
 

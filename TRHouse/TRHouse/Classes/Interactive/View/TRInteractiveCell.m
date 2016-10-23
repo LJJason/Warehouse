@@ -64,7 +64,7 @@
     self.contentLbl.text = inter.content;
     //设置配图
     if (inter.photos.count > 0) {
-        [self.photoVIew sd_setImageWithURL:[NSURL URLWithString:[inter.photos firstObject]] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+        [self.photoVIew sd_setImageWithURL:[NSURL URLWithString:[inter.photos firstObject]] placeholderImage:[UIImage imageNamed:@"default_bg"]];
         self.photoVIew.hidden = NO;
         self.photoCountBtn.hidden = NO;
         //设置图片个数

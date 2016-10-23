@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class TRPost;
 @interface TRCircleTableViewController : UITableViewController
 
 /** url */
 @property (nonatomic, copy) NSString *urlStr;
+@property (nonatomic, strong) TRPost *post;
 
 @end

@@ -10,6 +10,7 @@
 #import "TRRoom.h"
 #import "TRTableViewCell.h"
 #import "TRHomeHeaderView.h"
+#import "TRRoomDetailViewController.h"
 
 @interface TRHomeTableViewController ()
 
@@ -60,7 +61,7 @@
  */
 - (void)setupNav{
     self.navigationItem.titleView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"nav_home"]];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_map"] style:UIBarButtonItemStyleDone target:self action:@selector(mapButtonClick)];
+    //self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"nav_map"] style:UIBarButtonItemStyleDone target:self action:@selector(mapButtonClick)];
     self.navigationItem.title = @"首页";
 }
 
@@ -214,4 +215,28 @@ static NSString * const cellId = @"cellId";
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 130.0;
 }
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TRRoomDetailViewController *detail = [TRRoomDetailViewController viewControllerWtithStoryboardName:TRHomeStoryboardName identifier:NSStringFromClass([TRRoomDetailViewController class])];
+    detail.room = self.rooms[indexPath.row];
+    
+    [self.navigationController pushViewController:detail animated:YES];
+
+}
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

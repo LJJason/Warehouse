@@ -9,6 +9,8 @@
 #import "TRPostTableViewCell.h"
 #import "TRPost.h"
 #import "TRImageView.h"
+#import "TRAccount.h"
+#import "TRAccountTool.h"
 
 @interface TRPostTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *postContent;
@@ -38,6 +40,8 @@
     self.imageViews = view;
     [self.contentView addSubview:view];
     
+
+    
 }
 
 - (void)setPosts:(TRPost *)posts{
@@ -55,7 +59,9 @@
 
   
     NSString *users = [posts.praiseUser componentsJoinedByString:@","];
-    NSRange range = [users rangeOfString:@"13426545523"];
+    TRAccount *account = [TRAccountTool account];
+    
+    NSRange range = [users rangeOfString:account.uid];
     
     self.praiseUserBtn.enabled = range.length ? NO : YES;
     
@@ -65,7 +71,10 @@
 - (IBAction)likeClickAction:(UIButton *)sender forEvent:(UIEvent *)event {
     sender.enabled = NO;
     NSMutableDictionary *parament = [NSMutableDictionary dictionary];
-    parament[@"uid"] = @"13426545523";
+    
+    TRAccount *account = [TRAccountTool account];
+    
+    parament[@"uid"] = account.uid;
     parament[@"ID"] =  @(self.posts.ID);
     
     [TRHttpTool POST:@"http://192.168.61.79:8080/TRHouse/like" parameters:parament success:^(id responseObject) {
@@ -117,7 +126,7 @@
         self.imageViews.hidden = NO;
         CGFloat margin = 10;
         CGFloat maximgY = self.posts.textMaxY+margin;
-        self.imageViews.frame = CGRectMake(10, maximgY, TRScreenW - 2 * margin, self.posts.imageHeight);
+        self.imageViews.frame = CGRectMake(10, maximgY, self.posts.imageWidth, self.posts.imageHeight);
     }
     
     

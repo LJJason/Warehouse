@@ -263,23 +263,23 @@
         _textView.text = @"上传照片";
     }
     
-    //创建参数实例
-    TRComposeParam *parma = [[TRComposeParam alloc] init];
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    
     //获取账号信息
     TRAccount *account = [TRAccountTool account];
     
-    parma.uid = account.uid;
+    param[@"uid"] = account.uid;
     
-    parma.content = _textView.text;
+    param[@"postcontent"] = _textView.text;
     
     if (self.images.count > 0) {
         //图片路径
         NSString *pathStr = [imagePath componentsJoinedByString:@","];
-        parma.photos = pathStr;
+        param[@"postphotos"] = pathStr;
     }
     
     //存储认证信息
-    [TRHttpTool POST:TRFoundSentPostUrl parameters:parma.mj_keyValues success:^(id responseObject) {
+    [TRHttpTool POST:TRFoundSentPostUrl parameters:param.mj_keyValues success:^(id responseObject) {
         [TRProgressTool dismiss];
         
         NSInteger state = [responseObject[@"state"] integerValue];
