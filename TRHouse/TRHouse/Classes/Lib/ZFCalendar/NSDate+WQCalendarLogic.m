@@ -45,7 +45,7 @@
 /*计算这个月的第一天是礼拜几*/
 - (NSUInteger)weeklyOrdinality
 {
-    return [[NSCalendar currentCalendar] ordinalityOfUnit:NSDayCalendarUnit inUnit:NSWeekCalendarUnit forDate:self];
+    return [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSWeekCalendarUnit forDate:self];
 }
 
 
