@@ -8,6 +8,8 @@
 
 #import "TRRoomDetailViewController.h"
 #import "TRRoom.h"
+#import "TRSelectDateViewController.h"
+#import "TRNavigationController.h"
 
 @interface TRRoomDetailViewController ()
 /**
@@ -36,6 +38,8 @@
  */
 @property (weak, nonatomic) IBOutlet UIButton *addressBtn;
 
+/** 入住天数 */
+@property (nonatomic, assign) NSInteger days;
 
 @end
 
@@ -49,6 +53,8 @@
 }
 
 - (void)setupData{
+    //设置入住天数
+    self.days = 1;
     //设置图片
     [self.photoView sd_setImageWithURL:[NSURL URLWithString:[self.room.photos firstObject]] placeholderImage:[UIImage imageNamed:@"default_bg"]];
     //设置好评lbl
@@ -71,9 +77,7 @@
     NSString *toDayStr = [formatter stringFromDate:date];
     NSString *tomorrowStr = [formatter stringFromDate:[date dateByAddingTimeInterval:(24*3600)]];
     
-    TRLog(@"今天 -- %@, 明天 -- %@", toDayStr, tomorrowStr);
-    
-    [self.stayInDateBtn setTitle:[NSString stringWithFormat:@"%@ 入住 - %@ 离店 共1晚", toDayStr, tomorrowStr] forState:UIControlStateNormal];
+    [self.stayInDateBtn setTitle:[NSString stringWithFormat:@"%@ 入住 - %@ 离店 共%zd晚", toDayStr, tomorrowStr, self.days] forState:UIControlStateNormal];
     
     
 }
@@ -88,12 +92,27 @@
  *  地址按钮
  */
 - (IBAction)addressBtnClick {
+    
+    
+    
 }
 
 /**
  *  日期选择
  */
 - (IBAction)selectDateClick {
+    
+    TRSelectDateViewController *selectDateVc = [[TRSelectDateViewController alloc] init];
+    
+    selectDateVc.didSelectDateBlock = ^(NSString *firstDateStr, NSString *lastDateStr, NSInteger count) {
+        self.days = count;
+        [self.stayInDateBtn setTitle:[NSString stringWithFormat:@"%@ 入住 - %@ 离店 共%zd晚", firstDateStr, lastDateStr, self.days] forState:UIControlStateNormal];
+    };
+    
+    TRNavigationController *nav = [[TRNavigationController alloc] initWithRootViewController:selectDateVc];
+    
+    [self presentViewController:nav animated:YES completion:nil];
+    
 }
 
 

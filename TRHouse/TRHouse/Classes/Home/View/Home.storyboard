@@ -68,7 +68,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                         <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                        <state key="normal" title="Button" image="nav_map">
+                                                        <state key="normal" title="Button" image="address">
                                                             <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         </state>
                                                         <connections>
@@ -207,7 +207,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="nav_map" width="25" height="25"/>
+        <image name="address" width="25" height="25"/>
         <image name="photo_sel_previewVc.png" width="42" height="42"/>
     </resources>
 </document>

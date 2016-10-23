@@ -72,7 +72,7 @@ static NSString *DayCell = @"DayCell";
     
     CalendarMonthCollectionViewLayout *layout = [CalendarMonthCollectionViewLayout new];
     
-    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-50) collectionViewLayout:layout]; //初始化网格视图大小
+    self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height-50-64) collectionViewLayout:layout]; //初始化网格视图大小
     self.collectionView.showsVerticalScrollIndicator = NO;
     [self.collectionView registerClass:[CalendarDayCell class] forCellWithReuseIdentifier:DayCell];//cell重用设置ID
     

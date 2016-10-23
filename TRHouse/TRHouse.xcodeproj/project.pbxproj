@@ -80,6 +80,7 @@
 		C27934661DBCBB84005675E9 /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C279345B1DBCBB84005675E9 /* CalendarViewController.m */; };
 		C27934671DBCBB84005675E9 /* chack.png in Resources */ = {isa = PBXBuildFile; fileRef = C279345C1DBCBB84005675E9 /* chack.png */; };
 		C27934681DBCBB84005675E9 /* NSDate+WQCalendarLogic.m in Sources */ = {isa = PBXBuildFile; fileRef = C279345F1DBCBB84005675E9 /* NSDate+WQCalendarLogic.m */; };
+		C279346B1DBCBEAD005675E9 /* TRSelectDateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C279346A1DBCBEAD005675E9 /* TRSelectDateViewController.m */; };
 		C2915A8D1D8D378D00842952 /* TRHouseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915A8C1D8D378D00842952 /* TRHouseTests.m */; };
 		C2915A981D8D378D00842952 /* TRHouseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915A971D8D378D00842952 /* TRHouseUITests.m */; };
 		C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915AB81D8D3E7D00842952 /* AppDelegate.m */; };
@@ -304,6 +305,8 @@
 		C279345D1DBCBB84005675E9 /* Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Color.h; sourceTree = "<group>"; };
 		C279345E1DBCBB84005675E9 /* NSDate+WQCalendarLogic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+WQCalendarLogic.h"; sourceTree = "<group>"; };
 		C279345F1DBCBB84005675E9 /* NSDate+WQCalendarLogic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+WQCalendarLogic.m"; sourceTree = "<group>"; };
+		C27934691DBCBEAD005675E9 /* TRSelectDateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSelectDateViewController.h; sourceTree = "<group>"; };
+		C279346A1DBCBEAD005675E9 /* TRSelectDateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSelectDateViewController.m; sourceTree = "<group>"; };
 		C2915A6C1D8D378D00842952 /* TRHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2915A831D8D378D00842952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2915A881D8D378D00842952 /* TRHouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRHouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -738,6 +741,8 @@
 				C23A67991DB7D03F00755FFC /* TRHotAndSelectTableViewController.m */,
 				C279344A1DBC9C51005675E9 /* TRRoomDetailViewController.h */,
 				C279344B1DBC9C51005675E9 /* TRRoomDetailViewController.m */,
+				C27934691DBCBEAD005675E9 /* TRSelectDateViewController.h */,
+				C279346A1DBCBEAD005675E9 /* TRSelectDateViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1412,6 +1417,7 @@
 				B2773C171DACC23300B0A899 /* GFUser.m in Sources */,
 				C2B5855E1DB4759D00C37479 /* TRPersonal.m in Sources */,
 				C29163F31DB3CF0E00769BA1 /* Utilities.m in Sources */,
+				C279346B1DBCBEAD005675E9 /* TRSelectDateViewController.m in Sources */,
 				C29AD60C1DB6946E00510D06 /* PhotoPreviewCell.m in Sources */,
 				C21309251DB9054B003EE39C /* NSString+Hash.m in Sources */,
 				C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */,

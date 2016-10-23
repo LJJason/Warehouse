@@ -57,7 +57,7 @@
     self.clipsToBounds = YES;
     
     CGFloat w = 300.0f;
-    
+    self.backgroundColor = TRColor(241, 241, 241, 1.0);
     //月份
     UILabel *masterLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.frame.size.width - w) / 2, 10.0f, w, 30.f)];
     [masterLabel setBackgroundColor:[UIColor clearColor]];
