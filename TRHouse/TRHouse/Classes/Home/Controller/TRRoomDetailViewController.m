@@ -10,6 +10,7 @@
 #import "TRRoom.h"
 #import "TRSelectDateViewController.h"
 #import "TRNavigationController.h"
+#import <MapKit/MapKit.h>
 
 @interface TRRoomDetailViewController ()
 /**
@@ -40,10 +41,21 @@
 
 /** 入住天数 */
 @property (nonatomic, assign) NSInteger days;
+/**
+ *  地理编码器
+ */
+@property(nonatomic ,strong)CLGeocoder *geocoder;
 
 @end
 
 @implementation TRRoomDetailViewController
+
+- (CLGeocoder *)geocoder {
+    if (_geocoder == nil) {
+        _geocoder = [[CLGeocoder alloc] init];
+    }
+    return _geocoder;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -78,8 +90,7 @@
     NSString *tomorrowStr = [formatter stringFromDate:[date dateByAddingTimeInterval:(24*3600)]];
     
     [self.stayInDateBtn setTitle:[NSString stringWithFormat:@"%@ 入住 - %@ 离店 共%zd晚", toDayStr, tomorrowStr, self.days] forState:UIControlStateNormal];
-    
-    
+
 }
 
 /**
@@ -93,9 +104,58 @@
  */
 - (IBAction)addressBtnClick {
     
+    if (self.placemark == nil) {
+        //
+        [Toast makeText:@"返回上一页等待定位完成"];
+        return;
+    }
+    
+    //3,获得结束位置的地标
+    [self.geocoder geocodeAddressString:self.room.address completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        
+        CLPlacemark * endPlacemark = [placemarks firstObject];
+        //4,获得地标后开始导航
+        [self startNavigationWithStartPlacemark:self.placemark endPlacemark:endPlacemark];
+    }];
     
     
 }
+
+/**
+ *  利用地标位置开始设置导航
+ *
+ *  @param startPlacemark 开始位置的地标
+ *  @param endPlacemark   结束位置的地标
+ */
+-(void)startNavigationWithStartPlacemark:(CLPlacemark *)startPlacemark endPlacemark:(CLPlacemark*)endPlacemark
+{
+    //0,创建起点
+    MKPlacemark * startMKPlacemark = [[MKPlacemark alloc]initWithPlacemark:startPlacemark];
+    //0,创建终点
+    MKPlacemark * endMKPlacemark = [[MKPlacemark alloc]initWithPlacemark:endPlacemark];
+    
+    //1,设置起点位置
+    MKMapItem * startItem = [[MKMapItem alloc]initWithPlacemark:startMKPlacemark];
+    //2,设置终点位置
+    MKMapItem * endItem = [[MKMapItem alloc]initWithPlacemark:endMKPlacemark];
+    //3,起点,终点数组
+    NSArray * items = @[ startItem ,endItem];
+    
+    //4,设置地图的附加参数,是个字典
+    NSMutableDictionary * dictM = [NSMutableDictionary dictionary];
+    //导航模式(驾车,步行)
+    dictM[MKLaunchOptionsDirectionsModeKey] = MKLaunchOptionsDirectionsModeDriving;
+    //地图显示的模式
+    dictM[MKLaunchOptionsMapTypeKey] = MKMapTypeStandard;
+    
+    
+    //只要调用MKMapItem的open方法,就可以调用系统自带地图的导航
+    //Items:告诉系统地图从哪到哪
+    //launchOptions:启动地图APP参数(导航的模式/是否需要先交通状况/地图的模式/..)
+    
+    [MKMapItem openMapsWithItems:items launchOptions:dictM];
+}
+
 
 /**
  *  日期选择
