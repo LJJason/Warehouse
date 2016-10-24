@@ -84,7 +84,6 @@ UIKIT_EXTERN NSString * const TRComposeInteractiveUrl;
  *  获取互动评论的接口
  */
 UIKIT_EXTERN NSString * const TRGetAllInteractiveCommentsUrl;
-
 /*** 发互动评论的接口 */
 UIKIT_EXTERN NSString * const TRSendInteractiveCommentUrl;
 
@@ -113,7 +112,8 @@ UIKIT_EXTERN NSString * const TRGetAllPostsUrl;
 /*** 发邻居圈的接口 */
 UIKIT_EXTERN NSString * const TRFoundSentPostUrl;
 
-
+/*** 发邻居圈评论的接口 */
+UIKIT_EXTERN NSString * const TRCirleSendComment;
 
 
 

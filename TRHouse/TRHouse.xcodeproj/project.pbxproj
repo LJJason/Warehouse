@@ -45,6 +45,12 @@
 		B2773C231DACC44000B0A899 /* UIImage+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C221DACC44000B0A899 /* UIImage+GFExtension.m */; };
 		B2773C261DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = B2773C251DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m */; };
 		B29AC81B1DB7455B00AD1C6E /* TRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B29AC81A1DB7455B00AD1C6E /* TRImageView.m */; };
+		B29DD1281DBDE87C00D6A3F7 /* TRCircleCommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B29DD1271DBDE87C00D6A3F7 /* TRCircleCommentViewController.m */; };
+		B29DD12B1DBDE89200D6A3F7 /* TRPostComment.m in Sources */ = {isa = PBXBuildFile; fileRef = B29DD12A1DBDE89200D6A3F7 /* TRPostComment.m */; };
+		B29DD12E1DBDE8A500D6A3F7 /* TRPostCommentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B29DD12D1DBDE8A500D6A3F7 /* TRPostCommentTableViewCell.m */; };
+		B29DD1321DBDE96200D6A3F7 /* TRComentCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B29DD1301DBDE96200D6A3F7 /* TRComentCellTableViewCell.m */; };
+		B29DD1331DBDE96200D6A3F7 /* TRComentCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B29DD1311DBDE96200D6A3F7 /* TRComentCellTableViewCell.xib */; };
+		B29DD1351DBE061A00D6A3F7 /* TRPostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B29DD1341DBE061A00D6A3F7 /* TRPostTableViewCell.xib */; };
 		B2F788F61DAF26B600D74716 /* TRPost.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F788F51DAF26B600D74716 /* TRPost.m */; };
 		B2F788F91DAF673C00D74716 /* TRPostTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B2F788F81DAF673C00D74716 /* TRPostTableViewCell.m */; };
 		C21309141DB8FDDD003EE39C /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C21309131DB8FDDD003EE39C /* Me.storyboard */; };
@@ -254,6 +260,16 @@
 		B2773C251DACC4C000B0A899 /* UIBarButtonItem+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+GFExtension.m"; sourceTree = "<group>"; };
 		B29AC8191DB7455B00AD1C6E /* TRImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRImageView.h; sourceTree = "<group>"; };
 		B29AC81A1DB7455B00AD1C6E /* TRImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRImageView.m; sourceTree = "<group>"; };
+		B29DD1261DBDE87C00D6A3F7 /* TRCircleCommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRCircleCommentViewController.h; sourceTree = "<group>"; };
+		B29DD1271DBDE87C00D6A3F7 /* TRCircleCommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRCircleCommentViewController.m; sourceTree = "<group>"; };
+		B29DD1291DBDE89200D6A3F7 /* TRPostComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPostComment.h; sourceTree = "<group>"; };
+		B29DD12A1DBDE89200D6A3F7 /* TRPostComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPostComment.m; sourceTree = "<group>"; };
+		B29DD12C1DBDE8A500D6A3F7 /* TRPostCommentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPostCommentTableViewCell.h; sourceTree = "<group>"; };
+		B29DD12D1DBDE8A500D6A3F7 /* TRPostCommentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPostCommentTableViewCell.m; sourceTree = "<group>"; };
+		B29DD12F1DBDE96200D6A3F7 /* TRComentCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRComentCellTableViewCell.h; sourceTree = "<group>"; };
+		B29DD1301DBDE96200D6A3F7 /* TRComentCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRComentCellTableViewCell.m; sourceTree = "<group>"; };
+		B29DD1311DBDE96200D6A3F7 /* TRComentCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRComentCellTableViewCell.xib; sourceTree = "<group>"; };
+		B29DD1341DBE061A00D6A3F7 /* TRPostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TRPostTableViewCell.xib; sourceTree = "<group>"; };
 		B2F788F41DAF26B600D74716 /* TRPost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPost.h; sourceTree = "<group>"; };
 		B2F788F51DAF26B600D74716 /* TRPost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPost.m; sourceTree = "<group>"; };
 		B2F788F71DAF673C00D74716 /* TRPostTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPostTableViewCell.h; sourceTree = "<group>"; };
@@ -540,8 +556,14 @@
 				B23969D71DA9DC3000F2904A /* TRFound.storyboard */,
 				B2F788F71DAF673C00D74716 /* TRPostTableViewCell.h */,
 				B2F788F81DAF673C00D74716 /* TRPostTableViewCell.m */,
+				B29DD1341DBE061A00D6A3F7 /* TRPostTableViewCell.xib */,
 				B29AC8191DB7455B00AD1C6E /* TRImageView.h */,
 				B29AC81A1DB7455B00AD1C6E /* TRImageView.m */,
+				B29DD12C1DBDE8A500D6A3F7 /* TRPostCommentTableViewCell.h */,
+				B29DD12D1DBDE8A500D6A3F7 /* TRPostCommentTableViewCell.m */,
+				B29DD12F1DBDE96200D6A3F7 /* TRComentCellTableViewCell.h */,
+				B29DD1301DBDE96200D6A3F7 /* TRComentCellTableViewCell.m */,
+				B29DD1311DBDE96200D6A3F7 /* TRComentCellTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -557,6 +579,8 @@
 				930BDCA41DAACD6300BAE473 /* TRTourViewController.m */,
 				930A51071DB988A000AEA206 /* TRFoundSendViewController.h */,
 				930A51081DB988A000AEA206 /* TRFoundSendViewController.m */,
+				B29DD1261DBDE87C00D6A3F7 /* TRCircleCommentViewController.h */,
+				B29DD1271DBDE87C00D6A3F7 /* TRCircleCommentViewController.m */,
 			);
 			name = Dev;
 			sourceTree = "<group>";
@@ -621,6 +645,8 @@
 				B2773C131DACC23300B0A899 /* GFUser.m */,
 				B2F788F41DAF26B600D74716 /* TRPost.h */,
 				B2F788F51DAF26B600D74716 /* TRPost.m */,
+				B29DD1291DBDE89200D6A3F7 /* TRPostComment.h */,
+				B29DD12A1DBDE89200D6A3F7 /* TRPostComment.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1380,6 +1406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C29AD6061DB6946E00510D06 /* TableViewArrow@2x.png in Resources */,
+				B29DD1331DBDE96200D6A3F7 /* TRComentCellTableViewCell.xib in Resources */,
 				B2773BFF1DACC1E200B0A899 /* GFPictureView.xib in Resources */,
 				B2773C061DACC1E200B0A899 /* GFSeeBigPictureViewController.xib in Resources */,
 				C29AD6041DB6946E00510D06 /* preview_number_icon@2x.png in Resources */,
@@ -1391,6 +1418,7 @@
 				C26FD4181DB744CD00F9ED4B /* TRInteractiveCell.xib in Resources */,
 				C27934AD1DBCE3E4005675E9 /* cities.plist in Resources */,
 				C29AD6011DB6946E00510D06 /* photo_original_sel@2x.png in Resources */,
+				B29DD1351DBE061A00D6A3F7 /* TRPostTableViewCell.xib in Resources */,
 				C29AD6091DB6946E00510D06 /* PhotoPickerCell.xib in Resources */,
 				C29AD5FD1DB6946E00510D06 /* photo_def_photoPickerVc@2x.png in Resources */,
 				C29AD6001DB6946E00510D06 /* photo_original_def@2x.png in Resources */,
@@ -1489,6 +1517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C27DD9BE1DBDE28D0090F45C /* TRPhotoCell.m in Sources */,
+				B29DD12E1DBDE8A500D6A3F7 /* TRPostCommentTableViewCell.m in Sources */,
 				B2773BDF1DACC19F00B0A899 /* GFPieceViewController.m in Sources */,
 				B2773C231DACC44000B0A899 /* UIImage+GFExtension.m in Sources */,
 				B2F788F61DAF26B600D74716 /* TRPost.m in Sources */,
@@ -1507,8 +1536,10 @@
 				C27934631DBCBB84005675E9 /* CalendarLogic.m in Sources */,
 				C27934661DBCBB84005675E9 /* CalendarViewController.m in Sources */,
 				B2773C021DACC1E200B0A899 /* GFProgressView.m in Sources */,
+				B29DD12B1DBDE89200D6A3F7 /* TRPostComment.m in Sources */,
 				C27934641DBCBB84005675E9 /* CalendarMonthCollectionViewLayout.m in Sources */,
 				C29AD5F91DB6946E00510D06 /* AlbumNavigationController.m in Sources */,
+				B29DD1281DBDE87C00D6A3F7 /* TRCircleCommentViewController.m in Sources */,
 				C27934601DBCBB84005675E9 /* CalendarDayCell.m in Sources */,
 				C23A678E1DB79EF500755FFC /* TRTableViewCell.m in Sources */,
 				B2773C001DACC1E200B0A899 /* GFPieceCell.m in Sources */,
@@ -1605,6 +1636,7 @@
 				C29AD5B61DB66C9A00510D06 /* TRMeDetailTableViewController.m in Sources */,
 				C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */,
 				C29163FC1DB3E05F00769BA1 /* TRAccountParam.m in Sources */,
+				B29DD1321DBDE96200D6A3F7 /* TRComentCellTableViewCell.m in Sources */,
 				C2B10B091DAFE0F1003332FB /* TRMeHeaderView.m in Sources */,
 				C279349B1DBCE3A2005675E9 /* LNLocationGeocoder.m in Sources */,
 				C29AD5F81DB6946E00510D06 /* AlbumListTableViewCell.m in Sources */,

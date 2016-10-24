@@ -38,20 +38,15 @@
 }
 - (void)setPhotos:(NSArray *)photos{
     _photos = photos;
-    
-    for (int i = 0; i < photos.count; i ++) {
+    if ( photos.count > 0) {
         
-        if (!photos) {
+        for (int i = 0; i < photos.count; i ++) {
+            UIImageView *image = self.subviews[i];
             
-            return;
-        }else{
-        
-        UIImageView *image = self.subviews[i];
-        
-        [image sd_setImageWithURL:photos[i] placeholderImage:[UIImage imageNamed:@"default_bg"]];
+            [image sd_setImageWithURL:photos[i] placeholderImage:[UIImage imageNamed:@"default_bg"]];
         }
+
     }
-    
     
 }
 - (void)layoutSubviews{

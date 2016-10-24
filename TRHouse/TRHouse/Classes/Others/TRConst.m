@@ -104,7 +104,8 @@ NSString * const TRLikeUrl = @"http://localhost:8080/TRHouse/like";
 /*** 获取临居圈的数据的接口 */ //localhost:8080  192.168.61.79
 NSString * const TRGetAllPostsUrl = @"http://localhost:8080/TRHouse/getAllPost";
 
-
+/*** 发邻居圈评论的接口 */
+NSString * const TRCirleSendComment = @"http://localhost:8080/TRHouse/sendComment";
 
 
 

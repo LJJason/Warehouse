@@ -14,6 +14,7 @@
 #import "TRLoginViewController.h"
 #import "CZComposeViewController.h"
 #import "TRFoundSendViewController.h"
+#import "TRCircleCommentViewController.h"
 #import <HUPhotoBrowser.h>
 
 
@@ -172,7 +173,9 @@
         self.tableView.mj_footer.hidden = NO;
         
     } failure:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
         self.tableView.mj_footer.hidden = NO;
+        [Toast makeText:@"网络错误"];
         TRLog(@"Fail");
     }];
 
@@ -212,7 +215,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    TRCircleCommentViewController *commentVc = [TRCircleCommentViewController viewControllerWtithStoryboardName:TRFoundStoryboardName identifier:NSStringFromClass([TRCircleCommentViewController class])];
     
+    commentVc.post = self.posts[indexPath.row];
+    [self.navigationController pushViewController:commentVc animated:YES];
+
 }
 
 /*
