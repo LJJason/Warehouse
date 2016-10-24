@@ -103,6 +103,7 @@
         [self.searchManager startReverseGeocode:location completeionBlock:^(LNLocationGeocoder *locationGeocoder, CLPlacemark *placemark, NSError *error) {
             if (!error) {
                 self.placemark = placemark;
+                self.headerView.placemark = placemark;
                 NSMutableString *mutableString = [NSMutableString stringWithFormat:@"%@",locationGeocoder.city];
                 NSString *title = [mutableString stringByReplacingOccurrencesOfString:@"市" withString:@""];
                 self.city = title;

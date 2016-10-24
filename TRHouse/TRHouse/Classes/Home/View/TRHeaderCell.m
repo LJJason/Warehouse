@@ -30,6 +30,7 @@
 //        [self.contentView addSubview:lab];
 //        self.label = lab;
         TRTableViewCell *cell = [TRTableViewCell cell];
+        cell.userInteractionEnabled = NO;
         self.cell = cell;
         [self.contentView addSubview:cell];
         

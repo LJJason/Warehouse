@@ -9,6 +9,7 @@
 #import "TRHotAndSelectTableViewController.h"
 #import "TRTableViewCell.h"
 #import "TRRoom.h"
+#import "TRRoomDetailViewController.h"
 
 @interface TRHotAndSelectTableViewController ()
 
@@ -148,6 +149,13 @@ static NSString * const cellId = @"hotCellId";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TRRoomDetailViewController *detail = [TRRoomDetailViewController viewControllerWtithStoryboardName:TRHomeStoryboardName identifier:NSStringFromClass([TRRoomDetailViewController class])];
+    detail.room = self.rooms[indexPath.row];
+    detail.placemark = self.placemark;
+    [self.navigationController pushViewController:detail animated:YES];
+    
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 130.0;

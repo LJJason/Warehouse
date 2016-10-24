@@ -61,6 +61,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.navigationItem.title = @"商品详情";
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeMorePhotos:)];
+    [self.photoView addGestureRecognizer:tap];
     [self setupData];
 }
 
@@ -110,13 +112,24 @@
         return;
     }
     
-    //3,获得结束位置的地标
-    [self.geocoder geocodeAddressString:self.room.address completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
-        
-        CLPlacemark * endPlacemark = [placemarks firstObject];
-        //4,获得地标后开始导航
-        [self startNavigationWithStartPlacemark:self.placemark endPlacemark:endPlacemark];
-    }];
+    UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"是否打开地图进行导航?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertControl addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        // 点击确定按钮的时候, 会调用这个block
+        //3,获得结束位置的地标
+        [self.geocoder geocodeAddressString:self.room.address completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+            
+            CLPlacemark * endPlacemark = [placemarks firstObject];
+            //4,获得地标后开始导航
+            [self startNavigationWithStartPlacemark:self.placemark endPlacemark:endPlacemark];
+        }];
+    }]];
+    
+    [alertControl addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    
+    [self presentViewController:alertControl animated:YES completion:nil];
+    
+    
     
     
 }
@@ -175,5 +188,10 @@
     
 }
 
+
+- (void)seeMorePhotos:(UITapGestureRecognizer *)tap{
+    
+    
+}
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface TRHotAndSelectTableViewController : UITableViewController
 
@@ -15,5 +16,8 @@
 
 /** 标题 */
 @property (nonatomic, copy) NSString *navTitle;
+
+/** 地标 */
+@property (nonatomic, strong) CLPlacemark *placemark;
 
 @end
