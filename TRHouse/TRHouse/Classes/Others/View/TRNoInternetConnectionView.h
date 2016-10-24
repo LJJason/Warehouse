@@ -20,4 +20,7 @@
 /** 重新加载按钮回调 */
 @property (nonatomic, copy) void (^reloadAgainBlock)();
 
+/** 是否显示重新加载按钮 */
+@property (nonatomic, assign) BOOL hiddenBtn;
+
 @end

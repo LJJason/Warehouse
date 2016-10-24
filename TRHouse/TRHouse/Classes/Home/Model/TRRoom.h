@@ -40,4 +40,7 @@
 /** 评价 */
 @property (nonatomic, copy) NSString *praise;
 
+/** 最大住的人数 */
+@property (nonatomic, assign) NSInteger largestPeopleCount;
+
 @end

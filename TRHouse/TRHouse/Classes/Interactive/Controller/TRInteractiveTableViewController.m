@@ -14,6 +14,7 @@
 #import "TRAccountTool.h"
 #import "TRLoginViewController.h"
 #import "TRAccount.h"
+#import "TRNoInternetConnectionView.h"
 
 @interface TRInteractiveTableViewController ()
 
@@ -128,9 +129,25 @@ static NSString * const cellId = @"TRInteractiveCell";
     } failure:^(NSError *error) {
         //结束刷新
         [self.tableView.mj_header endRefreshing];
-        [Toast makeText:@"加载失败!!"];
-        self.tableView.mj_footer.hidden = NO;
+        //显示错误界面
+        [self showErrorView];
     }];
+}
+
+
+/**
+ *  展示无网络连接页面
+ */
+- (void)showErrorView {
+    
+    TRNoInternetConnectionView *noInterNet = [TRNoInternetConnectionView noInternetConnectionView];
+    noInterNet.frame = self.view.frame;
+    noInterNet.reloadAgainBlock = ^{
+        [self.tableView.mj_header beginRefreshing];
+    };
+    
+    [self.view addSubview:noInterNet];
+    
 }
 
 /**

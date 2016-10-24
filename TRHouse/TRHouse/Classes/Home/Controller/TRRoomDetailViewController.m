@@ -11,6 +11,9 @@
 #import "TRSelectDateViewController.h"
 #import "TRNavigationController.h"
 #import <MapKit/MapKit.h>
+#import "TRSeeMorePhotoViewController.h"
+#import "TRDetailInformationViewController.h"
+#import "TRNoInternetConnectionView.h"
 
 @interface TRRoomDetailViewController ()
 /**
@@ -46,10 +49,21 @@
  */
 @property(nonatomic ,strong)CLGeocoder *geocoder;
 
+/**
+ *  显示图片个数的按钮
+ */
+@property (weak, nonatomic) IBOutlet UIButton *photoCountBtn;
+
+@property (weak, nonatomic) IBOutlet UIView *configView;
+
+
 @end
 
 @implementation TRRoomDetailViewController
 
+/**
+ *  懒加载地理编码器
+ */
 - (CLGeocoder *)geocoder {
     if (_geocoder == nil) {
         _geocoder = [[CLGeocoder alloc] init];
@@ -60,13 +74,80 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"商品详情";
+    
+    [self setupNav];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeMorePhotos:)];
+    //允许与用户交互
+    self.photoView.userInteractionEnabled = YES;
+    [self.photoView addGestureRecognizer:tap];
     [self setupData];
+    //可提供的服务
+    [self loadConfigImage];
+}
+
+
+/**
+ *  设置可提供服务视图
+ */
+- (void)loadConfigImage{
+    
+    CGFloat margin = 20;
+    CGFloat y = 6.0;
+    CGFloat w = 50;
+    CGFloat h = 65;
+    
+    for (NSInteger i = 0; i < self.room.configuration.count; i++) {
+        
+        UIImageView *imageView = [[UIImageView alloc] init];
+        imageView.x = i * (margin + w) + margin;
+        imageView.y = y;
+        imageView.width = w;
+        imageView.height = h;
+        imageView.image = [UIImage imageNamed:self.room.configuration[i]];
+        [self.configView addSubview:imageView];
+    }
+    
+}
+
+
+/**
+ *  设置导航条相关
+ */
+- (void)setupNav {
+    self.navigationItem.title = @"商品详情";
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] init];
+    item.title = @"返回";
+    self.navigationItem.backBarButtonItem = item;
+}
+
+/**
+ *  展示无网络连接页面
+ */
+- (void)showErrorView {
+    
+    TRNoInternetConnectionView *noInterNet = [TRNoInternetConnectionView noInternetConnectionView];
+    noInterNet.frame = self.view.frame;
+    noInterNet.hiddenBtn = YES;
+    
+    [self.view addSubview:noInterNet];
+    
 }
 
 - (void)setupData{
+    
+    if (!self.room) {
+        //没东西就显示无网络页面
+        [self showErrorView];
+        return;
+    }
+
     //设置入住天数
     self.days = 1;
+    //设置图片的个数
+    [self.photoCountBtn setTitle:[NSString stringWithFormat:@"%zd", self.room.photos.count] forState:UIControlStateNormal];
+    
     //设置图片
     [self.photoView sd_setImageWithURL:[NSURL URLWithString:[self.room.photos firstObject]] placeholderImage:[UIImage imageNamed:@"default_bg"]];
     //设置好评lbl
@@ -84,9 +165,10 @@
     //获取今天的日期
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"MM月dd";
-    
+    //获取当前的日期
     NSDate *date = [NSDate date];
     NSString *toDayStr = [formatter stringFromDate:date];
+    //转换明天的日期
     NSString *tomorrowStr = [formatter stringFromDate:[date dateByAddingTimeInterval:(24*3600)]];
     
     [self.stayInDateBtn setTitle:[NSString stringWithFormat:@"%@ 入住 - %@ 离店 共%zd晚", toDayStr, tomorrowStr, self.days] forState:UIControlStateNormal];
@@ -110,13 +192,24 @@
         return;
     }
     
-    //3,获得结束位置的地标
-    [self.geocoder geocodeAddressString:self.room.address completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
-        
-        CLPlacemark * endPlacemark = [placemarks firstObject];
-        //4,获得地标后开始导航
-        [self startNavigationWithStartPlacemark:self.placemark endPlacemark:endPlacemark];
-    }];
+    UIAlertController *alertControl = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"是否打开地图进行导航?" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [alertControl addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        // 点击确定按钮的时候, 会调用这个block
+        //3,获得结束位置的地标
+        [self.geocoder geocodeAddressString:self.room.address completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+            
+            CLPlacemark * endPlacemark = [placemarks firstObject];
+            //4,获得地标后开始导航
+            [self startNavigationWithStartPlacemark:self.placemark endPlacemark:endPlacemark];
+        }];
+    }]];
+    
+    [alertControl addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
+    
+    [self presentViewController:alertControl animated:YES completion:nil];
+    
+    
     
     
 }
@@ -175,5 +268,28 @@
     
 }
 
+//顶部图片的点击
+- (void)seeMorePhotos:(UITapGestureRecognizer *)tap{
+    
+    if (tap.state == UIGestureRecognizerStateEnded) {
+        TRSeeMorePhotoViewController *seePhotoVc = [TRSeeMorePhotoViewController viewControllerWtithStoryboardName:TRHomeStoryboardName identifier:NSStringFromClass([TRSeeMorePhotoViewController class])];
+        seePhotoVc.photosUrl = self.room.photos;
+        
+        [self.navigationController pushViewController:seePhotoVc animated:YES];
+    }
+
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    id destinationViewController = segue.destinationViewController;
+    
+    if ([destinationViewController isKindOfClass:[TRDetailInformationViewController class]]) {
+        
+        TRDetailInformationViewController *detailVc = destinationViewController;
+        detailVc.room = self.room;
+    }
+    
+}
 
 @end

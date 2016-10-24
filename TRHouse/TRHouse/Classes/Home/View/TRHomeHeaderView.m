@@ -10,6 +10,7 @@
 #import "TRHeaderCell.h"
 #import "TRRoom.h"
 #import "TRHotAndSelectTableViewController.h"
+#import "TRRoomDetailViewController.h"
 
 #define TRMaxSections 100
 
@@ -156,6 +157,19 @@ static NSString * const TRcellId = @"TRcellId";
 }
 
 
+/**
+ *  选中
+ *
+ */
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    TRRoomDetailViewController *detailVc = [TRRoomDetailViewController viewControllerWtithStoryboardName:TRHomeStoryboardName identifier:NSStringFromClass([TRRoomDetailViewController class])];
+    detailVc.room = self.rooms[indexPath.row];
+    detailVc.placemark = self.placemark;
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController.childViewControllers[0] pushViewController:detailVc animated:YES];
+
+}
+
 -(void) scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self removeTimer];
 }
@@ -201,6 +215,7 @@ static NSString * const TRcellId = @"TRcellId";
     TRHotAndSelectTableViewController *selectVc = [[TRHotAndSelectTableViewController alloc] init];
     selectVc.urlStr = urlStr;
     selectVc.navTitle = title;
+    selectVc.placemark = self.placemark;
     [[UIApplication sharedApplication].keyWindow.rootViewController.childViewControllers[0] pushViewController:selectVc animated:YES];
 }
 
