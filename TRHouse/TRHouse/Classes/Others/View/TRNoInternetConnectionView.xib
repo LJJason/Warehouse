@@ -53,6 +53,9 @@
                 <constraint firstAttribute="trailing" secondItem="U2c-ZC-fI8" secondAttribute="trailing" constant="10" id="lTK-Sa-PUu"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
+            <connections>
+                <outlet property="againBtn" destination="SbY-72-UQq" id="6n8-hl-VnQ"/>
+            </connections>
         </view>
     </objects>
     <resources>

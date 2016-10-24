@@ -8,17 +8,19 @@
 
 #import "TRNoInternetConnectionView.h"
 
+@interface TRNoInternetConnectionView ()
+
+@property (weak, nonatomic) IBOutlet UIButton *againBtn;
+
+
+@end
+
+
 @implementation TRNoInternetConnectionView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
 
 + (instancetype)noInternetConnectionView {
+
     return [[[NSBundle mainBundle] loadNibNamed:@"TRNoInternetConnectionView" owner:nil options:nil] firstObject];
 }
 
@@ -32,5 +34,9 @@
     [self removeFromSuperview];
 }
 
+- (void)setHiddenBtn:(BOOL)hiddenBtn {
+    _hiddenBtn = hiddenBtn;
+    self.againBtn.hidden = hiddenBtn;
+}
 
 @end

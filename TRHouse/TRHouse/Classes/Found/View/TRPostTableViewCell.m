@@ -61,14 +61,19 @@
     NSString *users = [posts.praiseUser componentsJoinedByString:@","];
     TRAccount *account = [TRAccountTool account];
     
-    NSRange range = [users rangeOfString:account.uid];
-    
-    self.praiseUserBtn.enabled = range.length ? NO : YES;
-    
+    if (account) {
+        NSRange range = [users rangeOfString:account.uid];
+        
+        self.praiseUserBtn.enabled = range.length ? NO : YES;
+    }
     
 }
 
 - (IBAction)likeClickAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    
+    
+    
+    
     sender.enabled = NO;
     NSMutableDictionary *parament = [NSMutableDictionary dictionary];
     

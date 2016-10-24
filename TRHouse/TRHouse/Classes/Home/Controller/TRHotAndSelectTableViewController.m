@@ -9,6 +9,8 @@
 #import "TRHotAndSelectTableViewController.h"
 #import "TRTableViewCell.h"
 #import "TRRoom.h"
+#import "TRRoomDetailViewController.h"
+#import "TRNoInternetConnectionView.h"
 
 @interface TRHotAndSelectTableViewController ()
 
@@ -84,9 +86,26 @@ static NSString * const cellId = @"hotCellId";
     } failure:^(NSError *error) {
         //结束刷新
         [self.tableView.mj_header endRefreshing];
-        [Toast makeText:@"加载失败!!"];
-        self.tableView.mj_footer.hidden = NO;
+        //显示无网络连接
+        [self showErrorView];
+//        [Toast makeText:@"加载失败!!"];
+//        self.tableView.mj_footer.hidden = NO;
     }];
+}
+
+/**
+ *  展示无网络连接页面
+ */
+- (void)showErrorView {
+    
+    TRNoInternetConnectionView *noInterNet = [TRNoInternetConnectionView noInternetConnectionView];
+    noInterNet.frame = self.view.frame;
+    noInterNet.reloadAgainBlock = ^{
+        [self.tableView.mj_header beginRefreshing];
+    };
+    
+    [self.view addSubview:noInterNet];
+    
 }
 
 
@@ -148,6 +167,13 @@ static NSString * const cellId = @"hotCellId";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    TRRoomDetailViewController *detail = [TRRoomDetailViewController viewControllerWtithStoryboardName:TRHomeStoryboardName identifier:NSStringFromClass([TRRoomDetailViewController class])];
+    detail.room = self.rooms[indexPath.row];
+    detail.placemark = self.placemark;
+    [self.navigationController pushViewController:detail animated:YES];
+    
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 130.0;

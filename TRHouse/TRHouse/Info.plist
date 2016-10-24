@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationUsageDescription</key>
+	<string>亲, 临居想访问你的位置信息好吗?</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>亲, 临居想访问你的位置信息好吗?</string>
 	<key>NSCameraUsageDescription</key>
 	<string>亲, 临居想访问你的相机好吗?</string>
 	<key>NSPhotoLibraryUsageDescription</key>

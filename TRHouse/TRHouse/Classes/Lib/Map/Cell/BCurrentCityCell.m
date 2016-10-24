@@ -33,7 +33,7 @@
         [self.GPSButton setHidden:YES];
         [self.activityIndicatorView startAnimating];
     } completionBlock:^(CLLocation *location) {
-        [self.searchManager startReverseGeocode:location completeionBlock:^(LNLocationGeocoder *locationGeocoder, NSError *error) {
+        [self.searchManager startReverseGeocode:location completeionBlock:^(LNLocationGeocoder *locationGeocoder, CLPlacemark *placemark, NSError *error) {
             if (!error) {
                 [self.activityIndicatorView stopAnimating];
                 [self.label setHidden:YES];

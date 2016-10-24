@@ -18,7 +18,7 @@
     return self;
 }
 
-- (void)startReverseGeocode:(CLLocation *)location completeionBlock:(void (^)(LNLocationGeocoder *, NSError *))completeion{
+- (void)startReverseGeocode:(CLLocation *)location completeionBlock:(void (^)(LNLocationGeocoder *, CLPlacemark *,NSError *))completeion{
     self.completionBlock = completeion;
     [self startReverseGeocode:location];
 }
@@ -27,7 +27,7 @@
     [[NSUserDefaults standardUserDefaults] setObject:[NSArray arrayWithObjects:@"zh-hans",nil] forKey:@"AppleLanguages"];
     [self.gecoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         if (error || placemarks.count == 0) {
-            self.completionBlock(nil,error);
+            self.completionBlock(nil, nil, error);
         }else{
             LNLocationGeocoder *locationGeocoder = [[LNLocationGeocoder alloc] init];
             CLPlacemark *placemark = [placemarks firstObject];
@@ -38,7 +38,7 @@
             locationGeocoder.city = dictionary[@"City"];
             locationGeocoder.district = dictionary[@"SubLocality"];
             locationGeocoder.locality = placemark.locality;
-            self.completionBlock(locationGeocoder,nil);
+            self.completionBlock(locationGeocoder, placemark, nil);
         }
     }];
 }

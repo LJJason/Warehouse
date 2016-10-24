@@ -14,8 +14,8 @@
 
 @property (nonatomic, strong) CLGeocoder *gecoder;
 
-@property (nonatomic, copy) void (^completionBlock)(LNLocationGeocoder *locationGeocoder,NSError *error);
+@property (nonatomic, copy) void (^completionBlock)(LNLocationGeocoder *locationGeocoder, CLPlacemark *placemark,NSError *error);
 
-- (void)startReverseGeocode:(CLLocation*)location completeionBlock:(void(^)(LNLocationGeocoder *locationGeocoder,NSError *error))completeion;
+- (void)startReverseGeocode:(CLLocation*)location completeionBlock:(void(^)(LNLocationGeocoder *locationGeocoder, CLPlacemark *placemark, NSError *error))completeion;
 
 @end
