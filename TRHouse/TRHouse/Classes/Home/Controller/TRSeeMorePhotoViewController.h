@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TRSeeMorePhotoViewController : UICollectionViewController
+@interface TRSeeMorePhotoViewController : UIViewController
 
 
-/** 图片路径数组 */
+/** url */
 @property (nonatomic, strong) NSArray *photosUrl;
 
 @end

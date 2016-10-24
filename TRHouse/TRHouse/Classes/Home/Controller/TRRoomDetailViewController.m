@@ -11,6 +11,7 @@
 #import "TRSelectDateViewController.h"
 #import "TRNavigationController.h"
 #import <MapKit/MapKit.h>
+#import "TRSeeMorePhotoViewController.h"
 
 @interface TRRoomDetailViewController ()
 /**
@@ -60,11 +61,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.navigationItem.title = @"商品详情";
+    
+    [self setupNav];
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(seeMorePhotos:)];
+    //允许与用户交互
+    self.photoView.userInteractionEnabled = YES;
     [self.photoView addGestureRecognizer:tap];
     [self setupData];
 }
+
+/**
+ *  设置导航条相关
+ */
+- (void)setupNav {
+    self.navigationItem.title = @"商品详情";
+    
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] init];
+    item.title = @"返回";
+    self.navigationItem.backBarButtonItem = item;
+}
+
 
 - (void)setupData{
     //设置入住天数
@@ -191,7 +208,13 @@
 
 - (void)seeMorePhotos:(UITapGestureRecognizer *)tap{
     
-    
+    if (tap.state == UIGestureRecognizerStateEnded) {
+        TRSeeMorePhotoViewController *seePhotoVc = [TRSeeMorePhotoViewController viewControllerWtithStoryboardName:TRHomeStoryboardName identifier:NSStringFromClass([TRSeeMorePhotoViewController class])];
+        seePhotoVc.photosUrl = self.room.photos;
+        
+        [self.navigationController pushViewController:seePhotoVc animated:YES];
+    }
+
 }
 
 @end

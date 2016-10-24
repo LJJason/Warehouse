@@ -82,7 +82,7 @@
     if (self.inter.photos.count > 0) {
         self.photoLauout.constant = 200.0;
     }else {
-        self.photoLauout.constant = 200.0;
+        self.photoLauout.constant = 0.0;
     }
 }
 

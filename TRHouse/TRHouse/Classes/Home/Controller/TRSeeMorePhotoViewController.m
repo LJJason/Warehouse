@@ -7,77 +7,64 @@
 //
 
 #import "TRSeeMorePhotoViewController.h"
+#import "TRPhotoCell.h"
 
-@interface TRSeeMorePhotoViewController ()
+@interface TRSeeMorePhotoViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
+
+/** UICollectionView */
+@property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
 
 @end
 
 @implementation TRSeeMorePhotoViewController
 
-static NSString * const reuseIdentifier = @"Cell";
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Register cell classes
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    
-    // Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor whiteColor];
+    self.navigationItem.title = @"房间相册";
+    //初始化UICollectionView
+    [self initView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+static NSString * const TRPhotoCellId = @"TRPhotoCellId";
 
-
-#pragma mark <UICollectionViewDataSource>
-
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-
-    return self.photosUrl.count;
-}
-
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
+/**
+ *  初始化UICollectionView
+ */
+- (void)initView{
     
-    // Configure the cell
+//    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+//    flowLayout.itemSize = CGSizeMake((TRScreenW - 20 ) / 2, 100);
+//    flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
+//    flowLayout.minimumLineSpacing = 10;
+//    
+//    UICollectionView *collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, TRScreenW, TRScreenH) collectionViewLayout:flowLayout];
+//    collectionView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
+//    collectionView.delegate = self;
+//    collectionView.dataSource = self;
+////    collectionView.showsHorizontalScrollIndicator = NO;
+////    collectionView.pagingEnabled = YES;
+//    collectionView.backgroundColor = [UIColor whiteColor];
+//    [self.view addSubview:collectionView];
+//    
+//    _collectionView=collectionView;
+    //注册
+    //[_collectionView registerClass:[TRPhotoCell class] forCellWithReuseIdentifier:TRPhotoCellId];
+}
+
+-(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 50;
+}
+
+-(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    
+    TRPhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:TRPhotoCellId forIndexPath:indexPath];
+    
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:self.photosUrl[0]] placeholderImage:[UIImage imageNamed:@"default_bg"]];
+    
     
     return cell;
 }
-
-#pragma mark <UICollectionViewDelegate>
-
-/*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
-	return YES;
-}
-*/
-
-/*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
-
-/*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
-	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
-	
-}
-*/
 
 @end

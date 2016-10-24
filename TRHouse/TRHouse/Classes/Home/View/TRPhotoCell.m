@@ -10,4 +10,21 @@
 
 @implementation TRPhotoCell
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    if (self = [super initWithFrame:frame]) {
+        
+    }
+    return self;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
+    
+    UIImageView *imageView = [[UIImageView alloc] init];
+    imageView.frame = self.frame;
+    self.imageView = imageView;
+    [self.contentView addSubview:imageView];
+    
+}
+
 @end

@@ -10,4 +10,7 @@
 
 @interface TRPhotoCell : UICollectionViewCell
 
+/** 图片 */
+@property (nonatomic, weak) UIImageView *imageView;
+
 @end
