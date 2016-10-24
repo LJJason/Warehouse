@@ -10,4 +10,8 @@
 
 @interface TRSeeMorePhotoViewController : UICollectionViewController
 
+
+/** 图片路径数组 */
+@property (nonatomic, strong) NSArray *photosUrl;
+
 @end

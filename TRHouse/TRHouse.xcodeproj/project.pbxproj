@@ -94,6 +94,7 @@
 		C27934B51DBD04B0005675E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27934B41DBD04B0005675E9 /* CoreLocation.framework */; };
 		C27934B81DBD0AE2005675E9 /* TRSelectCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27934B71DBD0AE2005675E9 /* TRSelectCityViewController.m */; };
 		C27DD9BB1DBDDD4F0090F45C /* TRSeeMorePhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27DD9BA1DBDDD4F0090F45C /* TRSeeMorePhotoViewController.m */; };
+		C27DD9BE1DBDE28D0090F45C /* TRPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C27DD9BD1DBDE28D0090F45C /* TRPhotoCell.m */; };
 		C2915A8D1D8D378D00842952 /* TRHouseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915A8C1D8D378D00842952 /* TRHouseTests.m */; };
 		C2915A981D8D378D00842952 /* TRHouseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915A971D8D378D00842952 /* TRHouseUITests.m */; };
 		C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915AB81D8D3E7D00842952 /* AppDelegate.m */; };
@@ -345,6 +346,8 @@
 		C27934B71DBD0AE2005675E9 /* TRSelectCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSelectCityViewController.m; sourceTree = "<group>"; };
 		C27DD9B91DBDDD4F0090F45C /* TRSeeMorePhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSeeMorePhotoViewController.h; sourceTree = "<group>"; };
 		C27DD9BA1DBDDD4F0090F45C /* TRSeeMorePhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSeeMorePhotoViewController.m; sourceTree = "<group>"; };
+		C27DD9BC1DBDE28D0090F45C /* TRPhotoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRPhotoCell.h; sourceTree = "<group>"; };
+		C27DD9BD1DBDE28D0090F45C /* TRPhotoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRPhotoCell.m; sourceTree = "<group>"; };
 		C2915A6C1D8D378D00842952 /* TRHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2915A831D8D378D00842952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2915A881D8D378D00842952 /* TRHouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRHouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -641,6 +644,8 @@
 				C23A67961DB7BFB400755FFC /* Home.storyboard */,
 				C27934B11DBCFA93005675E9 /* TRButton.h */,
 				C27934B21DBCFA93005675E9 /* TRButton.m */,
+				C27DD9BC1DBDE28D0090F45C /* TRPhotoCell.h */,
+				C27DD9BD1DBDE28D0090F45C /* TRPhotoCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1478,6 +1483,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C27DD9BE1DBDE28D0090F45C /* TRPhotoCell.m in Sources */,
 				B2773BDF1DACC19F00B0A899 /* GFPieceViewController.m in Sources */,
 				B2773C231DACC44000B0A899 /* UIImage+GFExtension.m in Sources */,
 				B2F788F61DAF26B600D74716 /* TRPost.m in Sources */,

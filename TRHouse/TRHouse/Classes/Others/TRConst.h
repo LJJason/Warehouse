@@ -91,6 +91,12 @@ UIKIT_EXTERN NSString * const TRSendInteractiveCommentUrl;
 
 
 
+
+
+
+
+
+/* ============================ 发现模块 相关============================*/
 /*** 旅游攻略的接口 */
 UIKIT_EXTERN NSString * const TRTourUrl;
 /*** 奇闻趣事多的接口 */
@@ -104,7 +110,7 @@ UIKIT_EXTERN NSString * const TRLikeUrl;
 /*** 获取临居圈的数据的接口 */
 UIKIT_EXTERN NSString * const TRGetAllPostsUrl;
 
-/*** 发邻居圈评论的接口 */
+/*** 发邻居圈的接口 */
 UIKIT_EXTERN NSString * const TRFoundSentPostUrl;
 
 
