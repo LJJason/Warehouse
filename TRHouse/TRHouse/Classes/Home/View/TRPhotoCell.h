@@ -13,4 +13,7 @@
 /** 图片 */
 @property (nonatomic, weak) UIImageView *imageView;
 
+/** 点击图片回调 */
+@property (nonatomic, copy) void (^didTapImageView)();
+
 @end

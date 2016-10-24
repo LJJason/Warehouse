@@ -51,7 +51,7 @@ NSString * const TRGetUserUrl = @"http://localhost:8080/TRHouse/getUser";
 
 /* ============================ 首页 相关============================*/
 /*** 首页新品推荐的接口 */
-NSString * const TRGetNewRoomUrl = @"http://localhost:8080/TRHouse/getNewRoom";
+NSString * const TRGetNewRoomUrl = @"http://192.168.1.106:8080/TRHouse/getNewRoom";
 
 /*** 首页轮播推荐的接口 */
 NSString * const TRGetRecommendedRoomUrl = @"http://localhost:8080/TRHouse/getRecommendedRoom";

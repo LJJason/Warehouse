@@ -88,7 +88,9 @@
 
 - (void)tapPhoto:(UIGestureRecognizer *)tap
 {
-    [HUPhotoBrowser showFromImageView:self.photoVIew withURLStrings:self.inter.photos atIndex:0];
+    
+    [HUPhotoBrowser showFromImageView:self.photoVIew withURLStrings:self.inter.photos placeholderImage:[UIImage imageNamed:@"default_bg"] atIndex:0 dismiss:nil];
+    
 }
 
 + (instancetype)cell {

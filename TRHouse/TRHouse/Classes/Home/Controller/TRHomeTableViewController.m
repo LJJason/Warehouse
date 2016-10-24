@@ -208,9 +208,9 @@ static NSString * const cellId = @"cellId";
         
     } failure:^(NSError *error) {
         //结束刷新
-        [self.tableView.mj_header endRefreshing];
-        [Toast makeText:@"加载失败!!"];
-        self.tableView.mj_footer.hidden = NO;
+//        [self.tableView.mj_header endRefreshing];
+        [Toast makeText:@"请检查网络连接!!"];
+//        self.tableView.mj_footer.hidden = NO;
     }];
     
 }
@@ -249,7 +249,7 @@ static NSString * const cellId = @"cellId";
     } failure:^(NSError *error) {
         //结束刷新
         [self.tableView.mj_header endRefreshing];
-        [Toast makeText:@"加载失败!!"];
+        [Toast makeText:@"请检查网络连接!!"];
         self.tableView.mj_footer.hidden = NO;
     }];
 }
@@ -283,7 +283,7 @@ static NSString * const cellId = @"cellId";
     } failure:^(NSError *error) {
         //结束刷新
         [self.tableView.mj_footer endRefreshing];
-        [Toast makeText:@"加载失败!!"];
+        [Toast makeText:@"请检查网络连接!!"];
     }];
 }
 

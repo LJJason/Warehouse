@@ -123,6 +123,7 @@
 		C29708061DBA96480021F492 /* TRFeedbackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C29708051DBA96480021F492 /* TRFeedbackView.xib */; };
 		C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */; };
 		C297FAF41DAA1B4100F7CC61 /* UIViewController+TRExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */; };
+		C298AF841DBE533C0003B03A /* TRDetailInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C298AF831DBE533C0003B03A /* TRDetailInformationViewController.m */; };
 		C29AD5B01DB6491B00510D06 /* TRMeInteractive.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5AF1DB6491B00510D06 /* TRMeInteractive.m */; };
 		C29AD5B31DB6603600510D06 /* TRMeInterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5B21DB6603600510D06 /* TRMeInterTableViewCell.m */; };
 		C29AD5B61DB66C9A00510D06 /* TRMeDetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C29AD5B51DB66C9A00510D06 /* TRMeDetailTableViewController.m */; };
@@ -410,6 +411,8 @@
 		C297FAF01DAA1B4100F7CC61 /* UIView+GFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+GFExtension.m"; sourceTree = "<group>"; };
 		C297FAF11DAA1B4100F7CC61 /* UIViewController+TRExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+TRExtension.h"; sourceTree = "<group>"; };
 		C297FAF21DAA1B4100F7CC61 /* UIViewController+TRExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+TRExtension.m"; sourceTree = "<group>"; };
+		C298AF821DBE533C0003B03A /* TRDetailInformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRDetailInformationViewController.h; sourceTree = "<group>"; };
+		C298AF831DBE533C0003B03A /* TRDetailInformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRDetailInformationViewController.m; sourceTree = "<group>"; };
 		C29AD5AE1DB6491B00510D06 /* TRMeInteractive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeInteractive.h; sourceTree = "<group>"; };
 		C29AD5AF1DB6491B00510D06 /* TRMeInteractive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMeInteractive.m; sourceTree = "<group>"; };
 		C29AD5B11DB6603600510D06 /* TRMeInterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMeInterTableViewCell.h; sourceTree = "<group>"; };
@@ -898,6 +901,8 @@
 				C27934B71DBD0AE2005675E9 /* TRSelectCityViewController.m */,
 				C27DD9C21DBDF49C0090F45C /* TRSeeMorePhotoViewController.h */,
 				C27DD9C31DBDF49C0090F45C /* TRSeeMorePhotoViewController.m */,
+				C298AF821DBE533C0003B03A /* TRDetailInformationViewController.h */,
+				C298AF831DBE533C0003B03A /* TRDetailInformationViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1366,6 +1371,7 @@
 				TargetAttributes = {
 					C2915A6B1D8D378C00842952 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = UFF44DGDE2;
 						ProvisioningStyle = Automatic;
 					};
 					C2915A871D8D378D00842952 = {
@@ -1634,6 +1640,7 @@
 				C29AD5F71DB6946E00510D06 /* AlbumListController.m in Sources */,
 				C27934A71DBCE3C4005675E9 /* BHotCityCell.m in Sources */,
 				C29AD5B61DB66C9A00510D06 /* TRMeDetailTableViewController.m in Sources */,
+				C298AF841DBE533C0003B03A /* TRDetailInformationViewController.m in Sources */,
 				C2771D721D8F8BDE006972CD /* TRFoundTableViewController.m in Sources */,
 				C29163FC1DB3E05F00769BA1 /* TRAccountParam.m in Sources */,
 				B29DD1321DBDE96200D6A3F7 /* TRComentCellTableViewCell.m in Sources */,
@@ -1769,6 +1776,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = UFF44DGDE2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TRHouse/Classes/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = TRHouse/Info.plist;
@@ -1785,6 +1793,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = UFF44DGDE2;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = TRHouse/Classes/Others/PrefixHeader.pch;
 				INFOPLIST_FILE = TRHouse/Info.plist;

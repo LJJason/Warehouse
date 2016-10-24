@@ -8,8 +8,9 @@
 
 #import "TRSeeMorePhotoViewController.h"
 #import "TRPhotoCell.h"
+#import <HUPhotoBrowser.h>
 
-@interface TRSeeMorePhotoViewController ()<UICollectionViewDelegate, UICollectionViewDataSource>
+@interface TRSeeMorePhotoViewController ()<UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
 
 /** UICollectionView */
 @property (nonatomic, weak) IBOutlet UICollectionView *collectionView;
@@ -32,7 +33,7 @@ static NSString * const TRPhotoCellId = @"TRPhotoCellId";
  *  初始化UICollectionView
  */
 - (void)initView{
-    
+    self.collectionView.contentInset = UIEdgeInsetsMake(10, 0, 0, 0);
 //    UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
 //    flowLayout.itemSize = CGSizeMake((TRScreenW - 20 ) / 2, 100);
 //    flowLayout.scrollDirection = UICollectionViewScrollDirectionVertical;
@@ -53,18 +54,30 @@ static NSString * const TRPhotoCellId = @"TRPhotoCellId";
 }
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 50;
+    return self.photosUrl.count;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     
     TRPhotoCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:TRPhotoCellId forIndexPath:indexPath];
+    //
+    __weak typeof(cell) weakCell = cell;
     
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:self.photosUrl[0]] placeholderImage:[UIImage imageNamed:@"default_bg"]];
+    cell.didTapImageView = ^{
+        [HUPhotoBrowser showFromImageView:weakCell.imageView withURLStrings:self.photosUrl placeholderImage:[UIImage imageNamed:@"default_bg"] atIndex:indexPath.row dismiss:nil];
+    };
+    
+    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:self.photosUrl[indexPath.row]] placeholderImage:[UIImage imageNamed:@"default_bg"]];
     
     
     return cell;
 }
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath{
+    return CGSizeMake((TRScreenW - 30) / 2, 100);
+}
+
+
 
 @end

@@ -12,6 +12,8 @@
 #import "TRNavigationController.h"
 #import <MapKit/MapKit.h>
 #import "TRSeeMorePhotoViewController.h"
+#import "TRDetailInformationViewController.h"
+#import "TRNoInternetConnectionView.h"
 
 @interface TRRoomDetailViewController ()
 /**
@@ -47,10 +49,21 @@
  */
 @property(nonatomic ,strong)CLGeocoder *geocoder;
 
+/**
+ *  显示图片个数的按钮
+ */
+@property (weak, nonatomic) IBOutlet UIButton *photoCountBtn;
+
+@property (weak, nonatomic) IBOutlet UIView *configView;
+
+
 @end
 
 @implementation TRRoomDetailViewController
 
+/**
+ *  懒加载地理编码器
+ */
 - (CLGeocoder *)geocoder {
     if (_geocoder == nil) {
         _geocoder = [[CLGeocoder alloc] init];
@@ -69,7 +82,34 @@
     self.photoView.userInteractionEnabled = YES;
     [self.photoView addGestureRecognizer:tap];
     [self setupData];
+    //可提供的服务
+    [self loadConfigImage];
 }
+
+
+/**
+ *  设置可提供服务视图
+ */
+- (void)loadConfigImage{
+    
+    CGFloat margin = 20;
+    CGFloat y = 6.0;
+    CGFloat w = 50;
+    CGFloat h = 65;
+    
+    for (NSInteger i = 0; i < self.room.configuration.count; i++) {
+        
+        UIImageView *imageView = [[UIImageView alloc] init];
+        imageView.x = i * (margin + w) + margin;
+        imageView.y = y;
+        imageView.width = w;
+        imageView.height = h;
+        imageView.image = [UIImage imageNamed:self.room.configuration[i]];
+        [self.configView addSubview:imageView];
+    }
+    
+}
+
 
 /**
  *  设置导航条相关
@@ -82,10 +122,32 @@
     self.navigationItem.backBarButtonItem = item;
 }
 
+/**
+ *  展示无网络连接页面
+ */
+- (void)showErrorView {
+    
+    TRNoInternetConnectionView *noInterNet = [TRNoInternetConnectionView noInternetConnectionView];
+    noInterNet.frame = self.view.frame;
+    noInterNet.hiddenBtn = YES;
+    
+    [self.view addSubview:noInterNet];
+    
+}
 
 - (void)setupData{
+    
+    if (!self.room) {
+        //没东西就显示无网络页面
+        [self showErrorView];
+        return;
+    }
+
     //设置入住天数
     self.days = 1;
+    //设置图片的个数
+    [self.photoCountBtn setTitle:[NSString stringWithFormat:@"%zd", self.room.photos.count] forState:UIControlStateNormal];
+    
     //设置图片
     [self.photoView sd_setImageWithURL:[NSURL URLWithString:[self.room.photos firstObject]] placeholderImage:[UIImage imageNamed:@"default_bg"]];
     //设置好评lbl
@@ -103,9 +165,10 @@
     //获取今天的日期
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     formatter.dateFormat = @"MM月dd";
-    
+    //获取当前的日期
     NSDate *date = [NSDate date];
     NSString *toDayStr = [formatter stringFromDate:date];
+    //转换明天的日期
     NSString *tomorrowStr = [formatter stringFromDate:[date dateByAddingTimeInterval:(24*3600)]];
     
     [self.stayInDateBtn setTitle:[NSString stringWithFormat:@"%@ 入住 - %@ 离店 共%zd晚", toDayStr, tomorrowStr, self.days] forState:UIControlStateNormal];
@@ -205,7 +268,7 @@
     
 }
 
-
+//顶部图片的点击
 - (void)seeMorePhotos:(UITapGestureRecognizer *)tap{
     
     if (tap.state == UIGestureRecognizerStateEnded) {
@@ -215,6 +278,18 @@
         [self.navigationController pushViewController:seePhotoVc animated:YES];
     }
 
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    id destinationViewController = segue.destinationViewController;
+    
+    if ([destinationViewController isKindOfClass:[TRDetailInformationViewController class]]) {
+        
+        TRDetailInformationViewController *detailVc = destinationViewController;
+        detailVc.room = self.room;
+    }
+    
 }
 
 @end
