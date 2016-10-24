@@ -42,8 +42,8 @@
     if (self) {
         self.view.frame = frame;
         [self initData];
-        [self initSearchBar];
         [self initTableView];
+        [self initSearchBar];
 //        [[NSUserDefaults standardUserDefaults] removeObjectForKey:currentCity];
     }
     return self;
@@ -58,10 +58,6 @@
 #pragma mark - UISearchBar Delegate
 /**
  *  搜索开始回调用于更新UI
- *
- *  @param searchBar
- *
- *  @return
  */
 - (BOOL)searchBarShouldBeginEditing:(UISearchBar *)searchBar{
     if ([self.delegate respondsToSelector:@selector(beginSearch:)]) {
@@ -69,10 +65,11 @@
         if ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0) {
             CGRect statusBarFrame = [[UIApplication sharedApplication] statusBarFrame];
             [UIView animateWithDuration:0.25 animations:^{
-                [self.view setBackgroundColor:UIColorFromRGBA(198, 198, 203, 1.0)];
-                for (UIView *subview in self.view.subviews){
-                    subview.transform = CGAffineTransformMakeTranslation(0, statusBarFrame.size.height);
-                }
+                _tableView.backgroundColor = UIColorFromRGBA(0, 220, 255, 1.0);
+//                for (UIView *subview in self.view.subviews){
+//                    subview.transform = CGAffineTransformMakeTranslation(0, statusBarFrame.size.height);
+//                }
+                _searchBar.transform = CGAffineTransformMakeTranslation(0, statusBarFrame.size.height);
             }];
         }
     }
@@ -81,10 +78,7 @@
 
 /**
  *  搜索结束回调用于更新UI
- *
- *  @param searchBar
- *
- *  @return
+ 
  */
 - (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar{
     if ([self.delegate respondsToSelector:@selector(endSearch:)]) {
@@ -95,7 +89,7 @@
                     subview.transform = CGAffineTransformMakeTranslation(0, 0);
                 }
             } completion:^(BOOL finished) {
-                [self.view setBackgroundColor:[UIColor whiteColor]];
+                _tableView.backgroundColor = [UIColor whiteColor];
             }];
         }
     }
@@ -283,15 +277,15 @@
     }
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    if (section == 1) {
-        //如果第一次使用没有最近访问的城市则赢该行
-        if (![[NSUserDefaults standardUserDefaults] objectForKey:currentCity]) {
-            return 0.01;
-        }
-    }
-    return 5;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+//    if (section == 1) {
+//        //如果第一次使用没有最近访问的城市则赢该行
+//        if (![[NSUserDefaults standardUserDefaults] objectForKey:currentCity]) {
+//            return 0.01;
+//        }
+//    }
+//    return 5;
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (tableView == _tableView) {
@@ -359,14 +353,17 @@
 */
 #pragma mark - init
 - (void)initTableView{
-    
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 44, ScreenWidth, ScreenHeight - 44 - 64) style:UITableViewStylePlain];
+//    self.automaticallyAdjustsScrollViewInsets = YES;
+    self.view.backgroundColor = [UIColor whiteColor];
+    _tableView.backgroundColor = [UIColor whiteColor];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight) style:UITableViewStylePlain];
+    _tableView.contentInset = UIEdgeInsetsMake(44, 0, 64, 0);
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.showsVerticalScrollIndicator = NO;
     _tableView.sectionIndexBackgroundColor = [UIColor clearColor];
     _tableView.sectionIndexColor = [UIColor colorWithRed:0 green:220 blue:255 alpha:1.0];
-    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 0.01)];
+//    _tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 0.01)];
     [self.view addSubview:_tableView];
 }
 
@@ -375,7 +372,10 @@
     _searchBar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 44)];
     _searchBar.placeholder = @"输入城市名或拼音";
     _searchBar.delegate = self;
-    _searchBar.layer.borderColor = [[UIColor yellowColor] CGColor];
+//    _searchBar.barTintColor = UIColorFromRGBA(0, 205, 255, 1.0);
+    _searchBar.backgroundColor = [UIColor clearColor];
+    _searchBar.backgroundImage = [UIImage imageNamed:@"nav_bg"];
+//    _searchBar.layer.borderColor = [[UIColor yellowColor] CGColor]; 
     _displayController = [[UISearchDisplayController alloc] initWithSearchBar:_searchBar contentsController:self];
     _displayController.delegate = self;
     _displayController.searchResultsDataSource = self;

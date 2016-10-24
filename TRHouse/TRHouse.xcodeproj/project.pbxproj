@@ -90,6 +90,9 @@
 		C27934AA1DBCE3DB005675E9 /* ChineseToPinyin.m in Sources */ = {isa = PBXBuildFile; fileRef = C27934A91DBCE3DB005675E9 /* ChineseToPinyin.m */; };
 		C27934AD1DBCE3E4005675E9 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = C27934AB1DBCE3E4005675E9 /* cities.plist */; };
 		C27934B01DBCE404005675E9 /* BAddressPickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27934AF1DBCE404005675E9 /* BAddressPickerController.m */; };
+		C27934B31DBCFA93005675E9 /* TRButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C27934B21DBCFA93005675E9 /* TRButton.m */; };
+		C27934B51DBD04B0005675E9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C27934B41DBD04B0005675E9 /* CoreLocation.framework */; };
+		C27934B81DBD0AE2005675E9 /* TRSelectCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C27934B71DBD0AE2005675E9 /* TRSelectCityViewController.m */; };
 		C2915A8D1D8D378D00842952 /* TRHouseTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915A8C1D8D378D00842952 /* TRHouseTests.m */; };
 		C2915A981D8D378D00842952 /* TRHouseUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915A971D8D378D00842952 /* TRHouseUITests.m */; };
 		C2915ABC1D8D3E7D00842952 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C2915AB81D8D3E7D00842952 /* AppDelegate.m */; };
@@ -334,6 +337,11 @@
 		C27934AC1DBCE3E4005675E9 /* BAddressHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAddressHeader.h; sourceTree = "<group>"; };
 		C27934AE1DBCE404005675E9 /* BAddressPickerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BAddressPickerController.h; sourceTree = "<group>"; };
 		C27934AF1DBCE404005675E9 /* BAddressPickerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BAddressPickerController.m; sourceTree = "<group>"; };
+		C27934B11DBCFA93005675E9 /* TRButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRButton.h; sourceTree = "<group>"; };
+		C27934B21DBCFA93005675E9 /* TRButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRButton.m; sourceTree = "<group>"; };
+		C27934B41DBD04B0005675E9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C27934B61DBD0AE2005675E9 /* TRSelectCityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSelectCityViewController.h; sourceTree = "<group>"; };
+		C27934B71DBD0AE2005675E9 /* TRSelectCityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSelectCityViewController.m; sourceTree = "<group>"; };
 		C2915A6C1D8D378D00842952 /* TRHouse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TRHouse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2915A831D8D378D00842952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C2915A881D8D378D00842952 /* TRHouseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TRHouseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -469,6 +477,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C27934B51DBD04B0005675E9 /* CoreLocation.framework in Frameworks */,
 				2B81AEA3CD0C5E3B37D3E1AC /* libPods-TRHouse.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -627,6 +636,8 @@
 				C23A67931DB7ADAC00755FFC /* TRHeaderCell.h */,
 				C23A67941DB7ADAC00755FFC /* TRHeaderCell.m */,
 				C23A67961DB7BFB400755FFC /* Home.storyboard */,
+				C27934B11DBCFA93005675E9 /* TRButton.h */,
+				C27934B21DBCFA93005675E9 /* TRButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -844,6 +855,8 @@
 				C279344B1DBC9C51005675E9 /* TRRoomDetailViewController.m */,
 				C27934691DBCBEAD005675E9 /* TRSelectDateViewController.h */,
 				C279346A1DBCBEAD005675E9 /* TRSelectDateViewController.m */,
+				C27934B61DBD0AE2005675E9 /* TRSelectCityViewController.h */,
+				C27934B71DBD0AE2005675E9 /* TRSelectCityViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1235,6 +1248,7 @@
 		E509FA414993010A967070B5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C27934B41DBD04B0005675E9 /* CoreLocation.framework */,
 				0B68D0083076E8AF8B14CEDA /* libPods-TRHouse.a */,
 			);
 			name = Frameworks;
@@ -1470,6 +1484,7 @@
 				C2771D6C1D8F8B89006972CD /* TRHomeTableViewController.m in Sources */,
 				B2773C141DACC23300B0A899 /* GFPiece.m in Sources */,
 				B2773C201DACC41200B0A899 /* UIImageView+GFExtension.m in Sources */,
+				C27934B31DBCFA93005675E9 /* TRButton.m in Sources */,
 				C29163FF1DB3E07300769BA1 /* TRAccountTool.m in Sources */,
 				C213092D1DB92443003EE39C /* TRForgetPwdTableViewController.m in Sources */,
 				C27934631DBCBB84005675E9 /* CalendarLogic.m in Sources */,
@@ -1523,6 +1538,7 @@
 				C2B5855E1DB4759D00C37479 /* TRPersonal.m in Sources */,
 				C29163F31DB3CF0E00769BA1 /* Utilities.m in Sources */,
 				C279346B1DBCBEAD005675E9 /* TRSelectDateViewController.m in Sources */,
+				C27934B81DBD0AE2005675E9 /* TRSelectCityViewController.m in Sources */,
 				C29AD60C1DB6946E00510D06 /* PhotoPreviewCell.m in Sources */,
 				C21309251DB9054B003EE39C /* NSString+Hash.m in Sources */,
 				C297FAF31DAA1B4100F7CC61 /* UIView+GFExtension.m in Sources */,
