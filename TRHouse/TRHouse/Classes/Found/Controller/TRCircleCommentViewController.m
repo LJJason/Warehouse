@@ -53,11 +53,21 @@
     [self setupBasic];
     
     [self setupRefresh];
+    //消除多余的分割线
+    self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     
     
     // Do any additional setup after loading the view.
 }
 - (IBAction)SendClickAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    
+    if (_contentTextField.text.length != 0 ) {
+        
+        [self.view endEditing:YES];
+    }else{
+        
+        return;
+    }
     
     
     if ([TRAccountTool loginState]) {
@@ -87,6 +97,8 @@
         //没有登录
         [self loginVc];
     }
+    
+    self.contentTextField.text = nil;
 
 }
 

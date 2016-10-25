@@ -36,7 +36,7 @@ NSString * const TRGetVcCodeUrl = @"http://yearwood.top/TRHouse/sendSms";
 /*** 注册的接口 */
 NSString * const TRRegistUrl = @"http://localhost:8080/TRHouse/regist";
 /*** 登录的接口 */
-NSString * const TRLoginUrl = @"http://192.168.61.79:8080/TRHouse/login";
+NSString * const TRLoginUrl = @"http://localhost:8080/TRHouse/login";
 
 /*** 忘记密码的接口 */
 NSString * const TRForgetPwd = @"http://localhost:8080/TRHouse/changePwd";
@@ -99,16 +99,16 @@ NSString * const TRHappyUrl =  @"http://www.gxdxw.cn/";
 NSString * const TRFoundSentPostUrl = @"http://localhost:8080/TRHouse/postings";
 
 /*** 点赞的接口 */
-NSString * const TRLikeUrl = @"http://192.168.61.79:8080/TRHouse/like";
+NSString * const TRLikeUrl = @"http://localhost:8080/TRHouse/like";
 
 /*** 获取临居圈的数据的接口 */ //localhost:8080  192.168.61.79
-NSString * const TRGetAllPostsUrl = @"http://192.168.61.79:8080/TRHouse/getAllPost";
+NSString * const TRGetAllPostsUrl = @"http://localhost:8080/TRHouse/getAllPost";
 
 /*** 发邻居圈评论的接口 */
-NSString * const TRCirleSendComment = @"http://192.168.61.79:8080/TRHouse/sendComment";
+NSString * const TRCirleSendComment = @"http://localhost:8080/TRHouse/sendComment";
 
 /*** 获取邻居圈评论的接口 */
-NSString * const TRGetCirleComment = @"http://192.168.61.79:8080/TRHouse/getComments";
+NSString * const TRGetCirleComment = @"http://localhost:8080/TRHouse/getComments";
 
 
 
