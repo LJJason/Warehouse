@@ -9,7 +9,13 @@
 #import "TRSubmitViewController.h"
 #import "TRReservation.h"
 #import "TRRoom.h"
+#import "TROrderParam.h"
+#import "TRAccount.h"
+#import "TRAccountTool.h"
+#import "GBAlipayManager.h"
+#import "TRProgressTool.h"
 
+#define TROrderUrl @"http://localhost:8080/TRHouse/order"
 
 @interface TRSubmitViewController ()
 /**
@@ -65,8 +71,36 @@
  */
 - (IBAction)pay {
     
-#warning 接着做
+    //生成15位随机订单号
+    
+    NSString *orderNo = [GBAlipayManager generateTradeNO];
+    
+    TRAccount *account = [TRAccountTool account];
+    
+    TROrderParam *param = [[TROrderParam alloc] init];
+    param.orderNo = orderNo;
+    param.userName = self.userNameTextField.text;
+    param.contact = self.contactTextField.text;
+    param.userId = account.uid;
+    param.totalPrice = self.totalPrice;
+    param.roomId = self.reser.room.ID;
+    
+    [TRProgressTool showWithMessage:@"正在加载..."];
+    
+    [TRHttpTool POST:TROrderUrl parameters:param.mj_keyValues success:^(id responseObject) {
+        [TRProgressTool dismiss];
+        TRLog(@"%@", responseObject);
+        
+    } failure:^(NSError *error) {
+        TRLog(@"%@", error);
+    }];
+    
+    
+
 }
 
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
 
 @end
