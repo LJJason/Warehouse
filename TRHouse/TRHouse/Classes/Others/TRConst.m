@@ -83,6 +83,8 @@ NSString * const TRGetAllInteractiveCommentsUrl = @"http://localhost:8080/TRHous
 
 /*** 发互动评论的接口 */
 NSString * const TRSendInteractiveCommentUrl = @"http://localhost:8080/TRHouse/sendInteractiveComment";
+/** 一拍即合接口 */
+NSString * const TRHitItOffUrl = @"http://localhost:8080/TRHouse/hititoff";
 
 
 

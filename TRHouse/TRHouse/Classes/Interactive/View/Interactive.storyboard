@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9Df-xe-epL">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9Df-xe-epL">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -103,6 +103,21 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Y6-HM-gF7">
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="comment-bar-bg" translatesAutoresizingMaskIntoConstraints="NO" id="4An-9T-qAE"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3F-vS-XIR">
+                                        <color key="backgroundColor" red="0.0" green="0.86274509803921573" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <state key="normal" title="一拍即合">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="7"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="hitItOffBtnClick" destination="dbe-oZ-h5T" eventType="touchUpInside" id="o5x-7T-aE3"/>
+                                        </connections>
+                                    </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="想了解情况?赶紧评论吧!" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="h1Z-Oz-ipS">
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -120,17 +135,19 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="a3F-vS-XIR" secondAttribute="trailing" constant="10" id="0cr-y3-aFR"/>
                                     <constraint firstItem="4An-9T-qAE" firstAttribute="top" secondItem="8Y6-HM-gF7" secondAttribute="top" id="3xm-vS-kfE"/>
                                     <constraint firstItem="O84-Kt-bl7" firstAttribute="leading" secondItem="h1Z-Oz-ipS" secondAttribute="trailing" constant="10" id="AHy-rc-oXu"/>
-                                    <constraint firstItem="O84-Kt-bl7" firstAttribute="top" secondItem="8Y6-HM-gF7" secondAttribute="top" constant="5" id="Bb5-eC-qVi"/>
+                                    <constraint firstItem="h1Z-Oz-ipS" firstAttribute="top" secondItem="a3F-vS-XIR" secondAttribute="bottom" constant="10" id="JgM-LW-jgO"/>
+                                    <constraint firstItem="a3F-vS-XIR" firstAttribute="top" secondItem="8Y6-HM-gF7" secondAttribute="top" id="K8K-Xx-YG7"/>
                                     <constraint firstAttribute="bottom" secondItem="O84-Kt-bl7" secondAttribute="bottom" constant="5" id="PMJ-tk-Dxx"/>
-                                    <constraint firstAttribute="bottom" secondItem="h1Z-Oz-ipS" secondAttribute="bottom" constant="5" id="WJZ-38-Qcm"/>
                                     <constraint firstAttribute="bottom" secondItem="4An-9T-qAE" secondAttribute="bottom" id="Wfl-qi-BCz"/>
+                                    <constraint firstAttribute="bottom" secondItem="h1Z-Oz-ipS" secondAttribute="bottom" constant="5" id="X9r-29-3cO"/>
                                     <constraint firstAttribute="trailing" secondItem="4An-9T-qAE" secondAttribute="trailing" id="bQD-zS-CyP"/>
+                                    <constraint firstItem="a3F-vS-XIR" firstAttribute="leading" secondItem="8Y6-HM-gF7" secondAttribute="leading" constant="10" id="f0d-cE-Dpe"/>
                                     <constraint firstAttribute="trailing" secondItem="O84-Kt-bl7" secondAttribute="trailing" constant="10" id="g2w-cq-hIA"/>
                                     <constraint firstItem="4An-9T-qAE" firstAttribute="leading" secondItem="8Y6-HM-gF7" secondAttribute="leading" id="mLe-Cw-9GL"/>
-                                    <constraint firstItem="h1Z-Oz-ipS" firstAttribute="top" secondItem="8Y6-HM-gF7" secondAttribute="top" constant="5" id="tvE-NS-IsW"/>
-                                    <constraint firstAttribute="height" constant="44" id="v1m-8y-fYh"/>
+                                    <constraint firstAttribute="height" constant="73" id="v1m-8y-fYh"/>
                                     <constraint firstItem="h1Z-Oz-ipS" firstAttribute="leading" secondItem="8Y6-HM-gF7" secondAttribute="leading" constant="20" id="vNa-nS-CRW"/>
                                 </constraints>
                             </view>

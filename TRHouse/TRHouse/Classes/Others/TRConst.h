@@ -87,6 +87,8 @@ UIKIT_EXTERN NSString * const TRGetAllInteractiveCommentsUrl;
 /*** 发互动评论的接口 */
 UIKIT_EXTERN NSString * const TRSendInteractiveCommentUrl;
 
+/** 一拍即合接口 */
+UIKIT_EXTERN NSString * const TRHitItOffUrl;
 
 
 
