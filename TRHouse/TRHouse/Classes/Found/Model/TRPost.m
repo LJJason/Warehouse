@@ -99,11 +99,11 @@
     self.textMaxY = textSize.height+65;
     
     if (self.postphotos.count == 0) {
-         rowHeight = textSize.height + 122;
+         rowHeight = textSize.height + 110;
         
     }else{
        
-         rowHeight = textSize.height + 122 + self.imageHeight;
+         rowHeight = textSize.height + 110 + self.imageHeight;
     }
     
    

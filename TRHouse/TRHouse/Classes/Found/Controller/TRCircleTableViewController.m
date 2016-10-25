@@ -16,6 +16,7 @@
 #import "TRFoundSendViewController.h"
 #import "TRCircleCommentViewController.h"
 #import <HUPhotoBrowser.h>
+#import "TRPostTableViewCell.h"
 
 
 @interface TRCircleTableViewController ()
@@ -90,7 +91,7 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    TRPostTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"postCell"];
+    TRPostTableViewCell *cell = [TRPostTableViewCell cell];
     TRPost *post = self.posts[indexPath.row];
     
 //    TRGLog(@"%@", post.postcontent);

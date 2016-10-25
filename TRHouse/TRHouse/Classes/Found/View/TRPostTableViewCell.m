@@ -11,6 +11,7 @@
 #import "TRImageView.h"
 #import "TRAccount.h"
 #import "TRAccountTool.h"
+#import "TRLoginViewController.h"
 
 @interface TRPostTableViewCell ()
 @property (weak, nonatomic) IBOutlet UILabel *postContent;
@@ -40,7 +41,7 @@
     self.imageViews = view;
     [self.contentView addSubview:view];
     
-
+    
     
 }
 
@@ -56,6 +57,8 @@
     [self.commentCountBtn setTitle:[NSString stringWithFormat:@"%zd",posts.commentCount]forState:UIControlStateNormal];
 
     [self.iconImage sd_setImageWithURL:[NSURL URLWithString:posts.icon]placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    self.iconImage.layer.cornerRadius = 17.5;
+    self.iconImage.clipsToBounds = YES;
 
   
     NSString *users = [posts.praiseUser componentsJoinedByString:@","];
@@ -70,19 +73,23 @@
 }
 
 - (IBAction)likeClickAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    TRAccount *account = [TRAccountTool account];
     
-    
+    if (!account) {
+        [self loginVc];
+        return;
+    }
     
     
     sender.enabled = NO;
     NSMutableDictionary *parament = [NSMutableDictionary dictionary];
     
-    TRAccount *account = [TRAccountTool account];
+    
     
     parament[@"uid"] = account.uid;
     parament[@"ID"] =  @(self.posts.ID);
     
-    [TRHttpTool POST:@"http://192.168.61.79:8080/TRHouse/like" parameters:parament success:^(id responseObject) {
+    [TRHttpTool POST:TRLikeUrl parameters:parament success:^(id responseObject) {
         
         NSInteger state = [responseObject[@"state"] integerValue];
         if (state) {
@@ -121,6 +128,8 @@
 
 - (void)layoutSubviews
 {
+    [super layoutSubviews];
+    
     if (self.posts.postphotos.count == 0 ) {
         
         self.imageViews.hidden = YES;
@@ -138,6 +147,27 @@
     
 }
 
++ (instancetype)cell {
+    return [[[NSBundle mainBundle] loadNibNamed:NSStringFromClass(self) owner:nil options:nil] firstObject];
+}
+
 - (IBAction)commentClickAction:(UIButton *)sender forEvent:(UIEvent *)event {
 }
+
+/**
+ *  跳转控制器
+ */
+- (void)loginVc {
+    
+    [Toast makeText:@"请先登录!"];
+    
+    TRLoginViewController *loginVc = [TRLoginViewController instantiateInitialViewControllerWithStoryboardName:@"LoginAndRegist"];
+    loginVc.refreshDataBlock = ^ {
+        
+    };
+    
+    [[UIApplication sharedApplication].keyWindow.rootViewController.childViewControllers[2] presentViewController:loginVc animated:YES completion:nil];
+    
+}
+
 @end

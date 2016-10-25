@@ -65,7 +65,7 @@
         
         NSMutableDictionary *param = [NSMutableDictionary dictionary];
         param[@"uid"] = account.uid;
-        param[@"interactiveId"] = @(self.post.ID);
+        param[@"postId"] = @(self.post.ID);
         param[@"comments"] = self.contentTextField.text;
         
         [TRHttpTool POST:TRCirleSendComment parameters:param success:^(id responseObject) {
@@ -129,9 +129,9 @@
     
     //创建header
     UIView *header = [[UIView alloc] init];
-    TRComentCellTableViewCell *cell = [TRComentCellTableViewCell cell];
+    TRPostTableViewCell *cell = [TRPostTableViewCell cell];
     cell.backgroundColor = [UIColor whiteColor];
-    cell.post = self.post;
+    cell.posts = self.post;
     
     cell.size = CGSizeMake(TRScreenW, self.post.cellRowHeight);
     
@@ -158,10 +158,10 @@
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"ID"] = @(self.post.ID);
     
-    [TRHttpTool GET:TRGetAllPostsUrl parameters:param success:^(id responseObject) {
+    [TRHttpTool GET:TRGetCirleComment parameters:param success:^(id responseObject) {
         
         self.maxCount = [responseObject[@"maxCount"] integerValue];
-        
+        TRLog(@"%@",responseObject);
         self.comments = [TRPostComment mj_objectArrayWithKeyValuesArray:responseObject[@"comments"]];
         
         [self.tableView reloadData];
@@ -190,7 +190,7 @@
     param[@"page"] = @(page);
     param[@"ID"] = @(self.post.ID);
     
-    [TRHttpTool GET:TRGetAllPostsUrl parameters:param success:^(id responseObject) {
+    [TRHttpTool GET:TRGetCirleComment parameters:param success:^(id responseObject) {
         
         [self.comments addObjectsFromArray:[TRPostComment mj_objectArrayWithKeyValuesArray:responseObject[@"comments"]]];
         

@@ -116,7 +116,8 @@ UIKIT_EXTERN NSString * const TRFoundSentPostUrl;
 UIKIT_EXTERN NSString * const TRCirleSendComment;
 
 
-
+/*** 获取邻居圈评论的接口 */
+UIKIT_EXTERN NSString * const TRGetCirleComment;
 
 
 

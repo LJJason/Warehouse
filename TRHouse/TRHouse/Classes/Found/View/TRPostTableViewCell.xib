@@ -7,11 +7,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="204" id="6K6-pg-4up" customClass="TRPostTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="380" height="204"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="255" id="6K6-pg-4up" customClass="TRPostTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="255"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6K6-pg-4up" id="HaL-zt-vhB">
-                <frame key="frameInset" width="380" height="203"/>
+                <frame key="frameInset" width="385" height="254"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CJL-yk-3ZZ">
@@ -39,12 +39,24 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="xDz-Mw-tEB"/>
                         </constraints>
-                        <state key="normal" title="Button" image="mainCellComment"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="100" image="mainCellComment">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <state key="highlighted" image="mainCellCommentClick"/>
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VV7-hU-sPN">
-                        <state key="normal" title="0" image="mainCellDing"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Eu5-8i-Cyn"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                        <state key="normal" title="0" image="mainCellDing">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
                         <state key="disabled" image="mainCellDingClick"/>
+                        <connections>
+                            <action selector="likeClickAction:forEvent:" destination="6K6-pg-4up" eventType="touchUpInside" id="41X-YE-k8S"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -71,7 +83,7 @@
                 <outlet property="praiseUserBtn" destination="VV7-hU-sPN" id="em7-L8-z0W"/>
                 <outlet property="userNamelbl" destination="oIN-rR-cBi" id="ai7-hO-INY"/>
             </connections>
-            <point key="canvasLocation" x="-74" y="186"/>
+            <point key="canvasLocation" x="20" y="37"/>
         </tableViewCell>
     </objects>
     <resources>
