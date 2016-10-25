@@ -62,6 +62,8 @@
 		C21309251DB9054B003EE39C /* NSString+Hash.m in Sources */ = {isa = PBXBuildFile; fileRef = C21309241DB9054B003EE39C /* NSString+Hash.m */; };
 		C21309271DB905E6003EE39C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C21309261DB905E6003EE39C /* Assets.xcassets */; };
 		C213092D1DB92443003EE39C /* TRForgetPwdTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C213092C1DB92443003EE39C /* TRForgetPwdTableViewController.m */; };
+		C21602841DBEFBED004853F1 /* TRSubmitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21602831DBEFBED004853F1 /* TRSubmitViewController.m */; };
+		C21602871DBF05B4004853F1 /* TRReservation.m in Sources */ = {isa = PBXBuildFile; fileRef = C21602861DBF05B4004853F1 /* TRReservation.m */; };
 		C23A678E1DB79EF500755FFC /* TRTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A678C1DB79EF500755FFC /* TRTableViewCell.m */; };
 		C23A678F1DB79EF500755FFC /* TRTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C23A678D1DB79EF500755FFC /* TRTableViewCell.xib */; };
 		C23A67921DB7AB4F00755FFC /* TRHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A67911DB7AB4F00755FFC /* TRHomeHeaderView.m */; };
@@ -291,6 +293,10 @@
 		C21309261DB905E6003EE39C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C213092B1DB92443003EE39C /* TRForgetPwdTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRForgetPwdTableViewController.h; sourceTree = "<group>"; };
 		C213092C1DB92443003EE39C /* TRForgetPwdTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRForgetPwdTableViewController.m; sourceTree = "<group>"; };
+		C21602821DBEFBED004853F1 /* TRSubmitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRSubmitViewController.h; sourceTree = "<group>"; };
+		C21602831DBEFBED004853F1 /* TRSubmitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRSubmitViewController.m; sourceTree = "<group>"; };
+		C21602851DBF05B4004853F1 /* TRReservation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRReservation.h; sourceTree = "<group>"; };
+		C21602861DBF05B4004853F1 /* TRReservation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRReservation.m; sourceTree = "<group>"; };
 		C22BD58D1D91106A00C53223 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		C23A678B1DB79EF500755FFC /* TRTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRTableViewCell.h; sourceTree = "<group>"; };
 		C23A678C1DB79EF500755FFC /* TRTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRTableViewCell.m; sourceTree = "<group>"; };
@@ -661,6 +667,8 @@
 				C26FD41C1DB76D5100F9ED4B /* TRRoom.m */,
 				C27DD9BF1DBDE3E60090F45C /* TRPhoto.h */,
 				C27DD9C01DBDE3E60090F45C /* TRPhoto.m */,
+				C21602851DBF05B4004853F1 /* TRReservation.h */,
+				C21602861DBF05B4004853F1 /* TRReservation.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -903,6 +911,8 @@
 				C27DD9C31DBDF49C0090F45C /* TRSeeMorePhotoViewController.m */,
 				C298AF821DBE533C0003B03A /* TRDetailInformationViewController.h */,
 				C298AF831DBE533C0003B03A /* TRDetailInformationViewController.m */,
+				C21602821DBEFBED004853F1 /* TRSubmitViewController.h */,
+				C21602831DBEFBED004853F1 /* TRSubmitViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1572,6 +1582,8 @@
 				C29163F01DB3CE7400769BA1 /* TRRegistTool.m in Sources */,
 				C29163F71DB3D7F900769BA1 /* TRProgressTool.m in Sources */,
 				C29708041DBA962C0021F492 /* TRFeedbackView.m in Sources */,
+				C21602841DBEFBED004853F1 /* TRSubmitViewController.m in Sources */,
+				C21602871DBF05B4004853F1 /* TRReservation.m in Sources */,
 				C29707FE1DBA73260021F492 /* TRChangeasswordTableViewController.m in Sources */,
 				C29AD60E1DB6946E00510D06 /* VideoPlayerController.m in Sources */,
 				C27934AA1DBCE3DB005675E9 /* ChineseToPinyin.m in Sources */,

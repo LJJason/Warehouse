@@ -14,6 +14,11 @@
 #import "TRSeeMorePhotoViewController.h"
 #import "TRDetailInformationViewController.h"
 #import "TRNoInternetConnectionView.h"
+#import "TRLoginViewController.h"
+#import "TRAccount.h"
+#import "TRAccountTool.h"
+#import "TRReservation.h"
+#import "TRSubmitViewController.h"
 
 @interface TRRoomDetailViewController ()
 /**
@@ -56,6 +61,11 @@
 
 @property (weak, nonatomic) IBOutlet UIView *configView;
 
+/** 起始时间 */
+@property (nonatomic, copy) NSString *firstDateStr;
+
+/** 结束时间 */
+@property (nonatomic, copy) NSString *lastDateStr;
 
 @end
 
@@ -170,6 +180,8 @@
     NSString *toDayStr = [formatter stringFromDate:date];
     //转换明天的日期
     NSString *tomorrowStr = [formatter stringFromDate:[date dateByAddingTimeInterval:(24*3600)]];
+    self.firstDateStr = toDayStr;
+    self.lastDateStr = tomorrowStr;
     
     [self.stayInDateBtn setTitle:[NSString stringWithFormat:@"%@ 入住 - %@ 离店 共%zd晚", toDayStr, tomorrowStr, self.days] forState:UIControlStateNormal];
 
@@ -179,7 +191,36 @@
  *  预定按钮
  */
 - (IBAction)reservationBtnClick {
+    
+    if (![TRAccountTool loginState]) {
+        //跳转登录界面
+        [self loginVc];
+    }else {
+        //创建预定模型
+        TRReservation *reser = [[TRReservation alloc] init];
+        reser.firstDateStr = self.firstDateStr;
+        reser.lastDateStr = self.lastDateStr;
+        reser.room = self.room;
+        reser.days = self.days;
+        
+        TRSubmitViewController *subVc = [TRSubmitViewController viewControllerWtithStoryboardName:TRHomeStoryboardName identifier:NSStringFromClass([TRSubmitViewController class])];
+        subVc.reser = reser;
+        [self.navigationController pushViewController:subVc animated:YES];
+        
+    }
+    
 }
+
+/**
+ *  跳转控制器
+ */
+- (void)loginVc {
+    
+    TRLoginViewController *loginVc = [TRLoginViewController instantiateInitialViewControllerWithStoryboardName:@"LoginAndRegist"];
+    [self presentViewController:loginVc animated:YES completion:nil];
+}
+
+
 
 /**
  *  地址按钮
@@ -208,9 +249,6 @@
     [alertControl addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:nil]];
     
     [self presentViewController:alertControl animated:YES completion:nil];
-    
-    
-    
     
 }
 
@@ -259,6 +297,8 @@
     
     selectDateVc.didSelectDateBlock = ^(NSString *firstDateStr, NSString *lastDateStr, NSInteger count) {
         self.days = count;
+        self.firstDateStr = firstDateStr;
+        self.lastDateStr = lastDateStr;
         [self.stayInDateBtn setTitle:[NSString stringWithFormat:@"%@ 入住 - %@ 离店 共%zd晚", firstDateStr, lastDateStr, self.days] forState:UIControlStateNormal];
     };
     

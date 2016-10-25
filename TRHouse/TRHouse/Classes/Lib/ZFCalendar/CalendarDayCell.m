@@ -98,7 +98,7 @@
             day_lab.text = model.holiday;
             day_lab.textColor = [UIColor orangeColor];
         }else{
-            day_lab.text = [NSString stringWithFormat:@"%d",model.day];
+            day_lab.text = [NSString stringWithFormat:@"%zd",model.day];
             day_lab.textColor = COLOR_THEME1;
         }
         
@@ -110,7 +110,7 @@
     {
         [self hidden_NO];
         
-        day_lab.text = [NSString stringWithFormat:@"%d",model.day];
+        day_lab.text = [NSString stringWithFormat:@"%zd",model.day];
         day_lab.textColor = [UIColor whiteColor];
         day_title.text = model.Chinese_calendar;
         imgview.hidden = NO;

@@ -361,7 +361,7 @@
     
 }
 
--(NSString *)LunarForSolarYear:(int)wCurYear Month:(int)wCurMonth Day:(int)wCurDay{
+-(NSString *)LunarForSolarYear:(NSInteger)wCurYear Month:(NSInteger)wCurMonth Day:(NSInteger)wCurDay{
     
 
     
@@ -388,7 +388,7 @@
                                 ,268949,3402,3493,133973,1386,464219,605,2349,334123,2709
                                 ,2890,267946,2773,592565,1210,2651,395863,1323,2707,265877};
     
-    static int nTheDate,nIsEnd,m,k,n,i,nBit;
+    static NSInteger nTheDate,nIsEnd,m,k,n,i,nBit;
     
   
     //计算到初始时间1921年2月8日的天数：1921-2-8(正月初一)
@@ -459,7 +459,6 @@
 }
 - (void)selectLogic:(CalendarDayModel *)day
 {
-    NSLog(@"%d",day.style);
     
     if (day.style == CellDayTypeClick) {
         

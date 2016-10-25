@@ -45,7 +45,7 @@
 /*计算这个月的第一天是礼拜几*/
 - (NSUInteger)weeklyOrdinality
 {
-    return [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSWeekCalendarUnit forDate:self];
+    return [[NSCalendar currentCalendar] ordinalityOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitWeekOfMonth forDate:self];
 }
 
 
@@ -54,7 +54,7 @@
 - (NSDate *)firstDayOfCurrentMonth
 {
     NSDate *startDate = nil;
-    BOOL ok = [[NSCalendar currentCalendar] rangeOfUnit:NSMonthCalendarUnit startDate:&startDate interval:NULL forDate:self];
+    BOOL ok = [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitMonth startDate:&startDate interval:NULL forDate:self];
     NSAssert1(ok, @"Failed to calculate the first day of the month based on %@", self);
     return startDate;
 }
@@ -62,7 +62,7 @@
 
 - (NSDate *)lastDayOfCurrentMonth
 {
-    NSCalendarUnit calendarUnit = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+    NSCalendarUnit calendarUnit = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
     NSDateComponents *dateComponents = [[NSCalendar currentCalendar] components:calendarUnit fromDate:self];
     dateComponents.day = [self numberOfDaysInCurrentMonth];
     return [[NSCalendar currentCalendar] dateFromComponents:dateComponents];
