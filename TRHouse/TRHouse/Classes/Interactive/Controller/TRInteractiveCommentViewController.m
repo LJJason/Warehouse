@@ -221,6 +221,8 @@
 
 - (IBAction)composeCommentBtnClick {
     
+    [self.view endEditing:YES];
+    
     if ([TRAccountTool loginState]) {
         TRAccount *account = [TRAccountTool account];
         
@@ -295,6 +297,58 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [self.view endEditing:YES];
+}
+
+- (IBAction)hitItOffBtnClick {
+    
+    [self.view endEditing:YES];
+    
+    if ([TRAccountTool loginState]) {
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"温馨提示" message:@"已了解情况, 确定一拍集合？" preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+            [self hitItOff];
+        }];
+        
+        UIAlertAction *actionCancel = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:nil];
+        
+        [alert addAction:actionCancel];
+        [alert addAction:action];
+        [self presentViewController:alert animated:YES completion:nil];
+        
+    }else {
+        //没有登录
+        [self loginVc];
+    }
+    
+}
+
+//一拍即合请求
+- (void)hitItOff{
+    
+    TRAccount *account = [TRAccountTool account];
+    
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    param[@"uid"] = account.uid;
+    param[@"id"] = @(self.inter.ID);
+    
+    [TRHttpTool POST:TRHitItOffUrl parameters:param success:^(id responseObject) {
+        
+        NSInteger state = [responseObject[@"state"] integerValue];
+        
+        if (state) {
+            [Toast makeText:@"提交成功, 等待对方同意！"];
+            [self.tableView.mj_header beginRefreshing];
+        }else {
+            [Toast makeText:@"提交失败！"];
+        }
+    } failure:^(NSError *error) {
+        [Toast makeText:@"请检查网络连接!"];
+    }];
+    
+    self.contentTextField.text = nil;
+    self.sendBtn.enabled = NO;
 }
 
 @end

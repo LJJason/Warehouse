@@ -15,6 +15,6 @@
 
 /** 点赞按钮回调 */
 @property (nonatomic,copy) void (^likeBlock)(TRPostTableViewCell *cell, NSString *user);
-
++ (instancetype)cell;
 
 @end

@@ -13,6 +13,8 @@
 */
 
 - (void)awakeFromNib {
+    [super awakeFromNib];
+    
     self.progressLabel.textColor = [UIColor whiteColor];
     
     //裁剪的圆角的像素

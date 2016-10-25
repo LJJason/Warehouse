@@ -53,11 +53,21 @@
     [self setupBasic];
     
     [self setupRefresh];
+    //消除多余的分割线
+    self.tableView.tableFooterView = [[UIView alloc]initWithFrame:CGRectZero];
     
     
     // Do any additional setup after loading the view.
 }
 - (IBAction)SendClickAction:(UIButton *)sender forEvent:(UIEvent *)event {
+    
+    if (_contentTextField.text.length != 0 ) {
+        
+        [self.view endEditing:YES];
+    }else{
+        
+        return;
+    }
     
     
     if ([TRAccountTool loginState]) {
@@ -65,7 +75,7 @@
         
         NSMutableDictionary *param = [NSMutableDictionary dictionary];
         param[@"uid"] = account.uid;
-        param[@"interactiveId"] = @(self.post.ID);
+        param[@"postId"] = @(self.post.ID);
         param[@"comments"] = self.contentTextField.text;
         
         [TRHttpTool POST:TRCirleSendComment parameters:param success:^(id responseObject) {
@@ -87,6 +97,8 @@
         //没有登录
         [self loginVc];
     }
+    
+    self.contentTextField.text = nil;
 
 }
 
@@ -129,9 +141,9 @@
     
     //创建header
     UIView *header = [[UIView alloc] init];
-    TRComentCellTableViewCell *cell = [TRComentCellTableViewCell cell];
+    TRPostTableViewCell *cell = [TRPostTableViewCell cell];
     cell.backgroundColor = [UIColor whiteColor];
-    cell.post = self.post;
+    cell.posts = self.post;
     
     cell.size = CGSizeMake(TRScreenW, self.post.cellRowHeight);
     
@@ -158,10 +170,10 @@
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     param[@"ID"] = @(self.post.ID);
     
-    [TRHttpTool GET:TRGetAllPostsUrl parameters:param success:^(id responseObject) {
+    [TRHttpTool GET:TRGetCirleComment parameters:param success:^(id responseObject) {
         
         self.maxCount = [responseObject[@"maxCount"] integerValue];
-        
+        TRLog(@"%@",responseObject);
         self.comments = [TRPostComment mj_objectArrayWithKeyValuesArray:responseObject[@"comments"]];
         
         [self.tableView reloadData];
@@ -190,7 +202,7 @@
     param[@"page"] = @(page);
     param[@"ID"] = @(self.post.ID);
     
-    [TRHttpTool GET:TRGetAllPostsUrl parameters:param success:^(id responseObject) {
+    [TRHttpTool GET:TRGetCirleComment parameters:param success:^(id responseObject) {
         
         [self.comments addObjectsFromArray:[TRPostComment mj_objectArrayWithKeyValuesArray:responseObject[@"comments"]]];
         

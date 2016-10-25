@@ -51,7 +51,7 @@ NSString * const TRGetUserUrl = @"http://localhost:8080/TRHouse/getUser";
 
 /* ============================ 首页 相关============================*/
 /*** 首页新品推荐的接口 */
-NSString * const TRGetNewRoomUrl = @"http://192.168.1.106:8080/TRHouse/getNewRoom";
+NSString * const TRGetNewRoomUrl = @"http://localhost:8080/TRHouse/getNewRoom";
 
 /*** 首页轮播推荐的接口 */
 NSString * const TRGetRecommendedRoomUrl = @"http://localhost:8080/TRHouse/getRecommendedRoom";
@@ -83,6 +83,8 @@ NSString * const TRGetAllInteractiveCommentsUrl = @"http://localhost:8080/TRHous
 
 /*** 发互动评论的接口 */
 NSString * const TRSendInteractiveCommentUrl = @"http://localhost:8080/TRHouse/sendInteractiveComment";
+/** 一拍即合接口 */
+NSString * const TRHitItOffUrl = @"http://localhost:8080/TRHouse/hititoff";
 
 
 
@@ -91,7 +93,7 @@ NSString * const TRSendInteractiveCommentUrl = @"http://localhost:8080/TRHouse/s
 
 /* ============================ 发现模块 相关============================*/
 /*** 旅游攻略的接口 */
-NSString * const TRTourUrl = @"https://lvyou.baidu.com/notes/";
+NSString * const TRTourUrl = @"http://guide.qyer.com/";
 NSString * const TRNewsUrl = @"http://www.4908.cn/";
 NSString * const TRHappyUrl =  @"http://www.gxdxw.cn/";
 
@@ -107,7 +109,8 @@ NSString * const TRGetAllPostsUrl = @"http://localhost:8080/TRHouse/getAllPost";
 /*** 发邻居圈评论的接口 */
 NSString * const TRCirleSendComment = @"http://localhost:8080/TRHouse/sendComment";
 
-
+/*** 获取邻居圈评论的接口 */
+NSString * const TRGetCirleComment = @"http://localhost:8080/TRHouse/getComments";
 
 
 
