@@ -42,18 +42,18 @@
     
     [alertControl addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
         // 点击确定按钮的时候, 会调用这个block
-        
-        if (weakSelf.logoutBlock) {
-            weakSelf.logoutBlock();
-        }
-        
         [TRAccountTool saveAccount:nil];
         [TRAccountTool saveLoginState:NO];
         
         [TRProgressTool showWithMessage:@"正在退出..."];
         
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [TRProgressTool dismiss];
+            
+            if (weakSelf.logoutBlock) {
+                weakSelf.logoutBlock();
+            }
+            
             [weakSelf.navigationController popViewControllerAnimated:YES];
         });
         

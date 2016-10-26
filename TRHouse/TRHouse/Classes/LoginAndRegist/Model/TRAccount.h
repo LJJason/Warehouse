@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface TRAccount : NSObject<NSCoding>
+@interface TRAccount : NSObject
 
 /** 用户唯一标识符 */
 @property (nonatomic, copy) NSString *uid;

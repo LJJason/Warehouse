@@ -19,7 +19,7 @@
 #import "Utilities.h"
 
 
-#define TROrderUrl @"http://localhost:8080/TRHouse/order"
+#define TROrderUrl @"http://yearwood.top/TRHouse/order"
 
 @interface TRSubmitViewController ()
 /**

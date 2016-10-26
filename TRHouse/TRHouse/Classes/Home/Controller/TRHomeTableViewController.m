@@ -82,6 +82,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //添加刷新控件
+    [self setupRefresh];
+    
     //定位
     [self setupLocation];
     
@@ -89,9 +92,6 @@
     [self setupNav];
     
     [self setupHeader];
-    
-    //添加刷新控件
-    [self setupRefresh];
 }
 /**
  *  定位

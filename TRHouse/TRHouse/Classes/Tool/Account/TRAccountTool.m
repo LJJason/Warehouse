@@ -16,7 +16,7 @@
 
 #define TRLoginStateKey @"TRLoginState"
 
-
+#define TRAccountKey @"TRAccount"
 
 @implementation TRAccountTool
 
@@ -30,7 +30,11 @@
         
         NSString *uid = responseObject[@"uid"];
         if ([uid isEqualToString:phoneNum]) {
-            [TRAccountTool saveAccount:[TRAccount accountWithDict:responseObject]];
+            
+            TRAccount *account = [[TRAccount alloc] init];
+            account.uid = uid;
+            
+            [TRAccountTool saveAccount:account];
             //登录成功
             [TRAccountTool saveLoginState:YES];
             if (success) {
@@ -60,6 +64,8 @@
     
 }
 
+
+
 + (void)saveAccount:(TRAccount *)account {
     [NSKeyedArchiver archiveRootObject:account toFile:TRAccountFileName];
 }
@@ -68,13 +74,15 @@
 static TRAccount *_account;
 
 + (TRAccount *)account {
-    if (_account == nil) {
-        
-        _account = [NSKeyedUnarchiver unarchiveObjectWithFile:TRAccountFileName];
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:TRAccountFileName];
+}
+
++ (void)clearTheArchive {
+    //删除归档文件
+    NSFileManager *defaultManager = [NSFileManager defaultManager];
+    if ([defaultManager isDeletableFileAtPath:TRAccountFileName]) {
+        [defaultManager removeItemAtPath:TRAccountFileName error:nil];
     }
-    
-    
-    return _account;
 }
 
 + (void)saveUser:(TRUser *)user {
@@ -84,10 +92,7 @@ static TRAccount *_account;
 static TRUser *_user;
 
 + (TRUser *)user {
-    if (_user == nil) {
-        _user = [NSKeyedUnarchiver unarchiveObjectWithFile:TRUserFileName];
-    }
-    return _user;
+    return [NSKeyedUnarchiver unarchiveObjectWithFile:TRUserFileName];
 }
 
 

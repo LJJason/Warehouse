@@ -14,6 +14,7 @@
 #import "TRUser.h"
 #import "Utilities.h"
 #import "TRForgetPwdTableViewController.h"
+#import "TRAccount.h"
 
 @interface TRLoginViewController ()
 
@@ -49,31 +50,10 @@
         [TRProgressTool showWithMessage:@"登录中..."];
         [TRAccountTool loginWithPhoneNum:userName pwd:pwd success:^(TRLoginState state) {
             
-            [TRProgressTool dismiss];
-            switch (state) {
-                case TRLoginStateOK:
-                {
-                    TRUser *user = [[TRUser alloc] init];
-                    user.userName = self.phoneNumTextField.text;
-                    [TRAccountTool saveUser:user];
-                    [self dismissViewControllerAnimated:YES completion:^{
-                        if (self.refreshDataBlock) {
-                            self.refreshDataBlock();
-                        }
-                    }];
-                }
-                    break;
-                case TRLoginStateAccountNotExist:
-                    
-                    [Toast makeText:@"用户不存在!!"];
-                    
-                    break;
-                    
-                default:
-                    [Toast makeText:@"用户名或密码输入错误!!"];
-                    
-                    break;
-            }
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                //
+                [self dismis:state];
+            });
             
         } failure:^(NSError *error) {
             TRLog(@"%@", error);
@@ -88,7 +68,42 @@
     
 }
 
-
+/**
+ *  退出
+ */
+- (void)dismis:(TRLoginState)state{
+    
+    [TRProgressTool dismiss];
+    
+    switch (state) {
+        case TRLoginStateOK:
+        {
+            TRUser *user = [[TRUser alloc] init];
+            user.userName = self.phoneNumTextField.text;
+            [TRAccountTool saveUser:user];
+            //退出
+            [self dismissViewControllerAnimated:YES completion:^{
+                if (self.refreshDataBlock) {
+                    self.refreshDataBlock();
+                }
+            }];
+        }
+            break;
+        case TRLoginStateAccountNotExist:
+            
+            [Toast makeText:@"用户不存在!!"];
+            
+            break;
+            
+        default:
+            [Toast makeText:@"用户名或密码输入错误!!"];
+            
+            break;
+    }
+    
+    
+    
+}
 
 /**
  *  返回

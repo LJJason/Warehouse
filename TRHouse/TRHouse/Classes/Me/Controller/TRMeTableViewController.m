@@ -45,6 +45,9 @@
 
 - (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+    TRAccount *account = [TRAccountTool account];
+    
+    TRLog(@" == %@", account.uid);
     //加载数据
     [self refreshData];
 }
@@ -92,6 +95,7 @@
             TRGetPersonalParam *param = [[TRGetPersonalParam alloc] init];
             TRAccount *account = [TRAccountTool account];
             param.uid = account.uid;
+            TRLog(@"%@", account.uid);
             
             [TRHttpTool GET:TRGetPersonalUrl parameters:param.mj_keyValues success:^(id responseObject) {
                 self.meHeader.personal = [TRPersonal mj_objectWithKeyValues:responseObject];

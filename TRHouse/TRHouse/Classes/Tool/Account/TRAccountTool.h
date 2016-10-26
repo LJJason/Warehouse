@@ -68,4 +68,9 @@ typedef enum {
  */
 + (TRUser *)user;
 
+/**
+ *  清楚归档文件
+ */
++ (void)clearTheArchive;
+
 @end
