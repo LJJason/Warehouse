@@ -14,6 +14,10 @@
 #import "TRAccountTool.h"
 #import "GBAlipayManager.h"
 #import "TRProgressTool.h"
+#import "TRAccount.h"
+#import "TRAccountTool.h"
+#import "Utilities.h"
+
 
 #define TROrderUrl @"http://localhost:8080/TRHouse/order"
 
@@ -42,6 +46,9 @@
 /** 总价 */
 @property (nonatomic, assign) NSInteger totalPrice;
 
+/** 订单号 */
+@property (nonatomic, copy) NSString *orderNo;
+
 @end
 
 @implementation TRSubmitViewController
@@ -50,6 +57,49 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setupUI];
+    
+    [[NSNotificationCenter defaultCenter] addObserverForName:kTRPayResultNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
+        NSLog(@"%@", note.userInfo);
+        if ([note.userInfo[@"resultStatus"] isEqualToString:@"9000"]) {
+            TRLog(@"支付成功");
+            //支付成功处理订单
+            [self paySuccess];
+            
+        }else {
+            [Toast makeText:@"支付失败!"];
+        }
+    }];
+    
+}
+/**
+ *  支付成功
+ */
+- (void)paySuccess {
+    
+    NSMutableDictionary *param = [NSMutableDictionary dictionary];
+    TRAccount *account = [TRAccountTool account];
+    
+    param[@"uid"] = account.uid;
+    param[@"state"] = @"10001";
+    param[@"orderNo"] = self.orderNo;
+    self.orderNo = nil;
+    
+    [TRProgressTool showWithMessage:@"正在处理订单..."];
+    [TRHttpTool POST:TRPaySuccessUrl parameters:param success:^(id responseObject) {
+        
+        NSInteger stste = [responseObject[@"state"] integerValue];
+        [TRProgressTool dismiss];
+        if (stste) {
+            [Toast makeText:@"支付成功!"];
+        }else {
+            [Toast makeText:@"支付成功, 处理订单失败, 请联系客服并提供订单号!"];
+        }
+        
+    } failure:^(NSError *error) {
+        [TRProgressTool dismiss];
+        [Toast makeText:@"支付成功, 处理订单失败, 请联系客服并提供订单号!"];
+    }];
+
 }
 
 /**
@@ -71,10 +121,16 @@
  */
 - (IBAction)pay {
     
+    
+    if (!(self.userNameTextField.text.length > 0) && !(self.contactTextField.text.length > 0)) {
+        [Utilities popUpAlertViewWithMsg:@"请将信息填写完整" andTitle:@"温馨提示"];
+        return;
+    }
+    
     //生成15位随机订单号
     
     NSString *orderNo = [GBAlipayManager generateTradeNO];
-    
+    self.orderNo = orderNo;
     TRAccount *account = [TRAccountTool account];
     
     TROrderParam *param = [[TROrderParam alloc] init];
@@ -89,14 +145,29 @@
     
     [TRHttpTool POST:TROrderUrl parameters:param.mj_keyValues success:^(id responseObject) {
         [TRProgressTool dismiss];
-        TRLog(@"%@", responseObject);
+        
+        NSInteger state = [responseObject[@"state"] integerValue];
+        
+        if (state) {
+            //订单生成成功
+            //开始支付
+            [self paymentOrder:param];
+        }else {
+            [Toast makeText:@"订单提交失败, 请重新提交"];
+        }
         
     } failure:^(NSError *error) {
-        TRLog(@"%@", error);
+        [Toast makeText:@"订单提交失败, 请检查网络连接!"];
     }];
     
-    
+}
 
+/**
+ *  开始支付
+ */
+- (void)paymentOrder:(TROrderParam *)param{
+    
+    [GBAlipayManager alipayWithProductName:self.reser.room.describes amount:@"0.01" tradeNO:param.orderNo notifyURL:@"JSHAlipay2016" productDescription:@"预定房间" itBPay:@"30"];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

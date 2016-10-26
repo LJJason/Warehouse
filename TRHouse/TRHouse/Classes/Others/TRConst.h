@@ -14,6 +14,9 @@ UIKIT_EXTERN NSString * const TRGetTokenUrl;
 //盐
 UIKIT_EXTERN NSString * const salt;
 
+/*** 支付结果通知 */
+UIKIT_EXTERN NSString * const kTRPayResultNotification;
+
 
 /* ============================ Storyboard 相关============================*/
 /*** 首页页的StoryboardName */
@@ -68,7 +71,8 @@ UIKIT_EXTERN NSString * const TRGetHotRoomUrl;
 /*** 首页精选的接口 */
 UIKIT_EXTERN NSString * const TRGetSelectRoomUrl;
 
-
+/*** 支付成功的接口 */
+UIKIT_EXTERN NSString * const TRPaySuccessUrl;
 
 
 

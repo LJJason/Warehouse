@@ -94,6 +94,7 @@
 		C23A67951DB7ADAC00755FFC /* TRHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A67941DB7ADAC00755FFC /* TRHeaderCell.m */; };
 		C23A67971DB7BFB400755FFC /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C23A67961DB7BFB400755FFC /* Home.storyboard */; };
 		C23A679A1DB7D03F00755FFC /* TRHotAndSelectTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23A67991DB7D03F00755FFC /* TRHotAndSelectTableViewController.m */; };
+		C23BF5101DC09FA500684733 /* TRMerchantsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C23BF50F1DC09FA500684733 /* TRMerchantsViewController.m */; };
 		C26FD4131DB71F9200F9ED4B /* TRInteractiveCommentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C26FD4121DB71F9200F9ED4B /* TRInteractiveCommentCell.m */; };
 		C26FD4161DB7205200F9ED4B /* TRInteractiveComment.m in Sources */ = {isa = PBXBuildFile; fileRef = C26FD4151DB7205200F9ED4B /* TRInteractiveComment.m */; };
 		C26FD4181DB744CD00F9ED4B /* TRInteractiveCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26FD4171DB744CD00F9ED4B /* TRInteractiveCell.xib */; };
@@ -369,6 +370,8 @@
 		C23A67961DB7BFB400755FFC /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		C23A67981DB7D03F00755FFC /* TRHotAndSelectTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRHotAndSelectTableViewController.h; sourceTree = "<group>"; };
 		C23A67991DB7D03F00755FFC /* TRHotAndSelectTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRHotAndSelectTableViewController.m; sourceTree = "<group>"; };
+		C23BF50E1DC09FA500684733 /* TRMerchantsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRMerchantsViewController.h; sourceTree = "<group>"; };
+		C23BF50F1DC09FA500684733 /* TRMerchantsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRMerchantsViewController.m; sourceTree = "<group>"; };
 		C26FD4111DB71F9200F9ED4B /* TRInteractiveCommentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRInteractiveCommentCell.h; sourceTree = "<group>"; };
 		C26FD4121DB71F9200F9ED4B /* TRInteractiveCommentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TRInteractiveCommentCell.m; sourceTree = "<group>"; };
 		C26FD4141DB7205200F9ED4B /* TRInteractiveComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TRInteractiveComment.h; sourceTree = "<group>"; };
@@ -1094,6 +1097,8 @@
 				C29707FD1DBA73260021F492 /* TRChangeasswordTableViewController.m */,
 				C29707FF1DBA81A60021F492 /* TRFeedbackViewController.h */,
 				C29708001DBA81A60021F492 /* TRFeedbackViewController.m */,
+				C23BF50E1DC09FA500684733 /* TRMerchantsViewController.h */,
+				C23BF50F1DC09FA500684733 /* TRMerchantsViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1689,6 +1694,7 @@
 				C29163FF1DB3E07300769BA1 /* TRAccountTool.m in Sources */,
 				C213092D1DB92443003EE39C /* TRForgetPwdTableViewController.m in Sources */,
 				C27934631DBCBB84005675E9 /* CalendarLogic.m in Sources */,
+				C23BF5101DC09FA500684733 /* TRMerchantsViewController.m in Sources */,
 				C27934661DBCBB84005675E9 /* CalendarViewController.m in Sources */,
 				B2773C021DACC1E200B0A899 /* GFProgressView.m in Sources */,
 				B29DD12B1DBDE89200D6A3F7 /* TRPostComment.m in Sources */,

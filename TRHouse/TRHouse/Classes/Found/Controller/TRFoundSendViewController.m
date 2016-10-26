@@ -279,7 +279,7 @@
     }
     
     //存储认证信息
-    [TRHttpTool POST:TRFoundSentPostUrl parameters:param.mj_keyValues success:^(id responseObject) {
+    [TRHttpTool POST:TRFoundSentPostUrl parameters:param success:^(id responseObject) {
         [TRProgressTool dismiss];
         
         NSInteger state = [responseObject[@"state"] integerValue];

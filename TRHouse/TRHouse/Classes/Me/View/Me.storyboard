@@ -89,6 +89,9 @@
                                                 <constraint firstItem="jpY-TD-beG" firstAttribute="centerY" secondItem="QO8-6J-qbd" secondAttribute="centerY" id="fhx-Ag-saP"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Aq2-XA-8aW" kind="show" id="jmq-b0-F7w"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bPx-mx-ppY">
                                         <rect key="frame" x="0.0" y="392" width="375" height="44"/>
@@ -275,6 +278,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JTN-2a-KzE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1068" y="-572"/>
+        </scene>
+        <!--Merchants View Controller-->
+        <scene sceneID="5PX-ks-dUu">
+            <objects>
+                <viewController id="Aq2-XA-8aW" customClass="TRMerchantsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YCN-4a-bTW"/>
+                        <viewControllerLayoutGuide type="bottom" id="t1i-oL-hjU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6L8-hj-fkq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="merchants" translatesAutoresizingMaskIntoConstraints="NO" id="ON0-9Y-EFC"/>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ON0-9Y-EFC" secondAttribute="trailing" id="8Xd-hL-yLn"/>
+                            <constraint firstAttribute="bottom" secondItem="ON0-9Y-EFC" secondAttribute="bottom" id="nOY-K6-ZVX"/>
+                            <constraint firstItem="ON0-9Y-EFC" firstAttribute="leading" secondItem="6L8-hj-fkq" secondAttribute="leading" id="o3Y-03-ZFu"/>
+                            <constraint firstItem="ON0-9Y-EFC" firstAttribute="top" secondItem="YCN-4a-bTW" secondAttribute="bottom" id="z66-p1-w0I"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZGD-nA-6Ko" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-111" y="-635"/>
         </scene>
         <!--Feedback View Controller-->
         <scene sceneID="Rmw-P6-hSC">
@@ -948,6 +978,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="merchants" width="1242" height="2208"/>
         <image name="user_bg" width="650" height="387"/>
     </resources>
 </document>

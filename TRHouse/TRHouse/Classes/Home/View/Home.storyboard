@@ -254,7 +254,7 @@
                         <constraints>
                             <constraint firstItem="K0X-XP-Pkb" firstAttribute="leading" secondItem="FjD-Kj-iKX" secondAttribute="leading" id="2ad-Md-y7L"/>
                             <constraint firstItem="swt-nC-wLm" firstAttribute="leading" secondItem="FjD-Kj-iKX" secondAttribute="leading" id="2gx-W3-HkM"/>
-                            <constraint firstItem="kBa-Br-eo8" firstAttribute="top" secondItem="swt-nC-wLm" secondAttribute="bottom" id="Q6t-on-B4r"/>
+                            <constraint firstAttribute="bottom" secondItem="swt-nC-wLm" secondAttribute="bottom" id="DVk-cu-2n7"/>
                             <constraint firstAttribute="trailing" secondItem="swt-nC-wLm" secondAttribute="trailing" id="dvv-bP-dPG"/>
                             <constraint firstAttribute="trailing" secondItem="K0X-XP-Pkb" secondAttribute="trailing" id="eaB-gx-9a8"/>
                             <constraint firstAttribute="bottom" secondItem="K0X-XP-Pkb" secondAttribute="bottom" id="hSr-0P-Awj"/>
@@ -298,7 +298,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S0P-lM-uWG">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sigh" translatesAutoresizingMaskIntoConstraints="NO" id="S0P-lM-uWG">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="8jU-JA-Fpx"/>
                                     <constraint firstAttribute="width" constant="25" id="RcG-KB-TFt"/>
@@ -416,7 +416,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGf-vM-bBT">
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8l1-B0-5qk">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alipay" translatesAutoresizingMaskIntoConstraints="NO" id="8l1-B0-5qk">
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="H6m-z2-65j"/>
                                             <constraint firstAttribute="height" constant="40" id="lSk-Kl-OnS"/>
@@ -427,12 +427,12 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0j-d3-vct">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0j-d3-vct">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="Guh-sv-QDB"/>
                                             <constraint firstAttribute="width" constant="30" id="rnK-mz-yUT"/>
                                         </constraints>
-                                        <state key="normal" title="支"/>
+                                        <state key="normal" image="selectSu"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -649,7 +649,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TRPhotoCellId" id="Kuq-MK-dNK" customClass="TRPhotoCell">
-                                        <rect key="frame" x="77.5" y="0.0" width="200" height="100"/>
+                                        <rect key="frame" x="78" y="0.0" width="200" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
@@ -682,9 +682,12 @@
     </scenes>
     <resources>
         <image name="address" width="25" height="25"/>
+        <image name="alipay" width="40" height="40"/>
         <image name="phone" width="40" height="40"/>
         <image name="photo" width="18" height="18"/>
         <image name="photo_sel_previewVc.png" width="42" height="42"/>
         <image name="rightSp" width="26" height="40"/>
+        <image name="selectSu" width="30" height="30"/>
+        <image name="sigh" width="25" height="25"/>
     </resources>
 </document>
