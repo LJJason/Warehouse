@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "TRTabBarController.h"
+#import <AlipaySDK/AlipaySDK.h>
 
 @interface AppDelegate ()
 
@@ -105,6 +106,45 @@
         // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
         NSLog(@"Unresolved error %@, %@", error, error.userInfo);
         abort();
+    }
+}
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url{
+    
+    TRLog(@"========");
+    return YES;
+}
+
+
+// iOS9.0之前的用来获取从其他app跳转到本app时机, 返回值表示是否允许跳转
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    
+    TRLog(@"回来了");
+    
+    [self paymenetResultWithUrl:url];
+    return YES;
+}
+
+//iOS9.0之后的
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
+    [self paymenetResultWithUrl:url];
+    return YES;
+}
+
+- (void)paymenetResultWithUrl:(NSURL *)url{
+    
+    TRLog(@"回调    %@", url);
+    
+    
+    //判断是不是从支付宝app跳回来的
+    if ([url.host isEqualToString:@"safepay"]) {
+        [[AlipaySDK defaultService] processOrderWithPaymentResult:url standbyCallback:^(NSDictionary *resultDic) {
+            //9000表示支付成功
+            TRLog(@"支付结果--  %@", resultDic);
+            //通知支付页面去检查支付结果
+            [[NSNotificationCenter defaultCenter] postNotificationName:kTRPayResultNotification object:nil userInfo:resultDic];
+        }];
+    }else if ([url.host isEqualToString:@"yaerwood.top"]){
+        NSLog(@"回来了");
     }
 }
 

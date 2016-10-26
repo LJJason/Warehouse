@@ -117,9 +117,13 @@
     if (signedString != nil) {
         orderString = [NSString stringWithFormat:@"%@&sign=\"%@\"&sign_type=\"%@\"",
                        orderSpec, signedString, @"RSA"];
-        
+        //如果是网页支付会回到这个block
         [[AlipaySDK defaultService] payOrder:orderString fromScheme:appScheme callback:^(NSDictionary *resultDic) {
-            NSLog(@"reslut = %@",resultDic);
+
+            TRLog(@"%@", resultDic);
+            //支付结果通知
+            [[NSNotificationCenter defaultCenter] postNotificationName:kTRPayResultNotification object:nil userInfo:resultDic];
+            
         }];
         
     }

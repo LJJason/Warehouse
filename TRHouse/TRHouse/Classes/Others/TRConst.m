@@ -10,6 +10,9 @@ NSString * const TRGetTokenUrl = @"http://yearwood.top/TRMerchants/gettoken";
 //盐
 NSString * const salt = @"dfgshdgajnvahheht[q4tu0q4!@#$%*&()(*&^%*(*&^%$%^&*(*&^%$#$%^&djgvkbklsdbfbalesbdgnvabgareugbairbgcnxcnsdgn'aergheorhgg;sdf>RTYUHJKJHGFDSEDRFTGHJKHGFDRRFTGYHJKNHBGFDFGHJIOKIUYTRE$W#$%^&*(IU*YT^R%E$W#ESDXCVBNJBBVGFDRFGHJK";
 
+/*** 支付结果通知 */
+NSString * const kTRPayResultNotification = @"alipayResult";
+
 
 /* ============================ Storyboard 相关============================*/
 /*** 首页页的StoryboardName */
@@ -62,6 +65,8 @@ NSString * const TRGetHotRoomUrl = @"http://localhost:8080/TRHouse/getHotRoom";
 /*** 首页精选的接口 */
 NSString * const TRGetSelectRoomUrl = @"http://localhost:8080/TRHouse/getSelectRoom";
 
+/*** 支付成功的接口 */
+NSString * const TRPaySuccessUrl = @"http://localhost:8080/TRHouse/payOrder";
 
 
 
