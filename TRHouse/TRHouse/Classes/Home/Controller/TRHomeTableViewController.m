@@ -81,17 +81,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    //加载数据
+    [self loadNewRoom];
     
     //添加刷新控件
     [self setupRefresh];
     
-    //定位
-    [self setupLocation];
-    
     //设置导航条相关
     [self setupNav];
-    
+    //设置顶部轮播视图
     [self setupHeader];
+    //定位
+    [self setupLocation];
 }
 /**
  *  定位
@@ -109,7 +110,10 @@
                 self.city = title;
                 [self.leftButton setTitle:title forState:UIControlStateNormal];
                 [self.leftButton sizeToFit];
-                [self.tableView.mj_header beginRefreshing];
+                
+                dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                    [self.tableView.mj_header beginRefreshing];
+                });
             }else {
                 TRLog(@"%@", error);
             }
@@ -185,7 +189,7 @@ static NSString * const cellId = @"cellId";
     self.tableView.mj_header.automaticallyChangeAlpha = YES;
     
     //一进来就开始刷新
-    [self.tableView.mj_header beginRefreshing];
+//    [self.tableView.mj_header beginRefreshing];
     
     //添加上拉刷新控件
     self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreRoom)];
