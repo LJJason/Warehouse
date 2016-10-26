@@ -107,7 +107,7 @@
     CGFloat w = 50;
     CGFloat h = 65;
     
-    for (NSInteger i = 0; i < self.room.configuration.count; i++) {
+    for (NSInteger i = 0; i < 3; i++) {
         
         UIImageView *imageView = [[UIImageView alloc] init];
         imageView.x = i * (margin + w) + margin;
