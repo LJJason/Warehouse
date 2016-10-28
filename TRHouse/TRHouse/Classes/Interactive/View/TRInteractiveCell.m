@@ -48,6 +48,7 @@
     [super awakeFromNib];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapPhoto:)];
+    self.photoVIew.contentMode = UIViewContentModeScaleAspectFill;
     
     [self.photoVIew addGestureRecognizer:tap];
 }
